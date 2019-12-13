@@ -1,0 +1,17 @@
+<div class="timeline-box">
+  <div class="timeline-wrapper">
+    <div class="timeline-title">
+      <h2>
+        <%= title %>
+        <% if (isTag) { %>
+          <small>标签</small>
+        <% }%>
+      </h2>
+    </div>
+    <% for(let i = 0; i < posts.length; i++) {%>
+      <article>
+        <header><h1><%= posts[i].dateFormat%></h1></header>
+      </article>  
+    <% }%>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<% posts.forEach(function(post) { %>
+  <article class="post-list-box">
+    <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats}) %>
+    <div class="post-body">
+      <%- post.abstract %>
+      <!--noindex-->
+      <div class="post-button text-center">
+        <a class="btn" href="<%= post.link %>" rel="contents">
+          阅读全文 »
+        </a>
+      </div>
+      <!--/noindex-->
+    </div>
+    <footer class="post-footer">
+      <div class="post-eof"></div>
+    </footer>
+  </article>
+<% }); %>  
