@@ -1,0 +1,33 @@
+{
+  "name": "gridea-theme-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/gulp",
+    "serve": "nodemon --watch templates --watch assets -e js,ejs,less,css app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-nodemon": "^2.4.2",
+    "moment": "^2.24.0",
+    "nodemon": "^1.18.11"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "delay": "2500"
+  }
+}

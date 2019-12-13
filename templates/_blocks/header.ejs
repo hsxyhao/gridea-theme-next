@@ -1,0 +1,92 @@
+<header class="header">
+  <div class="blog-header">
+    <div class="site-meta">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-title">
+        <a href="/" class="brand">
+          <span><%= themeConfig.siteName %></span>
+        </a>
+      </div>
+      <p class="subtitle">Quick notes</p>
+    </div>
+    <nav class="site-nav" id="site_nav">
+      <ul>
+        <li class="nav-item nav-item-active">
+          <% menus.forEach(function(menu) { %>
+            <% if (menu.name === '首页') { %>
+              <% if (menu.openType === 'External') { %>
+                <a href="<%= menu.link %>" target="_blank">
+                  <i class="iconfont icon-home"></i> 首页
+                </a>
+              <% } else { %>
+                <a href="<%= menu.link %>">
+                  <i class="iconfont icon-home"></i> 首页
+                </a>
+              <% } %>
+            <% } %>
+          <% }); %>
+        </li>
+        <li class="nav-item">
+          <% menus.forEach(function(menu) { %>
+            <% if (menu.name === '归档') { %>
+              <% if (menu.openType === 'External') { %>
+                <a href="<%= menu.link %>" target="_blank">
+                  <i class="iconfont icon-archive"></i> 归档
+                </a>
+              <% } else { %>
+                <a href="<%= menu.link %>">
+                  <i class="iconfont icon-archive"></i> 归档
+                </a>
+              <% } %>
+            <% } %>
+          <% }); %>
+        </li>
+        <li class="nav-item">
+          <% menus.forEach(function(menu) { %>
+            <% if (menu.name === '标签') { %>
+              <% if (menu.openType === 'External') { %>
+                <a href="<%= menu.link %>" target="_blank">
+                  <i class="iconfont icon-tags"></i> 标签
+                </a>
+              <% } else { %>
+                <a href="<%= menu.link %>">
+                  <i class="iconfont icon-tags"></i> 标签
+                </a>
+              <% } %>
+            <% } %>
+          <% }); %>
+        </li>
+        <li class="nav-item">
+          <a>
+            <i class="iconfont icon-search"></i> 搜索
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function initEvent() {
+    navToggle.addEventListener('click',navClick);
+  }
+
+  function navClick() {
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+  }
+
+  window.addEventListener("load", initEvent);
+  
+</script>

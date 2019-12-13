@@ -1,0 +1,10 @@
+<div class="tags-box">
+  <div class="tag-cloud-title">
+    目前共计 <%= tags.length %> 个标签
+  </div>
+  <div class="tag-cloud-list">
+    <% for(let i = 0; i < tags.length; i++) { %>
+      <a href="<%= tags[i].link %>" alt="<%= tags[i].name %>"><%= tags[i].name %></a>
+    <% } %>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+@import './abstracts/varibles';
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 58%;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 15px;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: 'Roboto Slab', 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #555;
+  background: #f5f7f9;
+  width: 100%;
+  overflow-x: hidden;
+}
+.head-top-line {
+  height: 3px;
+  background: #222;
+}
+.header-box {
+  position: relative;
+}
+.main-container {
+  position: relative;
+}
+
+.sidebar {
+  margin-top: 330px;
+  width: 240px;
+  box-shadow: none;
+}
+
+.sidebar-wrapper {
+  width: auto;
+  box-sizing: border-box;
+  color: #555;
+  background: #fff;
+  box-shadow: initial;
+  border-radius: initial;
+  padding: 20px 10px;
+}
+
+@import './_blocks/footer.less';
+@import './_blocks/header.less';
+@import './_blocks/section.less';
+@import './_blocks/pagination.less';
+@import './_blocks/post-list.less';
+@import './_blocks/site-meta.less';
+@import './_blocks/title.less';
+@import './_blocks/post.less';
+@import './_blocks/post-sidebar.less';
+@import './_blocks/tags.less';
+@import './_blocks/timeline.less';
+@import './_core/markdown.less';

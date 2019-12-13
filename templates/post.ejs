@@ -1,0 +1,43 @@
+<html>
+  <head>
+      <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+  <body>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      <%- include('./_blocks/header') %>
+    </div>
+    <div class="main-continer">
+      <div class="section-layout">
+        <div class="section-layout-wrapper">
+          <%- include('./_blocks/post-sidebar', {toc: post.toc}) %>
+          <div class="section-box">
+            <div class="section">
+              <%- include('./_blocks/article') %>
+              <div class="post-body">
+                <%- post.content %>
+              </div>
+              <div class="post-footer">
+                <ul class="post-copyright">
+                  <li class="post-copyright-author">
+                    <strong>本文作者：</strong>
+                    <%= themeConfig.siteName %>
+                  </li>
+                  <li class="post-copyright-link">
+                    <strong>本文链接：</strong>
+                    <a href="<%= post.link %>" title="<%= post.title %>"><%= post.link %></a>
+                  </li>
+                  <li class="post-copyright-license">
+                    <strong>版权声明： </strong>
+                    本博客所有文章除特别声明外,转载请注明出处！
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%- include('./_blocks/footer') %>
+    </div>
+  </body>
+</html>
