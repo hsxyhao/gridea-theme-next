@@ -5,7 +5,7 @@
   <body>
     <div class="head-top-line"></div>
     <div class="header-box">
-      <%- include('./_blocks/header') %>
+      <%- include('./_blocks/header', {active: false}) %>
     </div>
     <div class="main-continer">
       <div class="section-layout">
@@ -13,7 +13,7 @@
           <%- include('./_blocks/home-sidebar') %>
           <div class="section-box">
             <section class="section posts-expand">
-              <%- include('./_blocks/timeline', {title: tag.name, isTag: true}) %>
+              <%- include('./_blocks/tag-timeline') %>
             </section>
           </div>
         </div>

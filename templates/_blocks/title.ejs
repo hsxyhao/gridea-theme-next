@@ -17,11 +17,11 @@
         <span class="pc-show">分类于</span>
         <% for(let i = 0; i < tags.length; i ++) { %>
           <%if (i === tags.length - 1) { %>
-            <a href="">
+            <a href="<%= tags[i].link %>">
               <span><%= tags[i].name %></span>
             </a>
           <% } else { %>
-            <a href="">
+            <a href="<%= tags[i].link %>">
               <span><%= tags[i].name %>、</span>
             </a>
           <% } %>
