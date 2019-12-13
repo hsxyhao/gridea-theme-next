@@ -17,7 +17,7 @@
     </div>
     <nav class="site-nav" id="site_nav">
       <ul>
-        <li class="nav-item nav-item-active">
+        <li class="nav-item <%= active&&menu === 'home' ?'nav-item-active':'' %>">
           <% menus.forEach(function(menu) { %>
             <% if (menu.name === '首页') { %>
               <% if (menu.openType === 'External') { %>
@@ -32,7 +32,7 @@
             <% } %>
           <% }); %>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <%= active&&menu === 'archives' ?'nav-item-active':'' %>">
           <% menus.forEach(function(menu) { %>
             <% if (menu.name === '归档') { %>
               <% if (menu.openType === 'External') { %>
@@ -47,7 +47,7 @@
             <% } %>
           <% }); %>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <%= active&&menu === 'tags' ?'nav-item-active':'' %>">
           <% menus.forEach(function(menu) { %>
             <% if (menu.name === '标签') { %>
               <% if (menu.openType === 'External') { %>

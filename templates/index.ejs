@@ -5,7 +5,7 @@
   <body>
     <div class="head-top-line"></div>
     <div class="header-box">
-      <%- include('./_blocks/header') %>
+      <%- include('./_blocks/header', {active: true, menu: 'home'}) %>
     </div>
     <div class="main-continer">
       <div class="section-layout">
@@ -14,7 +14,7 @@
           <div class="section-box">
             <section class="section posts-expand">
               <%- include('./_blocks/post-list') %>
-              <%- include('./_blocks/pagination', { logs: site.posts.length, pageSize: themeConfig.postPageSize}) %>
+              <%- include('./_blocks/pagination', { logs: site.posts.length, pageSize: themeConfig.postPageSize, url: '/page/', index: 4}) %>
             </section>
           </div>
         </div>

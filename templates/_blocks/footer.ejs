@@ -5,7 +5,7 @@
     </div>
     <div class="poweredby">
       <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
-      <div>Copy<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</div>
+      <div>Copy<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
     </div>
   </footer>
   <div class="back-to-top" id="back_to_top">
@@ -22,11 +22,6 @@
 
   let back2Top = document.querySelector('#back_to_top'),
   back2TopText = document.querySelector('#back_to_top_text');
-
-  function navClick() {
-    navToggle.classList.toggle('nav-toggle-active');
-    siteNav.classList.toggle('nav-menu-active');
-  }
 
   function scrollAnimation(currentY, targetY) {
     // 获取当前位置方法
@@ -52,6 +47,7 @@
   back2Top.addEventListener("click", function(e) {
     scrollAnimation(body.scrollTop, 0);
     e.stopPropagation();
+    return false;
   });
   
   window.addEventListener('scroll', function(e) {

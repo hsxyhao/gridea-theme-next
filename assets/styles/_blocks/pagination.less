@@ -1,5 +1,8 @@
+.page {
+  border-top: 1px solid #eee;
+}
+
 .pagination-ul {
-  margin: 120px 40px;
   text-align: center;
   border-top: none;
   padding: 0;
@@ -9,6 +12,7 @@
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  margin-top: -1px;
 }
 
 .pagination-ul li {
@@ -19,16 +23,17 @@
 
 .pagination-ul a{
   width: 32px;
+  font-size: 16px;
   display: inline-block;
-  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
 }
 
-.pagination-active  a{
+.pagination-active a{
   color: #fff;
   background: #ccc;
   border-top-color: #ccc;
 }
 
 .pagination-ul a:hover {
-  border-bottom: 1px solid #222;
+  border-top: 1px solid #222;
 }
