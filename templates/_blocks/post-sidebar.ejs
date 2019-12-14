@@ -1,16 +1,25 @@
+<% let showToc = toc.length > 0;%>
 <div class="sidebar">
-  <div class="sidebar-wrapper" id="sidebar">
-    <div class="post-list-sidebar">
-      <div class="sidebar-title">
-        <span class="sidebar-title-item sidebar-title-active">文章目录</span>
-        <span class="sidebar-title-item">站点概览</span>
+  <div class="sidebar-wrapper" id="sidebar" style="opacity: 0">
+    <% if (showToc) { %>
+      <div class="post-list-sidebar">
+        <div class="sidebar-title">
+          <span class="sidebar-title-item sidebar-title-active">文章目录</span>
+          <span class="sidebar-title-item">站点概览</span>
+        </div>
       </div>
-    </div>
+    <% } %>
     <div class="post-sidebar-body">
-      <div class="post-toc">
-        <%- include('./toc', {toc: toc}) %>
-      </div>
-      <div class="post-side-meta"></div>
+      <% if (showToc) { %>
+        <div class="post-toc">
+          <%- include('./toc', {toc: toc}) %>
+        </div>
+        <div class="post-side-meta">
+            <%- include('./site-meta') %>
+          </div>
+      <% } else {%>
+        <%- include('./site-meta') %>
+      <% } %>
     </div>
   </div>
 </div>
