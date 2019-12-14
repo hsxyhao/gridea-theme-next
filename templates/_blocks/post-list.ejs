@@ -4,12 +4,14 @@
     <div class="post-body">
       <%- post.abstract %>
       <!--noindex-->
+      <% if (post.content.length - post.abstract.length !== 14) { %>
       <div class="post-button text-center">
         <a class="btn" href="<%= post.link %>" rel="contents">
           阅读全文 »
         </a>
       </div>
       <!--/noindex-->
+      <% } %>
     </div>
     <footer class="post-footer">
       <div class="post-eof"></div>

@@ -2,7 +2,7 @@
 <div class="page">
   <ul class="pagination-ul">
     <% if (pagination.prev !== '') {%>
-      <li>
+      <li class="pagination-dir">
         <a href="<%= pagination.prev %>">
           <i class="iconfont icon-angle_left"></i>
         </a>
@@ -80,7 +80,7 @@
       <% } %>
     <% } %>
     <% if (current !== pages) {%>
-      <li>
+      <li class="pagination-dir">
         <a href="<%= url + next %>">
           <i class="iconfont icon-angle_right"></i>
         </a>
