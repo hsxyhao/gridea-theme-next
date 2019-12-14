@@ -60,4 +60,13 @@
     }
     back2TopText.textContent = Math.floor(percent);
   });
+
+  window.onload = function () {
+    let eles = document.querySelectorAll('.slide-anim')
+    console.log(eles)
+    eles.forEach(function(elem) {
+      elem.style = 'opacity: 1; transform: translateY(-15px) translateZ(0px);'
+    });
+  }
+
 </script>
