@@ -59,15 +59,7 @@
       back2Top.classList.remove('back-top-active');
     }
     back2TopText.textContent = Math.floor(percent);
-    console.log('scroll 2')
   });
-
-  window.onload = function () {
-    let eles = document.querySelectorAll('.slide-anim')
-    console.log(eles)
-    eles.forEach(function(elem) {
-      elem.style = 'opacity: 1; transform: translateY(-15px) translateZ(0px);'
-    });
-  }
-
+  // 代码高亮
+  hljs.initHighlightingOnLoad()
 </script>

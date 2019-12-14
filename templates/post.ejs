@@ -14,7 +14,7 @@
           <div class="section-box">
             <div class="section">
               <%- include('./_blocks/article') %>
-              <div class="post-body">
+              <div class="post-body" id="post_body">
                 <%- post.content %>
               </div>
               <div class="post-footer">
@@ -33,6 +33,14 @@
                   </li>
                 </ul>
               </div>
+              <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+                <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                  <%- include('./_blocks/gitalk') %>
+                <% } %>
+                <% if (commentSetting.commentPlatform === 'disqus') { %>
+                  <%- include('./_blocks/disqus') %>
+                <% } %>
+              <% } %>
             </div>
           </div>
         </div>
@@ -40,11 +48,4 @@
       <%- include('./_blocks/footer') %>
     </div>
   </body>
-  <script>
-    let headerHeight = document.querySelector('#id').clientHeight;
-    console.log(headerHeight);
-    window.addEventListener('scroll', function(e) {
-      console.log('scroll 1');
-    });
-  </script>
 </html>

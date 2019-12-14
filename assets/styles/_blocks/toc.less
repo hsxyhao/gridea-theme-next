@@ -1,3 +1,74 @@
-.toc-box {
-  
+.expanded ul{
+  padding: 0 2px 5px 10px;
+  display: block;
+}
+
+.closed ul{
+  padding: 0 2px 5px 10px;
+  display: none;
+}
+
+.toc-wrapper a {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: all;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+}
+
+.toc-box .toc-wrapper .active-current > a {
+  color: #fc6423;
+  border-bottom-color: #fc6423;
+}
+
+.markdownIt-TOC {
+  margin: 0;
+  padding: 0 2px 5px 10px;
+  text-align: left;
+  list-style: none;
+  font-size: 14px;
+}
+
+.markdownIt-TOC a:hover{
+  color: #000;
+  border-bottom-color: #000;
+}
+
+.markdownIt-TOC .active-show > ul{
+  display: block;
+}
+
+.toc-wrapper .active-hidden > ul{
+  display: block;
+}
+
+.toc-box .toc-wrapper .active-show > a {
+  color: #fc6423;
+  border-bottom-color: #fc6423;
+}
+
+.toc-box .toc-wrapper .active-hidden > a {
+  color: #fc6423;
+  border-bottom-color: #fc6423;
+}
+
+.markdownIt-TOC li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.8;
+}
+
+
+@media (max-width: 961px) and (min-width: 768px) {
+  .toc-box {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .toc-box {
+    display: none;
+  }
 }

@@ -1,5 +1,5 @@
 <div class="sidebar">
-  <div class="sidebar-wrapper">
+  <div class="sidebar-wrapper" id="sidebar">
     <div class="post-list-sidebar">
       <div class="sidebar-title">
         <span class="sidebar-title-item sidebar-title-active">文章目录</span>
@@ -14,3 +14,21 @@
     </div>
   </div>
 </div>
+<script>
+  let sidebar = document.querySelector('#sidebar');
+  let limitTop = sidebar.offsetTop;
+  let hasFix = false;
+  window.addEventListener('scroll', function(e) {
+    if (document.body.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+</script>

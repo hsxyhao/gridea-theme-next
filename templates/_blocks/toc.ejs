@@ -1,3 +1,141 @@
 <div class="toc-box">
-  <%- toc %>
+  <div class="toc-wrapper" id="toc_wrapper">
+    <%- toc %>
+  </div>
 </div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        cur.text =  deep + ' ' + cur.text;
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  let scrollTop = document.body.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+      lastIndex = -1;
+    }
+    return;
+  }
+
+  let current = 0;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      break;
+    }
+  }
+  current--;
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex) 
+        lastIndex = current;
+        removeParentActiveClass();
+        addActiveLiElemment(lList[current].parentElement,tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+      }
+    }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+window.addEventListener('load', function() {
+  postBody = document.querySelector('#post_body');
+  for (let i = 0; i < postBody.children.length; i++) {
+    if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+      hList.push(postBody.children[i]);
+    }
+  }
+  if (hList.length > 10) {
+    active = 'active-hidden'
+    tocContent.classList.add('closed');
+  } else {
+    tocContent.classList.add('expanded');
+  }
+
+  if ("createEvent" in document) {
+    let evt = document.createEvent("HTMLEvents");
+    evt.initEvent("scroll", false, true);
+    document.dispatchEvent(evt);
+  }
+  else {
+    document.fireEvent("scroll");
+  }
+})
+
+addTocNumber(tocContent, '')
+
+</script>
