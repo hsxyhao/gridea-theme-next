@@ -113,29 +113,34 @@ function addActiveLiElemment(elem, parent) {
 }
 
 window.addEventListener('load', function() {
-  postBody = document.querySelector('#post_body');
-  for (let i = 0; i < postBody.children.length; i++) {
-    if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-      hList.push(postBody.children[i]);
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
     }
-  }
-  if (hList.length > 10) {
-    active = 'active-hidden'
-    tocContent.classList.add('closed');
-  } else {
-    tocContent.classList.add('expanded');
-  }
 
-  if ("createEvent" in document) {
-    let evt = document.createEvent("HTMLEvents");
-    evt.initEvent("scroll", false, true);
-    document.dispatchEvent(evt);
+    if (hList.length > 10) {
+      active = 'active-hidden'
+      tocContent.classList.add('closed');
+    } else {
+      tocContent.classList.add('expanded');
+    }
+
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+    addTocNumber(tocContent, '');
   }
-  else {
-    document.fireEvent("scroll");
-  }
+  document.querySelector('#sidebar').style='display: block;';
 })
 
-addTocNumber(tocContent, '')
+
 
 </script>
