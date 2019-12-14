@@ -40,4 +40,11 @@
       <%- include('./_blocks/footer') %>
     </div>
   </body>
+  <script>
+    let headerHeight = document.querySelector('#id').clientHeight;
+    console.log(headerHeight);
+    window.addEventListener('scroll', function(e) {
+      console.log('scroll 1');
+    });
+  </script>
 </html>
