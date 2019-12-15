@@ -1,6 +1,6 @@
 <% let showToc = toc.length > 0;%>
 <div class="sidebar">
-  <div class="sidebar-wrapper" id="sidebar" style="opacity: 0">
+  <div class="sidebar-wrapper" id="sidebar">
     <% if (showToc) { %>
       <div class="post-list-sidebar">
         <div class="sidebar-title">
@@ -15,8 +15,8 @@
           <%- include('./toc', {toc: toc}) %>
         </div>
         <div class="post-side-meta">
-            <%- include('./site-meta') %>
-          </div>
+          <%- include('./site-meta') %>
+        </div>
       <% } else {%>
         <%- include('./site-meta') %>
       <% } %>
