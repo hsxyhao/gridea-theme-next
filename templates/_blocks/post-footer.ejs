@@ -1,0 +1,35 @@
+<div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      <%= themeConfig.siteName %>
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="<%= post.link %>" title="<%= post.title %>"><%= post.link %></a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外,转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    <% for(let i = 0; i < post.tags.length; i++) { %>
+      <a href="<%= post.tags[i].link %>"># <%= post.tags[i].name %></a>
+    <% } %>
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      <% if (post.prevPost) { %>
+        <i class="iconfont icon-angle_left"></i>
+        <a href="<%= post.prevPost.link %>"><%= post.prevPost.title %></a>
+      <% } %>
+    </div>
+    <div class="nav-next">
+      <% if (post.nextPost) { %>
+          <a href="<%= post.nextPost.link %>"><%= post.nextPost.title %></a>
+          <i class="iconfont icon-angle_right"></i>
+      <% } %>
+    </div>
+  </div>
+</div>

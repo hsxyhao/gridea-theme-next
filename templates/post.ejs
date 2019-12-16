@@ -17,22 +17,7 @@
               <div class="post-body next-mk-body" id="post_body">
                 <%- post.content %>
               </div>
-              <div class="post-footer">
-                <ul class="post-copyright">
-                  <li class="post-copyright-author">
-                    <strong>本文作者：</strong>
-                    <%= themeConfig.siteName %>
-                  </li>
-                  <li class="post-copyright-link">
-                    <strong>本文链接：</strong>
-                    <a href="<%= post.link %>" title="<%= post.title %>"><%= post.link %></a>
-                  </li>
-                  <li class="post-copyright-license">
-                    <strong>版权声明： </strong>
-                    本博客所有文章除特别声明外,转载请注明出处！
-                  </li>
-                </ul>
-              </div>
+              <%- include('./_blocks/post-footer') %>
               <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
                 <% if (commentSetting.commentPlatform === 'gitalk') { %>
                   <%- include('./_blocks/gitalk') %>
