@@ -27,7 +27,7 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 + 主题入场动画
 + 标签分权重展示
 + 关于我页面
-+ 自定markdown样式
++ 自定义markdown样式
 
 ### 联系
 QQ：806649821
