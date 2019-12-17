@@ -16,12 +16,13 @@
   z-index: 9999;
 }
 
-ul {
+.header ul {
   display: block;
+  padding: 0px;
   list-style-type: none;
 }
 
-li {
+.header li {
   list-style-type: none;
 }
 
@@ -68,6 +69,13 @@ li {
   transition: all .3s linear;
 }
 
+.nav-item {
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
 .nav-item-active a:after {
   content: " ";
   position: absolute;
@@ -89,16 +97,12 @@ li {
   display: block;
   font-size: 13px;
   line-height: inherit;
-  border-bottom: 1px solid #fff;
   position: relative;
   box-sizing: border-box;
   padding: 5px 20px;
   text-align: left;
   line-height: inherit;
-  transition-property: background-color;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  border: none;
 }
 
 .nav-item-active {
