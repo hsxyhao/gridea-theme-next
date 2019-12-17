@@ -4,7 +4,7 @@
 
 Next主题原本是Hexo平台上一款火爆的主题，该主题的主要设计风格就是简约，深受大众喜爱，当然我也很喜欢这款主题，最近自己在搭建静态博客，但是选择的是Gridea，目前来说还是一款小众平台提供的主题非常有限，翻了Gridea上所有的主题，还是比较喜欢NexT，最终决定还是自己开发并维护一套主题，方便自己也方便他人。
 
-![NexT主题预览](assets/images/preview.png)
+![NexT主题概览](assets/images/overview.png)
 
 
 ### 使用
@@ -39,7 +39,5 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 QQ：806649821
 VX：wh806649821 (备注next)
 
-### 截图
-![NexT主题截图](assets/images/overview.png)
 ### 最后
 对于一名后端开发来说写到这里着实不易，虽然技术栈、代码优化、用户体验这些都做的不是很好，但是会慢慢改进。
