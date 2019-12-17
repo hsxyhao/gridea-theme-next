@@ -7,8 +7,11 @@ Next主题原本是Hexo平台上一款火爆的主题，该主题的主要设计
 
 ![NexT主题预览](assets/images/preview.png)
 
+
 ### 使用
-先配置好[Gridea环境](https://gridea.dev/docs/)，配置教程请[移步这里](https://hsxyhao.github.io/post/gridea-setup/)
+
+先配置好[Gridea环境](https://gridea.dev/docs/)[v0.8.3以上](https://github.com/getgridea/gridea/releases)，配置教程请[移步这里](https://hsxyhao.github.io/post/gridea-setup/)
+
 ```java
 // gridea主题的目录可能不一样，真实路径为gridea后台的系统配置>源文件夹中的路径
 cd ~/Documents/Gridea/themes
