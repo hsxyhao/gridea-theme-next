@@ -67,6 +67,8 @@ document.addEventListener('scroll', function(e) {
   }
   if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
     current = hList.length - 1;
+  } else {
+    current--;
   }
   if (dir === 'down') {
     if (current > lastIndex) {
@@ -77,8 +79,6 @@ document.addEventListener('scroll', function(e) {
       lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
     }
   } else {
-    current--;
-    console.log(current)
     if (current < lastIndex) {
       addActiveClass(current);
       removeActiveClass(lastIndex);
@@ -118,8 +118,7 @@ function addActiveLiElemment(elem, parent) {
     addActiveLiElemment(elem.parentElement, parent);
   }
 }
-
-window.addEventListener('load', function() {
+document.body.onload = function () {
   if (tocWrapper) {
     postBody = document.querySelector('#post_body');
     for (let i = 0; i < postBody.children.length; i++) {
@@ -149,6 +148,9 @@ window.addEventListener('load', function() {
   }
   document.querySelector('#sidebar').style='display: block;';
   tocWrapper.classList.add('toc-active');
+}
+document.addEventListener('load', function() {
+  
 })
 
 

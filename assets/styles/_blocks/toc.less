@@ -8,6 +8,15 @@
   display: none;
 }
 
+.toc-wrapper {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.markdownIt-TOC ul {
+  display: none;
+}
+
 .toc-wrapper a {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -15,11 +24,6 @@
   transition-property: all;
   color: #666;
   border-bottom: 1px solid #ccc;
-}
-
-.toc-wrapper {
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
 }
 
 .toc-active {
