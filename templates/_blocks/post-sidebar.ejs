@@ -4,8 +4,8 @@
     <% if (showToc) { %>
       <div class="post-list-sidebar">
         <div class="sidebar-title">
-          <span class="sidebar-title-item sidebar-title-active">文章目录</span>
-          <span class="sidebar-title-item">站点概览</span>
+          <span id="tocSideBar" class="sidebar-title-item ">文章目录</span>
+          <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
         </div>
       </div>
     <% } %>
@@ -24,7 +24,22 @@
   </div>
 </div>
 <script>
-  let sidebar = document.querySelector('#sidebar');
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar');
+
+  const SIDEBAR_ACTIVE = 'sidebar-title-active';
+
+  tocSideBar.addEventListener('click', function() {
+    metaSideBar.classList.remove(SIDEBAR_ACTIVE);
+    this.classList.add(SIDEBAR_ACTIVE);
+  });
+
+  metaSideBar.addEventListener('click', function() {
+    tocSideBar.classList.remove(SIDEBAR_ACTIVE);
+    this.classList.add(SIDEBAR_ACTIVE);
+  });
+
   let limitTop = sidebar.offsetTop;
   let hasFix = false;
   window.addEventListener('scroll', function(e) {
