@@ -37,6 +37,9 @@ function addTocNumber(elem, deep) {
 
 
 document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
   let scrollTop = document.body.scrollTop;
   let dir;
 
@@ -50,36 +53,40 @@ document.addEventListener('scroll', function(e) {
   if (scrollTop <= 0) {
     if (lastIndex >= 0 && lastIndex < hList.length) {
       lList[lastIndex].classList.remove(activeClass);
-      lastIndex = -1;
     }
     return;
   }
 
-  let current = 0;
+  let current = 0, hasFind = false;
   for (let i = 0; i < hList.length; i++) {
     if (hList[i].offsetTop > scrollTop) {
       current = i;
+      hasFind = true;
       break;
     }
   }
-  current--;
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex) 
-        lastIndex = current;
-        removeParentActiveClass();
-        addActiveLiElemment(lList[current].parentElement,tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-      }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
     }
+  } else {
+    current--;
+    console.log(current)
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
 });
 
 function removeParentActiveClass() {
@@ -128,15 +135,17 @@ window.addEventListener('load', function() {
       tocContent.classList.add('expanded');
     }
 
-    if ("createEvent" in document) {
-      let evt = document.createEvent("HTMLEvents");
-      evt.initEvent("scroll", false, true);
-      document.dispatchEvent(evt);
-    }
-    else {
-      document.fireEvent("scroll");
-    }
     addTocNumber(tocContent, '');
+    setTimeout(function() {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
   }
   document.querySelector('#sidebar').style='display: block;';
   tocWrapper.classList.add('toc-active');
