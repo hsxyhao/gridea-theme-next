@@ -24,7 +24,7 @@ const Element_Class = {
   navItem: '.nav-item',
   post: '.post',
   tagYear: '.tag-year',
-  tagNode: '.tag-node',
+  tagNode: '.tag-archive-node',
   tagPostNode: '.tag-post-node',
   cloudTags: '.cloud-tag'
 }
