@@ -8,7 +8,7 @@
           <div class="line line-bottom"></div>
         </div>
       </div>
-      <div class="site-title slide-in">
+      <div class="site-title">
         <a href="/" class="brand">
           <span><%= themeConfig.siteName %></span>
         </a>
@@ -78,15 +78,10 @@
   let navToggle = document.querySelector('#nav_toggle'),
   siteNav = document.querySelector('#site_nav');
   
-  function initEvent() {
-    navToggle.addEventListener('click',navClick);
-  }
-
   function navClick() {
     navToggle.classList.toggle('nav-toggle-active');
     siteNav.classList.toggle('nav-menu-active');
   }
 
-  window.addEventListener("load", initEvent);
-  
+  navToggle.addEventListener('click',navClick);  
 </script>

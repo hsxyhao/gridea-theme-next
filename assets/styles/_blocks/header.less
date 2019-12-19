@@ -48,12 +48,20 @@
 }
 
 .brand {
-  position: relative;
   display: inline-block;
   padding: 0 40px;
   color: #fff;
   background: #222;
   border-bottom: none;
+  position: relative;
+  top: -10px;
+  opacity: 0;
+}
+
+.subtitle {
+  position: relative;
+  top: -10px;
+  opacity: 0;
 }
 
 .sub-title {
@@ -70,10 +78,7 @@
 }
 
 .nav-item {
-  transition-property: background;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  opacity: 0;
 }
 
 .nav-item-active a:after {
