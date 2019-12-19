@@ -10,12 +10,14 @@
       <% for(let j = 0; j < site.posts[i].tags.length; j++) {%>
         <% if (tag.slug === site.posts[i].tags[j].slug) {%>
           <a href="<%= site.posts[i].link %>">
-            <article>
-              <h1 class="tag-post-node">
-                <%= site.posts[i].dateFormat.substring(5)%>
-                <small><%= site.posts[i].title%></small>
-              </h1>
-            </article>  
+            <div class="motion-warpper">
+              <div class="tag-post-node">
+                <h1>
+                  <%= site.posts[i].dateFormat.substring(5)%>
+                  <small><%= site.posts[i].title%></small>
+                </h1>
+              </div>  
+            </div>
           </a>
         <% }%>
       <% }%>
