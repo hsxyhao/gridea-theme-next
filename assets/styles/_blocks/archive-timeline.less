@@ -69,15 +69,18 @@
 }
 
 .archive-timeline-box .tag-node {
-  position: relative;
   margin: 30px 0;
-  position: relative;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: border;
   border-bottom: 1px dashed #ccc;
   cursor: pointer;
+}
+
+.motion-warpper {
+  position: relative;
+  z-index: 1000;
 }
 
 .tag-year {
@@ -119,10 +122,10 @@
 }
 
 .archive-timeline-box .tag-node:hover {
-  border-bottom-color: #666;
+  border-bottom-color: #222;
 }
 .archive-timeline-box .tag-node:hover::before {
-  background: #666;
+  background: #222;
 }
 
 @media (max-width: 767px) {

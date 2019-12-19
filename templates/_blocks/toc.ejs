@@ -118,7 +118,8 @@ function addActiveLiElemment(elem, parent) {
     addActiveLiElemment(elem.parentElement, parent);
   }
 }
-document.body.onload = function () {
+
+function showToc() {
   if (tocWrapper) {
     postBody = document.querySelector('#post_body');
     for (let i = 0; i < postBody.children.length; i++) {
@@ -133,21 +134,24 @@ document.body.onload = function () {
     } else {
       tocContent.classList.add('expanded');
     }
-
-    addTocNumber(tocContent, '');
-    setTimeout(function() {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
   }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
   document.querySelector('#sidebar').style='display: block;';
   tocWrapper.classList.add('toc-active');
-}
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
 
 </script>

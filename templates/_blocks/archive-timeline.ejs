@@ -11,17 +11,19 @@
     <% let key = posts[i].dateFormat.substring(0, 4) %>
     <% if (lastTime !== key) { %>
       <div class="node-title">
-          <h2 class="tag-year"><%= key %></h2>
-      </div>  
+        <h2 class="tag-year"><%= key %></h2>
+      </div>    
       <% lastTime = key %>
     <% } %>
     <a href="<%= posts[i].link %>">
-      <article class="tag-node">
-        <h1 class="tag-archive-node">
-          <%= posts[i].dateFormat.substring(5)%>
-          <small><%= posts[i].title%></small>
-        </h1>
-      </article>  
+      <div class="motion-warpper tag-archive-node">
+        <div class="tag-node">
+          <h1>
+            <%= posts[i].dateFormat.substring(5)%>
+            <small><%= posts[i].title%></small>
+          </h1>
+        </div>  
+    </div>
     </a>
   <% }%>
 </div>
