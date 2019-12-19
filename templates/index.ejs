@@ -12,7 +12,7 @@
         <div class="section-layout-wrapper">
           <%- include('./_blocks/home-sidebar') %>
           <div class="section-box">
-            <section class="section posts-expand">
+            <section class="section posts-expand slide-down-in">
               <%- include('./_blocks/post-list') %>
               <%- include('./_blocks/pagination', { logs: site.posts.length, pageSize: themeConfig.postPageSize, url: '/page/', index: 4}) %>
             </section>
@@ -22,4 +22,5 @@
       <%- include('./_blocks/footer') %>
     </div>
   </body>
+  <script src="/media/js/motion.js"></script>
 </html>

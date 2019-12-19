@@ -12,7 +12,7 @@
         <div class="section-layout-wrapper">
           <%- include('./_blocks/post-sidebar', {toc: post.toc}) %>
           <div class="section-box">
-            <div class="section">
+            <div class="section post">
               <%- include('./_blocks/article') %>
               <div class="post-body next-md-body" id="post_body">
                 <%- post.content %>
@@ -33,4 +33,5 @@
       <%- include('./_blocks/footer') %>
     </div>
   </body>
+  <script src="/media/js/motion.js"></script>
 </html>

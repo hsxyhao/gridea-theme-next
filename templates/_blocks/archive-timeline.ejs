@@ -11,7 +11,7 @@
     <% let key = posts[i].dateFormat.substring(0, 4) %>
     <% if (lastTime !== key) { %>
       <div class="node-title">
-          <h2><%= key %></h2>
+          <h2 class="tag-year"><%= key %></h2>
       </div>  
       <% lastTime = key %>
     <% } %>

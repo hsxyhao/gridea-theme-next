@@ -11,10 +11,10 @@
     <% } %>
     <div class="post-sidebar-body">
       <% if (showToc) { %>
-        <div class="post-toc">
+        <div class="post-toc" id="post_toc">
           <%- include('./toc', {toc: toc}) %>
         </div>
-        <div class="post-side-meta">
+        <div class="post-side-meta" id="post_side_meta">
           <%- include('./site-meta') %>
         </div>
       <% } else {%>
@@ -24,20 +24,31 @@
   </div>
 </div>
 <script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
   let sidebar = document.querySelector('#sidebar'),
   tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar');
-
-  const SIDEBAR_ACTIVE = 'sidebar-title-active';
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta');
 
   tocSideBar.addEventListener('click', function() {
-    metaSideBar.classList.remove(SIDEBAR_ACTIVE);
-    this.classList.add(SIDEBAR_ACTIVE);
+    metaSideBar.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    this.classList.add(SIDEBAR_TITLE_ACTIVE);
+    postToc.classList.add(SLIDE_UP_IN);
+    postToc.style = 'opacity: 1; transform: translateY(0px);';
+  });
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
   });
 
   metaSideBar.addEventListener('click', function() {
-    tocSideBar.classList.remove(SIDEBAR_ACTIVE);
-    this.classList.add(SIDEBAR_ACTIVE);
+    tocSideBar.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    this.classList.add(SIDEBAR_TITLE_ACTIVE);
+    postSiteMeta.classList.add(SIDEBAR_BODY_ACTIVE);
+    postToc.classList.remove(SIDEBAR_BODY_ACTIVE);
   });
 
   let limitTop = sidebar.offsetTop;
