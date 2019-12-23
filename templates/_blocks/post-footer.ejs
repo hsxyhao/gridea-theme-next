@@ -22,13 +22,15 @@
     <div class="nav-prev">
       <% if (post.prevPost) { %>
         <i class="iconfont icon-angle_left"></i>
-        <a href="<%= post.prevPost.link %>"><%= post.prevPost.title %></a>
+        <a class="nav-pc-next" href="<%= post.prevPost.link %>"><%= post.prevPost.title %></a class="nav-pc-next">
+        <a class="nav-mobile-prev" href="<%= post.prevPost.link %>">上一篇</a>
       <% } %>
     </div>
     <div class="nav-next">
       <% if (post.nextPost) { %>
-          <a href="<%= post.nextPost.link %>"><%= post.nextPost.title %></a>
-          <i class="iconfont icon-angle_right"></i>
+        <a class="nav-pc-next" href="<%= post.nextPost.link %>"><%= post.nextPost.title %></a>
+        <a class="nav-mobile-next" href="<%= post.nextPost.link %>">下一篇</a>
+        <i class="iconfont icon-angle_right"></i>
       <% } %>
     </div>
   </div>

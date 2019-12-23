@@ -57,3 +57,22 @@
   font-weight: bold;
   color: black;
 }
+
+.nav-mobile-next, .nav-mobile-prev {
+  display: none;
+}
+
+.nav-pc-next, .nav-pc-prev {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+
+  .nav-pc-next, .nav-pc-prev {
+    display: none;
+  }
+
+  .nav-mobile-next, .nav-mobile-prev {
+    display: inline-block;
+  }
+}
