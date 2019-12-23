@@ -1,54 +1,82 @@
 <% let showToc = toc.length > 0;%>
 <div class="sidebar">
-  <div class="sidebar-wrapper" id="sidebar">
-    <% if (showToc) { %>
-      <div class="post-list-sidebar">
-        <div class="sidebar-title">
-          <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
-          <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
-        </div>
-      </div>
-    <% } %>
-    <div class="post-sidebar-body">
+    <div class="sidebar-wrapper" id="sidebar">
       <% if (showToc) { %>
-        <div class="post-toc" id="post_toc">
-          <%- include('./toc', {toc: toc}) %>
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
         </div>
-        <div class="post-side-meta" id="post_side_meta">
-          <%- include('./site-meta') %>
-        </div>
-      <% } else {%>
-        <%- include('./site-meta') %>
       <% } %>
+      <div class="sidebar-body" id="sidebar_body">
+        <% if (showToc) { %>
+          <div class="post-side-meta" id="post_side_meta">
+            <%- include('./site-meta') %>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <%- include('./toc', {toc: toc}) %>
+          </div>
+        <% } else {%>
+          <%- include('./site-meta') %>
+        <% } %>
+      </div>
     </div>
-  </div>
 </div>
 <script>
   const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
   const SLIDE_UP_IN = 'slide-up-in';
 
   let sidebar = document.querySelector('#sidebar'),
   tocSideBar = document.querySelector('#tocSideBar'),
   metaSideBar = document.querySelector('#metaSideBar'),
   postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta');
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
 
-  tocSideBar.addEventListener('click', function() {
-    metaSideBar.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    this.classList.add(SIDEBAR_TITLE_ACTIVE);
-    postToc.classList.add(SLIDE_UP_IN);
-    postToc.style = 'opacity: 1; transform: translateY(0px);';
+  tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
   });
+
+  metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+
+  }
 
   postToc.addEventListener('transitionend', function() {
     this.classList.remove(SLIDE_UP_IN);
-  });
-
-  metaSideBar.addEventListener('click', function() {
-    tocSideBar.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    this.classList.add(SIDEBAR_TITLE_ACTIVE);
-    postSiteMeta.classList.add(SIDEBAR_BODY_ACTIVE);
-    postToc.classList.remove(SIDEBAR_BODY_ACTIVE);
   });
 
   let limitTop = sidebar.offsetTop;
