@@ -5,14 +5,14 @@
     </a>
   </h1>
   <div class="post-meta">
-    <span class="meta-item">
+    <span class="meta-item pc-show">
       <i class="iconfont icon-calendar_empty"></i>
-      <span class="pc-show">发布于</span>
+      <span>发布于</span>
       <span><%= dateFormat %></span>
     </span>
     <%if (tags && tags.length > 0) { %>
       <span class="meta-item">
-        <span class="post-meta-divider">|</span>
+        <span class="post-meta-divider pc-show">|</span>
         <i class="iconfont icon-folder_open_alt"></i>
         <span class="pc-show">分类于</span>
         <% for(let i = 0; i < tags.length; i ++) { %>
@@ -36,7 +36,7 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="iconfont icon-keyboard"></i>
-      <span class="pc-show"><%= stats.words %>字数</span>
+      <span><%= stats.words %><span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
