@@ -17,7 +17,7 @@
       <p class="subtitle">Quick notes</p>
     </div>
     <nav class="site-nav" id="site_nav">
-      <ul>
+      <ul id="nav_ul">
         <% menus.forEach(function(menu) { %>
           <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
             <% if (menu.openType === 'External') { %>
