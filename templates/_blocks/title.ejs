@@ -6,14 +6,14 @@
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
-      <i class="iconfont icon-calendar_empty"></i>
+      <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
       <span><%= dateFormat %></span>
     </span>
     <%if (tags && tags.length > 0) { %>
       <span class="meta-item">
         <span class="post-meta-divider pc-show">|</span>
-        <i class="iconfont icon-folder_open_alt"></i>
+        <i class="fa fa-folder-o"></i>
         <span class="pc-show">分类于</span>
         <% for(let i = 0; i < tags.length; i ++) { %>
           <%if (i === tags.length - 1) { %>
@@ -30,12 +30,12 @@
     <% } %>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
-      <i class="iconfont icon-time"></i>
+      <i class="fa fa-clock-o"></i>
       <span><%= stats.minutes %>分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
-      <i class="iconfont icon-keyboard"></i>
+      <i class="fa fa-file-word-o"></i>
       <span><%= stats.words %><span class="pc-show">字数</span></span>
     </span>
   </div>

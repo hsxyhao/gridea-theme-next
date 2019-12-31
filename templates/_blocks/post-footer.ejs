@@ -21,7 +21,7 @@
   <div class="nav">
     <div class="nav-prev">
       <% if (post.prevPost) { %>
-        <i class="iconfont icon-angle_left"></i>
+        <i class="fa fa-angle-left"></i>
         <a class="nav-pc-next" href="<%= post.prevPost.link %>"><%= post.prevPost.title %></a class="nav-pc-next">
         <a class="nav-mobile-prev" href="<%= post.prevPost.link %>">上一篇</a>
       <% } %>
@@ -30,7 +30,7 @@
       <% if (post.nextPost) { %>
         <a class="nav-pc-next" href="<%= post.nextPost.link %>"><%= post.nextPost.title %></a>
         <a class="nav-mobile-next" href="<%= post.nextPost.link %>">下一篇</a>
-        <i class="iconfont icon-angle_right"></i>
+        <i class="fa fa-angle-right"></i>
       <% } %>
     </div>
   </div>

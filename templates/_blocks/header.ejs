@@ -1,4 +1,4 @@
-<% let map = new Map(); map.set('/','home'); map.set('/archives', 'archive'); map.set('/tags','tags');map.set('/post/about','info_sign'); %>
+<% let map = new Map(); map.set('/','home'); map.set('/archives', 'archive'); map.set('/tags','tags');map.set('/post/about','info-circle'); %>
 <header class="header">
   <div class="blog-header" id="header">
     <div class="site-meta">
@@ -22,18 +22,18 @@
           <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
             <% if (menu.openType === 'External') { %>
               <a href="<%= menu.link %>" target="_blank">
-                <i class="iconfont icon-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
+                <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
               </a>
             <% } else { %>
               <a href="<%= menu.link %>">
-                <i class="iconfont icon-<%= map.get(menu.link)%>"></i> <%= menu.name %>
+                <i class="fa fa-<%= map.get(menu.link)%>"></i> <%= menu.name %>
               </a>
             <% } %>
           </li>
         <% }); %>
         <li class="nav-item">
           <a>
-            <i class="iconfont icon-search"></i> 搜索
+            <i class="fa fa-search"></i> 搜索
           </a>
         </li>
       </ul>
