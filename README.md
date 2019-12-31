@@ -10,7 +10,7 @@ Next主题原本是Hexo平台上一款火爆的主题，该主题的主要设计
 ### 使用
 
 先配置好[Gridea环境](https://gridea.dev/docs/)([v0.8.3以上](https://github.com/getgridea/gridea/releases))，配置教程请[移步这里](https://hsxyhao.github.io/post/gridea-setup/)
-
+1. mac/linux系统
 ```java
 // gridea主题的目录可能不一样，真实路径为gridea后台的系统配置>源文件夹中的路径
 cd ~/Documents/Gridea/themes
@@ -19,6 +19,8 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 ```
 下载好之后，进入后台的主题配置里配置一下就行了
 
+2. window系统
+> 将下载好的主题包拷贝进gridea的主题目录
 ### 已更新内容
 
 - [x] 首页
