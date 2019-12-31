@@ -1,3 +1,4 @@
+<% let map = new Map(); map.set('/','home'); map.set('/archives', 'archive'); map.set('/tags','tags');map.set('/post/about','info_sign'); %>
 <header class="header">
   <div class="blog-header" id="header">
     <div class="site-meta">
@@ -17,51 +18,19 @@
     </div>
     <nav class="site-nav" id="site_nav">
       <ul>
-        <li class="nav-item <%= active&&menu === 'home' ?'nav-item-active':'' %>">
-          <% menus.forEach(function(menu) { %>
-            <% if (menu.name === '首页') { %>
-              <% if (menu.openType === 'External') { %>
-                <a href="<%= menu.link %>" target="_blank">
-                  <i class="iconfont icon-home"></i> 首页
-                </a>
-              <% } else { %>
-                <a href="<%= menu.link %>">
-                  <i class="iconfont icon-home"></i> 首页
-                </a>
-              <% } %>
+        <% menus.forEach(function(menu) { %>
+          <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
+            <% if (menu.openType === 'External') { %>
+              <a href="<%= menu.link %>" target="_blank">
+                <i class="iconfont icon-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
+              </a>
+            <% } else { %>
+              <a href="<%= menu.link %>">
+                <i class="iconfont icon-<%= map.get(menu.link)%>"></i> <%= menu.name %>
+              </a>
             <% } %>
-          <% }); %>
-        </li>
-        <li class="nav-item <%= active&&menu === 'archives' ?'nav-item-active':'' %>">
-          <% menus.forEach(function(menu) { %>
-            <% if (menu.name === '归档') { %>
-              <% if (menu.openType === 'External') { %>
-                <a href="<%= menu.link %>" target="_blank">
-                  <i class="iconfont icon-archive"></i> 归档
-                </a>
-              <% } else { %>
-                <a href="<%= menu.link %>">
-                  <i class="iconfont icon-archive"></i> 归档
-                </a>
-              <% } %>
-            <% } %>
-          <% }); %>
-        </li>
-        <li class="nav-item <%= active&&menu === 'tags' ?'nav-item-active':'' %>">
-          <% menus.forEach(function(menu) { %>
-            <% if (menu.name === '标签') { %>
-              <% if (menu.openType === 'External') { %>
-                <a href="<%= menu.link %>" target="_blank">
-                  <i class="iconfont icon-tags"></i> 标签
-                </a>
-              <% } else { %>
-                <a href="<%= menu.link %>">
-                  <i class="iconfont icon-tags"></i> 标签
-                </a>
-              <% } %>
-            <% } %>
-          <% }); %>
-        </li>
+          </li>
+        <% }); %>
         <li class="nav-item">
           <a>
             <i class="iconfont icon-search"></i> 搜索
