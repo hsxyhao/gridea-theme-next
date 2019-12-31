@@ -56,13 +56,10 @@
     back2TopText.textContent = Math.floor(percent);
   });
 
-  window.addEventListener('load', function(e){
-    let sideBar = document.querySelector('#sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    let top = navUl.children.length * 42 + 162;
-    sideBar.style = 'margin-top:' + top + 'px; visibility: visible;';
-  })
-
+  // 动态调整站点概览高度
+  let sideBar = document.querySelector('.sidebar');
+  let navUl = document.querySelector('#nav_ul');
+  sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px; opacity: 1;';
   // 代码高亮
   hljs.initHighlightingOnLoad();
 </script>
