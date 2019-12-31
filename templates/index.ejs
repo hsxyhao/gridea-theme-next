@@ -14,7 +14,8 @@
           <div class="section-box">
             <section class="section posts-expand slide-down-in">
               <%- include('./_blocks/post-list') %>
-              <%- include('./_blocks/pagination', { logs: site.posts.length, pageSize: themeConfig.postPageSize, url: '/page/', index: 4}) %>
+              <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
+              <%- include('./_blocks/pagination', { logs: articles, pageSize: themeConfig.postPageSize, url: '/page/', index: 4}) %>
             </section>
           </div>
         </div>
