@@ -7,8 +7,9 @@
   <div class="sidebar-item side-item-stat">
     <div class="sidebar-item-box">
       <a href="/archives/">
-        <span class="site-item-stat-count"><%= site.posts.length %></span>
-        <span class="site-item-stat-name">日志</span>
+        <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
+        <span class="site-item-stat-count"><%= articles %></span>
+        <span class="site-item-stat-name">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
