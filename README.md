@@ -2,7 +2,7 @@
   Gridea NexT Theme
 </h1>
 
-Next主题原本是Hexo平台上一款火爆的主题，该主题的主要设计风格就是简约，深受大众喜爱，当然我也很喜欢这款主题，最近自己在搭建静态博客，但是选择的是Gridea，目前来说还是一款小众平台提供的主题非常有限，翻了Gridea上所有的主题，还是比较喜欢NexT，最终决定还是自己开发并维护一套主题，方便自己也方便他人。
+Next主题原本是Hexo平台上一款火爆的主题，该主题的主要设计风格就是简约，深受大众喜爱，当然我也很喜欢这款主题，最近自己在搭建静态博客，但是选择的是Gridea，目前来说还是一款小众平台提供的主题非常有限，翻了Gridea上所有的主题，还是比较喜欢NexT，最终决定还是自己开发并维护一套主题，方便自己也方便他人，如果想了解更多关于gridea-theme-next的信息[请移步这里](https://hsxyhao.github.io/post/shuo-yi-xia-next-zhu-ti/)。
 
 ![NexT主题概览](assets/images/overview.png)
 
@@ -32,6 +32,7 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 - [x] 标签分权重展示
 - [x] 添加博客阅读页页脚
 - [x] 自定义markdown样式
+- [x] 支持KaTex数学公式
 
 ### 后续版本更新
 - [ ] 站内搜索
