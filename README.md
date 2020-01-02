@@ -23,11 +23,7 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 > 将下载好的主题包拷贝进gridea的主题目录
 ### 已更新内容
 
-- [x] 首页
-- [x] 归档
-- [x] 标签
-- [x] 分页
-- [x] 目录
+- [x] 首页、归档、标签、分页、目录
 - [x] 主题入场动画
 - [x] 标签分权重展示
 - [x] 添加博客阅读页页脚
@@ -36,7 +32,7 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 
 ### 后续版本更新
 - [ ] 站内搜索
-- [ ] 关于我页面
+- [ ] 主题自定义配置
 
 站内搜索功能需要等到Gridea支持插件版本才可以实现
 
