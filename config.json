@@ -1,16 +1,24 @@
 {
-  "name": "Next",
+  "name": "next",
   "version": "0.0.1",
-  "author": "EryouHao",
+  "author": "hsxyhao",
   "repository": "https://github.com/hsxyhao/gridea-theme-next",
   "customConfig": [
     {
-      "name": "contentMaxWidth",
-      "label": "内容区最大宽度",
+      "name": "viewportWidth",
+      "label": "博客内容区宽度",
       "group": "布局",
-      "value": "800px",
+      "value": "960px",
       "type": "input",
-      "note": "可填像素类型（如：320px）或百分比类型（如：38.2%）"
+      "note": "只能设置数字"
+    },
+    {
+      "name": "articleWidth",
+      "label": "文章内容区宽度",
+      "group": "布局",
+      "value": "700",
+      "type": "input",
+      "note": "只能设置数字"
     },
     {
       "name": "textSize",
@@ -41,24 +49,6 @@
         }
       ],
       "note": "包含标题及日期、标签等信息部分"
-    },
-    {
-      "name": "siteFont",
-      "label": "网站字体",
-      "group": "布局",
-      "value": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif",
-      "type": "select",
-      "options": [
-        {
-          "label": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif",
-          "value": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif"
-        },
-        {
-          "label": "Georgia, serif",
-          "value": "Georgia, serif"
-        }
-      ],
-      "note": ""
     },
     {
       "name": "openPostToc",
@@ -116,7 +106,25 @@
     {
       "name": "github",
       "label": "Github",
+      "icon": "github-alt",
       "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "juejin",
+      "label": "掘金",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "jianshu",
+      "label": "简书",
+      "group": "社交",
+      "icon": "book",
       "value": "",
       "type": "input",
       "note": "链接地址"
@@ -125,33 +133,28 @@
       "name": "twitter",
       "label": "Twitter",
       "group": "社交",
+      "icon": "book",
       "value": "",
       "type": "input",
       "note": "链接地址"
     },
     {
-      "name": "weibo",
-      "label": "微博",
+      "name": "wechat",
+      "label": "微信",
+      "icon": "weixin",
       "group": "社交",
       "value": "",
-      "type": "input",
-      "note": "链接地址"
+      "type": "picture-upload",
+      "note": "账号"
     },
     {
-      "name": "zhihu",
-      "label": "知乎",
+      "name": "qq",
+      "label": "QQ",
+      "icon": "qq",
       "group": "社交",
       "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "facebook",
-      "label": "Facebook",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
+      "type": "picture-upload",
+      "note": "账号"
     },
     {
       "name": "customCss",
