@@ -5,6 +5,52 @@
   "repository": "https://github.com/hsxyhao/gridea-theme-next",
   "customConfig": [
     {
+      "name": "scheme",
+      "label": "外观",
+      "group": "布局",
+      "value": "Pisces",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Pisces 小家碧玉似的清新",
+          "value": "Pisces"
+        },
+        {
+          "label": "Muse 黑白主调，大量留白",
+          "value": "Muse"
+        },
+        {
+          "label": "Mist 整洁有序的单栏外观",
+          "value": "Mist"
+        }
+      ]
+    },
+    {
+      "name": "字体",
+      "label": "font",
+      "group": "布局",
+      "value": "test1",
+      "type": "select",
+      "options": [
+        {
+          "label": "test1",
+          "value": "test1"
+        },
+        {
+          "label": "test2",
+          "value": "test2"
+        }
+      ],
+      "note": "NexT主题支持五种高亮主题"
+    },
+    {
+      "name": "subTitle",
+      "label": "子标题",
+      "group": "布局",
+      "value": "精于心，简于形",
+      "type": "input"
+    },
+    {
       "name": "viewportWidth",
       "label": "博客内容区宽度",
       "group": "布局",
@@ -29,34 +75,107 @@
       "note": "px 或 rem（如 16px 或 1rem）"
     },
     {
-      "name": "titleAlign",
-      "label": "标题对齐",
-      "group": "布局",
-      "value": "center",
-      "type": "radio",
-      "options": [
-        {
-          "label": "居中对齐",
-          "value": "center"
-        },
-        {
-          "label": "左对齐",
-          "value": "left"
-        },
-        {
-          "label": "右对齐",
-          "value": "right"
-        }
-      ],
-      "note": "包含标题及日期、标签等信息部分"
-    },
-    {
       "name": "openPostToc",
       "label": "是否显示文章目录",
-      "group": "布局",
+      "group": "特性",
       "value": true,
       "type": "switch",
       "note": "仅在宽屏时生效"
+    },
+    {
+      "name": "updateTip",
+      "label": "是否开启更新提示",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "默认不开启更新提示，但是建议开启"
+    },
+    {
+      "name": "autoNumber",
+      "label": "是否自动为目录增加序号",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "仅在有目录时生效"
+    },
+    {
+      "name": "rss",
+      "label": "是否启动RSS",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "建议开启RSS"
+    },
+    {
+      "name": "nightMode",
+      "label": "夜间模式",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "夜间模式默认不开启"
+    },
+    {
+      "name": "enableReward",
+      "label": "是否开启打赏功能",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "打赏功能默认不开启"
+    },
+    {
+      "name": "themeCompatible",
+      "label": "主题封面兼容模式",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "Hexo NexT不支持显示文章封面，为了兼容其他主题建议开启"
+    },
+    {
+      "name": "socialMenu",
+      "label": "侧边栏社交链接",
+      "group": "特性",
+      "value": "left",
+      "type": "radio",
+      "options": [
+        {
+          "label": "左边",
+          "value": "left"
+        },
+        {
+          "label": "右边",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "name": "highlight",
+      "label": "代码高亮",
+      "group": "特性",
+      "value": "normal",
+      "type": "select",
+      "options": [
+        {
+          "label": "c",
+          "value": "normal"
+        },
+        {
+          "label": "night",
+          "value": "night"
+        },
+        {
+          "label": "night blue",
+          "value": "night blue"
+        },
+        {
+          "label": "night bright",
+          "value": "night bright"
+        },
+        {
+          "label": "night eighties",
+          "value": "night eighties"
+        }
+      ],
+      "note": "NexT主题支持五种高亮主题"
     },
     {
       "name": "contentBgColor",
@@ -157,20 +276,31 @@
       "note": "账号"
     },
     {
-      "name": "customCss",
-      "label": "自定义CSS",
-      "group": "自定义样式",
-      "value": "",
-      "type": "textarea",
+      "name": "friends",
+      "label": "友链",
+      "group": "友链",
+      "type": "array",
+      "value": [
+      {
+          "siteName": "海岛心hey",
+          "siteLink": "https://fehey.com",
+          "siteLogo": "",
+          "description": "一个前端，Gridea 作者"
+      },
+      {
+          "siteName": "Gridea 官网",
+          "siteLink": "https://gridea.dev",
+          "siteLogo": "",
+          "description": "一个静态博客写作客户端"
+      }
+      ], 
+      "arrayItems": [
+          { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+          { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+          { "label": "Logo", "name": "siteLogo", "type": "picture-upload", "value": "" },
+          { "label": "描述", "name": "description", "type": "textarea", "value": "" }
+      ], 
       "note": ""
-    },
-    {
-      "name": "ga",
-      "label": "跟踪 ID",
-      "group": "谷歌统计",
-      "value": "",
-      "type": "input",
-      "note": "UA-xxxxxxxxx-x"
     }
   ]
 }
