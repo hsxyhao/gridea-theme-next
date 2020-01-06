@@ -32,6 +32,8 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 ### 后续版本更新
 - [ ] 站内搜索
 - [ ] 主题自定义配置
+- [ ] 友情链接
+- [ ] 社交账号
 
 站内搜索功能需要等到Gridea支持插件版本才可以实现
 
