@@ -39,7 +39,7 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 - [ ] 打赏功能
 - [ ] 主题兼容模式
 - [ ] 添加国内外主流社交账号
-> 下次更新时间周期比较长，建议release一下，敬请期待，开源让生命变得更多彩。
+> 下次更新时间周期比较长，建议watch一下，敬请期待，开源让生命变得更多彩。
 
 站内搜索功能需要等到Gridea支持插件版本才可以实现
 
