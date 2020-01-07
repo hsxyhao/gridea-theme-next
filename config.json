@@ -123,12 +123,42 @@
       "note": "打赏功能默认不开启"
     },
     {
-      "name": "themeCompatible",
-      "label": "主题封面兼容模式",
-      "group": "特性",
-      "value": true,
+      "name": "enableThemeCompatible",
+      "label": "是否开启主题封面兼容模式",
+      "group": "兼容",
+      "value": false,
       "type": "switch",
       "note": "Hexo NexT不支持显示文章封面，为了兼容其他主题建议开启"
+    },
+    {
+      "name": "strategy",
+      "label": "自动添加封面策略",
+      "group": "兼容",
+      "value": "first",
+      "type": "select",
+      "options": [
+        {
+          "label": "第1段落后",
+          "value": "first"
+        },
+        {
+          "label": "摘要前",
+          "value": "before"
+        },
+        {
+          "label": "摘要后",
+          "value": "after"
+        },
+        {
+          "label": "随机",
+          "value": "random"
+        },
+        {
+          "label": "两百字以后",
+          "value": "words"
+        }
+      ],
+      "note": "多种策略适配不同种摘要排版，总有一款适合你"
     },
     {
       "name": "socialMenu",
