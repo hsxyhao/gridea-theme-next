@@ -1,5 +1,5 @@
 <div class="toc-box">
-  <div class="toc-wrapper <%= site.customConfig.autoNumber?'auto-number':'' %>" id="toc_wrapper">
+  <div class="toc-wrapper <%= site.customConfig.autoNumber?'auto-number':'' %> <%= site.customConfig.tocCompress%>" id="toc_wrapper">
     <%- toc %>
   </div>
 </div>
@@ -130,12 +130,17 @@ function showToc() {
         hList.push(postBody.children[i]);
       }
     }
-
-    if (hList.length > 10) {
-      active = 'active-hidden'
-      tocContent.classList.add('closed');
-    } else {
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
       tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
     }
   }
 }
