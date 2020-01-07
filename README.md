@@ -34,7 +34,6 @@ git clone https://github.com/hsxyhao/gridea-theme-next
 - [ ] 自定义布局
 - [ ] hexo-next多种scheme开发
 - [ ] 友情链接
-- [ ] 社交账号
 - [ ] 夜间模式
 - [ ] 打赏功能
 - [ ] 主题兼容模式
