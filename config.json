@@ -75,14 +75,6 @@
       "note": "px 或 rem（如 16px 或 1rem）"
     },
     {
-      "name": "openPostToc",
-      "label": "是否显示文章目录",
-      "group": "特性",
-      "value": true,
-      "type": "switch",
-      "note": "仅在宽屏时生效"
-    },
-    {
       "name": "updateTip",
       "label": "是否开启更新提示",
       "group": "特性",
@@ -91,12 +83,41 @@
       "note": "默认不开启更新提示，但是建议开启"
     },
     {
+      "name": "openPostToc",
+      "label": "是否显示文章目录",
+      "group": "目录",
+      "value": true,
+      "type": "switch",
+      "note": "仅在宽屏时生效"
+    },
+    {
       "name": "autoNumber",
       "label": "是否自动为目录增加序号",
-      "group": "特性",
+      "group": "目录",
       "value": true,
       "type": "switch",
       "note": "仅在有目录时生效"
+    },
+    {
+      "name": "tocCompress",
+      "label": "是否启用目录压缩功能",
+      "group": "目录",
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "自动压缩",
+          "value": "auto"
+        },
+        {
+          "label": "不启动压缩",
+          "value": "no_compress"
+        },
+        {
+          "label": "启动压缩",
+          "value": "compress"
+        }],
+        "note": "超过10个链接则启动压缩，建议启动压缩，目录过长可以进行一定优化"
     },
     {
       "name": "rss",
@@ -128,7 +149,7 @@
       "group": "兼容",
       "value": false,
       "type": "switch",
-      "note": "Hexo NexT不支持显示文章封面，为了兼容其他主题建议开启"
+      "note": "主题兼容主要由hexo-next不支持封面问题导致，具体描述请到hsxyhao.github.io了解"
     },
     {
       "name": "strategy",
