@@ -1,5 +1,5 @@
 <div class="toc-box">
-  <div class="toc-wrapper" id="toc_wrapper">
+  <div class="toc-wrapper <%= site.customConfig.autoNumber?'auto-number':'' %>" id="toc_wrapper">
     <%- toc %>
   </div>
 </div>
@@ -10,6 +10,7 @@ let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
 let active = 'active-show', activeClass = 'active-current';
 let tocWrapper = document.querySelector('#toc_wrapper');
 let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
 
 function addTocNumber(elem, deep) {
   if (!elem) {
@@ -27,7 +28,9 @@ function addTocNumber(elem, deep) {
     for (let i = 0; i < elem.children.length; i++) {
       let cur = elem.children[i];
       if (cur.__proto__ === HTMLAnchorElement.prototype) {
-        cur.text =  deep + ' ' + cur.text;
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
       } else if (cur.__proto__ === HTMLUListElement.prototype) {
         addTocNumber(cur, deep);
       }
