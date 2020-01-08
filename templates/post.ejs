@@ -1,6 +1,8 @@
 <html>
   <head>
-      <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+    <%- include('./_blocks/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+    <meta name="description" content="<%- post.title %>" />
+    <meta name="keywords" content="<%- post.tags.map(tag => tag.name).join(',') %>" />
   </head>
   <body>
     <div class="head-top-line"></div>
