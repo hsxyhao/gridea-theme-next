@@ -9,7 +9,8 @@
           </div>
         </div>
       <% } %>
-      <div class="sidebar-body" id="sidebar_body">
+      <% let scheme = site.customConfig.scheme; %>
+      <div class="sidebar-body <%= scheme !==''?scheme:'pisces' %>" id="sidebar_body">
         <% if (showToc) { %>
           <div class="post-side-meta" id="post_side_meta">
             <%- include('./site-meta') %>
@@ -81,7 +82,9 @@
 
   let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
   let hasFix = false;
-  window.addEventListener('scroll', function(e) {
+
+  if (!sidebarBody.classList.contains('muse')) {
+    window.addEventListener('scroll', function(e) {
     if (document.body.scrollTop >= limitTop) {
       if (!hasFix) {
         sidebar.classList.add('sidebar-fixed');
@@ -94,4 +97,6 @@
       }
     }
   });
+  }
+  
 </script>

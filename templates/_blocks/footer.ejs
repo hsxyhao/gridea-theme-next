@@ -5,13 +5,19 @@
     </div>
     <div class="poweredby">
       <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
-      <div>Copy<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
+      <div>Copy From<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
     </div>
   </footer>
   <% let scheme = site.customConfig.scheme; %>
-  <div class="back-to-top <%= scheme !==''?scheme:'pisces' %>" id="back_to_top">
+  <% if (scheme === 'muse') { %>
+    <div class="muse-menu-box" id="muse_menu_box">
+      <span class="muse-line muse-line-first"></span>
+      <span class="muse-line muse-line-middle"></span>
+      <span class="muse-line muse-line-last"></span>
+    </div>
+  <% } %>
+  <div class="<%= scheme !==''?scheme:'pisces' %> back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
-    <%= scheme %>
     <% if (scheme !== 'muse') { %>
     <span class="scrollpercent">
       <span id="back_to_top_text">0</span>%
@@ -22,10 +28,11 @@
 
 <script>
 
+  let sideBarOpen = 'sidebar-open';
   let body = document.body;
-
   let back2Top = document.querySelector('#back_to_top'),
-  back2TopText = document.querySelector('#back_to_top_text');
+  back2TopText = document.querySelector('#back_to_top_text'),
+  museMenuBox = document.querySelector('#muse_menu_box');
 
   function scrollAnimation(currentY, targetY) {
    
@@ -69,6 +76,22 @@
     sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px; opacity: 1;';
   }
   
+  let open = false;
+  if (museMenuBox) {
+    museMenuBox.onclick = function() {
+      if (open) {
+        
+      } else {
+
+      }
+      for (let i = 0; i < museMenuBox.children.length; i++) {
+        museMenuBox.children[i].classList.toggle('muse-line');
+      }
+      museMenuBox.classList.toggle(sideBarOpen);
+      open = !open;
+    }
+  }
+
   // 代码高亮
   hljs.initHighlightingOnLoad();
 </script>

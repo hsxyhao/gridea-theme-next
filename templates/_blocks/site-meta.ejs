@@ -25,18 +25,20 @@
       </a>
     </div>
   </div>
-  <% if(site.customConfig.rss) { %>
-    <div class="sidebar-item">
-      <span class="site-item-rss">
-          <i class="fa fa-rss"></i>
-          <a href="<%= themeConfig.domain %>/atom.xml" target="_blank">RSS</a>
-      </span>
-    </div>
-  <% } else {%>
-    <div class="sidebar-item" style="border-top: 1px dotted #ccc;">
-    </div>
+  <% if (site.customConfig.scheme !== 'muse') { %>
+    <% if(site.customConfig.rss) { %>
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="<%= themeConfig.domain %>/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    <% } else {%>
+      <div class="sidebar-item" style="border-top: 1px dotted #ccc;">
+      </div>
+    <% } %>
   <% } %>
-  <% if (site.customConfig.scheme === 'muse') { %>
+  <% if (site.customConfig.scheme !== 'muse') { %>
     <div class="sidebar-item sidebar-item-social">
       <div class="social-item">
           <% if (site.customConfig.github !== '') {%>
