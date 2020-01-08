@@ -1,45 +1,48 @@
-<% let map = new Map(); map.set('/','home'); map.set('/archives', 'archive'); map.set('/tags','tags');map.set('/post/about','user');map.set('/post/skin-update','info-circle'); %>
-<header class="header">
-  <div class="blog-header" id="header">
-    <div class="site-meta">
-      <div class="nav-toggle" id="nav_toggle">
-        <div class="toggle-box">
-          <div class="line line-top"></div>
-          <div class="line line-center"></div>
-          <div class="line line-bottom"></div>
+<% let scheme = site.customConfig.scheme; let map = new Map(); map.set('/','home'); map.set('/archives', 'archive'); map.set('/tags','tags');map.set('/post/about','user');map.set('/post/skin-update','info-circle'); %>
+<div class=" <%= scheme !==''?scheme:'pisces' %>">
+  <header class="header">
+    <div class="blog-header" id="header">
+      <div class="site-meta">
+        <div class="nav-toggle" id="nav_toggle">
+          <div class="toggle-box">
+            <div class="line line-top"></div>
+            <div class="line line-center"></div>
+            <div class="line line-bottom"></div>
+          </div>
         </div>
-      </div>
-      <div class="site-title">
-        <a href="/" class="brand">
-          <span><%= themeConfig.siteName %></span>
-        </a>
-      </div>
-      <p class="subtitle"><%= site.customConfig.subTitle ===''?site.customConfig.subTitle:"精于心，简于形" %></p>
-    </div>
-    <nav class="site-nav" id="site_nav">
-      <ul id="nav_ul">
-        <% menus.forEach(function(menu) { %>
-          <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
-            <% if (menu.openType === 'External') { %>
-              <a href="<%= menu.link %>" target="_blank">
-                <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
-              </a>
-            <% } else { %>
-              <a href="<%= menu.link %>">
-                <i class="fa fa-<%= map.get(menu.link)%>"></i> <%= menu.name %>
-              </a>
-            <% } %>
-          </li>
-        <% }); %>
-        <li class="nav-item">
-          <a>
-            <i class="fa fa-search"></i> 搜索
+        <div class="site-title">
+          <a href="/" class="brand">
+            <span><%= themeConfig.siteName %></span>
           </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+        </div>
+        <p class="subtitle"><%= site.customConfig.subTitle ===''?site.customConfig.subTitle:"精于心，简于形" %></p>
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          <% menus.forEach(function(menu) { %>
+            <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
+              <% if (menu.openType === 'External') { %>
+                <a href="<%= menu.link %>" target="_blank">
+                  <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
+                </a>
+              <% } else { %>
+                <a href="<%= menu.link %>">
+                  <i class="fa fa-<%= map.get(menu.link)%>"></i> <%= menu.name %>
+                </a>
+              <% } %>
+            </li>
+          <% }); %>
+          <li class="nav-item">
+            <a>
+              <i class="fa fa-search"></i> 搜索
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
 <script type="text/javascript"> 
  
   let showNav = true;

@@ -8,20 +8,20 @@
       "name": "scheme",
       "label": "外观",
       "group": "布局",
-      "value": "Pisces",
+      "value": "pisces",
       "type": "radio",
       "options": [
         {
           "label": "Pisces 小家碧玉似的清新",
-          "value": "Pisces"
+          "value": "pisces"
         },
         {
           "label": "Muse 黑白主调，大量留白",
-          "value": "Muse"
+          "value": "muse"
         },
         {
           "label": "Mist 整洁有序的单栏外观",
-          "value": "Mist"
+          "value": "mist"
         }
       ]
     },
@@ -97,6 +97,14 @@
       "value": true,
       "type": "switch",
       "note": "仅在有目录时生效"
+    },
+    {
+      "name": "hoverColor",
+      "label": "目录Hover颜色",
+      "group": "目录",
+      "value": true,
+      "type": "input",
+      "note": "目录active状态下的颜色"
     },
     {
       "name": "tocCompress",
@@ -332,18 +340,6 @@
       "group": "友链",
       "type": "array",
       "value": [
-      {
-          "siteName": "海岛心hey",
-          "siteLink": "https://fehey.com",
-          "siteLogo": "",
-          "description": "一个前端，Gridea 作者"
-      },
-      {
-          "siteName": "Gridea 官网",
-          "siteLink": "https://gridea.dev",
-          "siteLogo": "",
-          "description": "一个静态博客写作客户端"
-      }
       ], 
       "arrayItems": [
           { "label": "名称", "name": "siteName", "type": "input", "value": "" },

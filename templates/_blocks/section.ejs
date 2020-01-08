@@ -1,4 +1,5 @@
-<div class="section-layout">
+<% let scheme = site.customConfig.scheme; %>
+<div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
   <div class="section-layout-wrapper">
     <%- include('./home-sidebar') %>
     <div class="section-box">

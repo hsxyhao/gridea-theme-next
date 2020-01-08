@@ -8,11 +8,15 @@
       <div>Copy<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
     </div>
   </footer>
-  <div class="back-to-top" id="back_to_top">
+  <% let scheme = site.customConfig.scheme; %>
+  <div class="back-to-top <%= scheme !==''?scheme:'pisces' %>" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
+    <%= scheme %>
+    <% if (scheme !== 'muse') { %>
     <span class="scrollpercent">
-      <span id="back_to_top_text">100</span>%
+      <span id="back_to_top_text">0</span>%
     </span>
+    <% } %>
   </div>
 </div>
 
@@ -53,13 +57,18 @@
     if (percent == 0) {
       back2Top.classList.remove('back-top-active');
     }
-    back2TopText.textContent = Math.floor(percent);
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
   });
 
   // 动态调整站点概览高度
-  let sideBar = document.querySelector('.sidebar');
-  let navUl = document.querySelector('#nav_ul');
-  sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px; opacity: 1;';
+  if (back2Top.classList.contains('pisces')) {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px; opacity: 1;';
+  }
+  
   // 代码高亮
   hljs.initHighlightingOnLoad();
 </script>
