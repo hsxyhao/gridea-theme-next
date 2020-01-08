@@ -36,40 +36,42 @@
     <div class="sidebar-item" style="border-top: 1px dotted #ccc;">
     </div>
   <% } %>
-  <div class="sidebar-item sidebar-item-social">
-    <div class="social-item">
-        <% if (site.customConfig.github !== '') {%>
-          <a href="<%= site.customConfig.github %>">
-            <i class="fa fa-github-alt"></i> Github
-          </a>
-        <% } %>
-        <% if (site.customConfig.juejin !== '') {%>
-          <a href="<%= site.customConfig.juejin %>">
-            <i class="fa fa-graduation-cap"></i> 掘金
-          </a>
-        <% } %>
-        <% if (site.customConfig.jianshu !== '') {%>
-          <a href="<%= site.customConfig.jianshu %>">
-            <i class="fa fa-book"></i> 简书
-          </a>
-        <% } %>
-        <% if (site.customConfig.twitter !== '') {%>
-          <a href="" title="<%= site.customConfig.qq %>">
-            <i class="fa fa-twitter"></i> Twitter
-          </a>
-        <% } %>
-        <% if (site.customConfig.wechat !== '') {%>
-          <a class="social-img" href="">
-            <img src="<%= site.customConfig.wechat %>" />
-            <i class="fa fa-wechat %>"></i> 微信
-          </a>
-        <% } %>
-        <% if (site.customConfig.qq !== '') {%>
-          <a class="social-img" href="">
-            <img src="<%= site.customConfig.qq %>" />
-            <i class="fa fa-qq"></i> QQ
-          </a>
-        <% } %>
+  <% if (site.customConfig.scheme === 'muse') { %>
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+          <% if (site.customConfig.github !== '') {%>
+            <a href="<%= site.customConfig.github %>">
+              <i class="fa fa-github-alt"></i> Github
+            </a>
+          <% } %>
+          <% if (site.customConfig.juejin !== '') {%>
+            <a href="<%= site.customConfig.juejin %>">
+              <i class="fa fa-graduation-cap"></i> 掘金
+            </a>
+          <% } %>
+          <% if (site.customConfig.jianshu !== '') {%>
+            <a href="<%= site.customConfig.jianshu %>">
+              <i class="fa fa-book"></i> 简书
+            </a>
+          <% } %>
+          <% if (site.customConfig.twitter !== '') {%>
+            <a href="" title="<%= site.customConfig.qq %>">
+              <i class="fa fa-twitter"></i> Twitter
+            </a>
+          <% } %>
+          <% if (site.customConfig.wechat !== '') {%>
+            <a class="social-img" href="">
+              <img src="<%= site.customConfig.wechat %>" />
+              <i class="fa fa-wechat %>"></i> 微信
+            </a>
+          <% } %>
+          <% if (site.customConfig.qq !== '') {%>
+            <a class="social-img" href="">
+              <img src="<%= site.customConfig.qq %>" />
+              <i class="fa fa-qq"></i> QQ
+            </a>
+          <% } %>
+      </div>
     </div>
-  </div>
+  <% } %>
 </div>
