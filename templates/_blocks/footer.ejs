@@ -32,7 +32,9 @@
   let body = document.body;
   let back2Top = document.querySelector('#back_to_top'),
   back2TopText = document.querySelector('#back_to_top_text'),
-  museMenuBox = document.querySelector('#muse_menu_box');
+  museMenuBox = document.querySelector('#muse_menu_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
 
   function scrollAnimation(currentY, targetY) {
    
@@ -77,18 +79,53 @@
   }
   
   let open = false;
+
+  let siteMetaSequence = [];
+  siteMetaSequence.push({
+    e: document.querySelector('.site-author-image'),
+    p: 'transition.slideRightIn',
+    o: {
+      duration: 200
+    }
+  })
+  siteMetaSequence.push({
+    e: document.querySelector('.site-description'),
+    p: 'transition.slideRightIn',
+    o: {
+      duration: 200
+    }
+  })
+
   if (museMenuBox) {
     museMenuBox.onclick = function() {
+      open = !open;
       if (open) {
-        
+        window.Velocity(rightSideBar, {
+          width: '320px'
+        }, {
+          duration: 300
+        })
+        window.Velocity(viewport, {
+          paddingRight: '320px'
+        } ,{
+          duration: 300
+        });
       } else {
-
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: 300
+        })
+        window.Velocity(viewport, {
+          paddingRight: '0px'
+        } ,{
+          duration: 300
+        });
       }
       for (let i = 0; i < museMenuBox.children.length; i++) {
         museMenuBox.children[i].classList.toggle('muse-line');
       }
       museMenuBox.classList.toggle(sideBarOpen);
-      open = !open;
     }
   }
 
