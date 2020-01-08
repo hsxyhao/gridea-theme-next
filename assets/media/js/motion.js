@@ -1,7 +1,7 @@
 /* 页面加载动画设计，本页代码参考Hexo-NexT源码设计改编
 源码链接: https://github.com/iissnan/hexo-theme-next/blob/master/source/js/src/motion.js
 */
-let MotionExector = {
+var MotionExector = {
   queue: [],
   index: -1,
   add: function(fn) {
@@ -15,6 +15,11 @@ let MotionExector = {
   },
   start: function() {
     this.next();
+  }, 
+  clear: function() {
+    window.Velocity('stop');
+    this.queue = [];
+    this.index - 1;
   }
 }
 
