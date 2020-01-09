@@ -24,51 +24,102 @@ var MotionExector = {
 }
 
 const Element_Class = {
-  title: '.brand',
+  title: '.main-title',
   subTitle: '.subtitle',
   navItem: '.nav-item',
   post: '.post',
   tagYear: '.tag-year',
   tagNode: '.tag-archive-node',
   tagPostNode: '.tag-post-node',
-  cloudTags: '.cloud-tag'
+  cloudTags: '.cloud-tag',
+  logoLineBefore: '.logo-line-before i',
+  logoLineAfter: '.logo-line-after i'
+}
+
+let logoLineMotion = function(MotionExector) {
+  let before = document.querySelector(Element_Class.logoLineBefore);
+  let after = document.querySelector(Element_Class.logoLineAfter);
+  if (before && after) {
+    let sequence = [];
+    sequence.push({
+      e: before,
+      p: {
+        translateX: '100%'
+      },
+      o: {
+        duration: 200
+      }
+    })
+    sequence.push({
+      e: after,
+      p: {
+        translateX: '-100%'
+      },
+      o: {
+        duration: 200,
+        complete: function() {
+          console.log(1)
+          MotionExector.next();
+        }
+      }
+    })
+    window.Velocity.RunSequence(sequence);
+  } else{
+    MotionExector.next();
+  }
 }
 
 let titleMotion = function(MotionExector) {
-  let title = document.querySelector(Element_Class.title);
+  let title = document.querySelector(Element_Class.title) || document.querySelector('.brand');
   let subTitle = document.querySelector(Element_Class.subTitle);
 
   let sequence = [];
-  sequence.push({
-    e: title,
-    p: {
-      opacity: 1,
-      top: 0
-    },
-    o: {
-      duration: 200
-    }
-  })
-  sequence.push({
-    e: subTitle,
-    p: {
-      opacity: 1,
-      top: 0
-    },
-    o: {
-      duration: 200,
-      complete: function() {
-        MotionExector.next();
+  if (subTitle) {
+    title && sequence.push({
+      e: title,
+      p: {
+        opacity: 1,
+        top: 0
+      },
+      o: {
+        duration: 200
       }
-    }
-  })
+    })
+    sequence.push({
+      e: subTitle,
+      p: {
+        opacity: 1,
+        top: 0
+      },
+      o: {
+        duration: 200,
+        complete: function() {
+          MotionExector.next();
+        }
+      }
+    })
+  } else {
+    title && sequence.push({
+      e: title,
+      p: {
+        opacity: 1,
+        top: 0
+      },
+      o: {
+        duration: 200,
+        complete: function() {
+          MotionExector.next();
+        }
+      }
+    })
+  }
   window.Velocity.RunSequence(sequence);
 }
 
 let menuMotion = function(MotionExector) {
   let menus = document.querySelectorAll(Element_Class.navItem);
 
-  window.Velocity(menus, 'transition.slideDownIn', {
+  menus && window.Velocity(menus, 'transition.slideDownIn', {
     display: null,
     duration: 200,
     complete: function () {
@@ -109,12 +160,21 @@ let tagPostMotion = function(MotionExector) {
   }
 }
 
-MotionExector.add(titleMotion)
+let rightMenuMotion = function() {
+  let museMenuBox = document.querySelector('#drawer_box'),
+   postBody = document.querySelector('#post_body')
+  if (museMenuBox && postBody && document.body.clientWidth > 765) {
+    museMenuBox.click();
+  }
+}
+
+MotionExector.add(logoLineMotion)
+.add(titleMotion)
 .add(menuMotion)
 .add(postListMotion)
 .add(tagPostMotion)
+.add(rightMenuMotion)
 .start();
-
 
 window.addEventListener('load', function() {
   // 归档页入场动画

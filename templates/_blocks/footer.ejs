@@ -9,8 +9,8 @@
     </div>
   </footer>
   <% let scheme = site.customConfig.scheme; %>
-  <% if (scheme === 'muse') { %>
-    <div class="muse-menu-box" id="muse_menu_box">
+  <% if (scheme === 'muse' || scheme === 'mist') { %>
+    <div class="drawer-box" id="drawer_box">
       <span class="muse-line muse-line-first"></span>
       <span class="muse-line muse-line-middle"></span>
       <span class="muse-line muse-line-last"></span>
@@ -18,7 +18,7 @@
   <% } %>
   <div class="<%= scheme !==''?scheme:'pisces' %> back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
-    <% if (scheme !== 'muse') { %>
+    <% if (!(scheme === 'muse' || scheme === 'mist')) { %>
     <span class="scrollpercent">
       <span id="back_to_top_text">0</span>%
     </span>
@@ -32,7 +32,7 @@
   let body = document.body;
   let back2Top = document.querySelector('#back_to_top'),
   back2TopText = document.querySelector('#back_to_top_text'),
-  museMenuBox = document.querySelector('#muse_menu_box'),
+  drawerBox = document.querySelector('#drawer_box'),
   rightSideBar = document.querySelector('.sidebar'),
   viewport = document.querySelector('body');
 
@@ -80,9 +80,9 @@
   
   let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
 
-  if (museMenuBox) {
+  if (drawerBox) {
     let rightMotions = document.querySelectorAll('.right-motion');
-    museMenuBox.onclick = function() {
+    drawerBox.onclick = function() {
       open = !open;
       window.Velocity(rightSideBar, 'stop');
       window.Velocity(viewport, 'stop');
@@ -92,8 +92,8 @@
         }, {
           duration: MOTION_TIME,
           begin: function() {
+            console.log(rightMotions)
             window.Velocity(rightMotions, 'transition.slideRightIn',{
-              display: 'inline-block'
             });
           }
         })
@@ -108,7 +108,6 @@
         }, {
           duration: MOTION_TIME,
           begin: function() {
-            
             window.Velocity(rightMotions, {
               opacity: 0
             });
@@ -120,10 +119,10 @@
           duration: MOTION_TIME
         });
       }
-      for (let i = 0; i < museMenuBox.children.length; i++) {
-        museMenuBox.children[i].classList.toggle('muse-line');
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
       }
-      museMenuBox.classList.toggle(sideBarOpen);
+      drawerBox.classList.toggle(sideBarOpen);
     }
   }
 

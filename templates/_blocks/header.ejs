@@ -2,20 +2,34 @@
 <div class=" <%= scheme !==''?scheme:'pisces' %>">
   <header class="header">
     <div class="blog-header" id="header">
-      <div class="site-meta">
-        <div class="nav-toggle" id="nav_toggle">
-          <div class="toggle-box">
-            <div class="line line-top"></div>
-            <div class="line line-center"></div>
-            <div class="line line-bottom"></div>
-          </div>
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
         </div>
+      </div>
+      <div class="site-meta">       
         <div class="site-title">
-          <a href="/" class="brand">
-            <span><%= themeConfig.siteName %></span>
-          </a>
+          <% if (scheme === 'mist') {%>
+            <a href="/" class="">
+              <span class="logo-line-before">
+                <i class=""></i>
+              </span>
+              <span class="main-title"><%= themeConfig.siteName %></span>
+              <span class="logo-line-after">
+                <i class=""></i>
+              </span>
+            </a>  
+          <% } else {%>
+            <a href="/" class="brand">
+              <span><%= themeConfig.siteName %></span>
+            </a>  
+          <% } %>
         </div>
-        <p class="subtitle"><%= site.customConfig.subTitle ===''?site.customConfig.subTitle:"精于心，简于形" %></p>
+        <% if (scheme !== 'mist') {%>
+          <p class="subtitle"><%= site.customConfig.subTitle ===''?site.customConfig.subTitle:"精于心，简于形" %></p>
+        <% } %>
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">

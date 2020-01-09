@@ -15,7 +15,7 @@
           <div class="post-side-meta" id="post_side_meta">
             <%- include('./site-meta') %>
           </div>
-          <div class="post-toc sidebar-body-active right-motion" id="post_toc" style="opacity: 1;">
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
             <%- include('./toc', {toc: toc}) %>
           </div>
         <% } else {%>
@@ -73,7 +73,6 @@
     })
     hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
     showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-
   }
 
   postToc.addEventListener('transitionend', function() {
