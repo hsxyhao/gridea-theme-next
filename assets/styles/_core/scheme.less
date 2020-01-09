@@ -120,28 +120,77 @@
   border: 1px solid #eee;
 }
 
+.gemini {
+  
+}
+.gemini .blog-header {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.gemini .section {
+  padding: 0px;
+}
+
+.gemini .post {
+  padding: 40px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.gemini .section {
+  width: auto;
+}
+
+.gemini .section-box {
+  background-color: transparent;
+  box-sizing: border-box;
+  width: calc(100% - 252px);
+  min-height: 700px;
+}
+
+.gemini .header {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+}
+
+
+.gemini .section-layout-wrapper {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gemini .sidebar {
+  position: absolute;
+  left: 0;
+  width: 240px;
+  opacity: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
+}
+
 .pisces {
 
 }
 
-.pisces .nav-item a {
+.pisces .blog-header {
+  box-shadow: initial;
+}
+
+.pisces .nav-item a, .gemini .nav-item a {
   display: block;
   font-size: 13px;
   line-height: inherit;
   position: relative;
   box-sizing: border-box;
   line-height: inherit;
-}
-
-.pisces .nav-item a {
   border: none;
   padding: 5px 20px;
   text-align: left;
-}
-
-.pisces .header li {
-  list-style-type: none;
-  line-height: 32px;
 }
 
 .pisces .header {
@@ -150,18 +199,22 @@
   width: 960px;
 }
 
-.pisces .blog-header {
+.pisces .header li, .gemini .header li {
+  list-style-type: none;
+  line-height: 32px;
+}
+
+.pisces .blog-header, .gemini .blog-header {
   position: absolute;
   top: 0;
   padding: 0;
   width: 240px;
   background: #fff;
-  box-shadow: initial;
   border-radius: initial;
   z-index: 9999;
 }
 
-.pisces .site-title {
+.pisces .site-title, .gemini .site-title {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
@@ -170,7 +223,7 @@
   font-family: 'Rosario', 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
-.pisces .site-meta {
+.pisces .site-meta, .gemini .site-meta {
   position: relative;
   padding: 20px 0;
   color: #fff;
@@ -178,7 +231,7 @@
   text-align: center;
 }
 
-.pisces .subtitle {
+.pisces .subtitle, .gemini .subtitle {
   position: relative;
   top: -10px;
   opacity: 0;
@@ -189,7 +242,7 @@
   color: #ddd;
 }
 
-.pisces .nav-item-active a:after {
+.pisces .nav-item-active a:after, .gemini .nav-item-active a:after {
   content: " ";
   position: absolute;
   top: 50%;
@@ -218,11 +271,12 @@
   transition: opacity .2s linear;
 }
 
-.pisces .sidebar-wrapper {
+
+.pisces .sidebar-wrapper, .gemini .sidebar-wrapper {
   background: #fff;
 }
 
-.pisces .site-author-image {
+.pisces .site-author-image, .gemini .site-author-image {
   max-width: 120px;
 }
 
@@ -639,7 +693,7 @@
 
 @media (max-width: 767px) {
 
-  .pisces .blog-header {
+  .pisces .blog-header, .gemini .blog-header {
     overflow: hidden;
   }
 

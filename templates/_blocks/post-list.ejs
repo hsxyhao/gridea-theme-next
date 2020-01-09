@@ -53,8 +53,10 @@
       </div>
       <% } %>
     </div>
-    <footer class="post-footer">
-      <div class="post-eof"></div>
-    </footer>
+    <% if (site.customConfig.scheme !== 'gemini') { %>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+    <% } %>
   </article>
 <% }); %>  
