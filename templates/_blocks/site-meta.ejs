@@ -1,10 +1,10 @@
 <div class="sidebar-wrapper">
   <div class="sidebar-item">
-    <img class="site-author-image" src="<%= themeConfig.domain %>/images/avatar.png"/>
+    <img class="site-author-image right-motion" src="<%= themeConfig.domain %>/images/avatar.png"/>
     <p class="site-author-name"><%= themeConfig.siteName %></p>
-    <p class="site-description"><%= themeConfig.siteDescription %></p>
+    <p class="site-description right-motion"><%= themeConfig.siteDescription %></p>
   </div>
-  <div class="sidebar-item side-item-stat">
+  <div class="sidebar-item side-item-stat right-motion">
     <div class="sidebar-item-box">
       <a href="/archives/">
         <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
