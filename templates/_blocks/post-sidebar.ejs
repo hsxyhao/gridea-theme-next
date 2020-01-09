@@ -1,6 +1,6 @@
 <% let showToc = toc.length > 0 && site.customConfig.openPostToc;%>
 <div class="sidebar">
-    <div class="sidebar-box" id="sidebar">
+    <div class="sidebar-box right-motion" id="sidebar">
       <% if (showToc) { %>
         <div class="post-list-sidebar">
           <div class="sidebar-title">
@@ -15,7 +15,7 @@
           <div class="post-side-meta" id="post_side_meta">
             <%- include('./site-meta') %>
           </div>
-          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+          <div class="post-toc sidebar-body-active right-motion" id="post_toc" style="opacity: 1;">
             <%- include('./toc', {toc: toc}) %>
           </div>
         <% } else {%>

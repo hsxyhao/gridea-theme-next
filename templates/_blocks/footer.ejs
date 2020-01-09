@@ -78,48 +78,46 @@
     sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px; opacity: 1;';
   }
   
-  let open = false;
-
-  let siteMetaSequence = [];
-  siteMetaSequence.push({
-    e: document.querySelector('.site-author-image'),
-    p: 'transition.slideRightIn',
-    o: {
-      duration: 200
-    }
-  })
-  siteMetaSequence.push({
-    e: document.querySelector('.site-description'),
-    p: 'transition.slideRightIn',
-    o: {
-      duration: 200
-    }
-  })
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
 
   if (museMenuBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
     museMenuBox.onclick = function() {
       open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
       if (open) {
         window.Velocity(rightSideBar, {
-          width: '320px'
+          width: RIGHT_MOVE_DIS
         }, {
-          duration: 300
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, 'transition.slideRightIn',{
+              display: 'inline-block'
+            });
+          }
         })
         window.Velocity(viewport, {
-          paddingRight: '320px'
+          paddingRight: RIGHT_MOVE_DIS
         } ,{
-          duration: 300
+          duration: MOTION_TIME
         });
       } else {
         window.Velocity(rightSideBar, {
           width: '0px'
         }, {
-          duration: 300
+          duration: MOTION_TIME,
+          begin: function() {
+            
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
         })
         window.Velocity(viewport, {
           paddingRight: '0px'
         } ,{
-          duration: 300
+          duration: MOTION_TIME
         });
       }
       for (let i = 0; i < museMenuBox.children.length; i++) {
