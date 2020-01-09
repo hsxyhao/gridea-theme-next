@@ -22,6 +22,10 @@
         {
           "label": "Mist 整洁有序的单栏外观",
           "value": "mist"
+        },
+        {
+          "label": "Gemini ",
+          "value": "gemini"
         }
       ]
     },

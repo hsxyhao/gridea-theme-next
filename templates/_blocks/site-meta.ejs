@@ -25,7 +25,8 @@
       </a>
     </div>
   </div>
-  <% if (site.customConfig.scheme !== 'muse') { %>
+  <% let scheme = site.customConfig.scheme %>
+  <% if (scheme !== 'muse' && scheme !== 'mist') { %>
     <% if(site.customConfig.rss) { %>
       <div class="sidebar-item">
         <span class="site-item-rss">
@@ -38,7 +39,7 @@
       </div>
     <% } %>
   <% } %>
-  <% if (site.customConfig.scheme !== 'muse') { %>
+  <% if (scheme !== 'muse' && scheme != 'mist') { %>
     <div class="sidebar-item sidebar-item-social">
       <div class="social-item">
           <% if (site.customConfig.github !== '') {%>
