@@ -1,8 +1,9 @@
 <% let lastTime = ''; %>
+<% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
 <div class="archive-timeline-box">
   <div class="archive-timeline-title">
     <% if (site.posts.length > 0) {%>
-      <h2>非常好！目前共计<%= site.posts.length %>篇日志，继续努力！</h2>
+      <h2>非常好！目前共计<%= articles %>篇日志，继续努力！</h2>
     <% } else { %>
       <h2>您目前还没有记录日志哟~~~</h2>
     <% } %>
@@ -27,5 +28,4 @@
     </a>
   <% }%>
 </div>
-<% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
 <%- include('./pagination', { logs: articles, pageSize: themeConfig.archivesPageSize, url: '/archives/page/', index: 5}) %>
