@@ -326,6 +326,7 @@
   border-radius: initial;
   z-index: 9999;
   margin: 0 auto;
+  padding: 100px 0 70px;
 }
 
 .muse .site-title {
@@ -349,7 +350,6 @@
   color: #fff;
   background: transparent;
   text-align: center;
-  padding: 100px 0 70px;
 }
 
 .muse .section-layout-wrapper {
@@ -567,7 +567,7 @@
 .mist .nav-item {
   display: inline-block;
   font-size: 14px;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .mist .section-layout-wrapper {
@@ -691,7 +691,142 @@
   }
 }
 
+@media (min-width: 992px) {
+
+}
+
+@media (max-width: 961px) {
+  .drawer-box {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
+
+  .muse .site-nav {
+    display: none;
+  }
+
+  .section-layout-wrapper {
+    width: auto;
+  }
+
+  .section-box {
+    width: 100% !important;
+  }
+
+  .section {
+    padding: 20px 20px;
+  }
+
+  .gemini .section {
+    margin: 0 !important;
+  }
+
+  .gemini .post {
+    padding: 10px 20px;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    height: 0px !important;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .muse .site-nav {
+    overflow: unset;
+  }
+
+  .muse .nav-item-active {
+    background-color: transparent;
+  }
+
+  .muse .nav-item:hover {
+    background: transparent;
+  }
+
+}
+
+// pisces gemini第一阶段
+@media (max-width: 991px) and (min-width: 768px) {
+  .header {
+    width: auto !important;
+  }
+  .blog-header {
+    position: relative !important;
+    width: auto !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+
+  .section {
+    width: auto;
+  }
+
+  .articles-wrapper {
+    width: auto;
+  }
+
+  .section-box {
+    width: 100% !important;
+  }
+
+  .pisces .section {
+    padding: 20px;
+  }
+
+  .gemini .section-layout-wrapper {
+    width: auto;
+    margin: 10px;
+  }
+
+  .gemini .post {
+    padding: 20px;
+  }
+
+  .gemini .brand {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .gemini .section-layout-wrapper {
+    width: auto;
+    margin: 10px;
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .header {
+    width: auto !important;
+  }
+  .blog-header {
+    position: relative !important;
+    width: auto !important;
+    border-radius: initial !important;
+  }
+
+  .muse .blog-header {
+    overflow: unset;
+  }
+
+  .muse #nav_ul {
+    background-color: #FFF;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
 
   .pisces .blog-header, .gemini .blog-header {
     overflow: hidden;
@@ -703,10 +838,6 @@
 
   .article-box {
     width: auto;
-  }
-
-  .muse .header {
-    background-color: #FFF;
   }
 
   .section {
@@ -741,10 +872,6 @@
   .muse .nav-item a, .mist .nav-item a {
     text-align: left;
     padding-left: 10px;
-  }
-
-  .muse .nav-item a:hover,.muse .nav-item a:hover {
-    border: none;
   }
 
   .mist .logo-line-after, .mist .logo-line-before {
@@ -798,53 +925,5 @@
     text-align: left;
     line-height: inherit;
     border: none;
-  }
-}
-
-@media (max-width: 961px) {
-  .drawer-box {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .muse .site-nav {
-    display: none;
-  }
-}
-
-
-@media (max-width: 961px) and (min-width: 768px) {
-  .header {
-    width: auto !important;
-  }
-  .blog-header {
-    position: relative;
-    width: auto;
-  }
-  .site-nav {
-    height: 0px;
-    margin: 0;
-  }
-  .nav-toggle {
-    display: inline-block;
-  }
-}
-
-@media (max-width: 767px) {
-  .header {
-    width: auto !important;
-  }
-  .blog-header {
-    position: relative !important;
-    width: auto !important;
-    border-radius: initial !important;
-  }
-  .site-nav {
-    height: 0px;
-    margin: 0;
-  }
-  .nav-toggle {
-    display: inline-block;
   }
 }

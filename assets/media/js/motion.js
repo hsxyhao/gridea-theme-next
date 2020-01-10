@@ -130,7 +130,8 @@ let menuMotion = function(MotionExector) {
 
 let postListMotion = function(MotionExector) {
   let posts = document.querySelectorAll(Element_Class.post);
-  let geminiSiteMeta = document.querySelector('.gemini .sidebar');
+  let geminiSiteMeta = document.querySelector('.pisces .sidebar') 
+  || document.querySelector('.gemini .sidebar');
 
   if (posts.length > 0) {
     if (geminiSiteMeta) {

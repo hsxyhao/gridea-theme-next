@@ -37,11 +37,11 @@
   sidebarTitle = document.querySelector('.sidebar-title'),
   sidebarBody = document.querySelector('#sidebar_body');
 
-  tocSideBar.addEventListener('click', (e) => {
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
     toggleSidebar(e);
   });
 
-  metaSideBar.addEventListener('click', (e) => {
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
     toggleSidebar(e);
   });
 
