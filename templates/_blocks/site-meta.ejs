@@ -74,6 +74,12 @@
               <i class="fa fa-qq"></i> QQ
             </a>
           <% } %>
+          <% if (site.customConfig.douban !== '') {%>
+            <a class="social-img" href="<%= site.customConfig.douban %>">
+              <i class="icon-douban">豆</i>
+              <span class="douban-span">豆瓣</span>
+            </a>
+          <% } %>
       </div>
     </div>
   <% } %>

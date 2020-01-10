@@ -291,16 +291,14 @@
       "icon": "github-alt",
       "group": "社交",
       "value": "",
-      "type": "input",
-      "note": "链接地址"
+      "type": "input"
     },
     {
       "name": "juejin",
       "label": "掘金",
       "group": "社交",
       "value": "",
-      "type": "input",
-      "note": "链接地址"
+      "type": "input"
     },
     {
       "name": "jianshu",
@@ -308,8 +306,7 @@
       "group": "社交",
       "icon": "book",
       "value": "",
-      "type": "input",
-      "note": "链接地址"
+      "type": "input"
     },
     {
       "name": "twitter",
@@ -317,8 +314,15 @@
       "group": "社交",
       "icon": "book",
       "value": "",
-      "type": "input",
-      "note": "链接地址"
+      "type": "input"
+    },
+    {
+      "name": "douban",
+      "label": "豆瓣",
+      "icon": "douban",
+      "group": "社交",
+      "value": "",
+      "type": "input"
     },
     {
       "name": "wechat",
@@ -326,8 +330,7 @@
       "icon": "weixin",
       "group": "社交",
       "value": "",
-      "type": "picture-upload",
-      "note": "账号"
+      "type": "picture-upload"
     },
     {
       "name": "qq",
@@ -335,8 +338,7 @@
       "icon": "qq",
       "group": "社交",
       "value": "",
-      "type": "picture-upload",
-      "note": "账号"
+      "type": "picture-upload"
     },
     {
       "name": "friends",
