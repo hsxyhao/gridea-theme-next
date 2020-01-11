@@ -79,10 +79,10 @@
     this.classList.remove(SLIDE_UP_IN);
   });
 
-  let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-  let hasFix = false;
 
-  if (!sidebarBody.classList.contains('muse')) {
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('mist')) {
+    let hasFix = false;
+    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
     window.addEventListener('scroll', function(e) {
     if (document.body.scrollTop >= limitTop) {
       if (!hasFix) {
