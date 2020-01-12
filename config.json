@@ -30,6 +30,22 @@
       ]
     },
     {
+      "name": "viewportWidth",
+      "label": "博客可视区宽度",
+      "group": "布局",
+      "value": "960px",
+      "type": "input",
+      "note": "各Scheme推荐14寸屏左右推荐配置：Pisces 960px,Muse 700px, Mist 85%, Gemini 960px。在Pisces、Gemini风格中博客可视区宽度比文章内容区宽度多260px，设置了可视区宽度默认改变了内容区宽度"
+    },
+    {
+      "name": "textSize",
+      "label": "正文内容文字大小",
+      "group": "布局",
+      "value": "16px",
+      "type": "input",
+      "note": "px 或 rem（如 16px 或 1rem）"
+    },
+    {
       "name": "字体",
       "label": "font",
       "group": "布局",
@@ -53,30 +69,6 @@
       "group": "布局",
       "value": "精于心，简于形",
       "type": "input"
-    },
-    {
-      "name": "viewportWidth",
-      "label": "博客内容区宽度",
-      "group": "布局",
-      "value": "960px",
-      "type": "input",
-      "note": "只能设置数字"
-    },
-    {
-      "name": "articleWidth",
-      "label": "文章内容区宽度",
-      "group": "布局",
-      "value": "700",
-      "type": "input",
-      "note": "只能设置数字"
-    },
-    {
-      "name": "textSize",
-      "label": "正文内容文字大小",
-      "group": "布局",
-      "value": "16px",
-      "type": "input",
-      "note": "px 或 rem（如 16px 或 1rem）"
     },
     {
       "name": "updateTip",

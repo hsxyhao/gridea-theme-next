@@ -5,26 +5,24 @@
   </head>
   <body>
     <div class="head-top-line"></div>
-    <div class="viewport">
-      <div class="header-box">
-        <%- include('./_blocks/header', {active: true, menu: 'home', link: '/'}) %>
-      </div>
-      <div class="main-continer">
-        <% let scheme = site.customConfig.scheme; %>
-        <div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
-          <div class="section-layout-wrapper">
-            <%- include('./_blocks/home-sidebar') %>
-            <div class="section-box">
-              <section class="section posts-expand slide-down-in">
-                <%- include('./_blocks/post-list') %>
-                <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
-                <%- include('./_blocks/pagination', { logs: articles, pageSize: themeConfig.postPageSize, url: '/page/', index: 4}) %>
-              </section>
-            </div>
+    <div class="header-box">
+      <%- include('./_blocks/header', {active: true, menu: 'home', link: '/'}) %>
+    </div>
+    <div class="main-continer">
+      <% let scheme = site.customConfig.scheme; %>
+      <div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
+        <div class="section-layout-wrapper">
+          <%- include('./_blocks/home-sidebar') %>
+          <div class="section-box">
+            <section class="section posts-expand slide-down-in">
+              <%- include('./_blocks/post-list') %>
+              <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
+              <%- include('./_blocks/pagination', { logs: articles, pageSize: themeConfig.postPageSize, url: '/page/', index: 4}) %>
+            </section>
           </div>
         </div>
-        <%- include('./_blocks/footer') %>
       </div>
+      <%- include('./_blocks/footer') %>
     </div>
   </body>
   <script src="/media/js/motion.js"></script>
