@@ -1,15 +1,22 @@
 const generateOverride = (params) => {
   let result = '';
-  console.log(`params: ${JSON.stringify(params)}`)
-  
-  if (params.viewportWidth && params.viewportWidth !== '960px') {
+  let headerClass = 'header'
+  if (params.scheme === 'mist') {
+    headerClass = 'blog-header'
+  }
+  if (params.viewportWidth) {
     result += `
-      .viewport {
+      .${headerClass} {
         width: ${params.viewportWidth};
+        margin: 0 auto;
+      }
+
+      .main-continer {
+        width: ${params.viewportWidth};
+        margin: 0 auto;
       }
     `
   }
-  console.log(`result: ${result}`)
   return result;
 }
 
