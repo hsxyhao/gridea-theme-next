@@ -83,4 +83,14 @@
       </div>
     </div>
   <% } %>
+<% if (site.customConfig.friends && site.customConfig.friends.length > 0) { %>
+  <div class="sidebar-item right-motion sidebar-item-friends">
+    <p class="friends-title"><i class="fa fa-globe"></i> <%= site.customConfig.friendsTitle %></p>
+    <div class="friends-box">
+      <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
+        <a href="<%= site.customConfig.friends[i].siteLink %>">【<%= site.customConfig.friends[i].siteName %>】</a>
+      <% } %>
+    </div>
+  </div>
+<% } %>
 </div>

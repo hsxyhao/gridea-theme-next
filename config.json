@@ -24,7 +24,7 @@
           "value": "mist"
         },
         {
-          "label": "Gemini ",
+          "label": "Gemini 精于心，简于形",
           "value": "gemini"
         }
       ]
@@ -341,6 +341,14 @@
       "type": "picture-upload"
     },
     {
+      "name": "friendsTitle",
+      "label": "友链",
+      "group": "友链",
+      "value": "友情链接",
+      "type": "input",
+      "note": "自定义友链标题"
+    },
+    {
       "name": "friends",
       "label": "友链",
       "group": "友链",
@@ -349,9 +357,7 @@
       ], 
       "arrayItems": [
           { "label": "名称", "name": "siteName", "type": "input", "value": "" },
-          { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
-          { "label": "Logo", "name": "siteLogo", "type": "picture-upload", "value": "" },
-          { "label": "描述", "name": "description", "type": "textarea", "value": "" }
+          { "label": "链接", "name": "siteLink", "type": "input", "value": "" }
       ], 
       "note": ""
     }
