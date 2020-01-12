@@ -5,8 +5,8 @@ const generateOverride = (params) => {
     headerClass = 'blog-header'
   }
   if (params.viewportWidth) {
-    result += `
-      .${headerClass} {
+    result += 
+      `.${headerClass} {
         width: ${params.viewportWidth};
         margin: 0 auto;
       }
@@ -17,6 +17,19 @@ const generateOverride = (params) => {
       }
     `
   }
+
+  if (params.fontFamily) {
+    console.log(123)
+    result += 
+    `@font-face {
+      font-family: '${params.fontFamily}';
+      src: url('/media/fonts/${params.fontFamily}.ttf');
+    }
+    * {
+        font-family: '${params.fontFamily}';
+    }`
+  }
+
   return result;
 }
 
