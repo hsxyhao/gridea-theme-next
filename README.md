@@ -2,7 +2,7 @@
   Gridea NexT Theme
 </h1>
 
-![NexT主题概览](assets/images/overview.png)
+![NexT主题概览](assets/images/overview.jpg)
 
 ### 使用
 下载压缩包加压到Gridea/themes目录下
