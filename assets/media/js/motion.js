@@ -145,7 +145,6 @@ let postListMotion = function(MotionExector) {
     stagger: 100, 
     drag: true,
     complete: function() {
-      console.log(geminiSiteMeta);
       geminiSiteMeta.style.transform = '';
       MotionExector.next();
     }
