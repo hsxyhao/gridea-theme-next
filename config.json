@@ -295,6 +295,14 @@
           { "label": "链接", "name": "siteLink", "type": "input", "value": "" }
       ], 
       "note": ""
+    },
+    {
+      "name": "bgImg",
+      "label": "背景图片",
+      "group": "美化",
+      "value": "",
+      "type": "picture-upload",
+      "note": "背景图片"
     }
   ]
 }
