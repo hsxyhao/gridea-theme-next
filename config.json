@@ -35,7 +35,7 @@
       "group": "布局",
       "value": "960px",
       "type": "input",
-      "note": "各Scheme推荐14寸屏左右推荐配置：Pisces 960px,Muse 700px, Mist 85%, Gemini 960px。在Pisces、Gemini风格中博客可视区宽度比文章内容区宽度多260px，设置了可视区宽度默认改变了内容区宽度"
+      "note": "各Scheme14寸屏左右推荐配置：Pisces 960px,Muse 700px, Mist 85%, Gemini 960px。在Pisces、Gemini风格中博客可视区宽度比文章内容区宽度多250~260px左右，设置了可视区宽度默认改变了内容区宽度"
     },
     {
       "name": "textSize",
@@ -46,22 +46,12 @@
       "note": "px 或 rem（如 16px 或 1rem）"
     },
     {
-      "name": "字体",
-      "label": "font",
+      "name": "fontFamily",
+      "label": "字体",
       "group": "布局",
-      "value": "test1",
-      "type": "select",
-      "options": [
-        {
-          "label": "test1",
-          "value": "test1"
-        },
-        {
-          "label": "test2",
-          "value": "test2"
-        }
-      ],
-      "note": "NexT主题支持五种高亮主题"
+      "value": "",
+      "type": "input",
+      "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
     },
     {
       "name": "subTitle",
@@ -184,53 +174,6 @@
         }
       ],
       "note": "多种策略适配不同种摘要排版，总有一款适合你"
-    },
-    {
-      "name": "socialMenu",
-      "label": "侧边栏社交链接",
-      "group": "特性",
-      "value": "left",
-      "type": "radio",
-      "options": [
-        {
-          "label": "左边",
-          "value": "left"
-        },
-        {
-          "label": "右边",
-          "value": "right"
-        }
-      ]
-    },
-    {
-      "name": "highlight",
-      "label": "代码高亮",
-      "group": "特性",
-      "value": "normal",
-      "type": "select",
-      "options": [
-        {
-          "label": "c",
-          "value": "normal"
-        },
-        {
-          "label": "night",
-          "value": "night"
-        },
-        {
-          "label": "night blue",
-          "value": "night blue"
-        },
-        {
-          "label": "night bright",
-          "value": "night bright"
-        },
-        {
-          "label": "night eighties",
-          "value": "night eighties"
-        }
-      ],
-      "note": "NexT主题支持五种高亮主题"
     },
     {
       "name": "contentBgColor",
