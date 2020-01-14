@@ -30,6 +30,21 @@
       ]
     },
     {
+      "name": "sideIsRight",
+      "label": "菜单栏是否开启右边显示",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "默认菜单栏在左边显示"
+    },
+    {
+      "name": "sideIsRight",
+      "label": "菜单栏右边显示",
+      "group": "布局",
+      "value": false,
+      "type": "switch"
+    },
+    {
       "name": "viewportWidth",
       "label": "博客可视区宽度",
       "group": "布局",
@@ -301,8 +316,18 @@
       "label": "背景图片",
       "group": "美化",
       "value": "",
-      "type": "picture-upload",
-      "note": "背景图片"
+      "type": "picture-upload"
+    },
+    {
+      "name": "bgImg",
+      "label": "标签透明度",
+      "group": "美化",
+      "value": "",
+      "type": "input",
+      "note": "正常模式下所有标签的透明度"
+    },
+    {
+
     }
   ]
 }
