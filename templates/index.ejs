@@ -14,7 +14,7 @@
       <div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/home-sidebar') %>
-          <div class="section-box">
+          <div class="section-box <%= scheme !==''?scheme:'pisces' %>">
             <section class="section posts-expand slide-down-in">
               <%- include('./_blocks/post-list') %>
               <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>

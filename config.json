@@ -12,6 +12,10 @@
       "type": "radio",
       "options": [
         {
+          "label": "Gemini 精于心，简于形",
+          "value": "gemini"
+        },
+        {
           "label": "Pisces 小家碧玉似的清新",
           "value": "pisces"
         },
@@ -22,10 +26,6 @@
         {
           "label": "Mist 整洁有序的单栏外观",
           "value": "mist"
-        },
-        {
-          "label": "Gemini 精于心，简于形",
-          "value": "gemini"
         }
       ]
     },
@@ -36,13 +36,6 @@
       "value": false,
       "type": "switch",
       "note": "默认菜单栏在左边显示"
-    },
-    {
-      "name": "sideIsRight",
-      "label": "菜单栏右边显示",
-      "group": "布局",
-      "value": false,
-      "type": "switch"
     },
     {
       "name": "viewportWidth",
