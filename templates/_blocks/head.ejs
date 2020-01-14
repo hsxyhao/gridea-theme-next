@@ -3,6 +3,10 @@
 <title><%= siteTitle %></title>
 <link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico?v=<%= site.utils.now %>">
 <link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css">
+
+<% let scheme = site.customConfig.scheme; %>
+<link rel="stylesheet" href="/media/css/<%= scheme?scheme:'pisces' %>.css">
+
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
