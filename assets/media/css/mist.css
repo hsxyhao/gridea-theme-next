@@ -1,10 +1,5 @@
-
 .section-box {
   background-color: #fff;
-}
-
-.section-box.gemini {
-  background-color: transparent;
 }
 
 .section {
@@ -139,244 +134,8 @@
   border: 1px solid #eee;
 }
 
-.gemini {
-  
-}
-.gemini .blog-header {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-}
 
-.gemini .section {
-  padding: 0px;
-}
-
-.gemini .post {
-  padding: 40px;
-  margin-bottom: 12px;
-  background-color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-}
-
-.gemini .section {
-  width: auto;
-}
-
-.gemini .section-box {
-  box-sizing: border-box;
-  width: calc(100% - 252px);
-  min-height: 700px;
-}
-
-.gemini .header {
-  position: relative;
-  margin: 0 auto;
-}
-
-
-.gemini .section-layout-wrapper {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-}
-
-.gemini .sidebar {
-  width: 240px;
-  opacity: 0;
-}
-
-
-.gemini .sidebar-wrapper {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
-}
-
-.pisces {
-
-}
-
-.pisces .blog-header {
-  box-shadow: initial;
-}
-
-.pisces .section-box {
-  width: calc(100% - 260px);
-}
-
-.pisces .nav-item a, .gemini .nav-item a {
-  display: block;
-  font-size: 13px;
-  line-height: inherit;
-  position: relative;
-  box-sizing: border-box;
-  line-height: inherit;
-  border: none;
-  padding: 5px 20px;
-  text-align: left;
-}
-
-.pisces .header {
-  position: relative;
-  margin: 0 auto;
-}
-
-.pisces .header li, .gemini .header li {
-  list-style-type: none;
-  line-height: 32px;
-}
-
-.pisces .blog-header, .gemini .blog-header {
-  position: absolute;
-  top: 0;
-  padding: 0;
-  width: 240px;
-  background: #fff;
-  border-radius: initial;
-  z-index: 9999;
-}
-
-.pisces .site-title, .gemini .site-title {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 36px;
-  font-size: 24px;
-  font-weight: normal;
-  font-family: 'Rosario', 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-
-.pisces .site-meta, .gemini .site-meta {
-  position: relative;
-  padding: 20px 0;
-  color: #fff;
-  background: #222;
-  text-align: center;
-}
-
-.pisces .subtitle, .gemini .subtitle {
-  position: relative;
-  top: -10px;
-  opacity: 0;
-  margin: 10px 10px 0;
-  font-weight: initial;
-  margin-top: 10px;
-  font-size: 13px;
-  color: #ddd;
-}
-
-.pisces .nav-item-active a:after, .gemini .nav-item-active a:after {
-  content: " ";
-  position: absolute;
-  top: 50%;
-  margin-top: -3px;
-  right: 15px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #bbb;
-  color: rgba(0, 0, 0, 0.98);
-}
-
-.pisces .section-layout-wrapper {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-}
-
-.pisces .sidebar {
-  box-shadow: none;
-  width: 240px;
-  opacity: 0;
-  transition: opacity .2s linear;
-}
-
-
-.pisces .sidebar-wrapper, .gemini .sidebar-wrapper {
-  background: #fff;
-}
-
-.pisces .site-author-image, .gemini .site-author-image {
-  max-width: 120px;
-}
-
-// header在中间，seta-meta在右侧隐藏
-.muse {
-  
-}
-
-.muse header{
-  margin: 0 auto;
-}
-
-.muse .header {
-  position: relative;
-}
-
-.muse .header ul {
-  text-align: center;
-}
-
-.muse .header li {
-  list-style-type: none;
-  padding: 5px 10px;
-  display: inline-block;
-}
-
-.muse .nav-item a{
-  text-align: center;
-  border-bottom: 1px solid transparent;
-  display: block;
-}
-
-.muse .nav-item a:hover {
-  border-bottom: 1px solid #222;
-}
-
-.muse .nav-item i {
-  display: block;
-}
-
-.muse .blog-header {
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  box-shadow: initial;
-  border-radius: initial;
-  z-index: 9999;
-  margin: 0 auto;
-  padding: 100px 0 70px;
-}
-
-.muse .site-title {
-  display: inline-block;
-  vertical-align: top;
-  font-weight: initial;
-  font-size: 18px;
-  font-family: 'Rosario', 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-
-.muse .subtitle {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #999;
-  top: -10px;
-  opacity: 0;
-}
-
-.muse .site-meta {
-  position: relative;
-  color: #fff;
-  background: transparent;
-  text-align: center;
-}
-
-.muse .section-layout-wrapper {
-  margin: 0 auto;
-  position: relative;
-}
-
-.muse .sidebar,.mist .sidebar {
+.mist .sidebar {
   position: fixed;
   top: 0px;
   right: 0px;
@@ -388,23 +147,23 @@
   overflow: hidden;
 }
 
-.muse .sidebar-wrapper,.mist .sidebar-wrapper {
+.mist .sidebar-wrapper {
   width: 320px;
   text-align: center;
 }
 
-.muse .sidebar-title,.mist .sidebar-title {
+.mist .sidebar-title {
   width: 320px;
 }
 
-.muse .site-author-name,.mist .site-author-name {
+.mist .site-author-name {
   margin: 5px 0 0;
   text-align: center;
   color: #f5f5f5;
   font-weight: normal;
 }
 
-.muse .site-description,.mist .site-description {
+.mist .site-description {
   margin-top: 5px;
   text-align: center;
   font-size: 14px;
@@ -412,82 +171,58 @@
   opacity: 0;
 }
 
-.muse .site-author-image,.mist .site-author-image {
+.mist .site-author-image {
   max-width: 96px;
   border: 2px solid #333;
   opacity: 0;
 }
 
-.muse .section-box,.mist .section-box {
+.mist .section-box {
   background-color: transparent;
 }
 
-.muse .section, .muse .posts-expand, .muse .post-header {
-  padding: 0px;
-}
-
-.muse .fa-arrow-up,.mist .fa-arrow-up {
-  color: #fff;
-}
-
-.muse .sidebar-title-active,.mist .sidebar-title-active{
+.mist .sidebar-title-active{
   color: #87daff;
   border-bottom-color: #87daff;
 }
 
-.muse .active-current > a,.mist .active-current > a {
+.mist .active-current > a {
   color: #87daff;
   border-bottom-color: #87daff;
 }
 
-.muse .active-show > a,.mist .active-show > a {
+.mist .active-show > a {
   color: #87daff;
   border-bottom-color: #87daff;
 }
 
-.muse .sidebar-box, .mist .sidebar-box {
+.mist .sidebar-box {
   background-color: transparent;
 }
 
-.muse .sidebar a:hover > span, .mist .sidebar a:hover > span {
+.mist .sidebar a:hover > span {
   transition: color .2s linear;
   color: #eee !important;
 }
 
-.muse .side-item-stat {
-  display: block;
-  text-align: center;
-}
-
-.muse .sidebar-item-box, .mist .sidebar-item-box {
+.mist .sidebar-item-box {
   display: inline-block;
   padding: 0 15px;
 }
 
-.muse .right-motion,.mist .right-motion {
+.mist .right-motion {
   opacity: 0;
 }
 
-.muse .sidebar-item-box + .sidebar-item-box,.mist .sidebar-item-box + .sidebar-item-box {
+.mist .sidebar-item-box + .sidebar-item-box {
   border-left: 1px solid #333;
 }
 
-.muse .sidebar-title-item:hover,.mist .sidebar-title-item:hover {
+.mist .sidebar-title-item:hover {
   color: #87daff;
 }
 
-.muse .post-button a {
-  color: #fff;
-  background: #222;
-  border: 2px solid #222;
-}
-
-.muse .post-button a:hover {
-  color: #222;
-  background: #fff;
-}
-
-.muse.back-to-top, .mist.back-to-top {
+.mist.back-to-top {
   opacity: 1;
   padding: 6px 0;
   width: 24px;
@@ -560,10 +295,6 @@
   width: 100%;
   opacity: 1;
   left: 0px;
-}
-
-.muse.body {
-  background-color: #ffffff;
 }
 
 .mist {
@@ -698,7 +429,7 @@
   background: transparent !important;
 }
 
-.mist .archive-timeline-box, .muse .archive-timeline-box,.mist .tag-timeline-box, .muse .tag-timeline-box {
+.mist .archive-timeline-box, .mist .tag-timeline-box {
   margin-left: 0; 
 }
 
@@ -724,10 +455,6 @@
     width: auto !important;
   }
 
-  .muse .site-nav {
-    display: none;
-  }
-
   .section-layout-wrapper {
     width: auto;
   }
@@ -740,14 +467,6 @@
     padding: 20px 20px;
   }
 
-  .gemini .section {
-    margin: 0 !important;
-  }
-
-  .gemini .post {
-    padding: 10px 20px;
-  }
-
   .nav-toggle {
     display: inline-block;
   }
@@ -758,21 +477,8 @@
     overflow: hidden;
   }
 
-  .muse .site-nav {
-    overflow: unset;
-  }
-
-  .muse .nav-item-active {
-    background-color: transparent;
-  }
-
-  .muse .nav-item:hover {
-    background: transparent;
-  }
-
 }
 
-// pisces gemini第一阶段
 @media (max-width: 991px) and (min-width: 768px) {
 
   .main-continer {
@@ -806,29 +512,12 @@
     padding: 20px;
   }
 
-  .gemini .section-layout-wrapper {
-    width: auto;
-    margin: 10px;
-  }
-
-  .gemini .post {
-    padding: 20px;
-  }
-
-  .gemini .brand {
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 767px) {
 
   .main-continer {
     width: auto;
-  }
-
-  .gemini .section-layout-wrapper {
-    width: auto;
-    margin: 10px;
   }
 
   .sidebar {
@@ -844,21 +533,11 @@
     border-radius: initial !important;
   }
 
-  .muse .blog-header {
-    overflow: unset;
-  }
-
-  .muse #nav_ul {
-    background-color: #FFF;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-  }
-
   .nav-toggle {
     display: inline-block;
   }
 
-  .pisces .blog-header, .gemini .blog-header {
+  .pisces .blog-header {
     overflow: hidden;
   }
 
@@ -870,36 +549,20 @@
     width: auto;
   }
 
-  .muse .section, .mist .section {
+  .mist .section {
     margin: 0px 20px !important;
     width: auto !important;
   }
-  .muse .nav-toggle {
-    top: 30px;
-    left: 10px;
-    color: #000;
-  }
-
-  .muse .site-nav {
-    position: absolute;
-    top: 30px;
-    background-color: #FFF;
-    width: 100%;
-  }
-
-  .muse .nav-item, .mist .nav-item {
+  
+  .mist .nav-item {
     display: block !important;
   }
-
-  .muse .nav-toggle .line {
-    background-color: #222;
-  }
-
-  .muse .nav-item i, .mist .nav-item i{
+  
+  .mist .nav-item i{
     display: inline-block !important;
   }
 
-  .muse .nav-item a, .mist .nav-item a {
+  .mist .nav-item a {
     text-align: left;
     padding-left: 10px;
   }
