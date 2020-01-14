@@ -19,7 +19,6 @@ const generateOverride = (params) => {
   }
 
   if (params.fontFamily) {
-    console.log(123)
     result += 
     `@font-face {
       font-family: '${params.fontFamily}';
@@ -30,6 +29,22 @@ const generateOverride = (params) => {
     }`
   }
 
+  if (params.sideIsRight) {
+    if (params.scheme === 'pisces' || params.scheme === 'gemini') {
+        result += `.pisces .blog-header, .gemini .blog-header {
+          right: 0;
+        }`
+    
+        result += `
+        .pisces .section-layout-wrapper, .gemini .section-layout-wrapper {
+          flex-direction: row-reverse;
+        }`
+    
+        result +=  `.pisces .sidebar, .gemini .sidebar {
+          right: 0;
+        }`
+      }
+  }
   return result;
 }
 

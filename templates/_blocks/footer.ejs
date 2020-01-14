@@ -24,6 +24,11 @@
     </span>
     <% } %>
   </div>
+  <% if (site.customConfig.bgImg) { %>
+    <div class="bg-img">
+      <img src="<%= site.customConfig.bgImg %>" />
+    </div>
+  <% } %>
 </div>
 
 <script>
