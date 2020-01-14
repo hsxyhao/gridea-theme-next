@@ -80,11 +80,12 @@
   });
 
 
-  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('mist')) {
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
     let hasFix = false;
+    let scrollEl = document.querySelector('.main-continer');
     let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
     window.addEventListener('scroll', function(e) {
-    if (document.body.scrollTop >= limitTop) {
+    if (document.scrollingElement.scrollTop >= limitTop) {
       if (!hasFix) {
         sidebar.classList.add('sidebar-fixed');
         hasFix = true;
