@@ -444,7 +444,8 @@
   background-color: transparent;
 }
 
-.muse .sidebar a:hover > span {
+.muse .sidebar a:hover > span, .mist .sidebar a:hover > span {
+  transition: color .2s linear;
   color: #eee !important;
 }
 
@@ -560,13 +561,12 @@
   background-color: #ffffff;
 }
 
-
 .mist {
   width: 100%;
 }
 
 .mist .header {
-  background-color: #eaeaea;
+  background-color: #F5F5F3;
 }
 
 .mist .blog-header {
@@ -574,6 +574,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 0 12px;
 }
 
 .mist .nav-item {
@@ -924,12 +925,6 @@
     border-top: 1px solid silver;
   }
 
-  .mist .blog-header {
-    width: auto;
-    position: relative;
-    display: block;
-    padding-top: 10px;
-  }
 
   .mist .post-header .post-title, .mist .post-header .post-meta {
     text-align: center;
