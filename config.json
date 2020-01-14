@@ -191,15 +191,6 @@
       "note": "多种策略适配不同种摘要排版，总有一款适合你"
     },
     {
-      "name": "contentBgColor",
-      "label": "内容区背景色",
-      "group": "颜色",
-      "value": "#ffffff",
-      "type": "input",
-      "card": "color",
-      "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"
-    },
-    {
       "name": "pageBgColor",
       "label": "网页背景色",
       "group": "颜色",
@@ -209,28 +200,10 @@
       "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"
     },
     {
-      "name": "textColor",
-      "label": "文字颜色",
+      "name": "contentBgColor",
+      "label": "内容区背景色",
       "group": "颜色",
-      "value": "rgba(0, 0, 0, 0.86)",
-      "type": "input",
-      "card": "color",
-      "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"
-    },
-    {
-      "name": "linkColor",
-      "label": "链接颜色",
-      "group": "颜色",
-      "value": "rgba(0,0,0,.98)",
-      "type": "input",
-      "card": "color",
-      "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"
-    },
-    {
-      "name": "linkHoverColor",
-      "label": "链接 Hover 颜色",
-      "group": "颜色",
-      "value": "#006CFF",
+      "value": "#ffffff",
       "type": "input",
       "card": "color",
       "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"

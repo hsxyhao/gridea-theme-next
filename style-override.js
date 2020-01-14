@@ -45,6 +45,13 @@ const generateOverride = (params) => {
         }`
       }
   }
+
+  if (params.pageBgColor) {
+    result += `body {
+      background-color: ${params.pageBgColor}
+    }`
+  }
+
   return result;
 }
 
