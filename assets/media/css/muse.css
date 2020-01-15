@@ -395,6 +395,12 @@
   left: 0px;
 }
 
+.main-continer {
+  background: #FFF;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .muse.body {
   background-color: #ffffff;
 }

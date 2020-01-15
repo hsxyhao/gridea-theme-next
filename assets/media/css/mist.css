@@ -134,6 +134,11 @@
   border: 1px solid #eee;
 }
 
+.main-continer {
+  background: #FFF;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
 .mist .sidebar {
   position: fixed;

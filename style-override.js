@@ -50,6 +50,12 @@ const generateOverride = (params) => {
     result += `body {
       background-color: ${params.pageBgColor}
     }`
+
+    if (params.scheme === 'mist') {
+      result += `.mist .header {
+        background-color: transparent !important;
+      }`
+    }
   }
 
   return result;

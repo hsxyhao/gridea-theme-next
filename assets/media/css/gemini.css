@@ -260,6 +260,18 @@
   max-width: 120px;
 }
 
+.gemini .nav-item a {
+  display: block;
+  font-size: 13px;
+  line-height: inherit;
+  position: relative;
+  box-sizing: border-box;
+  line-height: inherit;
+  border: none;
+  padding: 5px 20px;
+  text-align: left;
+}
+
 @media (min-width: 992px) {
 
 }
