@@ -29,11 +29,17 @@
   opacity: 0;
 }
 
-
 .nav-item a:hover {
-  color: #222;
+  background: #e1e1e1;
 }
 
+.nav-item a {
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  border-radius: 2px;
+  transition-property: background;
+}
 
 .nav-item-active {
   background: #f9f9f9;
@@ -229,7 +235,6 @@
 
 .mist.back-to-top {
   opacity: 1;
-  padding: 6px 0;
   width: 24px;
   background: #222;
 }
@@ -321,7 +326,6 @@
 .mist .nav-item {
   display: inline-block;
   font-size: 14px;
-  margin: 0 10px;
 }
 
 .mist .section-layout-wrapper {
