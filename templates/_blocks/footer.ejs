@@ -58,7 +58,7 @@
   }
 
   back2Top.addEventListener("click", function(e) {
-    scrollAnimation(body.scrollTop, 0);
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
     e.stopPropagation();
     return false;
   });

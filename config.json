@@ -30,6 +30,14 @@
       ]
     },
     {
+      "name": "seoKeywords",
+      "label": "SEO",
+      "group": "特性",
+      "value": "Gridea静态个人博客",
+      "type": "input",
+      "note": "seo优化关键字"
+    },
+    {
       "name": "sideIsRight",
       "label": "菜单栏是否开启右边显示",
       "group": "特性",

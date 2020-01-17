@@ -2,6 +2,10 @@
   background-color: #fff;
 }
 
+.muse .markdownIt-TOC a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
 .section {
   box-sizing: border-box;
   width: auto;
