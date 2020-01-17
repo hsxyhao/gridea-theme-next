@@ -1,5 +1,5 @@
-.section-box {
-  background-color: #fff;
+.pagination-ul {
+  padding: 10px 0;
 }
 
 .section-box.gemini {
@@ -161,10 +161,16 @@
   width: auto;
 }
 
-.gemini .section-box {
+
+.gemini .section-box{
   box-sizing: border-box;
   width: calc(100% - 252px);
   min-height: 700px;
+  background-color: transparent;
+}
+
+.gemini .section-box.tag-line{
+  background-color: #fff;
 }
 
 .gemini .header {

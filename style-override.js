@@ -37,7 +37,7 @@ const generateOverride = (params) => {
     
         result += `
         .pisces .section-layout-wrapper, .gemini .section-layout-wrapper {
-          flex-direction: row-reverse;
+          flex-direction: row-reverse !important;
         }`
     
         result +=  `.pisces .sidebar, .gemini .sidebar {

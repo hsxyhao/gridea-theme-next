@@ -43,7 +43,7 @@ document.addEventListener('scroll', function(e) {
   if (lList.length <= 0) {
     return;
   }
-  let scrollTop = document.body.scrollTop;
+  let scrollTop = document.scrollingElement.scrollTop;
   let dir;
 
   if (lastTop - scrollTop > 0) {
