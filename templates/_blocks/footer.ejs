@@ -9,7 +9,7 @@
   </footer>
   <% let scheme = site.customConfig.scheme; %>
   <% if (scheme === 'muse' || scheme === 'mist') { %>
-    <div class="drawer-box" id="drawer_box">
+    <div class="drawer-box <%= site.customConfig.sideIsRight?'right':'left' %>" id="drawer_box">
       <span class="muse-line muse-line-first"></span>
       <span class="muse-line muse-line-middle"></span>
       <span class="muse-line muse-line-last"></span>
@@ -87,6 +87,11 @@
 
   if (drawerBox) {
     let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn",
+    paddingDir = right ? "paddingRight" : "paddingLeft";
+
     drawerBox.onclick = function() {
       open = !open;
       window.Velocity(rightSideBar, 'stop');
@@ -98,12 +103,12 @@
         }, {
           duration: MOTION_TIME,
           begin: function() {
-            window.Velocity(rightMotions, 'transition.slideRightIn',{
+            window.Velocity(rightMotions, transitionDir,{
             });
           }
         })
         window.Velocity(viewport, {
-          paddingRight: RIGHT_MOVE_DIS
+          paddingDir: RIGHT_MOVE_DIS
         } ,{
           duration: MOTION_TIME
         });
@@ -119,7 +124,7 @@
           }
         })
         window.Velocity(viewport, {
-          paddingRight: '0px'
+          paddingDir: '0px'
         } ,{
           duration: MOTION_TIME
         });
