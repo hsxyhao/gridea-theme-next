@@ -4,8 +4,7 @@
       © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
     </div>
     <div class="poweredby">
-      <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
-      <div>Copy From<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
+      <%- site.themeConfig.footerInfo%>
     </div>
   </footer>
   <% let scheme = site.customConfig.scheme; %>
@@ -79,8 +78,9 @@
   // 动态调整站点概览高度
   if (back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
     let sideBar = document.querySelector('.sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px;';
+    let navUl = document.querySelector('#site_nav');
+    console.log(navUl);
+    sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
   }
   
   let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
@@ -91,13 +91,13 @@
       open = !open;
       window.Velocity(rightSideBar, 'stop');
       window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
       if (open) {
         window.Velocity(rightSideBar, {
           width: RIGHT_MOVE_DIS
         }, {
           duration: MOTION_TIME,
           begin: function() {
-            console.log(rightMotions)
             window.Velocity(rightMotions, 'transition.slideRightIn',{
             });
           }

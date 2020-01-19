@@ -54,14 +54,6 @@
       "note": "各Scheme14寸屏左右推荐配置：Pisces 960px,Muse 700px, Mist 85%, Gemini 960px。在Pisces、Gemini风格中博客可视区宽度比文章内容区宽度多250~260px左右，设置了可视区宽度默认改变了内容区宽度"
     },
     {
-      "name": "textSize",
-      "label": "正文内容文字大小",
-      "group": "布局",
-      "value": "16px",
-      "type": "input",
-      "note": "px 或 rem（如 16px 或 1rem）"
-    },
-    {
       "name": "fontFamily",
       "label": "字体",
       "group": "布局",
@@ -104,9 +96,10 @@
       "name": "hoverColor",
       "label": "目录Hover颜色",
       "group": "目录",
-      "value": true,
+      "value": "",
       "type": "input",
-      "note": "目录active状态下的颜色"
+      "card": "color",
+      "note": "Pisces、Gemini风格默认#000，Muse、Mist默认#FFF"
     },
     {
       "name": "tocCompress",
@@ -143,7 +136,7 @@
       "group": "特性",
       "value": false,
       "type": "switch",
-      "note": "夜间模式默认不开启"
+      "note": "夜间模式默认不开启【未完成】"
     },
     {
       "name": "enableReward",
@@ -151,7 +144,7 @@
       "group": "特性",
       "value": false,
       "type": "switch",
-      "note": "打赏功能默认不开启"
+      "note": "打赏功能默认不开启【未完成】"
     },
     {
       "name": "enableThemeCompatible",
@@ -159,7 +152,7 @@
       "group": "兼容",
       "value": false,
       "type": "switch",
-      "note": "主题兼容主要由hexo-next不支持封面问题导致，具体描述请到hsxyhao.github.io了解"
+      "note": "原版hexo-next是不支持封面设置的，该选项兼容Gridea中的封面配置"
     },
     {
       "name": "strategy",
@@ -189,25 +182,7 @@
           "value": "words"
         }
       ],
-      "note": "多种策略适配不同种摘要排版，总有一款适合你"
-    },
-    {
-      "name": "pageBgColor",
-      "label": "网页背景色",
-      "group": "颜色",
-      "value": "#ffffff",
-      "type": "input",
-      "card": "color",
-      "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"
-    },
-    {
-      "name": "contentBgColor",
-      "label": "内容区背景色",
-      "group": "颜色",
-      "value": "#ffffff",
-      "type": "input",
-      "card": "color",
-      "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"
+      "note": "多种策略适配不同种摘要排版，需开启兼容模式"
     },
     {
       "name": "github",
@@ -282,27 +257,74 @@
       "arrayItems": [
           { "label": "名称", "name": "siteName", "type": "input", "value": "" },
           { "label": "链接", "name": "siteLink", "type": "input", "value": "" }
-      ], 
-      "note": ""
+      ]
     },
     {
       "name": "bgImg",
       "label": "背景图片",
-      "group": "美化",
+      "group": "魔改",
       "value": "",
       "type": "picture-upload",
       "note": "博客整体背景图"
     },
     {
+      "name": "headerImg",
+      "label": "标题背景图片",
+      "group": "魔改",
+      "value": "",
+      "type": "picture-upload",
+      "note": "Muse风格的Header区域背景图片，仅在Muse风格中生效"
+    },
+    {
+      "name": "siteMetaImg",
+      "label": "站点预览背景图片",
+      "group": "魔改",
+      "value": "",
+      "type": "picture-upload",
+      "note": "仅在Muse、Mist风格中生效"
+    },
+    {
       "name": "opacity",
-      "label": "整个可视区透明度",
-      "group": "美化",
+      "label": "可视区透明度",
+      "group": "魔改",
       "value": "",
       "type": "input",
       "note": "正常模式下所有标签的透明度，仅数字1~100"
     },
     {
-
+      "name": "bgSiteMetaColor",
+      "label": "站点区域背景色",
+      "group": "魔改",
+      "value": "#000",
+      "type": "input",
+      "card": "color",
+      "note": "默认黑色不透明"
+    },
+    {
+      "name": "bgColor",
+      "label": "背景颜色",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "card": "color",
+      "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
+    },
+    {
+      "name": "bgTitleColor",
+      "label": "站点标题背景颜色",
+      "group": "魔改",
+      "value": "#000",
+      "type": "input",
+      "card": "color",
+      "note": "默认黑色，不透明"
+    },
+    {
+      "name": "bgTitleFontSize",
+      "label": "站点标题字体大小",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "字体大小采用的是css transform属性，参考值为[1,3]"
     }
   ]
 }
