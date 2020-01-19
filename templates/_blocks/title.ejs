@@ -5,6 +5,13 @@
     </a>
   </h1>
   <div class="post-meta">
+    <% if (isTop) { %>
+      <span class="meta-item">
+        <i class="fa fa-thumb-tack"></i>
+        <span>置顶</span>
+        <span class="post-meta-divider">|</span>
+      </span>
+    <% } %>
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
