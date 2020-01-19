@@ -149,7 +149,7 @@
 .mist .sidebar {
   position: fixed;
   top: 0px;
-  right: 0px;
+  left: 0px;
   bottom: 0;
   z-index: 1040;
   box-shadow: inset 0 2px 6px #000;
@@ -241,7 +241,7 @@
 
 .drawer-box {
   position: fixed;
-  right: 30px;
+  left: 30px;
   bottom: 56px;
   width: 14px;
   height: 14px;
@@ -264,7 +264,7 @@
   transition: all .3s linear;
 }
 
-.drawer-box:hover .muse-line:first-child {
+.drawer-box.right:hover .muse-line:first-child {
   top: 2px;
   transform: rotateZ(-45deg);
   width: 50%;
@@ -272,18 +272,37 @@
   left: 0px;
 }
 
-.drawer-box:hover middle {
+.drawer-box.right:hover middle {
   width: 90%;
   opacity: 1;
   left: 0px;
 }
 
-.drawer-box:hover .muse-line:last-child {
+.drawer-box.right:hover .muse-line:last-child {
   top: -2px;
   transform: rotateZ(45deg);
   width: 50%;
   opacity: 1;
   left: 0px;
+}
+
+.drawer-box.left:hover .muse-line:first-child {
+  top: 2px;
+  transform: translateX(100%) rotateZ(45deg);
+  width: 50%;
+  opacity: 1;
+}
+
+.drawer-box.left:hover middle {
+  width: 90%;
+  opacity: 1;
+}
+
+.drawer-box.left:hover .muse-line:last-child {
+  top: -2px;
+  transform: translateX(100%) rotateZ(-45deg);
+  width: 50%;
+  opacity: 1;
 }
 
 .sidebar-open .muse-line-first {

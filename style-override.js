@@ -70,7 +70,7 @@ const generateOverride = (params) => {
         right: 0;
       }`
     } else {
-      result += `.muse .sidebar {
+      result += `.muse .sidebar, .mist .sidebar {
         right: 0 !important;
         left: auto !important;
       }
@@ -146,6 +146,7 @@ const generateOverride = (params) => {
       result += `
         .header-box {
           background-image: url(${params.headerImg});
+          background-attachment: fixed;
         }
         .muse .blog-header {
           padding: 50px 0 0 !important;
