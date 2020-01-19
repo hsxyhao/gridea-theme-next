@@ -100,6 +100,24 @@ const generateOverride = (params) => {
   }
 
   // 魔改
+
+  if (params.bgImg) {
+    if (params.scheme === 'mist') {
+      result  +=  `.mist .main-title {
+        color: #eee !important;
+      }
+      .site-nav a {
+        color:  #eee !important;
+      }
+      .nav-item a:hover {
+        background: none !important;
+      }
+      .mist .site-title i {
+        background: #eee !important;
+      }`
+    }
+  }
+
   if (params.opacity) {
     let opacity = 0.85;
     try {
@@ -127,16 +145,8 @@ const generateOverride = (params) => {
       }`
     } else {
       // 首页 阅读页 归档 标签
-      result += `
-      .mist .header{
-        background-color: transparent;
-      }
-      .blog-header {
-        opacity: ${opacity};
-        background-color: #fff;
-      }
-      .section-layout.mist {
-        opacity: ${opacity};
+      result += `.section-layout {
+        opacity: ${opacity} !important;
       }`
     }
   }
@@ -228,12 +238,23 @@ const generateOverride = (params) => {
   }
 
   if (params.bgTitleFontSize) {
-    result += `
-    .brand {
-      font-weight: bold;
-      transform: scale(${params.bgTitleFontSize});
+    if (params.scheme === 'mist') {
+      result += `.site-title {
+        transform: scale(${params.bgTitleFontSize});
+      }`
+    } else {
+      result += `
+      .brand {
+        font-weight: bold;
+        transform: scale(${params.bgTitleFontSize});
+      }`
     }
-    `
+  }
+
+  if (params.blur) {
+      result += `.bg-img img {
+        filter: blur(${params.blur}px)
+      }`
   }
 
   return result;
