@@ -1,62 +1,64 @@
 <% posts.forEach(function(post) { %>
   <article class="post-list-box post">
-    <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats}) %>
-    <div class="post-body">
-      <% if (site.customConfig.enableThemeCompatible) { %>
-        <% if (site.customConfig.strategy === 'first') { %>
-          <% let paragraph = post.abstract && post.abstract.split('<p>');%>
-          <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
-            <%- '<p>' + paragraph[i]%>
-            <% if (i === 1 && post.feature) {%>
-              <img src="<%= post.feature %>" />
+    <div class="article-wrapper">
+      <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats}) %>
+      <div class="post-body">
+        <% if (site.customConfig.enableThemeCompatible) { %>
+          <% if (site.customConfig.strategy === 'first') { %>
+            <% let paragraph = post.abstract && post.abstract.split('<p>');%>
+            <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
+              <%- '<p>' + paragraph[i]%>
+              <% if (i === 1 && post.feature) {%>
+                <img src="<%= post.feature %>" />
+              <% } %>
             <% } %>
-          <% } %>
-        <% } else if (site.customConfig.strategy === 'before') {%>
-          <img src="<%= post.feature %>" />
-          <%- post.abstract %>
-        <% } else if (site.customConfig.strategy === 'after') {%>
-          <%- post.abstract %>
-          <img src="<%= post.feature %>" />
-        <% } else if (site.customConfig.strategy === 'random') {%>
-          <% let paragraph = post.abstract && post.abstract.split('<p>');let r = Math.floor(Math.random() * 10) % paragraph.length;%>
-          <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
-            <%- '<p>' + paragraph[i]%>
-            <% if (i === r && post.feature) {%>
-              <img src="<%= post.feature %>" />
+          <% } else if (site.customConfig.strategy === 'before') {%>
+            <img src="<%= post.feature %>" />
+            <%- post.abstract %>
+          <% } else if (site.customConfig.strategy === 'after') {%>
+            <%- post.abstract %>
+            <img src="<%= post.feature %>" />
+          <% } else if (site.customConfig.strategy === 'random') {%>
+            <% let paragraph = post.abstract && post.abstract.split('<p>');let r = Math.floor(Math.random() * 10) % paragraph.length;%>
+            <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
+              <%- '<p>' + paragraph[i]%>
+              <% if (i === r && post.feature) {%>
+                <img src="<%= post.feature %>" />
+              <% } %>
             <% } %>
-          <% } %>
-        <% } else if (site.customConfig.strategy === 'words') {%>
-          <% let paragraph = post.abstract && post.abstract.split('<p>'); %>
-          <% let words = 0; let has = false; for (let i = 0; i < paragraph.length; i++) { %>
-            <%- '<p>' + paragraph[i]%>
-            <%- post.featurec %>
-            <% words +=paragraph[i].length; %>
-            <% if (!has && words > 200 && post.feature) {%>
+          <% } else if (site.customConfig.strategy === 'words') {%>
+            <% let paragraph = post.abstract && post.abstract.split('<p>'); %>
+            <% let words = 0; let has = false; for (let i = 0; i < paragraph.length; i++) { %>
+              <%- '<p>' + paragraph[i]%>
+              <%- post.featurec %>
+              <% words +=paragraph[i].length; %>
+              <% if (!has && words > 200 && post.feature) {%>
+                <img src="<%= post.feature %>"/>
+                <% has = true; %>
+              <% } %>
+            <% } %>
+            <% if (!has && post.feature) {%>
               <img src="<%= post.feature %>"/>
-              <% has = true; %>
             <% } %>
-          <% } %>
-          <% if (!has && post.feature) {%>
-            <img src="<%= post.feature %>"/>
+          <% } else {%>
+            <%- post.abstract %>
           <% } %>
         <% } else {%>
           <%- post.abstract %>
         <% } %>
-      <% } else {%>
-        <%- post.abstract %>
-      <% } %>
-      <% if (post.content.length - post.abstract.length !== 14) { %>
-      <div class="post-button text-center">
-        <a class="btn" href="<%= post.link %>" rel="contents">
-          阅读全文 »
-        </a>
+        <% if (post.content.length - post.abstract.length !== 14) { %>
+        <div class="post-button text-center">
+          <a class="btn" href="<%= post.link %>" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        <% } %>
       </div>
+      <% if (site.customConfig.scheme !== 'gemini') { %>
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
       <% } %>
     </div>
-    <% if (site.customConfig.scheme !== 'gemini') { %>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-    <% } %>
   </article>
 <% }); %>  
