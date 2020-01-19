@@ -2,10 +2,6 @@
   background-color: #fff;
 }
 
-.muse .markdownIt-TOC a:hover {
-  color: #fff;
-  border-bottom-color: #fff;
-}
 .section {
   box-sizing: border-box;
   width: auto;
@@ -27,6 +23,7 @@
 .site-nav {
   margin: 20px 0;
   transition: all .3s linear;
+  text-align: center;
 }
 
 .nav-item {
@@ -39,12 +36,7 @@
 }
 
 
-.nav-item-active {
-  background: #f9f9f9;
-}
-
 .nav-item:hover {
-  background: #f9f9f9;
   color: rgba(0, 0, 0, 0.98);
 }
 
@@ -105,7 +97,7 @@
 }
 
 .header ul {
-  display: block;
+  display: inline-block;
   padding: 0px;
   list-style-type: none;
 }
@@ -138,8 +130,14 @@
   border: 1px solid #eee;
 }
 
-.muse {
-  
+.muse .post {
+  margin: 70px 0;
+}
+
+.muse.section-layout {
+  padding: 20px 40px;
+  background-color: #FFF;
+  box-sizing: border-box;
 }
 
 .muse header{
@@ -160,10 +158,14 @@
   display: inline-block;
 }
 
-.muse .nav-item a{
+.muse .nav-item a {
   text-align: center;
   border-bottom: 1px solid transparent;
   display: block;
+}
+
+.muse .nav-item-active a{
+  border-bottom: 1px solid #222;
 }
 
 .muse .nav-item a:hover {
@@ -182,7 +184,8 @@
   border-radius: initial;
   z-index: 9999;
   margin: 0 auto;
-  padding: 100px 0 70px;
+  padding: 100px 0 0;
+  background-color: #FFF;
 }
 
 .muse .site-title {
@@ -286,11 +289,6 @@
   background-color: transparent;
 }
 
-.muse .sidebar a:hover > span {
-  transition: color .2s linear;
-  color: #eee !important;
-}
-
 .muse .side-item-stat {
   display: block;
   text-align: center;
@@ -299,6 +297,11 @@
 .muse .sidebar-item-box {
   display: inline-block;
   padding: 0 15px;
+}
+
+.muse .sidebar-item-box:hover a{
+  transition: color .2s linear;
+  color: #fff !important;
 }
 
 .muse .right-motion {
@@ -326,7 +329,6 @@
 
 .muse.back-to-top {
   opacity: 1;
-  padding: 6px 0;
   width: 24px;
   background: #222;
 }
@@ -352,7 +354,7 @@
   height: 2px;
   width: 100%;
   margin-bottom: 3px;
-  background: #87daff;
+  background: #fff;
   transition: all .3s linear;
 }
 
@@ -397,12 +399,6 @@
   width: 100%;
   opacity: 1;
   left: 0px;
-}
-
-.main-continer {
-  background: #FFF;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .muse.body {

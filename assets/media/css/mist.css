@@ -2,12 +2,6 @@
   background-color: #fff;
 }
 
-
-.mist .markdownIt-TOC a:hover {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
 .section {
   box-sizing: border-box;
   width: auto;
@@ -146,9 +140,9 @@
   border: 1px solid #eee;
 }
 
-.main-continer {
-  background: #FFF;
-  padding: 20px;
+.section-layout.mist {
+  padding: 20px 40px;
+  background-color: #FFF;
   box-sizing: border-box;
 }
 
@@ -266,7 +260,7 @@
   height: 2px;
   width: 100%;
   margin-bottom: 3px;
-  background: #87daff;
+  background: #fff;
   transition: all .3s linear;
 }
 
@@ -317,16 +311,13 @@
   width: 100%;
 }
 
-.mist .header {
-  background-color: #F5F5F3;
-}
-
 .mist .blog-header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0 12px;
+  padding: 12px 40px 12px;
+  box-sizing: border-box;
 }
 
 .mist .nav-item {

@@ -25,8 +25,9 @@
 }
 
 .site-nav {
-  margin: 20px 0;
+  padding: 20px 0;
   transition: all .3s linear;
+  background-color: #FFF;
 }
 
 .nav-item {
@@ -142,9 +143,6 @@
 .gemini {
   
 }
-.gemini .blog-header {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-}
 
 .gemini .section {
   padding: 0px;
@@ -206,12 +204,13 @@
 
 .gemini .blog-header {
   position: absolute;
+  overflow: hidden;
   top: 0;
   padding: 0;
   width: 240px;
-  background: #fff;
   border-radius: initial;
   z-index: 9999;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 
 
@@ -322,6 +321,7 @@
     height: 0px !important;
     margin: 0;
     overflow: hidden;
+    background-color: #FFF;
   }
 
 }
@@ -384,6 +384,10 @@
     display: none !important;
   }
 
+  .gemini .blog-header {
+    overflow: hidden;
+  }
+  
   .header {
     width: auto !important;
   }
@@ -395,10 +399,6 @@
 
   .nav-toggle {
     display: inline-block;
-  }
-
-  .gemini .blog-header {
-    overflow: hidden;
   }
 
   .section-layout-wrapper {

@@ -21,7 +21,8 @@
 }
 
 .site-nav {
-  margin: 20px 0;
+  padding: 20px 0;
+  background-color: #fff;
   transition: all .3s linear;
 }
 
@@ -138,10 +139,6 @@
 
 }
 
-.pisces .blog-header {
-  box-shadow: initial;
-}
-
 .pisces .section-box {
   width: calc(100% - 260px);
 }
@@ -173,9 +170,10 @@
   top: 0;
   padding: 0;
   width: 240px;
-  background: #fff;
   border-radius: initial;
   z-index: 9999;
+  box-shadow: initial;
+  overflow: hidden;
 }
 
 .pisces .site-title {
@@ -285,6 +283,7 @@
     height: 0px !important;
     margin: 0;
     overflow: hidden;
+    background-color: #FFF;
   }
 
 }
@@ -350,7 +349,7 @@
   .pisces .blog-header {
     overflow: hidden;
   }
-
+  
   .section-layout-wrapper {
     width: auto !important;
   }
