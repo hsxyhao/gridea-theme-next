@@ -20,7 +20,11 @@ const generateOverride = (params) => {
       bgColor = '#fff';
     }
     result += `body {
-      background-color: ${bgColor};
+      background-color: ${bgColor} !important;
+    }`
+  } else {
+    result += `body {
+      background-color: ${params.bgColor};
     }`
   }
 
