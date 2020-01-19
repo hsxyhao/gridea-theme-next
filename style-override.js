@@ -57,19 +57,29 @@ const generateOverride = (params) => {
   // 特性
   if (params.sideIsRight) {
     if (params.scheme === 'pisces' || params.scheme === 'gemini') {
-        result += `.pisces .blog-header, .gemini .blog-header {
-          right: 0;
-        }`
-    
-        result += `
-        .pisces .section-layout-wrapper, .gemini .section-layout-wrapper {
-          flex-direction: row-reverse !important;
-        }`
-    
-        result +=  `.pisces .sidebar, .gemini .sidebar {
-          right: 0;
-        }`
+      result += `.pisces .blog-header, .gemini .blog-header {
+        right: 0;
+      }`
+  
+      result += `
+      .pisces .section-layout-wrapper, .gemini .section-layout-wrapper {
+        flex-direction: row-reverse !important;
+      }`
+  
+      result +=  `.pisces .sidebar, .gemini .sidebar {
+        right: 0;
+      }`
+    } else {
+      result += `.muse .sidebar {
+        right: 0 !important;
+        left: auto !important;
       }
+      .drawer-box {
+        right: 30px !important;
+        left: auto !important;
+      }
+      `
+    }
   }
 
   // 目录
