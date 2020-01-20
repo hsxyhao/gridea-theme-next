@@ -37,7 +37,7 @@
       "type": "input"
     },
     {
-      "name": "introduction",
+      "name": "signature",
       "label": "站点描述",
       "group": "布局",
       "value": "这个人很懒，什么都不想写...",
