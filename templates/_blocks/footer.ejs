@@ -28,6 +28,7 @@
       <img src="<%= site.customConfig.bgImg %>" />
     </div>
   <% } %>
+  <%- include('./live2d.ejs') %>
 </div>
 
 <script>
@@ -79,7 +80,6 @@
   if (back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
     let sideBar = document.querySelector('.sidebar');
     let navUl = document.querySelector('#site_nav');
-    console.log(navUl);
     sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
   }
   
