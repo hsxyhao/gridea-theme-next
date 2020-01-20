@@ -2,9 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title><%= siteTitle %></title>
 <meta name="keywords" content="<%= site.customConfig.seoKeywords %>">
+<meta name="description" content="<%= themeConfig.siteDescription %>">
 <link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico?v=<%= site.utils.now %>">
 <link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css">
-
 <% let scheme = site.customConfig.scheme; %>
 <link rel="stylesheet" href="/media/css/<%= scheme?scheme:'pisces' %>.css">
 

@@ -28,9 +28,10 @@
       <img src="<%= site.customConfig.bgImg %>" />
     </div>
   <% } %>
-  <%- include('./live2d.ejs') %>
+  <% if (site.customConfig.enableLive2d) { %>
+    <%- include('./live2d.ejs') %>
+  <% } %>
 </div>
-
 <script>
 
   let sideBarOpen = 'sidebar-open';
