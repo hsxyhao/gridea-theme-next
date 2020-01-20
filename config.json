@@ -30,6 +30,20 @@
       ]
     },
     {
+      "name": "subTitle",
+      "label": "子标题",
+      "group": "布局",
+      "value": "精于心，简于形",
+      "type": "input"
+    },
+    {
+      "name": "introduction",
+      "label": "站点描述",
+      "group": "布局",
+      "value": "这个人很懒，什么都不想写...",
+      "type": "input"
+    },
+    {
       "name": "seoKeywords",
       "label": "SEO",
       "group": "特性",
@@ -60,13 +74,6 @@
       "value": "",
       "type": "input",
       "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
-    },
-    {
-      "name": "subTitle",
-      "label": "子标题",
-      "group": "布局",
-      "value": "精于心，简于形",
-      "type": "input"
     },
     {
       "name": "updateTip",
@@ -332,6 +339,20 @@
       "group": "魔改",
       "value": "",
       "type": "input"
+    }, 
+    {
+      "name": "enableLive2d",
+      "label": "是否开启看板娘",
+      "group": "看板娘",
+      "value": "false",
+      "type": "switch"
+    }, 
+    {
+      "name": "enableLive2d",
+      "label": "是否开启看板娘",
+      "group": "看板娘",
+      "value": "false",
+      "type": "switch"
     }
   ]
 }
