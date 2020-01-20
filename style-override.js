@@ -226,7 +226,7 @@ const generateOverride = (params) => {
   if (params.bgTitleColor) {
     result += `
     .brand {
-      background: ${params.bgTitleColor};
+      background: ${params.bgTitleColor} !important;
     }
     `
   } else {

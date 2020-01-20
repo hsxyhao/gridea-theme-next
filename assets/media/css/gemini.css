@@ -323,6 +323,7 @@
   }
 
   .site-nav {
+    padding: 0px;
     height: 0px !important;
     margin: 0;
     overflow: hidden;
