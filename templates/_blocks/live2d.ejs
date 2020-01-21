@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/media/live2d/histoire/css/live2d.css" />
-<div id="landlord" style="left:5px;bottom:0px;">
+<div id="landlord" style="left:5px;bottom:0px;" data-key="<%= site.customConfig.apiKey %>">
   <div class="message" style="opacity:0"></div>
   <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
   <div class="live_talk_input_body">
@@ -29,7 +29,8 @@
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
 var message_Path = '/media/live2d/histoire/';
-var talkAPI = "1312312";//如果有类似图灵机器人的聊天接口请填写接口路径
+let landlord = document.querySelector('#landlord');
+var apiKey = landlord.dataset.key;
 </script>
 <script type="text/javascript" src="/media/live2d/histoire/js/live2d.js"></script>
 <script type="text/javascript" src="/media/live2d/histoire/js/message.js"></script>
