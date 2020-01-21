@@ -346,13 +346,14 @@
       "group": "看板娘",
       "value": "false",
       "type": "switch"
-    }, 
+    },
     {
-      "name": "enableLive2d",
-      "label": "是否开启看板娘",
+      "name": "apiKey",
+      "label": "apiKey",
       "group": "看板娘",
-      "value": "false",
-      "type": "switch"
+      "value": "",
+      "type": "input",
+      "note": "图灵机器人秘钥"
     }
   ]
 }

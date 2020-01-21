@@ -245,7 +245,7 @@ if(!norunFlag){
 				$('body').addClass(dataType);
 			}
 		});
-		if(talkAPI!==""){
+		if(apiKey){
 			$('#showInfoBtn').on('click',function(){
 				var live_statu = $('#live_statu_val').val();
 				if(live_statu=="0"){
@@ -285,21 +285,17 @@ if(!norunFlag){
 				}
 				showMessage('思考中~', 0);
 				$.ajax({
-					type: 'POST',
-					url: talkAPI,
-					data: {
-						"info":info_,
-						"userid":userid_
-					},
+					type: 'GET',
+					url: `http://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+					dataType : "json",//数据类型为jsonp  
 					success: function(res) {
-						if(res.code !== 100000){
+						if (res && res.code === 100000) {
 							talkValTimer();
-							showMessage('似乎有什么错误，请和站长联系！',0);
-						}else{
+							showMessage(res.text, 0);
+						} else {
 							talkValTimer();
-							showMessage(res.text,0);
+							showMessage('似乎有什么错误，请和站长联系！', 0);
 						}
-						console.log(res);
 						$('#AIuserText').val("");
 						sessionStorage.setItem("live2duser", userid_);
 					}
