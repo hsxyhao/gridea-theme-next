@@ -12,7 +12,7 @@
     </div>
     <div class="main-continer">
       <% let scheme = site.customConfig.scheme; %>
-      <div class="section-layout <%= scheme !==''?scheme:'pisces' %> <%= scheme === 'muse'?'bg-color':'' %>">
+      <div class="section-layout <%= scheme !==''?scheme:'pisces' %> <%= scheme === 'muse' || scheme === 'mist' ?'bg-color':'' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/post-sidebar', {toc: post.toc, link: '/'}) %>
           <div class="section-box box-shadow-wrapper">

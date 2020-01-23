@@ -133,4 +133,26 @@
   .archive-timeline-box {
     margin-left: 0px;
   }
+
+  .archive-timeline-box::after {
+    content: none;
+  }
+
+  .archive-timeline-title::before {
+    content: none;
+  }
+
+  .node-title::before {
+    content: none;
+  }
+
+  .archive-timeline-box .tag-node::before {
+    content: none;
+  }
+  .archive-timeline-box h1 {
+    max-width: 760px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }

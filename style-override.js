@@ -315,7 +315,6 @@ const generateOverride = (params) => {
         }
         .muse .post {
           padding: 20px 40px !important;
-          background: rgba(255,255,255,0.9) none repeat scroll !important;
           -webkit-box-shadow: 0 0 50px rgba(202,203,203,0.5);
           -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
         }
@@ -418,6 +417,12 @@ const generateOverride = (params) => {
   if (params.bgImg && params.scheme === 'gemini') {
     result += `.box-shadow-wrapper {
       padding: 10px;
+    }`
+  }
+
+  if (!params.shadow) {
+    result += `.box-shadow-wrapper {
+      box-shadow: none !important;
     }`
   }
   
