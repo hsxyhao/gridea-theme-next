@@ -257,6 +257,17 @@ const generateOverride = (params) => {
       }`
   }
 
+  // 看板娘
+  if (params.scale) {
+    let scale = params.scale;
+    if (scale < 0 || scale > 1) {
+      scale = 1;
+    }
+    result += `.box-scale > #landlord {
+      transform: scale(${scale});
+    }`
+  }
+
   return result;
 }
 
