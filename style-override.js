@@ -54,6 +54,95 @@ const generateOverride = (params) => {
     }`
   }
 
+  // 颜色
+  if (params.fontColor) {
+    result += `body {
+      color: ${params.fontColor};
+    }`
+  }
+
+  if (params.titleColor) {
+    result += `h1, h2, h3, h4, h5, h6 {
+      color: ${params.titleColor};
+    }
+    
+    .archive-timeline-title::before {
+      background-color: ${params.titleColor};
+    }
+    
+    .post-title-link::before {
+      background-color: ${params.titleColor};
+    }
+    
+    .node-title::before {
+      background-color: ${params.titleColor};
+    }`
+  }
+
+  if (params.linkColor) {
+    result += `a {
+      color: ${params.linkColor};
+    }`
+  }
+
+  if (params.linkHoverColor) {
+    result += `a:hover {
+      color: ${params.linkHoverColor};
+    }
+    
+    .archive-timeline-box .tag-node:hover::before {
+      background-color: ${params.linkHoverColor};
+    }
+    
+    .markdownIt-TOC a:hover {
+      color: ${params.linkHoverColor};
+      border-bottom-color: ${params.linkHoverColor};
+    }`
+  }
+
+  if (params.menuColor) {
+    if (params.scheme === 'muse') {
+      result += `.nav-item a {
+        color: ${params.menuColor};
+      }
+      .nav-item-active a {
+        color: ${params.menuColor};
+        border-bottom: 1px solid ${params.menuColor} !important;
+      }`
+    } else {
+      result  +=  `
+      .nav-item a {
+        color:  ${params.menuColor};
+      }`
+    }
+  }
+
+  if (params.menuHoverColor) {
+    if (params.scheme === 'muse') {
+      result += `.nav-item a:hover {
+        color: ${params.menuHoverColor};
+        border-bottom: 1px solid ${params.menuHoverColor} !important;
+      }`
+    } else {
+      result += `.nav-item a:hover {
+        color: ${params.menuHoverColor};
+      }`
+    }
+  }
+
+  if (params.menuActiveColor) {
+    result += `.nav-item-active {
+      background: ${params.menuActiveColor};
+    }
+
+    .nav-item:hover {
+      background: ${params.menuActiveColor};
+      color: rgba(0, 0, 0, 0.98);
+    }`
+  }
+
+
+
   // 特性
   if (params.sideIsRight) {
     if (params.scheme === 'pisces' || params.scheme === 'gemini') {
@@ -83,10 +172,10 @@ const generateOverride = (params) => {
   }
 
   // 目录
-  if (params.hoverColor) {
+  if (params.indexColor) {
     result += `.markdownIt-TOC a:hover {
-      color: ${params.hoverColor};
-      border-bottom-color: ${params.hoverColor};
+      color: ${params.indexColor};
+      border-bottom-color: ${params.indexColor};
     }`
   } else {
     let colorStr = '#000';
@@ -99,24 +188,65 @@ const generateOverride = (params) => {
     }`
   }
 
-  // 魔改
-
-  if (params.bgImg) {
-    if (params.scheme === 'mist') {
-      result  +=  `.mist .main-title {
-        color: #eee !important;
-      }
-      .site-nav a {
-        color:  #eee !important;
-      }
-      .nav-item a:hover {
-        background: none !important;
-      }
-      .mist .site-title i {
-        background: #eee !important;
-      }`
+  if (params.indexHoverColor) {
+    result += `.markdownIt-TOC a:hover {
+      color: ${params.indexHoverColor};
+      border-bottom-color: ${params.indexHoverColor};
+    }`
+  } else {
+    let colorStr = '#000';
+    if (params.scheme === 'mist' || params.scheme === 'muse') {
+      colorStr = '#fff';
     }
+    result += `.markdownIt-TOC a:hover {
+      color: ${colorStr};
+      border-bottom-color: ${colorStr};
+    }`
   }
+
+  if (params.indexActiveColor) {
+    result += `.active-current > a {
+      color: ${params.indexActiveColor} !important;
+      border-bottom-color: ${params.indexActiveColor} !important;
+    }
+    .sidebar-title-active {
+      color: ${params.indexActiveColor};
+      border-bottom-color: ${params.indexActiveColor};
+    }
+    .sidebar-title-item:hover {
+      color: ${params.indexActiveColor} !important;
+    }
+    .active-show > a {
+      color: ${params.indexActiveColor};
+      border-bottom-color: ${params.indexActiveColor};
+    }
+    .active-hidden > a {
+      color: ${params.indexActiveColor};
+      border-bottom-color: ${params.indexActiveColor};
+    }`
+  } else {
+    result += `.active-current > a {
+      color: #fc6423 !important;
+      border-bottom-color: #fc6423 !important;
+    }
+    .sidebar-title-active {
+      color: #fc6423 !important;
+      border-bottom-color: #fc6423 !important;
+    }
+    .sidebar-title-item:hover {
+      color: #fc6423 !important;
+    }
+    .active-show > a {
+      color: #fc6423;
+      border-bottom-color: #fc6423;
+    }
+    .active-hidden > a {
+      color: #fc6423;
+      border-bottom-color: #fc6423;
+    }`
+  }
+
+  // 魔改
 
   if (params.opacity) {
     let opacity = 0.85;
@@ -251,6 +381,15 @@ const generateOverride = (params) => {
     }
   }
 
+  if (params.blogTitleColor) {
+    result += `.main-title {
+      color: ${params.blogTitleColor};
+    }
+    .mist .site-title i {
+      background: ${params.blogTitleColor};
+    }`
+  }
+
   if (params.blur) {
       result += `.bg-img img {
         filter: blur(${params.blur}px)
@@ -268,6 +407,7 @@ const generateOverride = (params) => {
     }`
   }
 
+  
   return result;
 }
 

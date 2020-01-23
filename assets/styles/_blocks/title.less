@@ -8,11 +8,16 @@
 .post-title-link {
   display: inline-block;
   position: relative;
-  color: #555;
+  color: inherit;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
 }
+
+.post-title-link:hover {
+  color: inherit;
+}
+
 .post-title-link:hover::before {
   visibility: visible;
   -webkit-transform: scaleX(1);
@@ -29,7 +34,6 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
