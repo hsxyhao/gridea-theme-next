@@ -29,10 +29,6 @@
   opacity: 0;
 }
 
-.nav-item a:hover {
-  background: #e1e1e1;
-}
-
 .nav-item a {
   padding: 5px 10px;
   background: none;
@@ -362,7 +358,6 @@
 }
 
 .mist .main-title {
-  color: #222;
   font-size: 22px;
   font-weight: bolder;
   padding: 0;
@@ -378,11 +373,6 @@
   position: relative;
   display: block;
   height: 2px;
-  background: #222;
-}
-
-.mist .brand:hover {
-  color: #222;
 }
 
 .logo-line-before i, .logo-line-after i {

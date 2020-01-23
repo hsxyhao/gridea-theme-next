@@ -37,7 +37,6 @@
 .archive-timeline-title h2 {
   font-size: 14px;
   line-height: 2;
-  color: #555;
   margin-top: 0px;
   margin-left: 20px;
   font-weight: normal;
@@ -56,7 +55,6 @@
   margin-top: -4px;
   width: 8px;
   height: 8px;
-  background: #bbb;
   border-radius: 50%;
   z-index: 9999;
 }
@@ -64,7 +62,6 @@
 .node-title h2 {
   font-size: 20px;
   line-height: 2;
-  color: #555;
   margin-top: 0px;
   margin-left: 20px;
 }
@@ -100,8 +97,8 @@
   width: 6px;
   height: 6px;
   margin-left: -4px;
-  background: #bbb;
   border-radius: 50%;
+  background-color: #bbb;
   border: 1px solid #fff;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -116,6 +113,7 @@
   font-weight: normal;
   line-height: inherit;
   margin: 0 20px;
+  color: inherit;
 }
 
 .archive-timeline-box h1 > small {
@@ -123,11 +121,9 @@
 }
 
 .archive-timeline-box .tag-node:hover {
-  border-bottom-color: #222;
+  border-bottom-color: inherit;
 }
-.archive-timeline-box .tag-node:hover::before {
-  background: #222;
-}
+
 
 @media (max-width: 767px) {
   .archive-timeline-box {

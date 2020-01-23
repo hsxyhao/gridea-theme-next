@@ -20,33 +20,14 @@
   padding: 0px;
 }
 
-.site-title a:hover {
-  color: #fff;
-}
-
 .site-nav {
   padding: 20px 0;
   transition: all .3s linear;
-  background-color: #FFF;
+  background: #FFF;
 }
 
 .nav-item {
   opacity: 0;
-}
-
-
-.nav-item a:hover {
-  color: #222;
-}
-
-
-.nav-item-active {
-  background: #f9f9f9;
-}
-
-.nav-item:hover {
-  background: #f9f9f9;
-  color: rgba(0, 0, 0, 0.98);
 }
 
 .nav-toggle {
@@ -114,11 +95,15 @@
 .brand {
   display: inline-block;
   padding: 0 40px;
-  color: #fff;
   border-bottom: none;
   position: relative;
   top: -10px;
   opacity: 0;
+  color: #EEE;
+}
+
+.brand:hover {
+  color: #FFF;
 }
 
 .sidebar-wrapper {
@@ -195,11 +180,17 @@
   opacity: 0;
 }
 
+.gemini .sidebar-box {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
 
 .gemini .sidebar-wrapper {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
 }
 
+.gemini .sidebar-box .sidebar-wrapper {
+  box-shadow: none;
+}
 
 .gemini .header li {
   list-style-type: none;
@@ -231,8 +222,6 @@
 .gemini .site-meta {
   position: relative;
   padding: 20px 0;
-  color: #fff;
-  background: #222;
   text-align: center;
 }
 
@@ -327,7 +316,6 @@
     height: 0px !important;
     margin: 0;
     overflow: hidden;
-    background-color: #FFF;
   }
 
 }

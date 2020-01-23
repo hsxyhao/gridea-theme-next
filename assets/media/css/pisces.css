@@ -30,21 +30,6 @@
   opacity: 0;
 }
 
-
-.nav-item a:hover {
-  color: #222;
-}
-
-
-.nav-item-active {
-  background: #f9f9f9;
-}
-
-.nav-item:hover {
-  background: #f9f9f9;
-  color: rgba(0, 0, 0, 0.98);
-}
-
 .nav-toggle {
   position: absolute;
   left: 20px;

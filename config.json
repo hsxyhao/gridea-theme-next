@@ -44,6 +44,98 @@
       "type": "input"
     },
     {
+      "name": "bgColor",
+      "label": "背景颜色",
+      "group": "颜色",
+      "value": "#FFF",
+      "type": "input",
+      "card": "color",
+      "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
+    },
+    {
+      "name": "fontColor",
+      "label": "字体颜色",
+      "group": "颜色",
+      "value": "#555",
+      "card": "color",
+      "type": "input",
+      "note": "默认字体颜色"
+    },
+    {
+      "name": "titleColor",
+      "label": "标题颜色",
+      "group": "颜色",
+      "value": "#555",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "linkColor",
+      "label": "链接颜色",
+      "group": "颜色",
+      "value": "#555",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "linkHoverColor",
+      "label": "链接Hover颜色",
+      "group": "颜色",
+      "value": "#222",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "bgSiteMetaColor",
+      "label": "博客标题区域背景色",
+      "group": "颜色",
+      "value": "#000",
+      "type": "input",
+      "card": "color",
+      "note": "默认黑色不透明"
+    },
+    {
+      "name": "bgTitleColor",
+      "label": "博客标题背景色",
+      "group": "颜色",
+      "value": "#000",
+      "type": "input",
+      "card": "color",
+      "note": "默认黑色，不透明，Mist风格不生效"
+    },
+    {
+      "name": "blogTitleColor",
+      "label": "博客标题色",
+      "group": "颜色",
+      "value": "#FFF",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "menuColor",
+      "label": "菜单项字体颜色",
+      "group": "颜色",
+      "value": "#555",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "menuHoverColor",
+      "label": "菜单项Hover字体颜色",
+      "group": "颜色",
+      "value": "#222",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "menuActiveColor",
+      "label": "当前菜单项背景颜色",
+      "group": "颜色",
+      "value": "#f9f9f9",
+      "type": "input",
+      "card": "color"
+    },
+    {
       "name": "seoKeywords",
       "label": "SEO",
       "group": "特性",
@@ -100,13 +192,28 @@
       "note": "仅在有目录时生效"
     },
     {
-      "name": "hoverColor",
+      "name": "indexColor",
+      "label": "目录颜色",
+      "group": "目录",
+      "value": "",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "indexHoverColor",
       "label": "目录Hover颜色",
       "group": "目录",
       "value": "",
       "type": "input",
-      "card": "color",
-      "note": "Pisces、Gemini风格默认#000，Muse、Mist默认#FFF"
+      "card": "color"
+    },
+    {
+      "name": "indexActiveColor",
+      "label": "当前目录颜色",
+      "group": "目录",
+      "value": "",
+      "type": "input",
+      "card": "color"
     },
     {
       "name": "tocCompress",
@@ -297,33 +404,6 @@
       "value": "",
       "type": "input",
       "note": "正常模式下所有标签的透明度，仅数字1~100"
-    },
-    {
-      "name": "bgSiteMetaColor",
-      "label": "站点区域背景色",
-      "group": "魔改",
-      "value": "#000",
-      "type": "input",
-      "card": "color",
-      "note": "默认黑色不透明"
-    },
-    {
-      "name": "bgColor",
-      "label": "背景颜色",
-      "group": "魔改",
-      "value": "",
-      "type": "input",
-      "card": "color",
-      "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
-    },
-    {
-      "name": "bgTitleColor",
-      "label": "站点标题背景颜色",
-      "group": "魔改",
-      "value": "#000",
-      "type": "input",
-      "card": "color",
-      "note": "默认黑色，不透明"
     },
     {
       "name": "bgTitleFontSize",
