@@ -1,7 +1,5 @@
 var home_Path = document.location.protocol +'//' + window.document.location.hostname +":"+ window.document.location.port +'/';
-
 var userAgent = window.navigator.userAgent.toLowerCase();
-console.log(userAgent);
 var norunAI = [ "android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser" ,"msie","trident/7.0"];
 var norunFlag = false;
 
@@ -185,7 +183,6 @@ if(!norunFlag){
 	
 	function showMessage(text, timeout){
 		if(Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1)-1];
-		//console.log('showMessage', text);
 		$('.message').stop();
 		$('.message').html(text);
 		$('.message').fadeTo(200, 1);
@@ -284,27 +281,26 @@ if(!norunFlag){
 					return;
 				}
 				showMessage('思考中~', 0);
+				let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
 				$.ajax({
-					type: 'GET',
-					url: `http://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
-					dataType : "json",//数据类型为jsonp  
+					type: "get", 
+					url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`, 
+					dataType: "json",
 					success: function(res) {
-						if (res && res.code === 100000) {
-							talkValTimer();
-							showMessage(res.text, 0);
-						} else {
-							talkValTimer();
-							showMessage('似乎有什么错误，请和站长联系！', 0);
-						}
+						talkValTimer();
+						showMessage(res.text, 0);
 						$('#AIuserText').val("");
 						sessionStorage.setItem("live2duser", userid_);
+					},
+					error: function(e) {
+						talkValTimer();
+						showMessage('似乎有什么错误，请和站长联系！', 0);
 					}
 				});
 			});
 		}else{
 			$('#showInfoBtn').hide();
 			$('#showTalkBtn').hide();
-			
 		}
 		//获取音乐信息初始化
 		var bgmListInfo = $('input[name=live2dBGM]');

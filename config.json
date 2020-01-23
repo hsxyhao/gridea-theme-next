@@ -354,6 +354,14 @@
       "value": "",
       "type": "input",
       "note": "图灵机器人秘钥"
+    },
+    {
+      "name": "scale",
+      "label": "看板娘大小",
+      "group": "看板娘",
+      "value": "",
+      "type": "input",
+      "note": "建议值[0,1]"
     }
   ]
 }
