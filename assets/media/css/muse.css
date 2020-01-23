@@ -2,6 +2,12 @@
   background-color: #fff;
 }
 
+.box-shadow-wrapper {
+  box-shadow: 0 0 50px rgba(202,203,203,0.5);
+  -webkit-box-shadow: 0 0 50px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+
 .section {
   box-sizing: border-box;
   width: auto;
@@ -128,9 +134,12 @@
   margin: 70px 0;
 }
 
+.muse .section-layout-wrapper {
+  padding: 0 20px;
+}
+
 .muse.section-layout {
   padding: 20px 40px;
-  background-color: #FFF;
   box-sizing: border-box;
 }
 
@@ -171,7 +180,6 @@
   z-index: 9999;
   margin: 0 auto;
   padding: 100px 0 0;
-  background-color: #FFF;
 }
 
 .muse .site-title {
@@ -198,8 +206,16 @@
 }
 
 .muse .section-layout-wrapper {
-  margin: 0 auto;
+  margin: 0px auto;
   position: relative;
+}
+
+.muse .archives-section, .muse .tags-section {
+  margin: 70px 0;
+}
+
+.muse .archives-section {
+  padding: 20px !important;
 }
 
 .muse .sidebar {
@@ -248,7 +264,7 @@
   background-color: transparent;
 }
 
-.muse .section, .muse .posts-expand, .muse .post-header {
+.muse .posts-expand, .muse .post-header {
   padding: 0px;
 }
 

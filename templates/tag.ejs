@@ -10,13 +10,17 @@
     </div>
     <div class="main-continer">
       <% let scheme = site.customConfig.scheme; %>
-      <div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
+      <div class="section-layout <%= (scheme === 'muse' || scheme === 'mist')?'bg-color':'' %> <%= scheme !==''?scheme:'pisces' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/home-sidebar') %>
-          <div class="section-box tag-line">
-            <section class="section posts-expand">
-              <%- include('./_blocks/tag-timeline') %>
-            </section>
+            <div class="section-box tag-line">
+              <div class="box-shadow-wrapper">
+                <div class="bg-color">
+                  <section class="section posts-expand">
+                    <%- include('./_blocks/tag-timeline') %>
+                  </section>
+                </div>
+              </div>
           </div>
         </div>
       </div>
