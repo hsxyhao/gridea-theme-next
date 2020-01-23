@@ -1,4 +1,5 @@
-<div class="sidebar-wrapper">
+<% let scheme = site.customConfig.scheme %>
+<div class="sidebar-wrapper box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %>">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="<%= themeConfig.domain %>/images/avatar.png"/>
     <p class="site-author-name"><%= themeConfig.siteName %></p>
@@ -25,7 +26,6 @@
       </a>
     </div>
   </div>
-  <% let scheme = site.customConfig.scheme %>
   <% if (scheme !== 'muse' && scheme !== 'mist') { %>
     <% if(site.customConfig.rss) { %>
       <div class="sidebar-item">

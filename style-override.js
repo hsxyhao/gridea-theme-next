@@ -79,6 +79,16 @@ const generateOverride = (params) => {
     }`
   }
 
+  if (params.postSectionBgColor) {
+    result += `.bg-color {
+      background-color: ${params.postSectionBgColor};
+    }`
+  } else {
+    result += `.bg-color {
+      background-color: transparent;
+    }`
+  }
+
   if (params.linkColor) {
     result += `a {
       color: ${params.linkColor};
@@ -140,8 +150,6 @@ const generateOverride = (params) => {
       color: rgba(0, 0, 0, 0.98);
     }`
   }
-
-
 
   // 特性
   if (params.sideIsRight) {
@@ -407,6 +415,11 @@ const generateOverride = (params) => {
     }`
   }
 
+  if (params.bgImg && params.scheme === 'gemini') {
+    result += `.box-shadow-wrapper {
+      padding: 10px;
+    }`
+  }
   
   return result;
 }

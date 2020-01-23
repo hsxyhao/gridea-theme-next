@@ -1,5 +1,5 @@
 <% const show = 5; let model = logs % pageSize; let result = Math.floor(logs / pageSize); let pages = model === 0? result : result + 1; let next = pagination.next !== ''? parseInt(pagination.next.split('/')[index]): pages + 1;let current = next - 1; %>
-<div class="page">
+<div class="page bg-color">
   <ul class="pagination-ul">
     <% if (pagination.prev !== '') {%>
       <li class="pagination-dir">

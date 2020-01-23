@@ -1,6 +1,7 @@
 <% let showToc = toc.length > 0 && site.customConfig.openPostToc;%>
+<% let scheme = site.customConfig.scheme; %>
 <div class="sidebar">
-    <div class="sidebar-box right-motion" id="sidebar">
+    <div class="sidebar-box box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %> right-motion" id="sidebar">
       <% if (showToc) { %>
         <div class="post-list-sidebar">
           <div class="sidebar-title">
@@ -9,7 +10,6 @@
           </div>
         </div>
       <% } %>
-      <% let scheme = site.customConfig.scheme; %>
       <div class="sidebar-body <%= scheme !==''?scheme:'pisces' %>" id="sidebar_body">
         <% if (showToc) { %>
           <div class="post-side-meta" id="post_side_meta">

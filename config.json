@@ -45,12 +45,20 @@
     },
     {
       "name": "bgColor",
-      "label": "背景颜色",
+      "label": "背景色",
       "group": "颜色",
       "value": "#FFF",
       "type": "input",
       "card": "color",
       "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
+    },
+    {
+      "name": "postSectionBgColor",
+      "label": "主色调",
+      "group": "颜色",
+      "value": "#fff",
+      "type": "input",
+      "card": "color"
     },
     {
       "name": "fontColor",
@@ -240,7 +248,7 @@
       "name": "rss",
       "label": "是否启动RSS",
       "group": "特性",
-      "value": true,
+      "value": false,
       "type": "switch",
       "note": "建议开启RSS"
     },

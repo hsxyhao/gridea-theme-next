@@ -12,11 +12,11 @@
     </div>
     <div class="main-continer">
       <% let scheme = site.customConfig.scheme; %>
-      <div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
+      <div class="section-layout <%= scheme !==''?scheme:'pisces' %> <%= scheme === 'muse'?'bg-color':'' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/post-sidebar', {toc: post.toc, link: '/'}) %>
-          <div class="section-box">
-            <div class="section post post-page">
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
               <%- include('./_blocks/article') %>
               <div class="post-body next-md-body" id="post_body">
                 <%- post.content %>
