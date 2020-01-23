@@ -77,7 +77,7 @@
 
 .nav-menu-active {
   display: block !important;
-  margin: 20px 0 !important;
+  margin: 20px 0;
 }
 
 .nav-toggle-active .line-top {
@@ -138,7 +138,6 @@
 
 .section-layout.mist {
   padding: 20px 40px;
-  background-color: #FFF;
   box-sizing: border-box;
 }
 
@@ -486,12 +485,6 @@
     display: inline-block;
   }
 
-  .site-nav {
-    height: 0px !important;
-    margin: 0;
-    overflow: hidden;
-  }
-
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -546,6 +539,12 @@
     position: relative !important;
     width: auto !important;
     border-radius: initial !important;
+    display: block !important;
+    padding: 0px !important;
+  }
+
+  .section-layout.mist {
+    padding: 0px;
   }
 
   .nav-toggle {

@@ -1,26 +1,28 @@
-<div class="tag-timeline-box">
-  <div class="tag-timeline-wrapper">
-    <div class="tag-timeline-title">
-      <h2>
-        <%= tag.name %>
-        <small>标签</small>
-      </h2>
-    </div>
-    <% for(let i = 0; i < site.posts.length; i++) {%>
-      <% for(let j = 0; j < site.posts[i].tags.length; j++) {%>
-        <% if (tag.slug === site.posts[i].tags[j].slug) {%>
-          <a href="<%= site.posts[i].link %>">
-            <div class="motion-warpper">
-              <div class="tag-post-node">
-                <h1>
-                  <%= site.posts[i].dateFormat.substring(5)%>
-                  <small><%= site.posts[i].title%></small>
-                </h1>
-              </div>  
-            </div>
-          </a>
+<div class="padding-wrapper">
+  <div class="tag-timeline-box">
+    <div class="tag-timeline-wrapper">
+      <div class="tag-timeline-title">
+        <h2>
+          <%= tag.name %>
+          <small>标签</small>
+        </h2>
+      </div>
+      <% for(let i = 0; i < site.posts.length; i++) {%>
+        <% for(let j = 0; j < site.posts[i].tags.length; j++) {%>
+          <% if (tag.slug === site.posts[i].tags[j].slug) {%>
+            <a href="<%= site.posts[i].link %>">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    <%= site.posts[i].dateFormat.substring(5)%>
+                    <small><%= site.posts[i].title%></small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          <% }%>
         <% }%>
       <% }%>
-    <% }%>
+    </div>
   </div>
 </div>

@@ -123,7 +123,7 @@
 }
 
 .gemini .post-page {
-  padding: 20px 40px !important;
+  padding: 20px 40px;
 }
 
 .gemini .article-wrapper {
@@ -256,16 +256,8 @@
     width: 100% !important;
   }
 
-  .section {
-    padding: 20px 20px;
-  }
-
   .gemini .section {
     margin: 0 !important;
-  }
-
-  .gemini .post {
-    padding: 10px 20px;
   }
 
   .nav-toggle {
@@ -333,6 +325,18 @@
   .gemini .section-layout-wrapper {
     width: auto;
     margin: 10px;
+  }
+
+  .gemini .nav-item-active a:after {
+    content: none;
+  }
+
+  .gemini .post-page {
+    padding: 10px;
+  }
+
+  .box-shadow-wrapper {
+    padding: 0px;
   }
 
   .sidebar {

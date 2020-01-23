@@ -1,5 +1,5 @@
 <% posts.forEach(function(post) { %>
-  <article class="post-list-box post box-shadow-wrapper">
+  <article class="post-list-box <%= site.customConfig.scheme === 'muse'?'bg-color':''%> post box-shadow-wrapper">
     <div class="article-wrapper bg-color">
       <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats, isTop: post.isTop }) %>
       <div class="post-body">

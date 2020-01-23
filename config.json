@@ -429,6 +429,14 @@
       "type": "input"
     }, 
     {
+      "name": "shadow",
+      "label": "Muse风格阴影效果",
+      "group": "魔改",
+      "value": "false",
+      "type": "switch",
+      "note": "仅Muse风格生效，建议Muse风格中添加标题背景图片时开启"
+    }, 
+    {
       "name": "enableLive2d",
       "label": "是否开启看板娘",
       "group": "看板娘",
