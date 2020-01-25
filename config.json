@@ -47,7 +47,7 @@
       "name": "bgColor",
       "label": "背景色",
       "group": "颜色",
-      "value": "#FFF",
+      "value": "#eee",
       "type": "input",
       "card": "color",
       "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
@@ -203,7 +203,7 @@
       "name": "indexColor",
       "label": "目录颜色",
       "group": "目录",
-      "value": "",
+      "value": "#eee",
       "type": "input",
       "card": "color"
     },
@@ -211,7 +211,7 @@
       "name": "indexHoverColor",
       "label": "目录Hover颜色",
       "group": "目录",
-      "value": "",
+      "value": "#fff",
       "type": "input",
       "card": "color"
     },
