@@ -458,6 +458,18 @@
       "value": "",
       "type": "input",
       "note": "建议值[0,1]"
+    },
+    {
+      "name": "musicLinks",
+      "label": "看板娘音乐",
+      "group": "看板娘",
+      "type": "array",
+      "value": [
+      ], 
+      "arrayItems": [
+          { "label": "音乐名", "name": "musicName", "type": "input", "value": "" },
+          { "label": "链接", "name": "musicLink", "type": "input", "value": "" }
+      ]
     }
   ]
 }
