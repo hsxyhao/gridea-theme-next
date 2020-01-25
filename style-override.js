@@ -97,7 +97,7 @@ const generateOverride = (params) => {
       color: ${params.linkColor};
     }
     
-    .next-md-body a {
+    .next-md-body a, .friends-box a  {
       color: ${params.linkColor};
       border-bottom: 1px solid ${params.linkColor};
     }`
@@ -116,7 +116,8 @@ const generateOverride = (params) => {
       color: ${params.linkHoverColor};
       border-bottom-color: ${params.linkHoverColor};
     }
-    .next-md-body a:hover {
+
+    .next-md-body a:hover, .friends-box a:hover {
       color: ${params.linkHoverColor};
       border-bottom-color: ${params.linkHoverColor};
     }`
