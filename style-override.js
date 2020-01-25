@@ -58,6 +58,9 @@ const generateOverride = (params) => {
   if (params.fontColor) {
     result += `body {
       color: ${params.fontColor};
+    }
+    .next-md-body {
+      color: ${params.fontColor};
     }`
   }
 
@@ -92,6 +95,11 @@ const generateOverride = (params) => {
   if (params.linkColor) {
     result += `a {
       color: ${params.linkColor};
+    }
+    
+    .next-md-body a {
+      color: ${params.linkColor};
+      border-bottom: 1px solid ${params.linkColor};
     }`
   }
 
@@ -105,6 +113,10 @@ const generateOverride = (params) => {
     }
     
     .markdownIt-TOC a:hover {
+      color: ${params.linkHoverColor};
+      border-bottom-color: ${params.linkHoverColor};
+    }
+    .next-md-body a:hover {
       color: ${params.linkHoverColor};
       border-bottom-color: ${params.linkHoverColor};
     }`
@@ -181,7 +193,7 @@ const generateOverride = (params) => {
 
   // 目录
   if (params.indexColor) {
-    result += `.markdownIt-TOC a:hover {
+    result += `.markdownIt-TOC a {
       color: ${params.indexColor};
       border-bottom-color: ${params.indexColor};
     }`
@@ -190,7 +202,7 @@ const generateOverride = (params) => {
     if (params.scheme === 'mist' || params.scheme === 'muse') {
       colorStr = '#fff';
     }
-    result += `.markdownIt-TOC a:hover {
+    result += `.markdownIt-TOC a {
       color: ${colorStr};
       border-bottom-color: ${colorStr};
     }`
