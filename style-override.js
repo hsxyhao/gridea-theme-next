@@ -282,7 +282,7 @@ const generateOverride = (params) => {
     }
     if (params.scheme === 'pisces' || params.scheme === 'gemini') {
       // 首页 阅读页 归档 标签
-      result += `.site-nav, .sidebar-wrapper, .section-box, .sidebar-box, .site-nav {
+      result += `.site-nav, .sidebar-wrapper, .section-box, .sidebar-box, .site-nav, .blog-header {
         opacity: ${opacity};
       }`
     } else if (params.scheme === 'muse'){
