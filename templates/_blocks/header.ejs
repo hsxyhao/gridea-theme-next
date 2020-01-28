@@ -41,7 +41,7 @@
                 </a>
               <% } else { %>
                 <a href="<%= menu.link %>">
-                  <i class="fa fa-<%= map.get(menu.link)%>"></i> <%= menu.name %>
+                  <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
                 </a>
               <% } %>
             </li>
