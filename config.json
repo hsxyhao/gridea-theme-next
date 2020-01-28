@@ -231,6 +231,10 @@
       "type": "radio",
       "options": [
         {
+          "label": "手动",
+          "value": "manual"
+        },
+        {
           "label": "自动压缩",
           "value": "auto"
         },
