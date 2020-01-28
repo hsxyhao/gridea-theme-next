@@ -307,59 +307,32 @@
       "note": "多种策略适配不同种摘要排版，需开启兼容模式"
     },
     {
-      "name": "github",
-      "label": "Github",
-      "icon": "github-alt",
+      "name": "socials",
+      "label": "文本|链接",
       "group": "社交",
-      "value": "",
-      "type": "input"
+      "type": "array",
+      "value": [
+      ], 
+      "arrayItems": [
+          { "label": "名称", "name": "socialName", "type": "input", "value": "" },
+          { "label": "图标", "name": "socialIcon", "type": "input", "value": "fa-globe" },
+          { "label": "链接", "name": "socialLink", "type": "input", "value": "" }
+      ],
+      "note": "常用的社交图标，github：github-alt，twitter：fa-twitter，微信：fa-wechat，QQ：fa-qq，图标采用的是font-awesome矢量字体图标，自定义图标可以从http://www.fontawesome.com.cn上查找"
     },
     {
-      "name": "juejin",
-      "label": "掘金",
+      "name": "imgSocials",
+      "label": "图片",
       "group": "社交",
-      "value": "",
-      "type": "input"
-    },
-    {
-      "name": "jianshu",
-      "label": "简书",
-      "group": "社交",
-      "icon": "book",
-      "value": "",
-      "type": "input"
-    },
-    {
-      "name": "twitter",
-      "label": "Twitter",
-      "group": "社交",
-      "icon": "book",
-      "value": "",
-      "type": "input"
-    },
-    {
-      "name": "douban",
-      "label": "豆瓣",
-      "icon": "douban",
-      "group": "社交",
-      "value": "",
-      "type": "input"
-    },
-    {
-      "name": "wechat",
-      "label": "微信",
-      "icon": "weixin",
-      "group": "社交",
-      "value": "",
-      "type": "picture-upload"
-    },
-    {
-      "name": "qq",
-      "label": "QQ",
-      "icon": "qq",
-      "group": "社交",
-      "value": "",
-      "type": "picture-upload"
+      "type": "array",
+      "value": [
+      ], 
+      "arrayItems": [
+          { "label": "名称", "name": "socialName", "type": "input", "value": "" },
+          { "label": "图标", "name": "socialIcon", "type": "input", "value": "fa-globe" },
+          { "label": "图片", "name": "socialImg", "type": "picture-upload", "value": "" }
+      ],
+      "note": "QQ、微信类有二维码图片的社交账号，可以在这里添加"
     },
     {
       "name": "friendsTitle",

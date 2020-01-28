@@ -61,6 +61,9 @@ const generateOverride = (params) => {
     }
     .next-md-body {
       color: ${params.fontColor};
+    }
+    .next-md-body h1, .next-md-body h2 {
+      border-bottom-color: ${params.fontColor};
     }`
   }
 
