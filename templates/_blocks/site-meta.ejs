@@ -54,6 +54,11 @@
       <% } %>
     </div>
   </div>
+<% if (site.customConfig.bgMusic !== 'none' && site.customConfig.bgMusic === 'iframeLinks') { %>
+  <div class="sidebar-item">
+    <%- site.customConfig.iframeHtml %>
+  </div>
+<% } %>
 <% if (site.customConfig.friends && site.customConfig.friends.length > 0) { %>
   <div class="sidebar-item right-motion sidebar-item-friends">
     <p class="friends-title"><i class="fa fa-globe"></i> <%= site.customConfig.friendsTitle %></p>
