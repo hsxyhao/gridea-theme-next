@@ -31,6 +31,9 @@
   <% if (site.customConfig.enableLive2d) { %>
     <%- include('./live2d.ejs') %>
   <% } %>
+  <% if (site.customConfig.bgMusic !== 'none') { %>
+    <%- include('./aplayer.ejs') %>
+  <% } %>
 </div>
 <script>
 

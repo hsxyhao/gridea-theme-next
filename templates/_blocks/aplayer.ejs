@@ -1,0 +1,37 @@
+<% if (site.customConfig.bgMusic === 'aplayer') { %>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div class="aplayer" id="aplayer"></div>
+  <input hidden id="player_cover" value="<%= site.customConfig.cover %>" />
+  <div class="music-list">
+  <% for(let i = 0; i < site.customConfig.aplayerList.length; i++ ) { %>
+    <% let c = site.customConfig.aplayerList[i]; %>
+    <input hidden value="<%= c.musicName + ',' + c.author + ',' + c.musicLink + ',' +c.lrc %>" />
+  <% } %>
+  </div>
+  <script>
+  let musics = document.querySelector('.music-list').children;
+  let mediaMusic = [];
+  let cover = document.querySelector('#player_cover').value;
+  for (let i = 0; i < musics.length; i++) {
+    let item = musics[i];
+    let splits = item.value.split(',');
+    mediaMusic.push({
+      name: splits[0],
+      artist: splits[1],
+      url: splits[2],
+      lrc: splits[3],
+      cover: cover
+    });
+  }
+  console.log(mediaMusic);
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      lrcType: 3,
+      listFolded: false,
+      listMaxHeight: 90,
+      audio: mediaMusic
+  });
+  </script>
+<% } %>
