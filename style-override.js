@@ -21,10 +21,16 @@ const generateOverride = (params) => {
     }
     result += `body {
       background-color: ${bgColor} !important;
+    }
+    .nav-toggle .line {
+      background-color: ${params.bgColor} !important;
     }`
   } else {
     result += `body {
       background-color: ${params.bgColor};
+    }
+    .nav-toggle .line {
+      background-color: ${params.bgColor} !important;
     }`
   }
 
@@ -389,13 +395,13 @@ const generateOverride = (params) => {
   if (params.bgTitleColor) {
     result += `
     .brand {
-      background: ${params.bgTitleColor} !important;
+      background: ${params.bgTitleColor};
     }
     `
   } else {
     result += `
     .brand {
-      background: transparent !important;
+      background: transparent;
     }
     `
   }
