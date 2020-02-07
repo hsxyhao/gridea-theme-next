@@ -429,6 +429,10 @@ const generateOverride = (params) => {
     }`
   }
 
+  if (params.cssStr) {
+    result += params.cssStr;
+  }
+
   if (params.blur) {
       result += `.bg-img img {
         filter: blur(${params.blur}px)
