@@ -355,6 +355,9 @@ const generateOverride = (params) => {
     result += `
       .site-meta {
         background: ${params.bgSiteMetaColor} !important;
+      }
+      .head-top-line {
+        background: ${params.bgSiteMetaColor} !important;
       }`;
   }
 
