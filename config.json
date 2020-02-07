@@ -44,6 +44,14 @@
       "type": "input"
     },
     {
+      "name": "cssStr",
+      "label": "自定义css",
+      "group": "布局",
+      "value": "",
+      "type": "textarea",
+      "note": "可以修改主题中的指定元素以及markdown的样式、颜色，需要css基础"
+    },
+    {
       "name": "bgColor",
       "label": "背景色",
       "group": "颜色",
