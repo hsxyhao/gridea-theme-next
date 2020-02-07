@@ -64,7 +64,11 @@ const generateOverride = (params) => {
     }
     .next-md-body h1, .next-md-body h2 {
       border-bottom-color: ${params.fontColor};
-    }
+    }`
+  }
+
+  if (params.timeLineColor) {
+    result += `
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
       background: ${params.fontColor};
     }`

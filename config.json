@@ -61,6 +61,15 @@
       "card": "color"
     },
     {
+      "name": "timeLineColor",
+      "label": "归档页时间线线条色",
+      "group": "颜色",
+      "value": "#eee",
+      "type": "input",
+      "card": "color",
+      "note": "标签详情页的时间线也生效"
+    },
+    {
       "name": "fontColor",
       "label": "字体颜色",
       "group": "颜色",
