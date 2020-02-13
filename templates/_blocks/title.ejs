@@ -16,10 +16,10 @@
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
       <span><%= dateFormat %></span>
+      <span class="post-meta-divider pc-show">|</span>
     </span>
     <%if (tags && tags.length > 0) { %>
       <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
         <i class="fa fa-folder-o"></i>
         <span class="pc-show">分类于</span>
         <% for(let i = 0; i < tags.length; i ++) { %>
