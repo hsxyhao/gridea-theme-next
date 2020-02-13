@@ -1,0 +1,58 @@
+{
+    "version":"1.0.0",
+    "model":"model.moc",
+    "textures":[
+        "histoire.1024/0.png",
+		"histoire.1024/1.png",
+		"histoire.1024/normal_2.png"
+    ],
+    "layout":{
+        "center_x":0.0,
+        "center_y":-0.05,
+        "width":2.0
+    },
+    "hit_areas_custom":{
+        "head_x":[-1, 1],
+        "head_y":[1, -1],
+        "body_x":[-1, -1],
+        "body_y":[1, -1]
+    },
+    "motions":{
+        "idle":[
+            {"file":"motions/idle/idle_00.mtn"},
+			{"file":"motions/idle/idle_01.mtn"},
+			{"file":"motions/idle/idle_02.mtn"}
+        ],
+        "sleepy":[
+			{"file":"motions/tap/shake.mtn"}
+        ],
+        "flick_head":[
+			{"file":"motions/tap/refuse.mtn"},
+			{"file":"motions/tap/nep_slide_head_2.mtn"},
+			{"file":"motions/tap/nep_touch_belly_2.mtn"},
+			{"file":"motions/tap/nep_touch_boobs_1.mtn"}
+        ],
+        "tap_body":[
+			{"file":"motions/tap/smile.mtn"}
+
+        ],
+        "talk":[
+			{"file":"motions/tap/nep_touch_belly_1.mtn"},
+			{"file":"motions/tap/nep_slide_head_2.mtn"},
+			{"file":"motions/tap/nep_touch_head_1.mtn"}
+
+        ],
+		"rest":[
+			{"file":"motions/tap/tilt_head.mtn"},
+			{"file":"motions/idle/idle_00.mtn"},
+			{"file":"motions/idle/idle_01.mtn"},
+			{"file":"motions/idle/idle_02.mtn"}
+        ],
+		"":[
+			{"file":"motions/tap/nep_touch_belly_1.mtn"},
+			{"file":"motions/tap/nep_slide_head_2.mtn"},
+			{"file":"motions/tap/nep_touch_head_1.mtn"},
+			{"file":"motions/tap/nep_touch_boobs_1.mtn"}
+		]
+    }
+}

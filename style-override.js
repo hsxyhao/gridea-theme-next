@@ -76,7 +76,7 @@ const generateOverride = (params) => {
   if (params.timeLineColor) {
     result += `
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: ${params.fontColor};
+      background: ${params.timeLineColor};
     }`
   }
 
