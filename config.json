@@ -54,15 +54,6 @@
     {
       "name": "bgColor",
       "label": "背景色",
-      "group": "CDN",
-      "value": "#eee",
-      "type": "input",
-      "card": "color",
-      "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
-    },
-    {
-      "name": "bgColor",
-      "label": "背景色",
       "group": "颜色",
       "value": "#eee",
       "type": "input",
