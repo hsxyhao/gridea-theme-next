@@ -54,6 +54,15 @@
     {
       "name": "bgColor",
       "label": "背景色",
+      "group": "CDN",
+      "value": "#eee",
+      "type": "input",
+      "card": "color",
+      "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
+    },
+    {
+      "name": "bgColor",
+      "label": "背景色",
       "group": "颜色",
       "value": "#eee",
       "type": "input",
@@ -201,12 +210,29 @@
       "note": "默认不开启更新提示，但是建议开启"
     },
     {
-      "name": "openPostToc",
-      "label": "是否显示文章目录",
+      "name": "siteBar",
+      "label": "阅读页目录展示方案",
       "group": "目录",
-      "value": true,
-      "type": "switch",
-      "note": "仅在宽屏时生效"
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "目录",
+          "value": "toc"
+        },
+        {
+          "label": "隐藏",
+          "value": "hide"
+        },
+        {
+          "label": "自动",
+          "value": "auto"
+        },
+        {
+          "label": "站点预览",
+          "value": "sitemeta"
+        }],
+        "note": "显示：如果有目录则展示，没有什么都展示，隐藏：什么都不展示，自动：主题自动检测，检测到目录结构则展示，否则展示站点概览，站点预览：只显示站点预览"
     },
     {
       "name": "autoNumber",
@@ -712,7 +738,7 @@
           { "label": "图标", "name": "socialIcon", "type": "input", "value": "fa-globe" },
           { "label": "链接", "name": "socialLink", "type": "input", "value": "" }
       ],
-      "note": "常用的社交图标，github：github-alt，twitter：fa-twitter，微信：fa-wechat，QQ：fa-qq，图标采用的是font-awesome矢量字体图标，自定义图标可以从http://www.fontawesome.com.cn上查找"
+      "note": "常用的社交图标，github：fa-github-alt，twitter：fa-twitter，微信：fa-wechat，QQ：fa-qq，图标采用的是font-awesome矢量字体图标，自定义图标可以从http://www.fontawesome.com.cn上查找"
     },
     {
       "name": "imgSocials",

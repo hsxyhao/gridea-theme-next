@@ -1,8 +1,9 @@
-<% let showToc = toc.length > 0 && site.customConfig.openPostToc;%>
-<% let scheme = site.customConfig.scheme; %>
+<% let showToc = toc.length > 0%>
+<% let scheme = site.customConfig.scheme; let siteBar = site.customConfig.siteBar;%>
 <div class="sidebar">
+  <% if (!(siteBar === 'hide' || siteBar === 'toc' && !showToc)) {%>
     <div class="sidebar-box box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %> right-motion" id="sidebar">
-      <% if (showToc) { %>
+      <% if (siteBar === 'auto') { %>
         <div class="post-list-sidebar">
           <div class="sidebar-title">
             <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
@@ -11,18 +12,29 @@
         </div>
       <% } %>
       <div class="sidebar-body <%= scheme !==''?scheme:'pisces' %>" id="sidebar_body">
-        <% if (showToc) { %>
-          <div class="post-side-meta" id="post_side_meta">
-            <%- include('./site-meta') %>
-          </div>
-          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-            <%- include('./toc', {toc: toc}) %>
-          </div>
-        <% } else {%>
+        <% if (siteBar === 'toc') { %>
+          <% if (showToc) { %>
+            <div style="opacity: 1;">
+              <%- include('./toc', {toc: toc}) %>
+            </div>
+          <% } %>
+        <% } else if (siteBar === 'sitemeta') { %>
           <%- include('./site-meta') %>
+        <% } else if (siteBar === 'auto') { %>
+          <% if (showToc) { %>
+            <div class="post-side-meta" id="post_side_meta">
+              <%- include('./site-meta') %>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <%- include('./toc', {toc: toc}) %>
+            </div>
+          <% } else {%>
+            <%- include('./site-meta') %>
+          <% } %>
         <% } %>
       </div>
     </div>
+  <% } %>
 </div>
 <script>
   const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
@@ -75,28 +87,29 @@
     showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
 
-  postToc.addEventListener('transitionend', function() {
+  postToc && postToc.addEventListener('transitionend', function() {
     this.classList.remove(SLIDE_UP_IN);
   });
 
-
-  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-    let hasFix = false;
-    let scrollEl = document.querySelector('.main-continer');
-    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-    window.addEventListener('scroll', function(e) {
-    if (document.scrollingElement.scrollTop >= limitTop) {
-      if (!hasFix) {
-        sidebar.classList.add('sidebar-fixed');
-        hasFix = true;
-      }
-    } else {
-      if (hasFix) {
-        sidebar.classList.remove('sidebar-fixed');
-        hasFix = false;
-      }
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
     }
-  });
   }
   
 </script>
