@@ -857,7 +857,7 @@
     },
     {
       "name": "bgMusic",
-      "label": "是否启用目录压缩功能",
+      "label": "音乐插件",
       "group": "音乐",
       "value": "none",
       "type": "radio",
