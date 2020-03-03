@@ -45,5 +45,12 @@
       <i class="fa fa-file-word-o"></i>
       <span><%= stats.words %><span class="pc-show">字数</span></span>
     </span>
+    <% if (browse) { %>
+      <span id="<%= '/post'+link.split('post')[1] %>" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    <% } %>
   </div>
 </header>

@@ -17,20 +17,21 @@
           <%- include('./_blocks/post-sidebar', {toc: post.toc, link: '/'}) %>
           <div class="section-box box-shadow-wrapper">
             <div class="section bg-color post post-page">
-              <%- include('./_blocks/article') %>
+              <%- include('./_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats, isTop: post.isTop, browse: site.customConfig.visitor }) %>
               <div class="post-body next-md-body" id="post_body">
                 <%- post.content %>
               </div>
               <%- include('./_blocks/post-footer') %>
-              <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-                <% if (commentSetting.commentPlatform === 'gitalk') { %>
-                  <%- include('./_blocks/gitalk') %>
-                <% } %>
-                <% if (commentSetting.commentPlatform === 'disqus') { %>
-                  <%- include('./_blocks/disqus') %>
-                <% } %>
-                <% if (commentSetting.commentPlatform === 'disqus') { %>
-                  <%- include('./_blocks/disqus') %>
+              <% if (site.customConfig.valine) { %>
+                <%- include('./_blocks/valine') %>
+              <% } else { %>
+                <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>\
+                  <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                    <%- include('./_blocks/gitalk') %>
+                  <% } %>
+                  <% if (commentSetting.commentPlatform === 'disqus') { %>
+                    <%- include('./_blocks/disqus') %>
+                  <% } %>
                 <% } %>
               <% } %>
             </div>
