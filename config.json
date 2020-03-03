@@ -906,6 +906,139 @@
           { "label": "歌词", "name": "lrc", "type": "input", "value": "" }
       ],
       "note": "歌词歌曲为网络资源，不太好找，谨慎使用"
+    },
+    {
+      "name": "valine",
+      "label": "启用",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "启用后会覆盖gridea自带的评论"
+    },
+    {
+      "name": "appID",
+      "label": "AppID",
+      "group": "评论",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "appKey",
+      "label": "AppKey",
+      "group": "评论",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "placeholder",
+      "label": "评论框占位提示符",
+      "group": "评论",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "avatar",
+      "label": "封面头像",
+      "group": "评论",
+      "type": "select",
+      "value": "",
+      "options": [
+        {
+          "label": "自定义图像",
+          "value": "custom"
+        },
+        {
+          "label": "Gravatar官方图形",
+          "value": ""
+        },
+        {
+          "label": "神秘人(一个灰白头像)",
+          "value": "mp"
+        },
+        {
+          "label": "抽象几何图形",
+          "value": "identicon"
+        },
+        {
+          "label": "小怪物",
+          "value": "monsterid"
+        },
+        {
+          "label": "用不同面孔和背景组合生成的头像",
+          "value": "wavatar"
+        },
+        {
+          "label": "八位像素复古头像",
+          "value": "retro"
+        },
+        {
+          "label": "一种具有不同颜色、面部等的机器人",
+          "value": "robohash"
+        },
+        {
+          "label": "不显示头像",
+          "value": "hide"
+        }
+      ],
+      "note": "自定义头像为Gravatar的头像，需要自己上传，上面的头像具体对应的图像移步：https://valine.js.org/avatar.html"
+    },
+    {
+      "name": "notify",
+      "label": "通知",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "评论回复邮件提醒"
+    },
+    {
+      "name": "pageSize",
+      "label": "评论分页",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "评论列表分页，每页条数，默认不分页"
+    },
+    {
+      "name": "lang",
+      "label": "多语言",
+      "group": "评论",
+      "type": "select",
+      "value": "zh-cn",
+      "options": [
+        {
+          "label": "zh-cn",
+          "value": "zh-cn"
+        },
+        {
+          "label": "en",
+          "value": "en"
+        }
+      ],
+      "note": "多语言支持，可选值：zh-cn，en"
+    },
+    {
+      "name": "visitor",
+      "label": "来访",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "文章访问量统计"
+    },
+    {
+      "name": "highlight",
+      "label": "高亮",
+      "group": "评论",
+      "value": true,
+      "type": "switch",
+      "note": "代码高亮，默认开启，若不需要，请手动关闭"
+    },
+    {
+      "name": "avatarForce",
+      "label": "评论列表头像",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "每次访问强制拉取最新的评论列表头像，不推荐设置为true，目前的评论列表头像会自动带上Valine的版本号"
     }
   ]
 }

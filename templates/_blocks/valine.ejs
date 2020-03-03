@@ -1,0 +1,18 @@
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+<script>
+new Valine({
+    el: '#vcomments' ,
+    appId: '<%= site.customConfig.appID %>',
+    appKey: '<%= site.customConfig.appKey %>',
+    notify: 'true' === '<%= site.customConfig.notify %>', 
+    avatar:'<%= site.customConfig.avatar %>', 
+    placeholder: '<%= site.customConfig.placeholder %>',
+    pageSize: '<%= site.customConfig.pageSize %>',
+    lang: '<%= site.customConfig.lang %>',
+    visitor: 'true' === '<%= site.customConfig.visitor %>',
+    highlight: 'true' === '<%= site.customConfig.highlight %>',
+    avatarForce: 'true' === '<%= site.customConfig.avatarForce %>',
+});
+</script>
