@@ -169,6 +169,27 @@
       "note": "seo优化关键字"
     },
     {
+      "name": "menuIcon",
+      "label": "导航菜单图标",
+      "group": "特性",
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "默认",
+          "value": "default"
+        },
+        {
+          "label": "自动",
+          "value": "auto"
+        }],
+        "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
+    },
+    {
       "name": "sideIsRight",
       "label": "菜单栏是否开启右边显示",
       "group": "特性",

@@ -35,12 +35,23 @@
         <ul id="nav_ul">
           <% menus.forEach(function(menu) { %>
             <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
-              <% if (menu.openType === 'External') { %>
-                <a href="<%= menu.link %>" target="_blank">
-                  <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
+              <% let target = menu.openType === 'External'?'_blank':'_self' %>
+              <% if (site.customConfig.menuIcon === 'default') { %>
+                <% if (map.get(menu.link)) { %>
+                  <a href="<%= menu.link %>" target="<%= target %>">
+                    <i class="fa fa-<%= map.get(menu.link) %>"></i> <%= menu.name %>
+                  </a>
+                <% } else { %>
+                  <a href="<%= menu.link %>" target="<%= target %>">
+                    <%= menu.name %>
+                  </a>
+                <% } %>
+              <% } else if (site.customConfig.menuIcon === 'none') { %>
+                <a href="<%= menu.link %>" target="<%= target %>">
+                  <%= menu.name %>
                 </a>
               <% } else { %>
-                <a href="<%= menu.link %>">
+                <a href="<%= menu.link %>" target="<%= target %>">
                   <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
                 </a>
               <% } %>
