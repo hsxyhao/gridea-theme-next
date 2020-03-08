@@ -3,7 +3,7 @@
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="<%= themeConfig.domain %>/images/avatar.png"/>
     <p class="site-author-name"><%= themeConfig.siteName %></p>
-    <p class="site-description right-motion"><%= site.customConfig.signature %></p>
+    <p class="site-description right-motion"><%= site.themeConfig.siteDescription %></p>
   </div>
   <div class="sidebar-item side-item-stat right-motion">
     <div class="sidebar-item-box">
@@ -52,7 +52,7 @@
         <% if (site.customConfig.imgSocials && site.customConfig.imgSocials.length) { %>
           <% for(let i = 0; i < site.customConfig.imgSocials.length; i++) { %>
             <a class="social-img" href="#">
-              <img src="<%= site.customConfig.imgSocials[i].socialImg %>" />
+              <img src="<%= site.customConfig.cdn %><%= site.customConfig.imgSocials[i].socialImg %>" />
               <i class="fa <%= site.customConfig.imgSocials[i].socialIcon %>"></i> <%= site.customConfig.imgSocials[i].socialName %>
             </a>
           <% } %>

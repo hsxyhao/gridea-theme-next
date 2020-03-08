@@ -1,6 +1,10 @@
 const generateOverride = (params) => {
   let result = '';
   let headerClass = 'header'
+  let cdn = '';
+  if (params.cdn !== '') {
+    cdn = params.cdn;
+  }
   // 默认配置
   if (!params.bgColor) {
     let bgColor = '';
@@ -53,7 +57,7 @@ const generateOverride = (params) => {
     result += 
     `@font-face {
       font-family: '${params.fontFamily}';
-      src: url('/media/fonts/${params.fontFamily}.ttf');
+      src: url('${cdn}/media/fonts/${params.fontFamily}.ttf');
     }
     * {
         font-family: '${params.fontFamily}';

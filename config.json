@@ -37,13 +37,6 @@
       "type": "input"
     },
     {
-      "name": "signature",
-      "label": "站点描述",
-      "group": "布局",
-      "value": "这个人很懒，什么都不想写...",
-      "type": "input"
-    },
-    {
       "name": "cssStr",
       "label": "自定义css",
       "group": "布局",
@@ -1060,6 +1053,14 @@
       "value": false,
       "type": "switch",
       "note": "每次访问强制拉取最新的评论列表头像，不推荐设置为true，目前的评论列表头像会自动带上Valine的版本号"
+    },
+    {
+      "name": "cdn",
+      "label": "地址",
+      "group": "CDN",
+      "value": "",
+      "type": "input",
+      "note": "只包含主题的静态资源，博客文章部分的静态资源（图片）需要手动引用"
     }
   ]
 }
