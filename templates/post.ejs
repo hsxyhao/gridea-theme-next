@@ -25,7 +25,7 @@
               <% if (site.customConfig.valine) { %>
                 <%- include('./_blocks/valine') %>
               <% } else { %>
-                <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>\
+                <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
                   <% if (commentSetting.commentPlatform === 'gitalk') { %>
                     <%- include('./_blocks/gitalk') %>
                   <% } %>
