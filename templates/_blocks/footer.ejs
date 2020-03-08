@@ -25,7 +25,7 @@
   </div>
   <% if (site.customConfig.bgImg) { %>
     <div class="bg-img">
-      <img src="<%= site.customConfig.bgImg %>" />
+      <img src="<%= site.customConfig.cdn %><%= site.customConfig.bgImg %>" />
     </div>
   <% } %>
   <% if (site.customConfig.enableLive2d) { %>

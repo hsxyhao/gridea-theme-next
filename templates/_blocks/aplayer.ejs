@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
   <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
   <div class="aplayer" id="aplayer"></div>
-  <input hidden id="player_cover" value="<%= site.customConfig.cover %>" />
+  <input hidden id="player_cover" value="<%= site.customConfig.cdn %><%= site.customConfig.cover %>" />
   <div class="music-list">
   <% for(let i = 0; i < site.customConfig.aplayerList.length; i++ ) { %>
     <% let c = site.customConfig.aplayerList[i]; %>
@@ -24,7 +24,6 @@
       cover: cover
     });
   }
-  console.log(mediaMusic);
   const ap = new APlayer({
       container: document.getElementById('aplayer'),
       fixed: true,
