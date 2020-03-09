@@ -1061,6 +1061,14 @@
       "value": "",
       "type": "input",
       "note": "只包含主题的静态资源，博客文章部分的静态资源（图片）需要手动引用"
+    },
+    {
+      "name": "ga",
+      "label": "谷歌跟踪",
+      "group": "跟踪",
+      "value": "",
+      "type": "input",
+      "note": "UA-XXXX"
     }
   ]
 }
