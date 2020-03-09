@@ -48,9 +48,9 @@
     <% if (browse) { %>
       <% let postId = link.split('/post/')[1];%>
       <% if (postId.lastIndexOf('/') === postId.length-1) { %>
-        <% postId = '/' + postId %>
+        <% postId = '/post/' + postId %>
       <% } else { %>
-        <% postId = '/' + postId + '/' %>
+        <% postId = '/post/' + postId + '/' %>
       <% } %>
       <span id="<%= postId %>" data-flag-title="<%= title %>" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
