@@ -1064,11 +1064,19 @@
     },
     {
       "name": "ga",
-      "label": "谷歌跟踪",
+      "label": "谷歌分析",
       "group": "跟踪",
       "value": "",
       "type": "input",
-      "note": "UA-XXXX"
+      "note": "UA-xxxxxxxx-1"
+    },
+    {
+      "name": "bd",
+      "label": "百度分析",
+      "group": "跟踪",
+      "value": "",
+      "type": "input",
+      "note": "xxxxxx32e97exxx0605fcc44xxxxxxx"
     }
   ]
 }
