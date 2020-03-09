@@ -46,7 +46,13 @@
       <span><%= stats.words %><span class="pc-show">字数</span></span>
     </span>
     <% if (browse) { %>
-      <span id="<%= '/post'+link.split('post')[1] %>" class="meta-item pc-show leancloud_visitors">
+      <% let postId = link.split('/post/')[1];%>
+      <% if (postId.lastIndexOf('/') === postId.length-1) { %>
+        <% postId = '/' + postId %>
+      <% } else { %>
+        <% postId = '/' + postId + '/' %>
+      <% } %>
+      <span id="<%= postId %>" data-flag-title="<%= title %>" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
