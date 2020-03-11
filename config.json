@@ -162,6 +162,14 @@
       "note": "seo优化关键字"
     },
     {
+      "name": "imgFillet",
+      "label": "站点预览头像圆角",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "开启会产生头像旋转彩蛋"
+    },
+    {
       "name": "menuIcon",
       "label": "导航菜单图标",
       "group": "特性",
