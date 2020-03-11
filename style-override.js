@@ -185,6 +185,21 @@ const generateOverride = (params) => {
   }
 
   // 特性
+
+  if (params.imgFillet) {
+    result += `.site-author-image {
+      border-radius: 50%;
+    }
+    // copy from juejin
+    .site-author-image:hover {
+      transform: rotate(666turn);
+      transition-delay: 1s;
+      transition-property: all;
+      transition-duration: 59s;
+      transition-timing-function: cubic-bezier(.34,0,.84,1);
+    }`;
+  }
+
   if (params.sideIsRight) {
     if (params.scheme === 'pisces' || params.scheme === 'gemini') {
       result += `.pisces .blog-header, .gemini .blog-header {
