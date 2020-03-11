@@ -24,7 +24,12 @@ function addTocNumber(elem, deep) {
     }
   } else if (prop === HTMLLIElement.prototype) {
     // 保存li元素
-    lList.push(elem);
+    if (elem.children.length <= 0) {
+      continue;
+    }
+    if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+      lList.push(elem);
+    }
     for (let i = 0; i < elem.children.length; i++) {
       let cur = elem.children[i];
       if (cur.__proto__ === HTMLAnchorElement.prototype) {
