@@ -27,7 +27,6 @@ function addTocNumber(elem, deep) {
     if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
       lList.push(elem);
     }
-    lList.push(elem);
     for (let i = 0; i < elem.children.length; i++) {
       let cur = elem.children[i];
       if (cur.__proto__ === HTMLAnchorElement.prototype) {
