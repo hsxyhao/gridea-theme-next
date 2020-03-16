@@ -44,12 +44,12 @@
         disCount = 1;
       }
       let val = (sColorArr[c] - eColorArr[c]) / range * disCount;
-      if (val >= 255) {
+      if (val >= 100) {
         val = eColorArr[c];
       } else if (val <= 0) {
         val = sColorArr[c];
       }
-      arr[c] = Math.floor(255 - val);
+      arr[c] = Math.floor(val);
     }
     style += 'color: ' + toHex(arr);
     tags[i].style = style;
