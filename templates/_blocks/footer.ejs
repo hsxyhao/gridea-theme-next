@@ -24,8 +24,7 @@
     <% } %>
   </div>
   <% if (site.customConfig.bgImg) { %>
-    <div class="bg-img">
-      <img src="<%= site.customConfig.cdn %><%= site.customConfig.bgImg %>" />
+    <div class="bg-img" style="background-image: url('<%= site.customConfig.cdn %><%= site.customConfig.bgImg %>');background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
     </div>
   <% } %>
   <% if (site.customConfig.enableLive2d) { %>
