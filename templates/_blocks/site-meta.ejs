@@ -65,16 +65,22 @@
     <%- site.customConfig.iframeHtml %>
   </div>
 <% } %>
-<% if (site.customConfig.friends && site.customConfig.friends.length > 0) { %>
-  <div class="sidebar-item right-motion sidebar-item-friends">
-    <p class="friends-title"><i class="fa fa-globe"></i> <%= site.customConfig.friendsTitle %></p>
-    <div class="friends-box">
-      <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
-        <p>
-          <a href="<%= site.customConfig.friends[i].siteLink %>">【<%= site.customConfig.friends[i].siteName %>】</a>
-        </p>
+<% if (!site.customConfig.enableFriendPage) { %>
+  <% if (site.customConfig.friends.length > 0) { %>
+    <div class="sidebar-item right-motion sidebar-item-friends">
+      <% if (site.customConfig.friendsIcon) { %>
+        <p class="friends-title"><%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %></p>
+      <% } else { %>
+        <p class="friends-title"><i class="fa fa-ship"></i> <%= site.customConfig.friendsTitle %></p>
       <% } %>
+      <div class="friends-box">
+        <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
+          <p>
+            <a href="<%= site.customConfig.friends[i].siteLink %>">【<%= site.customConfig.friends[i].siteName %>】</a>
+          </p>
+        <% } %>
+      </div>
     </div>
-  </div>
+  <% } %>
 <% } %>
 </div>

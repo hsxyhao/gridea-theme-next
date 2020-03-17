@@ -33,7 +33,21 @@
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
-          <% menus.forEach(function(menu) { %>
+          <% for (let i=0; i < menus.length; i++) { %>
+            <% let menu = menus[i]; %>
+            <% if (site.customConfig.enableFriendPage) { %>
+              <% if (site.customConfig.friendsIndex-1 === i) { %>
+                <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
+                  <a href="/friends" target="<%= site.customConfig.friendsTarget %>">
+                    <% if (site.customConfig.friendsIcon) { %>
+                      <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
+                    <% } else { %>
+                      <i class="fa fa-ship"></i><%= site.customConfig.friendsTitle %>
+                    <% } %>
+                  </a>
+                </li>
+              <% } %>
+            <% } %>
             <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
               <% let target = menu.openType === 'External'?'_blank':'_self' %>
               <% if (site.customConfig.menuIcon === 'default') { %>
@@ -56,12 +70,20 @@
                 </a>
               <% } %>
             </li>
-          <% }); %>
-          <li class="nav-item">
-            <a>
-              <i class="fa fa-search"></i> 搜索
-            </a>
-          </li>
+          <% } %>
+          <% if (site.customConfig.enableFriendPage) { %>
+            <% if (!site.customConfig.friendsIndex || site.customConfig.friendsIndex === '' || site.customConfig.friendsIndex-1 >= menus.length) { %>
+              <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
+                <a href="/friends" target="<%= site.customConfig.friendsTarget %>">
+                  <% if (site.customConfig.friendsIcon) { %>
+                    <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
+                  <% } else { %>
+                    <i class="fa fa-ship"></i> <%= site.customConfig.friendsTitle %>
+                  <% } %>
+                </a>
+              </li>
+            <% } %>
+          <% } %>
         </ul>
       </nav>
     </div>
