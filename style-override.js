@@ -335,12 +335,12 @@ const generateOverride = (params) => {
       }`
     }
   }
-
+  let cdn = params.cdn || '';
   if (params.headerImg) {
     if (params.scheme === 'muse') {
       result += `
         .header-box {
-          background-image: url(${params.headerImg});
+          background-image: url(${cdn}${params.headerImg});
           background-attachment: fixed;
         }
         .muse .blog-header {
@@ -387,7 +387,7 @@ const generateOverride = (params) => {
 
   if (params.siteMetaImg) {
     result += `.sidebar {
-      background-image: url(${params.siteMetaImg}) !important;
+      background-image: url(${cdn}${params.siteMetaImg}) !important;
     }
     .sidebar-item-box a {
       color: #eee;
