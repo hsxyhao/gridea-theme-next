@@ -4,26 +4,27 @@
       <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats, isTop: post.isTop, browse: false }) %>
       <div class="post-body">
         <% if (site.customConfig.enableThemeCompatible) { %>
+          <% let cdn = site.customConfig.cdn + '/post-images', imgUrl = cdn + post.feature.split('post-images')[1];  %>
           <% if (site.customConfig.strategy === 'first') { %>
             <% let paragraph = post.abstract && post.abstract.split('<p>');%>
             <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
               <%- '<p>' + paragraph[i]%>
               <% if (i === 1 && post.feature) {%>
-                <img src="<%= post.feature %>" />
+                <img src="<%= imgUrl %>" />
               <% } %>
             <% } %>
           <% } else if (site.customConfig.strategy === 'before') {%>
-            <img src="<%= post.feature %>" />
+            <img src="<%= imgUrl %>" />
             <%- post.abstract %>
           <% } else if (site.customConfig.strategy === 'after') {%>
             <%- post.abstract %>
-            <img src="<%= post.feature %>" />
+            <img src="<%= imgUrl %>" />
           <% } else if (site.customConfig.strategy === 'random') {%>
             <% let paragraph = post.abstract && post.abstract.split('<p>');let r = Math.floor(Math.random() * 10) % paragraph.length;%>
             <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
               <%- '<p>' + paragraph[i]%>
               <% if (i === r && post.feature) {%>
-                <img src="<%= post.feature %>" />
+                <img src="<%= imgUrl %>" />
               <% } %>
             <% } %>
           <% } else if (site.customConfig.strategy === 'words') {%>
@@ -33,12 +34,12 @@
               <%- post.featurec %>
               <% words +=paragraph[i].length; %>
               <% if (!has && words > 200 && post.feature) {%>
-                <img src="<%= post.feature %>"/>
+                <img src="<%= imgUrl %>"/>
                 <% has = true; %>
               <% } %>
             <% } %>
             <% if (!has && post.feature) {%>
-              <img src="<%= post.feature %>"/>
+              <img src="<%= imgUrl %>"/>
             <% } %>
           <% } else {%>
             <%- post.abstract %>
