@@ -1,7 +1,7 @@
 <% let scheme = site.customConfig.scheme %>
 <div class="sidebar-wrapper box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %>">
   <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="<%= themeConfig.domain %>/images/avatar.png"/>
+    <img class="site-author-image right-motion" src="<%= site.customConfig.cdn %>/images/avatar.png"/>
     <p class="site-author-name"><%= themeConfig.siteName %></p>
     <p class="site-description right-motion"><%= site.themeConfig.siteDescription %></p>
   </div>
