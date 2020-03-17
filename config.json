@@ -768,12 +768,44 @@
       "note": "QQ、微信类有二维码图片的社交账号，可以在这里添加"
     },
     {
+      "name": "enableFriendPage",
+      "label": "自定义友链页面",
+      "group": "友链",
+      "value": true,
+      "type": "switch",
+      "note": "开启后会自动在菜单栏生成一个友链导航，不开启在站点预览下出现友链"
+    },
+    {
       "name": "friendsTitle",
       "label": "友链",
       "group": "友链",
       "value": "友情链接",
       "type": "input",
       "note": "自定义友链标题"
+    },
+    {
+      "name": "friendsIcon",
+      "label": "导航图标",
+      "group": "友链",
+      "value": "fa-ship",
+      "type": "input",
+      "note": "支持emoji图标，默认为fa-ship"
+    },
+    {
+      "name": "friendsTarget",
+      "label": "内部/外部",
+      "group": "友链",
+      "value": "_self",
+      "type": "input",
+      "note": "_blank: 浏览器中打开新的tab页，_self: 当前tab页跳转"
+    },
+    {
+      "name": "friendsIndex",
+      "label": "导航链接位置",
+      "group": "友链",
+      "value": "",
+      "type": "input",
+      "note": "在导航菜单中的排序，默认最后一个"
     },
     {
       "name": "friends",
@@ -784,7 +816,9 @@
       ], 
       "arrayItems": [
           { "label": "名称", "name": "siteName", "type": "input", "value": "" },
-          { "label": "链接", "name": "siteLink", "type": "input", "value": "" }
+          { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+          { "label": "头像", "name": "siteAvator", "type": "input", "value": "", "note": "默认获取站点下的favicon图标" },
+          { "label": "描述", "name": "siteDesc", "type": "input", "value": "" }
       ]
     },
     {
