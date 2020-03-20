@@ -817,7 +817,7 @@
       "arrayItems": [
           { "label": "名称", "name": "siteName", "type": "input", "value": "" },
           { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
-          { "label": "头像", "name": "siteAvator", "type": "input", "value": "", "note": "默认获取站点下的favicon图标" },
+          { "label": "头像", "name": "siteAvator", "type": "input", "value": "" },
           { "label": "描述", "name": "siteDesc", "type": "input", "value": "" }
       ]
     },
