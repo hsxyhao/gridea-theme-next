@@ -219,7 +219,6 @@
 .mist .right-motion {
   opacity: 0;
 }
-
 .mist .sidebar-item-box + .sidebar-item-box {
   border-left: 1px solid #333;
 }

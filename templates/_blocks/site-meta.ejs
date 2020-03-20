@@ -76,7 +76,7 @@
       <div class="friends-box">
         <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
           <p>
-            <a href="<%= site.customConfig.friends[i].siteLink %>">【<%= site.customConfig.friends[i].siteName %>】</a>
+            <a href="<%= site.customConfig.friends[i].siteLink %>"><%= site.customConfig.friends[i].siteName %></a>
           </p>
         <% } %>
       </div>
