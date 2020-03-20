@@ -13,26 +13,27 @@
       <div class="section-layout <%= scheme !==''?scheme:'pisces' %> <%= scheme === 'muse' || scheme === 'mist' ?'bg-color':'' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/home-sidebar') %>
-          <div class="section-box <%= scheme !==''?scheme:'pisces' %>">
-            <section class="section tags-section bg-color posts-expand slide-down-in">
+          <div class="section-box <%= scheme !==''?scheme:'pisces' %> box-shadow-wrapper">
+            <section class="friends-section bg-color slide-down-in">
               <div class="firends-box">
+                <h1 class="firends-title" itemprop="name headline"><%= site.customConfig.friendsTitle %></h1>
                 <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
-                  <% let avator = site.customConfig.friends[i].siteAvator;%>
                   <a href="<%= site.customConfig.friends[i].siteLink %>"></a>
-                    <p>
-                      <% if(avator === '') { %>
-                        <img src="<%= site.customConfig.friends[i].siteLink %>/favicon.ico"/>
-                      <% } else { %>
-                        <img src="<%= avator %>"/>
-                      <% } %>
+                    <div class="firends-item">
+                      <img src="<%= site.customConfig.friends[i].siteAvator %>"/>
                       <div class="right">
-                        <%= site.customConfig.friends[i].siteName %>
-                        <%= site.customConfig.friends[i].siteDesc %>
+                        <div class="top">
+                          <%= site.customConfig.friends[i].siteName %>
+                        </div>
+                        <div class="bottom">
+                          <%= site.customConfig.friends[i].siteDesc %>
+                        </div>
                       </div>
-                    </p>
+                    </div>
                   </a>
                 <% } %>
               </div>
+              <%- include('./_blocks/comment') %>
             </section>
           </div>
         </div>

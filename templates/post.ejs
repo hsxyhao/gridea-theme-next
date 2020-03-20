@@ -22,18 +22,7 @@
                 <%- post.content %>
               </div>
               <%- include('./_blocks/post-footer') %>
-              <% if (site.customConfig.valine) { %>
-                <%- include('./_blocks/valine') %>
-              <% } else { %>
-                <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-                  <% if (commentSetting.commentPlatform === 'gitalk') { %>
-                    <%- include('./_blocks/gitalk') %>
-                  <% } %>
-                  <% if (commentSetting.commentPlatform === 'disqus') { %>
-                    <%- include('./_blocks/disqus') %>
-                  <% } %>
-                <% } %>
-              <% } %>
+              <%- include('./_blocks/comment') %>
             </div>
           </div>
         </div>

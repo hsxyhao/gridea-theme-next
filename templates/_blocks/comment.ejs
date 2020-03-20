@@ -1,0 +1,12 @@
+<% if (site.customConfig.valine) { %>
+  <%- include('./valine') %>
+<% } else { %>
+  <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+    <% if (commentSetting.commentPlatform === 'gitalk') { %>
+      <%- include('./gitalk') %>
+    <% } %>
+    <% if (commentSetting.commentPlatform === 'disqus') { %>
+      <%- include('./disqus') %>
+    <% } %>
+  <% } %>
+<% } %>
