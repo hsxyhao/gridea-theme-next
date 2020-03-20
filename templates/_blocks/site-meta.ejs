@@ -45,7 +45,7 @@
         <% if (site.customConfig.socials && site.customConfig.socials.length) { %>
           <% for(let i = 0; i < site.customConfig.socials.length; i++) { %>
             <a href="<%= site.customConfig.socials[i].socialLink %>">
-              <i class="fa <%= site.customConfig.socials[i].socialIcon %>"></i> <%= site.customConfig.socials[i].socialName %>
+              <i class="fa <%= site.customConfig.socials[i].socialIcon %>" title="<%= site.customConfig.socials[i].socialName %>"></i>
             </a>
           <% } %>
         <% } %>
@@ -53,18 +53,13 @@
           <% for(let i = 0; i < site.customConfig.imgSocials.length; i++) { %>
             <a class="social-img" href="#">
               <img src="<%= site.customConfig.cdn %><%= site.customConfig.imgSocials[i].socialImg %>" />
-              <i class="fa <%= site.customConfig.imgSocials[i].socialIcon %>"></i> <%= site.customConfig.imgSocials[i].socialName %>
+              <i class="fa <%= site.customConfig.imgSocials[i].socialIcon %>" title="<%= site.customConfig.imgSocials[i].socialName %>" ></i>
             </a>
           <% } %>
         <% } %>
       </div>
     </div>
   <% } %>
-<% if (site.customConfig.bgMusic !== 'none' && site.customConfig.bgMusic === 'iframeLinks') { %>
-  <div class="sidebar-item">
-    <%- site.customConfig.iframeHtml %>
-  </div>
-<% } %>
 <% if (!site.customConfig.enableFriendPage) { %>
   <% if (site.customConfig.friends.length > 0) { %>
     <div class="sidebar-item right-motion sidebar-item-friends">
@@ -82,5 +77,10 @@
       </div>
     </div>
   <% } %>
+<% } %>
+<% if (site.customConfig.bgMusic !== 'none' && site.customConfig.bgMusic === 'iframeLinks') { %>
+  <div class="sidebar-item">
+    <%- site.customConfig.iframeHtml %>
+  </div>
 <% } %>
 </div>
