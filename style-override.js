@@ -1,10 +1,7 @@
 const generateOverride = (params) => {
   let result = '';
   let headerClass = 'header'
-  let cdn = '';
-  if (params.cdn !== '') {
-    cdn = params.cdn;
-  }
+  let cdn = params.cdn || '';
   // 默认配置
   if (!params.bgColor) {
     let bgColor = '';
@@ -335,7 +332,6 @@ const generateOverride = (params) => {
       }`
     }
   }
-  let cdn = params.cdn || '';
   if (params.headerImg) {
     if (params.scheme === 'muse') {
       result += `
