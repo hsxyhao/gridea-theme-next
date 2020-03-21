@@ -892,6 +892,20 @@
       "note": "建议值[0,1]"
     },
     {
+      "name": "live2dLeft",
+      "label": "看板娘距左边距离",
+      "group": "看板娘",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "live2dBottom",
+      "label": "看板娘距底部距离",
+      "group": "看板娘",
+      "value": "",
+      "type": "input"
+    },
+    {
       "name": "musicLinks",
       "label": "看板娘音乐",
       "group": "看板娘",
