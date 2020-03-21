@@ -18,7 +18,7 @@
               <div class="firends-box">
                 <h1 class="firends-title" itemprop="name headline"><%= site.customConfig.friendsTitle %></h1>
                 <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
-                  <a href="<%= site.customConfig.friends[i].siteLink %>"></a>
+                  <a href="<%= site.customConfig.friends[i].siteLink %>">
                     <div class="firends-item">
                       <img src="<%= site.customConfig.friends[i].siteAvator %>"/>
                       <div class="right">
@@ -32,6 +32,26 @@
                     </div>
                   </a>
                 <% } %>
+              </div>
+              <hr>
+              <div style="text-align:center">
+                <span class="with-love">
+                  <i class="fa fa-heart"></i>
+                </span> 
+                留言添加友链
+                <span class="with-love">
+                  <i class="fa fa-heart"></i>
+                </span>
+              </div>
+              <hr>
+              <div class="friends-note">
+                <p><strong>友链格式：</strong></p>
+                <ul>
+                  <li>网站名称：枫糖</li>
+                  <li>网站地址：<a href="https://blog.maplesugar.space" data-pjax-state="">https://blog.maplesugar.space</a></li>
+                  <li> 网站描述：From rookie to master</li>
+                  <li> 网站 Logo / 头像：<a href="https://blog.maplesugar.space/uploads/maple-leaf-avatar.jpg" data-pjax-state="">https://blog.maplesugar.space/uploads/maple-leaf-avatar.jpg</a></li>
+                </ul>
               </div>
               <%- include('./_blocks/comment') %>
             </section>

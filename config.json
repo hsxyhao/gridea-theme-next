@@ -830,14 +830,6 @@
       "note": "博客整体背景图"
     },
     {
-      "name": "headerImg",
-      "label": "标题背景图片",
-      "group": "魔改",
-      "value": "",
-      "type": "picture-upload",
-      "note": "Muse风格的Header区域背景图片，仅在Muse风格中生效"
-    },
-    {
       "name": "siteMetaImg",
       "label": "站点预览背景图片",
       "group": "魔改",
