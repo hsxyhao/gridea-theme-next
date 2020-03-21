@@ -1,6 +1,8 @@
+
+<% let left = site.customConfig.live2dLeft || 5, bottom = site.customConfig.live2dBottom %>
 <link rel="stylesheet" href="<%= site.customConfig.cdn %>/media/live2d/histoire/css/live2d.css" />
 <div class="box-scale">
-  <div id="landlord" style="left:5px;bottom:0px;" data-key="<%= site.customConfig.apiKey %>">
+  <div id="landlord" style="<%= 'left: ' +left+ 'px;bottom: ' + bottom + 'px;' %>" data-key="<%= site.customConfig.apiKey %>">
     <div class="message" style="opacity:0"></div>
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
     <div class="live_talk_input_body">
