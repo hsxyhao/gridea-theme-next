@@ -61,7 +61,7 @@
     </div>
   <% } %>
 <% if (!site.customConfig.enableFriendPage) { %>
-  <% if (site.customConfig.friends.length > 0) { %>
+  <% if (site.customConfig.friends && site.customConfig.friends.length > 0) { %>
     <div class="sidebar-item right-motion sidebar-item-friends">
       <% if (site.customConfig.friendsIcon) { %>
         <p class="friends-title"><%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %></p>

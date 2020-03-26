@@ -17,20 +17,22 @@
             <section class="friends-section bg-color slide-down-in">
               <div class="firends-box">
                 <h1 class="firends-title" itemprop="name headline"><%= site.customConfig.friendsTitle %></h1>
-                <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
-                  <a href="<%= site.customConfig.friends[i].siteLink %>">
-                    <div class="firends-item">
-                      <img src="<%= site.customConfig.friends[i].siteAvator %>"/>
-                      <div class="right">
-                        <div class="top">
-                          <%= site.customConfig.friends[i].siteName %>
-                        </div>
-                        <div class="bottom">
-                          <%= site.customConfig.friends[i].siteDesc %>
+                <% if (site.customConfig.friends) { %>
+                  <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
+                    <a href="<%= site.customConfig.friends[i].siteLink %>">
+                      <div class="firends-item">
+                        <img src="<%= site.customConfig.friends[i].siteAvator %>"/>
+                        <div class="right">
+                          <div class="top">
+                            <%= site.customConfig.friends[i].siteName %>
+                          </div>
+                          <div class="bottom">
+                            <%= site.customConfig.friends[i].siteDesc %>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
+                  <% } %>
                 <% } %>
               </div>
               <hr>
