@@ -830,14 +830,6 @@
       "note": "博客整体背景图"
     },
     {
-      "name": "siteMetaImg",
-      "label": "站点预览背景图片",
-      "group": "魔改",
-      "value": "",
-      "type": "picture-upload",
-      "note": "仅在Muse、Mist风格中生效"
-    },
-    {
       "name": "opacity",
       "label": "可视区透明度",
       "group": "魔改",

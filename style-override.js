@@ -344,31 +344,6 @@ const generateOverride = (params) => {
       }`;
   }
 
-  if (params.siteMetaImg) {
-    result += `.sidebar {
-      background-image: url(${cdn}${params.siteMetaImg}) !important;
-    }
-    .sidebar-item-box a {
-      color: #eee;
-    }
-    .friends-title {
-      color: #eee;
-      border-top: 1px dotted #fff;
-    }
-    .friends-box a {
-      color: #eee;
-      border-bottom: 1px solid #eee;
-    }
-    .toc-wrapper a {
-      color: #eee;
-      border-bottom: 1px solid #eee;
-    }
-    .sidebar-title-item {
-      color: #eee;
-    }
-    `
-  }
-
   if (params.bgTitleColor) {
     let color = toHexColor(params.bgTitleColor, ratio);
     result += `
