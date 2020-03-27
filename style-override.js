@@ -3,7 +3,7 @@ function toHexColor(color, opacity) {
   if (color.length === 4) {
     return `#${color[1]}${color[1]}${color[2]}${color[2]}${color[3]}${color[3]}${opacity.toString(16)}`;
   } else if (color.length === 7) {
-    return `#${color}${opacity.toString(16)}`;
+    return `${color}${opacity.toString(16)}`;
   }
   return color;
 }
