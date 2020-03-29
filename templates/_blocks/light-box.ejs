@@ -1,9 +1,13 @@
-<div class="light-box" id="light_box">
-
-</div>
+<div class="light-box" id="light_box"></div>
 <script>
   let imgs = document.querySelectorAll('.post-body img');
   let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
   let width = window.innerWidth * 0.8;
   lightBox.onclick= () => {
     let img = lightBox.querySelector('img');
@@ -18,7 +22,7 @@
       lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
       lightImg.onclick = function() {
         lightBox.style = '';
-        this.remove()
+        this.remove();
       }
       lightBox.append(lightImg);
     }
