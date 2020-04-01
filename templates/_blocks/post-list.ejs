@@ -8,17 +8,21 @@
           <% if (site.customConfig.strategy === 'first') { %>
             <% let paragraph = post.abstract && post.abstract.split('<p>');%>
             <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
-              <%- '<p>' + paragraph[i]%>
+              <%- '<p>' + paragraph[i] %>
               <% if (i === 1 && post.feature) {%>
                 <img src="<%= imgUrl %>" />
               <% } %>
             <% } %>
           <% } else if (site.customConfig.strategy === 'before') {%>
-            <img src="<%= imgUrl %>" />
+            <% if (post.feature) { %>
+              <img src="<%= imgUrl %>" />
+            <% } %>
             <%- post.abstract %>
           <% } else if (site.customConfig.strategy === 'after') {%>
             <%- post.abstract %>
-            <img src="<%= imgUrl %>" />
+            <% if (post.feature) {%>
+              <img src="<%= imgUrl %>" />
+            <% } %>
           <% } else if (site.customConfig.strategy === 'random') {%>
             <% let paragraph = post.abstract && post.abstract.split('<p>');let r = Math.floor(Math.random() * 10) % paragraph.length;%>
             <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
