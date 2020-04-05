@@ -4,7 +4,7 @@
       <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats, isTop: post.isTop, browse: false }) %>
       <div class="post-body">
         <% if (site.customConfig.enableThemeCompatible) { %>
-          <% let cdn = site.customConfig.cdn + '/post-images', imgUrl = cdn + post.feature.split('post-images')[1];  %>
+          <% let cdn = site.customConfig.cdn + '/post-images', imgPrefix = post.feature.split('post-images')[1], imgUrl = imgPrefix ? cdn + imgPrefix : post.feature;  %>
           <% if (site.customConfig.strategy === 'first') { %>
             <% let paragraph = post.abstract && post.abstract.split('<p>');%>
             <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
