@@ -92,6 +92,14 @@ const generateOverride = (params) => {
     }`
   }
 
+  if (params.fontSize && params.fontSize !== '') {
+    result += `
+    .post-body {
+      font-size: ${params.fontSize}px !important
+    }
+    `
+  }
+
   // 颜色
   if (params.fontColor) {
     result += `body {
