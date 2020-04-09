@@ -341,6 +341,16 @@ const generateOverride = (params) => {
     }`
   }
 
+  if (params.radius) {
+    result += `
+    .gemini .blog-header, .gemini .sidebar-wrapper, .gemini .article-wrapper, .gemini .post, .gemini .page, .gemini .section, .gemini .section-box, .gemini .sidebar-box, .gemini .friends-section {
+      border-radius: ${params.radius}px;
+    }
+    .pisces .blog-header, .pisces .sidebar-wrapper, .pisces .article-wrapper, .pisces .section, .pisces .sidebar-box, .pisces .friends-section {
+      border-radius: ${params.radius}px;
+    }`
+  }
+
   if (params.bgSiteMetaColor) {
     let color = params.bgSiteMetaColor;
     result += `

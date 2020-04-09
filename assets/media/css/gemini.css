@@ -123,11 +123,6 @@
   border: 1px solid #eee;
 }
 
-
-.gemini {
-  
-}
-
 .gemini .post-page {
   padding: 20px 40px;
 }
@@ -183,7 +178,6 @@
   top: 0;
   padding: 0;
   width: 240px;
-  border-radius: initial;
   z-index: 9999;
 }
 
