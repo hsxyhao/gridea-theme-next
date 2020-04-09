@@ -45,6 +45,30 @@
       "note": "可以修改主题中的指定元素以及markdown的样式、颜色，需要css基础"
     },
     {
+      "name": "viewportWidth",
+      "label": "博客可视区宽度",
+      "group": "布局",
+      "value": "960px",
+      "type": "input",
+      "note": "各Scheme14寸屏左右推荐配置：Pisces 960px,Muse 700px, Mist 85%, Gemini 960px。在Pisces、Gemini风格中博客可视区宽度比文章内容区宽度多250~260px左右，设置了可视区宽度默认改变了内容区宽度"
+    },
+    {
+      "name": "fontSize",
+      "label": "字体大小",
+      "group": "布局",
+      "value": "",
+      "type": "input",
+      "note": "阅读内容区域字体大小，默认14"
+    },
+    {
+      "name": "fontFamily",
+      "label": "字体",
+      "group": "布局",
+      "value": "",
+      "type": "input",
+      "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
+    },
+    {
       "name": "bgColor",
       "label": "背景色",
       "group": "颜色",
@@ -197,22 +221,6 @@
       "value": false,
       "type": "switch",
       "note": "默认菜单栏在左边显示"
-    },
-    {
-      "name": "viewportWidth",
-      "label": "博客可视区宽度",
-      "group": "布局",
-      "value": "960px",
-      "type": "input",
-      "note": "各Scheme14寸屏左右推荐配置：Pisces 960px,Muse 700px, Mist 85%, Gemini 960px。在Pisces、Gemini风格中博客可视区宽度比文章内容区宽度多250~260px左右，设置了可视区宽度默认改变了内容区宽度"
-    },
-    {
-      "name": "fontFamily",
-      "label": "字体",
-      "group": "布局",
-      "value": "",
-      "type": "input",
-      "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
     },
     {
       "name": "updateTip",
