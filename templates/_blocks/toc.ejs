@@ -99,6 +99,9 @@ function showToc() {
     let con = tocContent.children[0].children[0];
     tocContent.innerHTML = con.innerHTML;
   }
+  let markdownItTOC = document.querySelector('.markdownIt-TOC');
+  let innerHeight = window.innerHeight;
+  markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
   addTocNumber(tocContent, '');
 })();
 
