@@ -165,6 +165,16 @@
     }
   }
 
+  // 链接跳转
+  let newWindow = '<%= site.customConfig.newWindow %>'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target","_blank");
+      }
+    })
+  }
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
