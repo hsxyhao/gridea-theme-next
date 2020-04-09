@@ -846,6 +846,14 @@
       "note": "正常模式下所有标签的透明度，仅数字1~100"
     },
     {
+      "name": "radius",
+      "label": "圆角",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "Pisces、Gemini风格下圆角配置，纯数字"
+    },
+    {
       "name": "bgTitleFontSize",
       "label": "站点标题字体大小",
       "group": "魔改",
