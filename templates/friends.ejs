@@ -19,7 +19,7 @@
                 <h1 class="firends-title" itemprop="name headline"><%= site.customConfig.friendsTitle %></h1>
                 <% if (site.customConfig.friends) { %>
                   <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
-                    <a href="<%= site.customConfig.friends[i].siteLink %>">
+                    <a href="<%= site.customConfig.friends[i].siteLink %>" target="_blank">
                       <div class="firends-item">
                         <img src="<%= site.customConfig.friends[i].siteAvator %>"/>
                         <div class="right">
