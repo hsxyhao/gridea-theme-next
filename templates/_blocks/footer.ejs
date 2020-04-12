@@ -23,9 +23,9 @@
     </span>
     <% } %>
   </div>
-  <% if (site.customConfig.bgImg) { %>
+  <% if (site.customConfig.bgImg !== '' || site.customConfig.bgImgUrl !== '') { %>
     <div class="bg-img">
-      <img src="<%= site.customConfig.cdn %><%= site.customConfig.bgImg %>" />
+      <img src="<%= site.customConfig.cdn %><%= site.customConfig.bgImgUrl && site.customConfig.bgImgUrl !== '' ? site.customConfig.bgImgUrl : site.customConfig.bgImg %>" />
     </div>
   <% } %>
   <% if (site.customConfig.enableLive2d) { %>
