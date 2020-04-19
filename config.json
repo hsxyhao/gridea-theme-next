@@ -1013,7 +1013,7 @@
       "group": "评论",
       "value": false,
       "type": "switch",
-      "note": "启用后会覆盖gridea自带的评论,获取appID和appKey请看 https://valine.js.org/quickstart.html"
+      "note": "启用后会覆盖gridea自带的评论"
     },
     {
       "name": "appID",
