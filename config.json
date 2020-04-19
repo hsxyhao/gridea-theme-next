@@ -803,7 +803,7 @@
       "name": "friendsIcon",
       "label": "导航图标",
       "group": "友链",
-      "value": "fa-ship",
+      "value": "",
       "type": "input",
       "note": "支持emoji图标，默认为fa-ship"
     },

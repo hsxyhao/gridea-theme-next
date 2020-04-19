@@ -10,7 +10,7 @@
       <%- include('./_blocks/header', {active: true, menu: 'archives', link: '/archives'}) %>
     </div>
     <div class="main-continer">
-      <% let scheme = site.customConfig.scheme; %>
+      <% let scheme = site.customConfig.scheme || 'pisces'; %>
       <div class="section-layout <%= (scheme === 'muse' || scheme === 'mist')?'bg-color':'' %> <%= scheme !==''?scheme:'pisces' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/home-sidebar') %>

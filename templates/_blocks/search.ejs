@@ -1,0 +1,36 @@
+<div class="search-mask" id="search_mask">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input type="text" placeholder="搜索">
+      </div>
+      <i class="fa fa-times-circle"></i>
+    </div>
+    <div class="result">
+      <% for (let i=0; i < site.posts.length; i++) { %>
+        <div class="item">
+          <a class="result-title" href="<%= site.posts[i].link %>"" data-c="<%= site.posts[i].content %>"><%- site.posts[i].title %></a>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+<script>
+  // var escape = "<%= JSON.stringify(site.posts) %>";
+  // var json = escape.substr(1, escape.length - 2);
+  // var datas = json.split(',');
+  // for (let i=0; i < datas.length; i++) {
+  //   let item = datas[i];
+  //   let attrs = item.split('34;:&#34')
+  //   debugger
+  //   console.log(datas[i])
+  // }
+  let escapeMap = new Map();
+  escapeMap.set('&#34;', '"');
+  escapeMap.set('&gt;', '>');
+  escapeMap.set('&#39;', "'");
+  escapeMap.set('&lt;', '<');
+  escapeMap.set('&quot;', '"');
+  escapeMap.set('&amp;', '&');
+</script>

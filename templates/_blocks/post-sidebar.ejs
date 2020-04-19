@@ -1,5 +1,5 @@
 <% let showToc = toc.length > 0%>
-<% let scheme = site.customConfig.scheme; let siteBar = site.customConfig.siteBar;%>
+<% let scheme = site.customConfig.scheme || 'pisces'; let siteBar = site.customConfig.siteBar;%>
 <div class="sidebar">
   <% if (!(siteBar === 'hide' || siteBar === 'toc' && !showToc)) {%>
     <div class="sidebar-box box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %> right-motion" id="sidebar">
