@@ -30,13 +30,6 @@
       ]
     },
     {
-      "name": "subTitle",
-      "label": "子标题",
-      "group": "布局",
-      "value": "精于心，简于形",
-      "type": "input"
-    },
-    {
       "name": "bolgername",
       "label": "博主名称",
       "group": "布局",
