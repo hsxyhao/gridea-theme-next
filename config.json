@@ -37,6 +37,20 @@
       "type": "input"
     },
     {
+      "name": "bolgername",
+      "label": "博主名称",
+      "group": "布局",
+      "value": "仅适用 Gemini,Pisces 布局",
+      "type": "input"
+    },
+    {
+      "name": "bolgerjs",
+      "label": "博主介绍",
+      "group": "布局",
+      "value": "仅适用 Gemini,Pisces 布局",
+      "type": "input"
+    },
+    {
       "name": "cssStr",
       "label": "自定义css",
       "group": "布局",
