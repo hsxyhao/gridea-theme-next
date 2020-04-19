@@ -7,7 +7,7 @@
       <%- site.themeConfig.footerInfo%>
     </div>
   </footer>
-  <% let scheme = site.customConfig.scheme; %>
+  <% let scheme = site.customConfig.scheme || 'pisces'; %>
   <% if (scheme === 'muse' || scheme === 'mist') { %>
     <div class="drawer-box <%= site.customConfig.sideIsRight?'right':'left' %>" id="drawer_box">
       <span class="muse-line muse-line-first"></span>

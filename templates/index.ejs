@@ -9,8 +9,8 @@
       <%- include('./_blocks/header', {active: true, menu: 'home', link: '/'}) %>
     </div>
     <div class="main-continer">
-      <% let scheme = site.customConfig.scheme; %>
-      <div class="section-layout <%= scheme !==''?scheme:'pisces' %> <%= scheme === 'muse' || scheme === 'mist' ?'bg-color':'' %>">
+      <% let scheme = site.customConfig.scheme || 'pisces' %>
+      <div class="section-layout <%= scheme !== '' ?scheme:'pisces' %> <%= scheme === 'muse' || scheme === 'mist' ?'bg-color':'' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/home-sidebar') %>
           <div class="section-box <%= scheme !==''?scheme:'pisces' %>">

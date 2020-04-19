@@ -1,4 +1,4 @@
-<% let scheme = site.customConfig.scheme %>
+<% let scheme = site.customConfig.scheme || 'pisces'; %>
 <div class="sidebar-wrapper box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %>">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="<%= site.customConfig.cdn %>/images/avatar.png"/>
@@ -63,7 +63,7 @@
 <% if (!site.customConfig.enableFriendPage) { %>
   <% if (site.customConfig.friends && site.customConfig.friends.length > 0) { %>
     <div class="sidebar-item right-motion sidebar-item-friends">
-      <% if (site.customConfig.friendsIcon) { %>
+      <% if (site.customConfig.friendsIcon && site.customConfig.friendsIcon ！== '') { %>
         <p class="friends-title"><%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %></p>
       <% } else { %>
         <p class="friends-title"><i class="fa fa-ship"></i> <%= site.customConfig.friendsTitle %></p>

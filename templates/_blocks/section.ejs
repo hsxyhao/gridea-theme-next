@@ -1,4 +1,4 @@
-<% let scheme = site.customConfig.scheme; %>
+<% let scheme = site.customConfig.scheme || 'pisces'; %>
 <div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
   <div class="section-layout-wrapper">
     <%- include('./home-sidebar') %>
