@@ -433,6 +433,27 @@ const generateOverride = (params) => {
       box-shadow: none !important;
     }`
   }
+
+  if (params.cursorDefault) {
+    result += `body {
+      cursor: url('/media/curs/normal.cur'), default;
+    }
+    `
+  }
+
+  if (params.cursorLink) {
+    result += `
+    a {
+      cursor: url('/media/curs/link.cur'), pointer !important;
+    }`
+  }
+
+  if (params.cursorText) {
+    result += `
+    input, textarea, code {
+      cursor: url('/media/curs/texto.cur'), text !important;
+    }`
+  }
   
   return result;
 }
