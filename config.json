@@ -178,6 +178,41 @@
       "card": "color"
     },
     {
+      "name": "cursorDefault",
+      "label": "默认",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorLink",
+      "label": "链接",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorText",
+      "label": "文本",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorZoomin",
+      "label": "放大",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorZoomout",
+      "label": "缩小",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
       "name": "seoKeywords",
       "label": "SEO",
       "group": "特性",
