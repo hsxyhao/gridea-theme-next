@@ -1,11 +1,89 @@
 <%- include('./search') %>
+<input hidden id="copy" />
 <script>
+//拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+window.Clipboard = (function(window, document, navigator) {
+  var textArea,
+      copy;
+
+  // 判断是不是ios端
+  function isOS() {
+    return navigator.userAgent.match(/ipad|iphone/i);
+  }
+  //创建文本元素
+  function createTextArea(text) {
+    textArea = document.createElement('textArea');
+    textArea.value = text;
+    textArea.style.width = 0;
+    textArea.style.height = 0;
+    textArea.clientHeight = 0;
+    textArea.clientWidth = 0;
+    document.body.appendChild(textArea);
+  }
+  //选择内容
+  function selectText() {
+    var range,
+        selection;
+
+    if (isOS()) {
+      range = document.createRange();
+      range.selectNodeContents(textArea);
+      selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      textArea.setSelectionRange(0, 999999);
+    } else {
+      textArea.select();
+    }
+  }
+
+//复制到剪贴板
+  function copyToClipboard() {        
+    try{
+      document.execCommand("Copy")
+    }catch(err){
+      alert("复制错误！请手动复制！")
+    }
+    document.body.removeChild(textArea);
+  }
+
+  copy = function(text) {
+    createTextArea(text);
+    selectText();
+    copyToClipboard();
+  };
+
+  return {
+    copy: copy
+  };
+})(window, document, navigator);
+
+function copyCode (e) {
+  if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+    var text = e.currentTarget.innerText;
+    if (e.srcElement.textContent === '复制成功') {
+      console.log('复制操作频率过高');
+      return;
+    }
+    e.srcElement.textContent = '复制成功';
+    (function(elem){
+      setTimeout(() => {
+        if (elem.textContent === '复制成功') {
+          elem.textContent = '复制代码'
+        }
+      }, 1000);
+    })(e.srcElement)
+    Clipboard.copy(text);
+  }
+}
+
  let codes = document.querySelectorAll('code');
  codes.forEach(code => {
-   let span = document.createElement('span');
-   span.classList.add('copy-code');
-   span.textContent = '复制代码';
-   code.appendChild(span);
+   let copyElem = document.createElement('span');
+   copyElem.classList.add('copy-code');
+   copyElem.textContent = '复制代码';
+   code.appendChild(copyElem);
+   code.onclick = copyCode
  })
 </script>
 <script src="<%= site.customConfig.cdn %>/media/js/motion.js"></script>
