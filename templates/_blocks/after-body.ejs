@@ -1,2 +1,11 @@
 <%- include('./search') %>
+<script>
+ let codes = document.querySelectorAll('code');
+ codes.forEach(code => {
+   let span = document.createElement('span');
+   span.classList.add('copy-code');
+   span.textContent = '复制代码';
+   code.appendChild(span);
+ })
+</script>
 <script src="<%= site.customConfig.cdn %>/media/js/motion.js"></script>
