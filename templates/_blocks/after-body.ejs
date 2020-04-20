@@ -59,7 +59,8 @@ window.Clipboard = (function(window, document, navigator) {
 
 function copyCode (e) {
   if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-    var text = e.currentTarget.innerText;
+    let code = e.currentTarget.querySelector('code');
+    var text = code.innerText;
     if (e.srcElement.textContent === '复制成功') {
       console.log('复制操作频率过高');
       return;
@@ -76,13 +77,14 @@ function copyCode (e) {
   }
 }
 
- let codes = document.querySelectorAll('code');
- codes.forEach(code => {
-   let copyElem = document.createElement('span');
-   copyElem.classList.add('copy-code');
-   copyElem.textContent = '复制代码';
-   code.appendChild(copyElem);
-   code.onclick = copyCode
+ let pres = document.querySelectorAll('pre');
+ pres.forEach(pre => {
+  let code = pre.querySelector('code');
+  let copyElem = document.createElement('span');
+  copyElem.classList.add('copy-code');
+  copyElem.textContent = '复制代码';
+  pre.appendChild(copyElem);
+  pre.onclick = copyCode
  })
 </script>
 <script src="<%= site.customConfig.cdn %>/media/js/motion.js"></script>
