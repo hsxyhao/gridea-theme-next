@@ -199,6 +199,13 @@
       "type": "input"
     },
     {
+      "name": "cursorCopy",
+      "label": "复制",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
       "name": "cursorZoomin",
       "label": "放大",
       "group": "鼠标",

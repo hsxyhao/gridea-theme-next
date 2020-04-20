@@ -436,25 +436,65 @@ const generateOverride = (params) => {
 
   if (params.cursorDefault) {
     result += `body {
-      cursor: url('/media/curs/normal.cur'), default;
-    }
-    `
+      cursor: url('/media/curs/${params.cursorDefault}.cur'), default;
+    }`
+  } else {
+    result += `body {
+      cursor: default;
+    }`
   }
 
   if (params.cursorLink) {
-    result += `
-    a {
-      cursor: url('/media/curs/link.cur'), pointer !important;
+    result += `a {
+      cursor: url('/media/curs/${params.cursorLink}.cur'), pointer !important;
+    }`
+  } else {
+    result += `a {
+      cursor: pointer;
     }`
   }
 
   if (params.cursorText) {
-    result += `
-    input, textarea, code {
-      cursor: url('/media/curs/texto.cur'), text !important;
+    result += `input, textarea, code {
+      cursor: url('/media/curs/${params.cursorText}.cur'), text !important;
+    }`
+  } else {
+    result += `input, textarea, code {
+      cursor: text;
+    }`
+  }
+
+  if (params.cursorCopy) {
+    result += `code > span.copy-code {
+      cursor: url('/media/curs/${params.cursorCopy}.cur'), text !important;
+    }`
+  } else {
+    result += `code > span.copy-code {
+      cursor: pointer;
     }`
   }
   
+  if (params.cursorZoomin) {
+    result += `.post img {
+      cursor: url('/media/curs/${params.cursorZoomin}.cur'), zoom-in !important;
+    }`
+  } else {
+    result += `.post img {
+      cursor: zoom-in;
+    }`
+  }
+
+
+  if (params.cursorZoomout) {
+    result += `.post img {
+      cursor: url('/media/curs/${params.cursorZoomout}.cur'), zoom-out !important;
+    }`
+  } else {
+    result += `.post img {
+      cursor: zoom-out;
+    }`
+  }
+
   return result;
 }
 
