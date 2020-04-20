@@ -178,6 +178,22 @@
       "card": "color"
     },
     {
+      "name": "mouseClick",
+      "label": "鼠标点击效果",
+      "group": "鼠标",
+      "value": "none",
+      "type": "radio",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "love",
+          "value": "love"
+        }]
+    },
+    {
       "name": "cursorDefault",
       "label": "默认",
       "group": "鼠标",
