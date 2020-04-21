@@ -37,8 +37,8 @@
             <% let menu = menus[i]; %>
             <% if (site.customConfig.enableFriendPage) { %>
               <% if (site.customConfig.friendsIndex-1 === i) { %>
-                <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
-                  <a href="/friends" target="<%= site.customConfig.friendsTarget %>">
+                <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
+                  <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
                     <% if (site.customConfig.friendsIcon) { %>
                       <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
                     <% } else { %>
@@ -73,8 +73,8 @@
           <% } %>
           <% if (site.customConfig.enableFriendPage) { %>
             <% if (!site.customConfig.friendsIndex || site.customConfig.friendsIndex === '' || site.customConfig.friendsIndex-1 >= menus.length) { %>
-              <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
-                <a href="/friends" target="<%= site.customConfig.friendsTarget %>">
+              <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
+                <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
                   <% if (site.customConfig.friendsIcon) { %>
                     <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
                   <% } else { %>
