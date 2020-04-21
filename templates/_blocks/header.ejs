@@ -49,23 +49,23 @@
               <% } %>
             <% } %>
             <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
-              <% let target = menu.openType === 'External'?'_blank':'_self' %>
+              <% let target = menu.openType === 'External'?'_blank':'_self'; let href = menu.link === '/' ? '/': menu.link + '/' %>
               <% if (site.customConfig.menuIcon === 'default') { %>
                 <% if (map.get(menu.link)) { %>
-                  <a href="<%= menu.link %>/" target="<%= target %>">
+                  <a href="<%= href %>" target="<%= target %>">
                     <i class="fa fa-<%= map.get(menu.link) %>"></i> <%= menu.name %>
                   </a>
                 <% } else { %>
-                  <a href="<%= menu.link %>/" target="<%= target %>">
+                  <a href="<%= href %>" target="<%= target %>">
                     <%= menu.name %>
                   </a>
                 <% } %>
               <% } else if (site.customConfig.menuIcon === 'none') { %>
-                <a href="<%= menu.link %>/" target="<%= target %>">
+                <a href="<%= href %>" target="<%= target %>">
                   <%= menu.name %>
                 </a>
               <% } else { %>
-                <a href="<%= menu.link %>/" target="<%= target %>">
+                <a href="<%= href %>" target="<%= target %>">
                   <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
                 </a>
               <% } %>
