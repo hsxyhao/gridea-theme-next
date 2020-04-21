@@ -13,12 +13,10 @@
       <div class="section-layout <%= (scheme === 'muse' || scheme === 'mist')?'bg-color':'' %> <%= scheme !==''?scheme:'pisces' %>">
         <div class="section-layout-wrapper">
           <%- include('./_blocks/home-sidebar') %>
-            <div class="section-box tag-line">
-              <div class="box-shadow-wrapper">
-                <section class="section posts-expand bg-color">
-                  <%- include('./_blocks/tag-timeline') %>
-                </section>
-              </div>
+            <div class="section-box tag-line box-shadow-wrapper">
+              <section class="section tags-section posts-expand bg-color">
+                <%- include('./_blocks/tag-timeline') %>
+              </section>
           </div>
         </div>
       </div>
