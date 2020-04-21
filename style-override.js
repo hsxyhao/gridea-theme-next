@@ -436,7 +436,7 @@ const generateOverride = (params) => {
 
   if (params.cursorDefault) {
     result += `body {
-      cursor: url('/media/curs/${params.cursorDefault}.cur'), default;
+      cursor: url('${cdn}/media/curs/${params.cursorDefault}.cur'), default;
     }`
   } else {
     result += `body {
@@ -446,7 +446,7 @@ const generateOverride = (params) => {
 
   if (params.cursorLink) {
     result += `a {
-      cursor: url('/media/curs/${params.cursorLink}.cur'), pointer !important;
+      cursor: url('${cdn}/media/curs/${params.cursorLink}.cur'), pointer !important;
     }`
   } else {
     result += `a {
@@ -456,7 +456,7 @@ const generateOverride = (params) => {
 
   if (params.cursorText) {
     result += `input, textarea, code {
-      cursor: url('/media/curs/${params.cursorText}.cur'), text !important;
+      cursor: url('${cdn}/media/curs/${params.cursorText}.cur'), text !important;
     }`
   } else {
     result += `input, textarea, code {
@@ -466,7 +466,7 @@ const generateOverride = (params) => {
 
   if (params.cursorCopy) {
     result += `code > span.copy-code {
-      cursor: url('/media/curs/${params.cursorCopy}.cur'), text !important;
+      cursor: url('${cdn}/media/curs/${params.cursorCopy}.cur'), text !important;
     }`
   } else {
     result += `code > span.copy-code {
@@ -476,7 +476,7 @@ const generateOverride = (params) => {
   
   if (params.cursorZoomin) {
     result += `.post img {
-      cursor: url('/media/curs/${params.cursorZoomin}.cur'), zoom-in !important;
+      cursor: url('${cdn}/media/curs/${params.cursorZoomin}.cur'), zoom-in !important;
     }`
   } else {
     result += `.post img {
@@ -487,7 +487,7 @@ const generateOverride = (params) => {
 
   if (params.cursorZoomout) {
     result += `.post img {
-      cursor: url('/media/curs/${params.cursorZoomout}.cur'), zoom-out !important;
+      cursor: url('${cdn}/media/curs/${params.cursorZoomout}.cur'), zoom-out !important;
     }`
   } else {
     result += `.post img {
