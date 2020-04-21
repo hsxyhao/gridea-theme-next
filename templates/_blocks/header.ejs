@@ -37,8 +37,8 @@
             <% let menu = menus[i]; %>
             <% if (site.customConfig.enableFriendPage) { %>
               <% if (site.customConfig.friendsIndex-1 === i) { %>
-                <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
-                  <a href="/friends" target="<%= site.customConfig.friendsTarget %>">
+                <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
+                  <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
                     <% if (site.customConfig.friendsIcon) { %>
                       <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
                     <% } else { %>
@@ -52,20 +52,20 @@
               <% let target = menu.openType === 'External'?'_blank':'_self' %>
               <% if (site.customConfig.menuIcon === 'default') { %>
                 <% if (map.get(menu.link)) { %>
-                  <a href="<%= menu.link %>" target="<%= target %>">
+                  <a href="<%= menu.link %>/" target="<%= target %>">
                     <i class="fa fa-<%= map.get(menu.link) %>"></i> <%= menu.name %>
                   </a>
                 <% } else { %>
-                  <a href="<%= menu.link %>" target="<%= target %>">
+                  <a href="<%= menu.link %>/" target="<%= target %>">
                     <%= menu.name %>
                   </a>
                 <% } %>
               <% } else if (site.customConfig.menuIcon === 'none') { %>
-                <a href="<%= menu.link %>" target="<%= target %>">
+                <a href="<%= menu.link %>/" target="<%= target %>">
                   <%= menu.name %>
                 </a>
               <% } else { %>
-                <a href="<%= menu.link %>" target="<%= target %>">
+                <a href="<%= menu.link %>/" target="<%= target %>">
                   <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
                 </a>
               <% } %>
@@ -73,8 +73,8 @@
           <% } %>
           <% if (site.customConfig.enableFriendPage) { %>
             <% if (!site.customConfig.friendsIndex || site.customConfig.friendsIndex === '' || site.customConfig.friendsIndex-1 >= menus.length) { %>
-              <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
-                <a href="/friends" target="<%= site.customConfig.friendsTarget %>">
+              <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
+                <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
                   <% if (site.customConfig.friendsIcon) { %>
                     <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
                   <% } else { %>
