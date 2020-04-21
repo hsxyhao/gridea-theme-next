@@ -1095,6 +1095,14 @@
       "type": "input"
     },
     {
+      "name": "valineimage",
+      "label": "评论框背景图",
+      "group": "评论",
+      "value": "https://upimage.alexhchu.com/2020/04/21/47eda59424daa.gif",
+      "type": "input",
+      "note": "支持图片外链以及本地图片,使用方法与背景图片设置方法一致"
+    },
+    {
       "name": "avatar",
       "label": "封面头像",
       "group": "评论",
@@ -1141,14 +1149,6 @@
       "note": "自定义头像为Gravatar的头像，需要自己上传，上面的头像具体对应的图像移步：https://valine.js.org/avatar.html"
     },
     {
-      "name": "notify",
-      "label": "通知",
-      "group": "评论",
-      "value": false,
-      "type": "switch",
-      "note": "评论回复邮件提醒"
-    },
-    {
       "name": "pageSize",
       "label": "评论分页",
       "group": "评论",
@@ -1170,9 +1170,13 @@
         {
           "label": "en",
           "value": "en"
+        },
+        {
+          "label": "ja",
+          "value": "ja"
         }
       ],
-      "note": "多语言支持，可选值：zh-cn，en"
+      "note": "多语言支持，可选值：zh-cn，en，ja"
     },
     {
       "name": "visitor",
