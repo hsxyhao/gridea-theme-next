@@ -27,12 +27,11 @@
   window.addEventListener('load', function() {
     let postBody = document.querySelector('#post_body');
     let hs = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-    hs.forEach(h => {
+    postBody && hs.forEach(h => {
       let helems = postBody.querySelectorAll(h);
       if (helems.length > 0) {
         helems.forEach(elem => {
           elem.id = encodeURI(elem.id);
-          console.log(elem.id);
         })
       }
     })
