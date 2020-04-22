@@ -46,11 +46,9 @@
       <span><%= stats.words %><span class="pc-show">字数</span></span>
     </span>
     <% if (browse) { %>
-    <% let postId = link.split('/post/')[1];%>
-    <% if (postId.lastIndexOf('/') === postId.length-1) { %>
-    <% postId = '/post/' + postId %>
-    <% } else { %>
-    <% postId = '/post/' + postId + '/' %>
+    <% let url = link.split('://')[1]; let postId = url && url.substr(url.indexOf('/')) || url; %>
+    <% if (postId.lastIndexOf('/') !== postId.length-1) { %>
+    <% postId = postId + '/' %>
     <% } %>
     <span id="<%= postId %>" data-flag-title="<%= title %>" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
