@@ -2,28 +2,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
   <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
   <div class="aplayer" id="aplayer"></div>
-  <input hidden id="player_cover" value="<%= site.customConfig.cdn %><%= site.customConfig.cover %>" />
-  <div class="music-list">
-  <% for(let i = 0; i < site.customConfig.aplayerList.length; i++ ) { %>
-    <% let c = site.customConfig.aplayerList[i]; %>
-    <input hidden value="<%= c.musicName + ',' + c.author + ',' + c.musicLink + ',' +c.lrc %>" />
-  <% } %>
-  </div>
   <script>
-  let musics = document.querySelector('.music-list').children;
+  let musics = JSON.parse('<%- JSON.stringify(site.customConfig.aplayerList) %>');
   let mediaMusic = [];
-  let cover = document.querySelector('#player_cover').value;
   for (let i = 0; i < musics.length; i++) {
     let item = musics[i];
-    let splits = item.value.split(',');
     mediaMusic.push({
-      name: splits[0],
-      artist: splits[1],
-      url: splits[2],
-      lrc: splits[3],
-      cover: cover
+      name: item.musicName,
+      artist: item.author,
+      url: item.musicLink,
+      lrc: item.lrc,
+      cover: item.cover
     });
   }
+
   const ap = new APlayer({
       container: document.getElementById('aplayer'),
       fixed: true,
@@ -32,5 +24,18 @@
       listMaxHeight: 90,
       audio: mediaMusic
   });
+  window.addEventListener('load', function() {
+    let postBody = document.querySelector('#post_body');
+    let hs = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    hs.forEach(h => {
+      let helems = postBody.querySelectorAll(h);
+      if (helems.length > 0) {
+        helems.forEach(elem => {
+          elem.id = encodeURI(elem.id);
+          console.log(elem.id);
+        })
+      }
+    })
+  })
   </script>
 <% } %>
