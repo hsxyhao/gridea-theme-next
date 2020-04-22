@@ -1,4 +1,4 @@
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <% let scheme = site.customConfig.scheme || 'pisces', cdn = site.customConfig.cdn %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="<%= site.customConfig.seoKeywords %>">
@@ -10,9 +10,12 @@
 <link rel="stylesheet" href="<%= cdn %>/media/css/<%= scheme?scheme:'pisces' %>.css">
 
 <link rel="stylesheet" href="<%= cdn %>/media/fonts/font-awesome.css">
-<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
 
-<link href="<%= cdn %>/media/hljs/styles/<%= site.customConfig.hljs?site.customConfig.hljs:'github' %>.css" rel="stylesheet">  
+<link href="<%= cdn %>/media/hljs/styles/<%= site.customConfig.hljs?site.customConfig.hljs:'github' %>.css"
+  rel="stylesheet">
 
 <script src="<%= cdn %>/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
@@ -25,7 +28,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', '<%= site.customConfig.ga %>');
@@ -33,12 +36,12 @@
 <% } %>
 <% if (site.customConfig.bd) { %>
 <script>
-var _hmt = _hmt || [];
-(function() {
+  var _hmt = _hmt || [];
+  (function () {
     var hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?<%= site.customConfig.bd %>";
-    var s = document.getElementsByTagName("script")[0]; 
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
-})();
+  })();
 </script>
 <% } %>

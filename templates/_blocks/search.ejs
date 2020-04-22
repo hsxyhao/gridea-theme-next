@@ -9,9 +9,10 @@
     </div>
     <div class="result">
       <% for (let i=0; i < site.posts.length; i++) { %>
-        <div class="item">
-          <a class="result-title" href="<%= site.posts[i].link %>"" data-c="<%= site.posts[i].content %>"><%- site.posts[i].title %></a>
-        </div>
+      <div class="item">
+        <a class="result-title" href="<%= site.posts[i].link %>"" data-c="
+          <%= site.posts[i].content %>"><%- site.posts[i].title %></a>
+      </div>
       <% } %>
     </div>
   </div>
