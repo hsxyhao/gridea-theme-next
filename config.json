@@ -47,9 +47,9 @@
       "name": "bolgerjsplus",
       "label": "博主介绍美化",
       "group": "布局",
-      "value": true,
+      "value": false,
       "type": "switch",
-      "note": "博主介绍美化,默认开启"
+      "note": "博主介绍美化,默认关闭"
     },
     {
       "name": "bolgerjss",
@@ -226,6 +226,10 @@
         {
           "label": "peace",
           "value": "peace"
+        },
+        {
+          "label": "fireworks",
+          "value": "fireworks"
         }
       ]
     },
