@@ -205,6 +205,10 @@
         {
           "label": "love",
           "value": "love"
+        },
+        {
+          "label": "peace",
+          "value": "peace"
         }
       ]
     },
