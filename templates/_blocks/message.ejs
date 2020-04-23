@@ -436,16 +436,19 @@ if(!norunFlag){
 	}
 	$(document).ready(function() {
 		var AIimgSrc = [
-        <% if (site.customConfig.chooseLive2d === 'histoire') { %>
-			message_Path + "model/histoire/histoire.1024/texture_00.png",
-			message_Path + "model/histoire/histoire.1024/texture_01.png",
-			message_Path + "model/histoire/histoire.1024/texture_02.png",
-            message_Path + "model/histoire/histoire.1024/texture_03.png"
-            <% } %>
-        <% if (site.customConfig.chooseLive2d === 'rem') { %>
-            message_Path + "model/rem/remu2048/texture_00.png"
-             <% } %>
-
+		<% if (site.customConfig.chooseLive2d === 'histoire') { %>
+		message_Path + "model/histoire/histoire.1024/texture_00.png",
+		message_Path + "model/histoire/histoire.1024/texture_01.png",
+		message_Path + "model/histoire/histoire.1024/texture_02.png",
+		message_Path + "model/histoire/histoire.1024/texture_03.png"
+		<% } %>
+		<% if (site.customConfig.chooseLive2d === 'rem') { %>
+		message_Path + "model/rem/remu2048/texture_00.png"
+		<% } %>
+		<% if (site.customConfig.chooseLive2d === 'rem') { %>
+		message_Path + "model/sagiri/remu2048/texture_00.png",
+		message_Path + "model/sagiri/remu2048/texture_00.png"
+		<% } %>
 		]
 		var images = [];
 		var imgLength = AIimgSrc.length;
@@ -467,13 +470,16 @@ if(!norunFlag){
 						},1300);
 					}
 					setTimeout(function(){
-                        <% if (site.customConfig.chooseLive2d === 'histoire') { %>
-                            loadlive2d("live2d", message_Path+"model/histoire/model.json");
-                            <% } %>
 
-                        <% if (site.customConfig.chooseLive2d === 'rem') { %>
-                            loadlive2d("live2d", message_Path+"model/rem/model.json");
-                            <% } %>
+<% if (site.customConfig.chooseLive2d === 'histoire') { %>
+loadlive2d("live2d", message_Path+"model/histoire/model.json");
+<% } %>
+<% if (site.customConfig.chooseLive2d === 'rem') { %>
+loadlive2d("live2d", message_Path+"model/rem/model.json");
+<% } %>
+<% if (site.customConfig.chooseLive2d === 'sagiri') { %>
+loadlive2d("live2d", message_Path+"model/sagiri/model.json");
+<% } %>
 					},1000);
 					initLive2d ();
 					images = null;
