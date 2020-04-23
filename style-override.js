@@ -393,8 +393,8 @@ const generateOverride = (params) => {
 
   if (params.blogTitleColor) {
     let color = toHexColor(params.blogTitleColor, ratio);
-    result += `.main-title {
-      color: ${params.blogTitleColor};
+    result += `.main-title, .brand {
+      color: ${params.blogTitleColor} !important;
     }
     .mist .site-title i {
       background: ${color};

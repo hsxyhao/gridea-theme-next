@@ -313,6 +313,72 @@
       "note": "开启后博客内的链接会在新的窗口打开"
     },
     {
+      "name": "rss",
+      "label": "是否启动RSS",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "建议开启RSS"
+    },
+    {
+      "name": "nightMode",
+      "label": "夜间模式",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "夜间模式默认不开启【未完成】"
+    },
+    {
+      "name": "enableReward",
+      "label": "是否开启打赏功能",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "打赏功能默认不开启【未完成】"
+    },
+    {
+      "name": "hljs",
+      "label": "高亮",
+      "group": "特性",
+      "value": "androidstudio",
+      "type": "input",
+      "note": "前往官方地址https://highlightjs.org/，选择合适的高亮主题"
+    },
+    {
+      "name": "strategy",
+      "label": "自动添加封面策略",
+      "group": "特性",
+      "value": "none",
+      "type": "select",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "第1段落后",
+          "value": "first"
+        },
+        {
+          "label": "摘要前",
+          "value": "before"
+        },
+        {
+          "label": "摘要后",
+          "value": "after"
+        },
+        {
+          "label": "随机",
+          "value": "random"
+        },
+        {
+          "label": "两百字以后",
+          "value": "words"
+        }
+      ],
+      "note": "多种封面显示策略适配不同种摘要排版"
+    },
+    {
       "name": "siteBar",
       "label": "阅读页目录展示方案",
       "group": "目录",
@@ -395,441 +461,6 @@
         }
       ],
       "note": "超过10个链接则启动压缩，建议启动压缩，目录过长可以进行一定优化"
-    },
-    {
-      "name": "rss",
-      "label": "是否启动RSS",
-      "group": "特性",
-      "value": false,
-      "type": "switch",
-      "note": "建议开启RSS"
-    },
-    {
-      "name": "nightMode",
-      "label": "夜间模式",
-      "group": "特性",
-      "value": false,
-      "type": "switch",
-      "note": "夜间模式默认不开启【未完成】"
-    },
-    {
-      "name": "enableReward",
-      "label": "是否开启打赏功能",
-      "group": "特性",
-      "value": false,
-      "type": "switch",
-      "note": "打赏功能默认不开启【未完成】"
-    },
-    {
-      "name": "hljs",
-      "label": "高亮",
-      "group": "特性",
-      "value": "androidstudio",
-      "type": "select",
-      "options": [
-        {
-          "label": "androidstudio",
-          "value": "androidstudio"
-        },
-        {
-          "label": "kimbie.light",
-          "value": "kimbie.light"
-        },
-        {
-          "label": "arduino-light",
-          "value": "arduino-light"
-        },
-        {
-          "label": "atelier-heath-light",
-          "value": "atelier-heath-light"
-        },
-        {
-          "label": "codepen-embed",
-          "value": "codepen-embed"
-        },
-        {
-          "label": "vs2015",
-          "value": "vs2015"
-        },
-        {
-          "label": "atelier-estuary-light",
-          "value": "atelier-estuary-light"
-        },
-        {
-          "label": "an-old-hope",
-          "value": "an-old-hope"
-        },
-        {
-          "label": "tomorrow-night-eighties",
-          "value": "tomorrow-night-eighties"
-        },
-        {
-          "label": "atom-one-light",
-          "value": "atom-one-light"
-        },
-        {
-          "label": "gml",
-          "value": "gml"
-        },
-        {
-          "label": "nord",
-          "value": "nord"
-        },
-        {
-          "label": "xcode",
-          "value": "xcode"
-        },
-        {
-          "label": "atelier-seaside-light",
-          "value": "atelier-seaside-light"
-        },
-        {
-          "label": "foundation",
-          "value": "foundation"
-        },
-        {
-          "label": "tomorrow",
-          "value": "tomorrow"
-        },
-        {
-          "label": "a11y-dark",
-          "value": "a11y-dark"
-        },
-        {
-          "label": "atelier-lakeside-light",
-          "value": "atelier-lakeside-light"
-        },
-        {
-          "label": "atelier-cave-dark",
-          "value": "atelier-cave-dark"
-        },
-        {
-          "label": "grayscale",
-          "value": "grayscale"
-        },
-        {
-          "label": "routeros",
-          "value": "routeros"
-        },
-        {
-          "label": "gruvbox-light",
-          "value": "gruvbox-light"
-        },
-        {
-          "label": "atelier-heath-dark",
-          "value": "atelier-heath-dark"
-        },
-        {
-          "label": "school-book",
-          "value": "school-book"
-        },
-        {
-          "label": "xt256",
-          "value": "xt256"
-        },
-        {
-          "label": "github",
-          "value": "github"
-        },
-        {
-          "label": "tomorrow-night-blue",
-          "value": "tomorrow-night-blue"
-        },
-        {
-          "label": "idea",
-          "value": "idea"
-        },
-        {
-          "label": "magula",
-          "value": "magula"
-        },
-        {
-          "label": "pojoaque",
-          "value": "pojoaque"
-        },
-        {
-          "label": "lightfair",
-          "value": "lightfair"
-        },
-        {
-          "label": "atelier-savanna-light",
-          "value": "atelier-savanna-light"
-        },
-        {
-          "label": "color-brewer",
-          "value": "color-brewer"
-        },
-        {
-          "label": "purebasic",
-          "value": "purebasic"
-        },
-        {
-          "label": "atelier-forest-dark",
-          "value": "atelier-forest-dark"
-        },
-        {
-          "label": "isbl-editor-light",
-          "value": "isbl-editor-light"
-        },
-        {
-          "label": "paraiso-dark",
-          "value": "paraiso-dark"
-        },
-        {
-          "label": "a11y-light",
-          "value": "a11y-light"
-        },
-        {
-          "label": "dark",
-          "value": "dark"
-        },
-        {
-          "label": "railscasts",
-          "value": "railscasts"
-        },
-        {
-          "label": "night-owl",
-          "value": "night-owl"
-        },
-        {
-          "label": "paraiso-light",
-          "value": "paraiso-light"
-        },
-        {
-          "label": "atelier-sulphurpool-dark",
-          "value": "atelier-sulphurpool-dark"
-        },
-        {
-          "label": "atelier-plateau-dark",
-          "value": "atelier-plateau-dark"
-        },
-        {
-          "label": "obsidian",
-          "value": "obsidian"
-        },
-        {
-          "label": "atelier-plateau-light",
-          "value": "atelier-plateau-light"
-        },
-        {
-          "label": "brown-paper",
-          "value": "brown-paper"
-        },
-        {
-          "label": "kimbie.dark",
-          "value": "kimbie.dark"
-        },
-        {
-          "label": "atom-one-dark-reasonable",
-          "value": "atom-one-dark-reasonable"
-        },
-        {
-          "label": "gruvbox-dark",
-          "value": "gruvbox-dark"
-        },
-        {
-          "label": "atelier-sulphurpool-light",
-          "value": "atelier-sulphurpool-light"
-        },
-        {
-          "label": "atelier-dune-light",
-          "value": "atelier-dune-light"
-        },
-        {
-          "label": "atelier-cave-light",
-          "value": "atelier-cave-light"
-        },
-        {
-          "label": "tomorrow-night-bright",
-          "value": "tomorrow-night-bright"
-        },
-        {
-          "label": "docco",
-          "value": "docco"
-        },
-        {
-          "label": "dracula",
-          "value": "dracula"
-        },
-        {
-          "label": "googlecode",
-          "value": "googlecode"
-        },
-        {
-          "label": "darcula",
-          "value": "darcula"
-        },
-        {
-          "label": "gradient-dark",
-          "value": "gradient-dark"
-        },
-        {
-          "label": "ir-black",
-          "value": "ir-black"
-        },
-        {
-          "label": "qtcreator_light",
-          "value": "qtcreator_light"
-        },
-        {
-          "label": "atelier-savanna-dark",
-          "value": "atelier-savanna-dark"
-        },
-        {
-          "label": "hopscotch",
-          "value": "hopscotch"
-        },
-        {
-          "label": "shades-of-purple",
-          "value": "shades-of-purple"
-        },
-        {
-          "label": "ocean",
-          "value": "ocean"
-        },
-        {
-          "label": "zenburn",
-          "value": "zenburn"
-        },
-        {
-          "label": "atelier-dune-dark",
-          "value": "atelier-dune-dark"
-        },
-        {
-          "label": "hybrid",
-          "value": "hybrid"
-        },
-        {
-          "label": "monokai",
-          "value": "monokai"
-        },
-        {
-          "label": "arta",
-          "value": "arta"
-        },
-        {
-          "label": "mono-blue",
-          "value": "mono-blue"
-        },
-        {
-          "label": "sunburst",
-          "value": "sunburst"
-        },
-        {
-          "label": "solarized-dark",
-          "value": "solarized-dark"
-        },
-        {
-          "label": "vs",
-          "value": "vs"
-        },
-        {
-          "label": "atelier-forest-light",
-          "value": "atelier-forest-light"
-        },
-        {
-          "label": "ascetic",
-          "value": "ascetic"
-        },
-        {
-          "label": "rainbow",
-          "value": "rainbow"
-        },
-        {
-          "label": "atelier-estuary-dark",
-          "value": "atelier-estuary-dark"
-        },
-        {
-          "label": "atelier-lakeside-dark",
-          "value": "atelier-lakeside-dark"
-        },
-        {
-          "label": "monokai-sublime",
-          "value": "monokai-sublime"
-        },
-        {
-          "label": "atom-one-dark",
-          "value": "atom-one-dark"
-        },
-        {
-          "label": "agate",
-          "value": "agate"
-        },
-        {
-          "label": "default",
-          "value": "default"
-        },
-        {
-          "label": "github-gist",
-          "value": "github-gist"
-        },
-        {
-          "label": "isbl-editor-dark",
-          "value": "isbl-editor-dark"
-        },
-        {
-          "label": "atelier-seaside-dark",
-          "value": "atelier-seaside-dark"
-        },
-        {
-          "label": "solarized-light",
-          "value": "solarized-light"
-        },
-        {
-          "label": "darkula",
-          "value": "darkula"
-        },
-        {
-          "label": "qtcreator_dark",
-          "value": "qtcreator_dark"
-        },
-        {
-          "label": "far",
-          "value": "far"
-        },
-        {
-          "label": "tomorrow-night",
-          "value": "tomorrow-night"
-        }
-      ]
-    },
-    {
-      "name": "enableThemeCompatible",
-      "label": "是否开启主题封面兼容模式",
-      "group": "兼容",
-      "value": false,
-      "type": "switch",
-      "note": "原版hexo-next是不支持封面设置的，该选项兼容Gridea中的封面配置"
-    },
-    {
-      "name": "strategy",
-      "label": "自动添加封面策略",
-      "group": "兼容",
-      "value": "first",
-      "type": "select",
-      "options": [
-        {
-          "label": "第1段落后",
-          "value": "first"
-        },
-        {
-          "label": "摘要前",
-          "value": "before"
-        },
-        {
-          "label": "摘要后",
-          "value": "after"
-        },
-        {
-          "label": "随机",
-          "value": "random"
-        },
-        {
-          "label": "两百字以后",
-          "value": "words"
-        }
-      ],
-      "note": "多种策略适配不同种摘要排版，需开启兼容模式"
     },
     {
       "name": "socials",
