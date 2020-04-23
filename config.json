@@ -221,6 +221,12 @@
       ]
     },
     {
+      "name": "mousecursor",
+      "label": "鼠标指针使用方法请查看文档",
+      "group": "鼠标",
+      "note": "请查看https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#关于鼠标指针设置"
+    },
+    {
       "name": "cursorDefault",
       "label": "默认",
       "group": "鼠标",
