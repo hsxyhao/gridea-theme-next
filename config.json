@@ -52,11 +52,20 @@
       "note": "博主介绍美化,默认开启"
     },
     {
-      "name": "bolgerjs",
+      "name": "bolgerjss",
       "label": "博主介绍",
       "group": "布局",
-      "value": "仅适用 Gemini,Pisces 布局",
-      "type": "input"
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "介绍文本",
+          "name": "bolgerjstext",
+          "type": "input",
+          "value": ""
+        }
+      ],
+      "note": "美化为单行回退显示,关闭美化未多行显示,具体效果请查看文档https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#博主介绍"
     },
     {
       "name": "cssStr",
