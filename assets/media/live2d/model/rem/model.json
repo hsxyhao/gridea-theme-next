@@ -1,0 +1,193 @@
+{
+	"version": "Live2D MoePet v1.1",
+	"name": "remu",
+	"model": "remu.moc",
+	"textures": [
+		"remu2048/texture_00.png"
+	],
+	"physics": "remu.physics.json",
+	"pose": "remu.pose.json",
+	"lip_sync": "false",
+	"layout": {
+		"center_x":0.0,
+        "center_y":-0.05,
+        "width":2.0
+	},
+	"hit_areas_custom":{
+        "head_x":[-0.3, 1.12],
+        "head_y":[0.26, 0.56],
+        "body_x":[-0.41, 0.58],
+        "body_y":[0.46, -1.12]
+    },
+
+	"motions": {
+		"idle": [{
+			"file": "motions/Live2D_remu_idle.mtn"
+		}],
+		"flick_head": [
+			{
+				"file": "motions/Live2D_remu01.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu02.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu03.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu04.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu05.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu21.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu22.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu23.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu24.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu25.mtn"
+			}
+		],
+		"tap_body": [
+			{
+				"file": "motions/Live2D_remu06.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu07.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu08.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu09.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu10.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu11.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu12.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu13.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu14.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu15.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu16.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu17.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu18.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu19.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu20.mtn"
+			}
+		],
+		"sleepy":[
+			{"file":"motions/Live2D_remu_idle.mtn"}
+        ],
+		"rest":[
+			{"file":"motions/Live2D_remu_idle.mtn"}
+        ],
+		"talk":[
+			{
+				"file": "motions/Live2D_remu01.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu02.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu03.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu04.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu05.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu21.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu22.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu23.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu24.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu25.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu26.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu06.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu07.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu08.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu09.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu10.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu11.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu12.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu13.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu14.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu15.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu16.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu17.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu18.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu19.mtn"
+			},
+			{
+				"file": "motions/Live2D_remu20.mtn"
+			}
+		]
+	}
+}

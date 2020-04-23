@@ -1061,16 +1061,16 @@
       "type": "radio",
       "options": [
         {
-          "label": "伊斯特瓦尔",
+          "label": "histoire",
           "value": "histoire"
         },
         {
-          "label": "默认",
-          "value": "default"
+          "label": "rem",
+          "value": "rem"
         },
         {
-          "label": "自动",
-          "value": "auto"
+          "label": "nap",
+          "value": "nap"
         }
       ],
       "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
