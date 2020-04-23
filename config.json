@@ -65,7 +65,7 @@
           "value": ""
         }
       ],
-      "note": "美化为单行回退显示,关闭美化未多行显示,具体效果请查看文档https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#博主介绍"
+      "note": "美化为单行回退显示,关闭美化为多行显示,具体效果请查看文档https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#博主介绍"
     },
     {
       "name": "cssStr",
