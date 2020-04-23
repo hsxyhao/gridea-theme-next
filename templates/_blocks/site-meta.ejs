@@ -4,7 +4,8 @@
     <img class="site-author-image right-motion" src="<%= site.customConfig.cdn %>/images/avatar.png"/>
     <p class="site-author-name"><%= site.customConfig.bolgername %></p>
     <p class="site-description right-motion">
-      <div id="binft"></div>
+      <% if (site.customConfig.bolgerjsplus) { %>
+        <div id="binft"></div>
       <script>
         var binft = function (r) {
           function t() {
@@ -46,18 +47,9 @@
           };
           binft(document.getElementById('binft'));
       </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+      <% } else { %>
+        <%= site.customConfig.bolgerjs %>
+      <% } %>
     </p>
   </div>
   <div class="sidebar-item side-item-stat right-motion">
