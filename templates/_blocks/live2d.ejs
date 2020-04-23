@@ -1,6 +1,6 @@
 
 <% let left = site.customConfig.live2dLeft || 5, bottom = site.customConfig.live2dBottom %>
-<link rel="stylesheet" href="<%= site.customConfig.cdn %>/media/live2d/histoire/css/live2d.css" />
+<link rel="stylesheet" href="<%= site.customConfig.cdn %>/media/live2d/css/live2d.css" />
 <div class="box-scale">
   <div id="landlord" style="<%= 'left: ' +left+ 'px;bottom: ' + bottom + 'px;' %>" data-key="<%= site.customConfig.apiKey %>">
     <div class="message" style="opacity:0"></div>
@@ -35,9 +35,9 @@
 <div id="open_live2d">召唤伊斯特瓦尔</div>
 <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
-var message_Path = '<%= site.customConfig.cdn %>/media/live2d/histoire/';
+var message_Path = '<%= site.customConfig.cdn %>/media/live2d/';
 let landlord = document.querySelector('#landlord');
 var apiKey = landlord.dataset.key;
 </script>
-<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/histoire/js/live2d.js"></script>
-<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/histoire/js/message.js"></script>
+<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/js/message.js"></script>

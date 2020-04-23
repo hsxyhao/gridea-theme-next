@@ -436,6 +436,7 @@ if(!norunFlag){
 	}
 	$(document).ready(function() {
 		var AIimgSrc = [
+			
 			message_Path + "model/histoire/histoire.1024/texture_00.png",
 			message_Path + "model/histoire/histoire.1024/texture_01.png",
 			message_Path + "model/histoire/histoire.1024/texture_02.png",
