@@ -1061,16 +1061,16 @@
       "type": "radio",
       "options": [
         {
-          "label": "histoire",
+          "label": "伊斯特瓦尔",
           "value": "histoire"
         },
         {
-          "label": "rem",
+          "label": "蕾姆",
           "value": "rem"
         },
         {
-          "label": "nap",
-          "value": "nap"
+          "label": "和泉纱雾",
+          "value": "sagiri"
         }
       ],
       "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
