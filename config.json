@@ -1073,8 +1073,20 @@
           "value": "sagiri"
         },
         {
+          "label": "康娜",
+          "value": "kanna"
+        },
+        {
+          "label": "凉风青叶",
+          "value": "Aoba"
+        },
+        {
           "label": "小黑",
           "value": "hijiki"
+        },
+        {
+          "label": "小白",
+          "value": "tororo"
         }
       ],
       "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
