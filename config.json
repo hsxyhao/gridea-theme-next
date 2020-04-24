@@ -44,28 +44,12 @@
       "type": "input"
     },
     {
-      "name": "bolgerjsplus",
-      "label": "博主介绍美化",
-      "group": "布局",
-      "value": false,
-      "type": "switch",
-      "note": "博主介绍美化,默认关闭"
-    },
-    {
       "name": "bolgerjss",
       "label": "博主介绍",
       "group": "布局",
-      "type": "array",
-      "value": [],
-      "arrayItems": [
-        {
-          "label": "介绍文本",
-          "name": "bolgerjstext",
-          "type": "input",
-          "value": ""
-        }
-      ],
-      "note": "美化为单行回退显示,关闭美化为多行显示,具体效果请查看文档https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#博主介绍"
+      "type": "input",
+      "value": "",
+      "note": "支持多行写法，使用\\n表示换行，可以在魔改处开启美化功能"
     },
     {
       "name": "cssStr",
@@ -1006,6 +990,14 @@
       "value": "",
       "type": "input",
       "note": "目前windows系统使用背景图片请手动填写，上传会造成配置无法保存，具体填写规范README上有介绍"
+    },
+    {
+      "name": "bolgerjsplus",
+      "label": "博主介绍美化",
+      "group": "布局",
+      "value": false,
+      "type": "switch",
+      "note": "博主介绍美化,默认关闭"
     },
     {
       "name": "opacity",
