@@ -5,9 +5,13 @@
     <p class="site-author-name"><%= site.customConfig.bolgername %></p>
     <% if (site.customConfig.bolgerjss && site.customConfig.bolgerjss !== '') { %>
     <div class="site-description right-motion">
+      <% if (!site.customConfig.bolgerjsplus) { %>
       <%let texts = site.customConfig.bolgerjss.split('\\n');%>
       <% for (let i = 0; i < texts.length; i++) { %>
-        <p class="desc"><%= texts[i] %></p>
+        <p><%= texts[i] %></p>
+      <% } %>
+      <% } else { %>
+        <p id="binft"><%= site.customConfig.bolgerjss %></p>
       <% } %>
     </div>
     <% } %>

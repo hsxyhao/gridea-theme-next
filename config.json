@@ -994,7 +994,7 @@
     {
       "name": "bolgerjsplus",
       "label": "博主介绍美化",
-      "group": "布局",
+      "group": "魔改",
       "value": false,
       "type": "switch",
       "note": "博主介绍美化,默认关闭"
