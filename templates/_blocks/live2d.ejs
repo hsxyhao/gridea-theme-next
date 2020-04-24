@@ -1,16 +1,18 @@
-
 <% let left = site.customConfig.live2dLeft || 5, bottom = site.customConfig.live2dBottom %>
-<link rel="stylesheet" href="<%= site.customConfig.cdn %>/media/live2d/histoire/css/live2d.css" />
+<link rel="stylesheet" href="<%= site.customConfig.cdn %>/media/live2d/css/live2d.css" />
 <div class="box-scale">
-  <div id="landlord" style="<%= 'left: ' +left+ 'px;bottom: ' + bottom + 'px;' %>" data-key="<%= site.customConfig.apiKey %>">
+  <div id="landlord" style="<%= 'left: ' +left+ 'px;bottom: ' + bottom + 'px;' %>"
+    data-key="<%= site.customConfig.apiKey %>">
     <div class="message" style="opacity:0"></div>
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
     <div class="live_talk_input_body">
       <div class="live_talk_input_name_body">
-        <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+        <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+          placeholder="你的名字" />
       </div>
       <div class="live_talk_input_text_body">
-        <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+        <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+          placeholder="要和我聊什么呀？" />
         <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
       </div>
     </div>
@@ -27,17 +29,24 @@
       <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
       <input id="duType" value="douqilai" type="hidden">
       <% for(let i = 0; i < site.customConfig.musicLinks.length; i++ ) { %>
-        <input name="live2dBGM" value="<%= site.customConfig.musicLinks[i].musicLink %>" type="hidden">
+      <input name="live2dBGM" value="<%= site.customConfig.musicLinks[i].musicLink %>" type="hidden">
       <% } %>
     </div>
   </div>
 </div>
-<div id="open_live2d">召唤伊斯特瓦尔</div>
+<div id="open_live2d">召唤看板娘</div>
 <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
-var message_Path = '<%= site.customConfig.cdn %>/media/live2d/histoire/';
-let landlord = document.querySelector('#landlord');
-var apiKey = landlord.dataset.key;
+  var message_Path = '<%= site.customConfig.cdn %>/media/live2d/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
 </script>
-<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/histoire/js/live2d.js"></script>
-<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/histoire/js/message.js"></script>
+<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/js/live2d.js"></script>
+<script >
+  <%- include('../_blocks/message') %>
+</script>
+
+
+
+
+
