@@ -9,21 +9,34 @@
 	"pose": "remu.pose.json",
 	"lip_sync": "false",
 	"layout": {
-		"center_x":0.0,
-        "center_y":-0.05,
-        "width":2.0
+		"center_x": 0.0,
+		"center_y": -0.05,
+		"width": 2.0
 	},
-	"hit_areas_custom":{
-        "head_x":[-0.3, 1.12],
-        "head_y":[0.26, 0.56],
-        "body_x":[-0.41, 0.58],
-        "body_y":[0.46, -1.12]
-    },
-
+	"hit_areas_custom": {
+		"head_x": [
+			-0.3,
+			1.12
+		],
+		"head_y": [
+			0.26,
+			0.56
+		],
+		"body_x": [
+			-0.41,
+			0.58
+		],
+		"body_y": [
+			0.46,
+			-1.12
+		]
+	},
 	"motions": {
-		"idle": [{
-			"file": "motions/Live2D_remu_idle.mtn"
-		}],
+		"idle": [
+			{
+				"file": "motions/Live2D_remu_idle.mtn"
+			}
+		],
 		"flick_head": [
 			{
 				"file": "motions/Live2D_remu01.mtn"
@@ -103,13 +116,17 @@
 				"file": "motions/Live2D_remu20.mtn"
 			}
 		],
-		"sleepy":[
-			{"file":"motions/Live2D_remu_idle.mtn"}
-        ],
-		"rest":[
-			{"file":"motions/Live2D_remu_idle.mtn"}
-        ],
-		"talk":[
+		"sleepy": [
+			{
+				"file": "motions/Live2D_remu_idle.mtn"
+			}
+		],
+		"rest": [
+			{
+				"file": "motions/Live2D_remu_idle.mtn"
+			}
+		],
+		"talk": [
 			{
 				"file": "motions/Live2D_remu01.mtn"
 			},

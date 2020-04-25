@@ -193,6 +193,11 @@
       "card": "color"
     },
     {
+      "label": "相关文档",
+      "group": "鼠标",
+      "note": "请查看https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#关于鼠标指针设置"
+    },
+    {
       "name": "mouseClick",
       "label": "鼠标点击效果",
       "group": "鼠标",
@@ -216,12 +221,6 @@
           "value": "fireworks"
         }
       ]
-    },
-    {
-      "name": "mousecursor",
-      "label": "鼠标指针使用方法请查看文档",
-      "group": "鼠标",
-      "note": "请查看https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#关于鼠标指针设置"
     },
     {
       "name": "cursorDefault",
@@ -1046,6 +1045,13 @@
       "type": "switch"
     },
     {
+      "name": "enableLive2dSocial",
+      "label": "是否开启社交",
+      "group": "看板娘",
+      "value": true,
+      "type": "switch"
+    },
+    {
       "name": "chooseLive2d",
       "label": "选择看板娘",
       "group": "看板娘",
@@ -1059,14 +1065,6 @@
         {
           "label": "蕾姆",
           "value": "rem"
-        },
-        {
-          "label": "和泉纱雾",
-          "value": "sagiri"
-        },
-        {
-          "label": "康娜",
-          "value": "kanna"
         },
         {
           "label": "凉风青叶",

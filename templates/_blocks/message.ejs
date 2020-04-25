@@ -3,7 +3,7 @@
 	var userAgent = window.navigator.userAgent.toLowerCase();
 	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
 	var norunFlag = false;
-	
+
 	for (var i = 0; i < norunAI.length; i++) {
 		if (userAgent.indexOf(norunAI[i]) > -1) {
 			norunFlag = true;
@@ -445,11 +445,6 @@
 				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
 			} else if (chooseLive2d === 'rem') {
 				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
-			} else if (chooseLive2d === 'sagiri') {
-				AIimgSrc.push(message_Path + "model/sagiri/textures/texture_00.png");
-				AIimgSrc.push(message_Path + "model/sagiri/textures/texture_01.png");
-			} else if (chooseLive2d === 'kanna') {
-				AIimgSrc.push(message_Path + "model/kanna/textures/texture_00.png");
 			} else if (chooseLive2d === 'Aoba') {
 				AIimgSrc.push(message_Path + "model/Aoba/textures/texture_00.png");
 			} else if (chooseLive2d === 'hijiki') {
@@ -481,10 +476,6 @@
 							model = message_Path + "model/histoire/model.json";
 						} else if (chooseLive2d === 'rem') {
 							model = message_Path + "model/rem/model.json";
-						} else if (chooseLive2d === 'sagiri') {
-							model = message_Path + "model/sagiri/model.json";
-						} else if (chooseLive2d === 'kanna') {
-							model = message_Path + "model/kanna/model.json";
 						} else if (chooseLive2d === 'Aoba') {
 							model = message_Path + "model/Aoba/model.json";
 						} else if (chooseLive2d === 'hijiki') {
@@ -492,9 +483,9 @@
 						} else if (chooseLive2d === 'tororo') {
 							model = message_Path + "model/tororo/tororo.model.json";
 						}
-						setTimeout(function(){
+						setTimeout(function () {
 							loadlive2d("live2d", model);
-						},1000);
+						}, 1000);
 						initLive2d();
 						images = null;
 					}
