@@ -40,15 +40,16 @@
       "name": "bolgername",
       "label": "博主名称",
       "group": "布局",
-      "value": "仅适用 Gemini,Pisces 布局",
+      "value": "适用 Gemini,Pisces 布局,版权说明需配置",
       "type": "input"
     },
     {
-      "name": "bolgerjs",
+      "name": "bolgerjss",
       "label": "博主介绍",
       "group": "布局",
-      "value": "仅适用 Gemini,Pisces 布局",
-      "type": "input"
+      "type": "input",
+      "value": "",
+      "note": "支持多行写法，使用\\n表示换行，可以在魔改处开启美化功能"
     },
     {
       "name": "cssStr",
@@ -192,6 +193,11 @@
       "card": "color"
     },
     {
+      "label": "相关文档",
+      "group": "鼠标",
+      "note": "请查看https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#关于鼠标指针设置"
+    },
+    {
       "name": "mouseClick",
       "label": "鼠标点击效果",
       "group": "鼠标",
@@ -205,6 +211,14 @@
         {
           "label": "love",
           "value": "love"
+        },
+        {
+          "label": "peace",
+          "value": "peace"
+        },
+        {
+          "label": "fireworks",
+          "value": "fireworks"
         }
       ]
     },
@@ -608,6 +622,14 @@
       "note": "目前windows系统使用背景图片请手动填写，上传会造成配置无法保存，具体填写规范README上有介绍"
     },
     {
+      "name": "bolgerjsplus",
+      "label": "博主介绍美化",
+      "group": "魔改",
+      "value": false,
+      "type": "switch",
+      "note": "博主介绍美化,默认关闭"
+    },
+    {
       "name": "opacity",
       "label": "可视区透明度",
       "group": "魔改",
@@ -652,6 +674,43 @@
       "group": "看板娘",
       "value": false,
       "type": "switch"
+    },
+    {
+      "name": "enableLive2dSocial",
+      "label": "是否开启社交",
+      "group": "看板娘",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "chooseLive2d",
+      "label": "选择看板娘",
+      "group": "看板娘",
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "伊斯特瓦尔",
+          "value": "histoire"
+        },
+        {
+          "label": "蕾姆",
+          "value": "rem"
+        },
+        {
+          "label": "凉风青叶",
+          "value": "Aoba"
+        },
+        {
+          "label": "小黑",
+          "value": "hijiki"
+        },
+        {
+          "label": "小白",
+          "value": "tororo"
+        }
+      ],
+      "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
     },
     {
       "name": "apiKey",
