@@ -5,6 +5,11 @@
   "repository": "https://github.com/hsxyhao/gridea-theme-next",
   "customConfig": [
     {
+      "label": "相关文档",
+      "group": "布局",
+      "note": "https://yeming.site/post/1JA_OJlig/#布局"
+    },
+    {
       "name": "scheme",
       "label": "外观",
       "group": "布局",
@@ -82,6 +87,11 @@
       "value": "",
       "type": "input",
       "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
+    },
+    {
+      "label": "相关文档",
+      "group": "颜色",
+      "note": "https://yeming.site/post/1JA_OJlig/#颜色"
     },
     {
       "name": "bgColor",
@@ -195,7 +205,7 @@
     {
       "label": "相关文档",
       "group": "鼠标",
-      "note": "请查看https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#关于鼠标指针设置"
+      "note": "https://yeming.site/post/1JA_OJlig/#鼠标"
     },
     {
       "name": "mouseClick",
@@ -265,20 +275,17 @@
       "type": "input"
     },
     {
+      "label": "相关文档",
+      "group": "特性",
+      "note": "https://yeming.site/post/1JA_OJlig/#特性"
+    },
+    {
       "name": "seoKeywords",
       "label": "SEO",
       "group": "特性",
       "value": "Gridea静态个人博客",
       "type": "input",
       "note": "seo优化关键字"
-    },
-    {
-      "name": "imgFillet",
-      "label": "站点预览头像圆角",
-      "group": "特性",
-      "value": true,
-      "type": "switch",
-      "note": "开启会产生头像旋转彩蛋"
     },
     {
       "name": "menuIcon",
@@ -303,8 +310,16 @@
       "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
     },
     {
+      "name": "imgFillet",
+      "label": "站点预览头像圆角",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "开启会产生头像旋转彩蛋"
+    },
+    {
       "name": "sideIsRight",
-      "label": "菜单栏是否开启右边显示",
+      "label": "菜单栏右侧显示",
       "group": "特性",
       "value": false,
       "type": "switch",
@@ -312,7 +327,7 @@
     },
     {
       "name": "updateTip",
-      "label": "是否开启更新提示",
+      "label": "更新提示",
       "group": "特性",
       "value": false,
       "type": "switch",
@@ -328,7 +343,7 @@
     },
     {
       "name": "rss",
-      "label": "是否启动RSS",
+      "label": "RSS",
       "group": "特性",
       "value": false,
       "type": "switch",
@@ -344,7 +359,7 @@
     },
     {
       "name": "enableReward",
-      "label": "是否开启打赏功能",
+      "label": "打赏功能",
       "group": "特性",
       "value": false,
       "type": "switch",
@@ -352,7 +367,7 @@
     },
     {
       "name": "hljs",
-      "label": "高亮",
+      "label": "代码块高亮主题",
       "group": "特性",
       "value": "androidstudio",
       "type": "input",
@@ -360,7 +375,7 @@
     },
     {
       "name": "strategy",
-      "label": "自动添加封面策略",
+      "label": "封面显示策略",
       "group": "特性",
       "value": "none",
       "type": "select",
@@ -393,6 +408,11 @@
       "note": "多种封面显示策略适配不同种摘要排版"
     },
     {
+      "label": "相关文档",
+      "group": "目录",
+      "note": "https://yeming.site/post/1JA_OJlig/#目录"
+    },
+    {
       "name": "siteBar",
       "label": "阅读页目录展示方案",
       "group": "目录",
@@ -400,16 +420,16 @@
       "type": "radio",
       "options": [
         {
-          "label": "目录",
-          "value": "toc"
-        },
-        {
           "label": "隐藏",
           "value": "hide"
         },
         {
           "label": "自动",
           "value": "auto"
+        },
+        {
+          "label": "目录",
+          "value": "toc"
         },
         {
           "label": "站点预览",
@@ -420,7 +440,7 @@
     },
     {
       "name": "autoNumber",
-      "label": "是否自动为目录增加序号",
+      "label": "目录自动序号",
       "group": "目录",
       "value": true,
       "type": "switch",
@@ -452,33 +472,34 @@
     },
     {
       "name": "tocCompress",
-      "label": "是否启用目录压缩功能",
+      "label": "目录压缩策略",
       "group": "目录",
       "value": "auto",
       "type": "radio",
       "options": [
         {
-          "label": "手动",
-          "value": "manual"
+          "label": "不压缩",
+          "value": "no_compress"
         },
         {
           "label": "自动压缩",
           "value": "auto"
         },
         {
-          "label": "不启动压缩",
-          "value": "no_compress"
-        },
-        {
-          "label": "启动压缩",
+          "label": "压缩",
           "value": "compress"
         }
       ],
       "note": "超过10个链接则启动压缩，建议启动压缩，目录过长可以进行一定优化"
     },
     {
+      "label": "相关文档",
+      "group": "社交",
+      "note": "https://yeming.site/post/1JA_OJlig/#社交"
+    },
+    {
       "name": "socials",
-      "label": "文本|链接",
+      "label": "链接",
       "group": "社交",
       "type": "array",
       "value": [],
@@ -533,6 +554,11 @@
       "note": "QQ、微信类有二维码图片的社交账号，可以在这里添加"
     },
     {
+      "label": "相关文档",
+      "group": "友链",
+      "note": "https://yeming.site/post/1JA_OJlig/#友链"
+    },
+    {
       "name": "enableFriendPage",
       "label": "自定义友链页面",
       "group": "友链",
@@ -542,7 +568,7 @@
     },
     {
       "name": "friendsTitle",
-      "label": "友链",
+      "label": "友链标题",
       "group": "友链",
       "value": "友情链接",
       "type": "input",
@@ -596,14 +622,13 @@
           "name": "siteAvator",
           "type": "input",
           "value": ""
-        },
-        {
-          "label": "描述",
-          "name": "siteDesc",
-          "type": "input",
-          "value": ""
         }
       ]
+    },
+    {
+      "label": "相关文档",
+      "group": "魔改",
+      "note": "https://yeming.site/post/1JA_OJlig/#魔改"
     },
     {
       "name": "bgImg",
@@ -669,6 +694,11 @@
       "note": "仅Muse风格生效，建议Muse风格中添加标题背景图片时开启"
     },
     {
+      "label": "相关文档",
+      "group": "看板娘",
+      "note": "https://yeming.site/post/1JA_OJlig/#看板娘"
+    },
+    {
       "name": "enableLive2d",
       "label": "是否开启看板娘",
       "group": "看板娘",
@@ -709,8 +739,7 @@
           "label": "小白",
           "value": "tororo"
         }
-      ],
-      "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
+      ]
     },
     {
       "name": "apiKey",
@@ -762,6 +791,11 @@
           "value": ""
         }
       ]
+    },
+    {
+      "label": "相关文档",
+      "group": "音乐",
+      "note": "https://yeming.site/post/1JA_OJlig/#音乐"
     },
     {
       "name": "bgMusic",
@@ -834,8 +868,13 @@
       "note": "歌词歌曲为网络资源，不太好找，谨慎使用"
     },
     {
+      "label": "相关文档",
+      "group": "评论",
+      "note": "https://yeming.site/post/1JA_OJlig/#评论"
+    },
+    {
       "name": "valine",
-      "label": "启用",
+      "label": "Valine启用",
       "group": "评论",
       "value": false,
       "type": "switch",
@@ -971,12 +1010,22 @@
       "note": "每次访问强制拉取最新的评论列表头像，不推荐设置为true，目前的评论列表头像会自动带上Valine的版本号"
     },
     {
+      "label": "相关文档",
+      "group": "CDN",
+      "note": "https://yeming.site/post/1JA_OJlig/#CDN"
+    },
+    {
       "name": "cdn",
       "label": "地址",
       "group": "CDN",
       "value": "",
       "type": "input",
       "note": "只包含主题的静态资源，博客文章部分的静态资源（图片）需要手动引用"
+    },
+    {
+      "label": "相关文档",
+      "group": "跟踪",
+      "note": "https://yeming.site/post/1JA_OJlig/#跟踪"
     },
     {
       "name": "ga",
