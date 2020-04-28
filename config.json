@@ -363,7 +363,31 @@
       "group": "特性",
       "value": false,
       "type": "switch",
-      "note": "打赏功能默认不开启【未完成】"
+      "note": "打赏功能默认不开启"
+    },
+    {
+      "name": "RewardMessage",
+      "label": "博主寄语",
+      "group": "特性",
+      "value": "坚持原创技术分享，您的支持将鼓励我继续创作！恰饭^.^~",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "Rewardwx",
+      "label": "微信收款码",
+      "group": "特性",
+      "value": "",
+      "type": "input",
+      "note": "支持外链以及本地手动设置,与Win背景图片设置方法一致"
+    },
+    {
+      "name": "Rewardzfb",
+      "label": "支付宝收款码",
+      "group": "特性",
+      "value": "",
+      "type": "input",
+      "note": "支持外链以及本地手动设置,与Win背景图片设置方法一致"
     },
     {
       "name": "hljs",
