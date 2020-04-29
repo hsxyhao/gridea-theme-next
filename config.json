@@ -679,6 +679,14 @@
       "note": "博主介绍美化,默认关闭"
     },
     {
+      "name": "postend",
+      "label": "文章结束提醒",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "文章结束提醒,支持html代码,emoji"
+    },
+    {
       "name": "opacity",
       "label": "可视区透明度",
       "group": "魔改",
