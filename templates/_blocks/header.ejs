@@ -5,6 +5,7 @@ map.set('/archives', 'archive');
 map.set('/tags','tags');
 map.set('/post/about','user');
 map.set('/post/skin-update','info-circle'); %>
+<%- site.customConfig.mygithub %>
 <div class="<%= scheme !==''?scheme:'pisces' %>">
   <header class="header <%= scheme === 'mist' || scheme === 'muse'?'bg-color':''%> ">
     <div class="blog-header box-shadow-wrapper <%= scheme === 'gemini' || scheme === 'pisces'?'bg-color':''%> " id="header">

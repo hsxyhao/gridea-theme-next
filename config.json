@@ -57,6 +57,14 @@
       "note": "支持多行写法，使用\\n表示换行，可以在魔改处开启美化功能"
     },
     {
+      "name": "mygithub",
+      "label": "Fork me on Github",
+      "group": "布局",
+      "type": "input",
+      "value": "",
+      "note": "详情见文档设置"
+    },
+    {
       "name": "cssStr",
       "label": "自定义css",
       "group": "布局",
