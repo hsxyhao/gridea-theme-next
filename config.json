@@ -5,6 +5,14 @@
   "repository": "https://github.com/hsxyhao/gridea-theme-next",
   "customConfig": [
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "布局",
+      "note": "https://yeming.site/post/1JA_OJlig/#布局"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "scheme",
       "label": "外观",
       "group": "布局",
@@ -44,6 +52,7 @@
       "type": "input"
     },
     {
+<<<<<<< HEAD
       "name": "bolgerjsplus",
       "label": "博主介绍美化",
       "group": "布局",
@@ -66,6 +75,22 @@
         }
       ],
       "note": "美化为单行回退显示,关闭美化为多行显示,具体效果请查看文档https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#博主介绍"
+=======
+      "name": "bolgerjss",
+      "label": "博主介绍",
+      "group": "布局",
+      "type": "input",
+      "value": "",
+      "note": "支持多行写法，使用\\n表示换行，可以在魔改处开启美化功能"
+    },
+    {
+      "name": "mygithub",
+      "label": "Fork me on Github",
+      "group": "布局",
+      "type": "input",
+      "value": "",
+      "note": "详情见文档设置"
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
     },
     {
       "name": "cssStr",
@@ -100,6 +125,14 @@
       "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "颜色",
+      "note": "https://yeming.site/post/1JA_OJlig/#颜色"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "bgColor",
       "label": "背景色",
       "group": "颜色",
@@ -209,6 +242,14 @@
       "card": "color"
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "鼠标",
+      "note": "https://yeming.site/post/1JA_OJlig/#鼠标"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "mouseClick",
       "label": "鼠标点击效果",
       "group": "鼠标",
@@ -234,12 +275,15 @@
       ]
     },
     {
+<<<<<<< HEAD
       "name": "mousecursor",
       "label": "鼠标指针使用方法请查看文档",
       "group": "鼠标",
       "note": "请查看https://github.com/hsxyhao/gridea-theme-next/blob/master/文档.md#关于鼠标指针设置"
     },
     {
+=======
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "cursorDefault",
       "label": "默认",
       "group": "鼠标",
@@ -282,6 +326,14 @@
       "type": "input"
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "特性",
+      "note": "https://yeming.site/post/1JA_OJlig/#特性"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "seoKeywords",
       "label": "SEO",
       "group": "特性",
@@ -290,6 +342,7 @@
       "note": "seo优化关键字"
     },
     {
+<<<<<<< HEAD
       "name": "imgFillet",
       "label": "站点预览头像圆角",
       "group": "特性",
@@ -298,6 +351,8 @@
       "note": "开启会产生头像旋转彩蛋"
     },
     {
+=======
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "menuIcon",
       "label": "导航菜单图标",
       "group": "特性",
@@ -320,8 +375,21 @@
       "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
     },
     {
+<<<<<<< HEAD
       "name": "sideIsRight",
       "label": "菜单栏是否开启右边显示",
+=======
+      "name": "imgFillet",
+      "label": "站点预览头像圆角",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "开启会产生头像旋转彩蛋"
+    },
+    {
+      "name": "sideIsRight",
+      "label": "菜单栏右侧显示",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "group": "特性",
       "value": false,
       "type": "switch",
@@ -329,7 +397,11 @@
     },
     {
       "name": "updateTip",
+<<<<<<< HEAD
       "label": "是否开启更新提示",
+=======
+      "label": "更新提示",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "group": "特性",
       "value": false,
       "type": "switch",
@@ -344,6 +416,104 @@
       "note": "开启后博客内的链接会在新的窗口打开"
     },
     {
+<<<<<<< HEAD
+=======
+      "name": "rss",
+      "label": "RSS",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "建议开启RSS"
+    },
+    {
+      "name": "nightMode",
+      "label": "夜间模式",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "夜间模式默认不开启【未完成】"
+    },
+    {
+      "name": "enableReward",
+      "label": "打赏功能",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "打赏功能默认不开启"
+    },
+    {
+      "name": "RewardMessage",
+      "label": "博主寄语",
+      "group": "特性",
+      "value": "坚持原创技术分享，您的支持将鼓励我继续创作！恰饭^.^~",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "Rewardwx",
+      "label": "微信收款码",
+      "group": "特性",
+      "value": "",
+      "type": "input",
+      "note": "支持外链以及本地手动设置,与Win背景图片设置方法一致"
+    },
+    {
+      "name": "Rewardzfb",
+      "label": "支付宝收款码",
+      "group": "特性",
+      "value": "",
+      "type": "input",
+      "note": "支持外链以及本地手动设置,与Win背景图片设置方法一致"
+    },
+    {
+      "name": "hljs",
+      "label": "代码块高亮主题",
+      "group": "特性",
+      "value": "androidstudio",
+      "type": "input",
+      "note": "前往官方地址https://highlightjs.org/，选择合适的高亮主题"
+    },
+    {
+      "name": "strategy",
+      "label": "封面显示策略",
+      "group": "特性",
+      "value": "none",
+      "type": "select",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "第1段落后",
+          "value": "first"
+        },
+        {
+          "label": "摘要前",
+          "value": "before"
+        },
+        {
+          "label": "摘要后",
+          "value": "after"
+        },
+        {
+          "label": "随机",
+          "value": "random"
+        },
+        {
+          "label": "两百字以后",
+          "value": "words"
+        }
+      ],
+      "note": "多种封面显示策略适配不同种摘要排版"
+    },
+    {
+      "label": "相关文档",
+      "group": "目录",
+      "note": "https://yeming.site/post/1JA_OJlig/#目录"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "siteBar",
       "label": "阅读页目录展示方案",
       "group": "目录",
@@ -351,10 +521,13 @@
       "type": "radio",
       "options": [
         {
+<<<<<<< HEAD
           "label": "目录",
           "value": "toc"
         },
         {
+=======
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
           "label": "隐藏",
           "value": "hide"
         },
@@ -363,6 +536,13 @@
           "value": "auto"
         },
         {
+<<<<<<< HEAD
+=======
+          "label": "目录",
+          "value": "toc"
+        },
+        {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
           "label": "站点预览",
           "value": "sitemeta"
         }
@@ -371,7 +551,11 @@
     },
     {
       "name": "autoNumber",
+<<<<<<< HEAD
       "label": "是否自动为目录增加序号",
+=======
+      "label": "目录自动序号",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "group": "目录",
       "value": true,
       "type": "switch",
@@ -403,31 +587,45 @@
     },
     {
       "name": "tocCompress",
+<<<<<<< HEAD
       "label": "是否启用目录压缩功能",
+=======
+      "label": "目录压缩策略",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "group": "目录",
       "value": "auto",
       "type": "radio",
       "options": [
         {
+<<<<<<< HEAD
           "label": "手动",
           "value": "manual"
+=======
+          "label": "不压缩",
+          "value": "no_compress"
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
         },
         {
           "label": "自动压缩",
           "value": "auto"
         },
         {
+<<<<<<< HEAD
           "label": "不启动压缩",
           "value": "no_compress"
         },
         {
           "label": "启动压缩",
+=======
+          "label": "压缩",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
           "value": "compress"
         }
       ],
       "note": "超过10个链接则启动压缩，建议启动压缩，目录过长可以进行一定优化"
     },
     {
+<<<<<<< HEAD
       "name": "rss",
       "label": "是否启动RSS",
       "group": "特性",
@@ -865,6 +1063,15 @@
     {
       "name": "socials",
       "label": "文本|链接",
+=======
+      "label": "相关文档",
+      "group": "社交",
+      "note": "https://yeming.site/post/1JA_OJlig/#社交"
+    },
+    {
+      "name": "socials",
+      "label": "链接",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "group": "社交",
       "type": "array",
       "value": [],
@@ -919,6 +1126,14 @@
       "note": "QQ、微信类有二维码图片的社交账号，可以在这里添加"
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "友链",
+      "note": "https://yeming.site/post/1JA_OJlig/#友链"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "enableFriendPage",
       "label": "自定义友链页面",
       "group": "友链",
@@ -928,7 +1143,11 @@
     },
     {
       "name": "friendsTitle",
+<<<<<<< HEAD
       "label": "友链",
+=======
+      "label": "友链标题",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "group": "友链",
       "value": "友情链接",
       "type": "input",
@@ -982,16 +1201,27 @@
           "name": "siteAvator",
           "type": "input",
           "value": ""
+<<<<<<< HEAD
         },
         {
           "label": "描述",
           "name": "siteDesc",
           "type": "input",
           "value": ""
+=======
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
         }
       ]
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "魔改",
+      "note": "https://yeming.site/post/1JA_OJlig/#魔改"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "bgImg",
       "label": "背景图片",
       "group": "魔改",
@@ -1008,6 +1238,25 @@
       "note": "目前windows系统使用背景图片请手动填写，上传会造成配置无法保存，具体填写规范README上有介绍"
     },
     {
+<<<<<<< HEAD
+=======
+      "name": "bolgerjsplus",
+      "label": "博主介绍美化",
+      "group": "魔改",
+      "value": false,
+      "type": "switch",
+      "note": "博主介绍美化,默认关闭"
+    },
+    {
+      "name": "postend",
+      "label": "文章结束提醒",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "文章结束提醒,支持html代码,emoji"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "opacity",
       "label": "可视区透明度",
       "group": "魔改",
@@ -1047,6 +1296,14 @@
       "note": "仅Muse风格生效，建议Muse风格中添加标题背景图片时开启"
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "看板娘",
+      "note": "https://yeming.site/post/1JA_OJlig/#看板娘"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "enableLive2d",
       "label": "是否开启看板娘",
       "group": "看板娘",
@@ -1054,6 +1311,16 @@
       "type": "switch"
     },
     {
+<<<<<<< HEAD
+=======
+      "name": "enableLive2dSocial",
+      "label": "是否开启社交",
+      "group": "看板娘",
+      "value": true,
+      "type": "switch"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "chooseLive2d",
       "label": "选择看板娘",
       "group": "看板娘",
@@ -1069,6 +1336,7 @@
           "value": "rem"
         },
         {
+<<<<<<< HEAD
           "label": "和泉纱雾",
           "value": "sagiri"
         },
@@ -1077,6 +1345,8 @@
           "value": "kanna"
         },
         {
+=======
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
           "label": "凉风青叶",
           "value": "Aoba"
         },
@@ -1088,8 +1358,12 @@
           "label": "小白",
           "value": "tororo"
         }
+<<<<<<< HEAD
       ],
       "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
+=======
+      ]
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
     },
     {
       "name": "apiKey",
@@ -1143,6 +1417,14 @@
       ]
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "音乐",
+      "note": "https://yeming.site/post/1JA_OJlig/#音乐"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "bgMusic",
       "label": "音乐插件",
       "group": "音乐",
@@ -1213,8 +1495,18 @@
       "note": "歌词歌曲为网络资源，不太好找，谨慎使用"
     },
     {
+<<<<<<< HEAD
       "name": "valine",
       "label": "启用",
+=======
+      "label": "相关文档",
+      "group": "评论",
+      "note": "https://yeming.site/post/1JA_OJlig/#评论"
+    },
+    {
+      "name": "valine",
+      "label": "Valine启用",
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "group": "评论",
       "value": false,
       "type": "switch",
@@ -1350,6 +1642,14 @@
       "note": "每次访问强制拉取最新的评论列表头像，不推荐设置为true，目前的评论列表头像会自动带上Valine的版本号"
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "CDN",
+      "note": "https://yeming.site/post/1JA_OJlig/#CDN"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "cdn",
       "label": "地址",
       "group": "CDN",
@@ -1358,6 +1658,14 @@
       "note": "只包含主题的静态资源，博客文章部分的静态资源（图片）需要手动引用"
     },
     {
+<<<<<<< HEAD
+=======
+      "label": "相关文档",
+      "group": "跟踪",
+      "note": "https://yeming.site/post/1JA_OJlig/#跟踪"
+    },
+    {
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
       "name": "ga",
       "label": "谷歌分析",
       "group": "跟踪",

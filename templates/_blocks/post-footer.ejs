@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+=======
+
+<div style="text-align:center;width:100%"><%- site.customConfig.postend %></div>
+<% if (site.customConfig.enableReward) { %>
+  <div>
+    <div style="padding:10px 0;margin:20px auto;width:90%;text-align:center">
+      <div style="text-align:center">
+        <span class="with-love">
+          <i class="fa fa-heart"></i>
+        </span>
+        <%= site.customConfig.RewardMessage %>
+        <span class="with-love">
+          <i class="fa fa-heart"></i>
+        </span>
+      </div>
+      <button id="rewardButton" disable="enable"
+        onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>赞赏</span></button>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display:inline-block"><img id="wechat_qr"
+            src="<%= site.customConfig.Rewardwx %>" alt="微信">
+          <p>微信</p>
+        </div>
+        <div id="alipay" style="display:inline-block"><img id="alipay_qr"
+            src="<%= site.customConfig.Rewardzfb %>" alt="支付宝">
+          <p>支付宝</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+<% } %>
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
 <div class="post-footer">
   <ul class="post-copyright">
     <li class="post-copyright-author">

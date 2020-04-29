@@ -3,6 +3,7 @@
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="<%= site.customConfig.cdn %>/images/avatar.png"/>
     <p class="site-author-name"><%= site.customConfig.bolgername %></p>
+<<<<<<< HEAD
     <p class="site-description right-motion">
       <% if (site.customConfig.bolgerjsplus) { %>
         <div id="binft"></div>
@@ -61,6 +62,20 @@
           <% } %>
       <% } %>
     </p>
+=======
+    <% if (site.customConfig.bolgerjss && site.customConfig.bolgerjss !== '') { %>
+    <div class="site-description right-motion">
+      <% if (!site.customConfig.bolgerjsplus) { %>
+      <%let texts = site.customConfig.bolgerjss.split('\\n');%>
+      <% for (let i = 0; i < texts.length; i++) { %>
+        <p><%= texts[i] %></p>
+      <% } %>
+      <% } else { %>
+        <p id="binft"><%= site.customConfig.bolgerjss %></p>
+      <% } %>
+    </div>
+    <% } %>
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
   </div>
   <div class="sidebar-item side-item-stat right-motion">
     <div class="sidebar-item-box">

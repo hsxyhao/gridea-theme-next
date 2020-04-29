@@ -3,6 +3,7 @@
     <div class="article-wrapper bg-color">
       <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, stats: post.stats, isTop: post.isTop, browse: false }) %>
       <div class="post-body">
+<<<<<<< HEAD
         <% if (site.customConfig.enableThemeCompatible) { %>
           <% let cdn = site.customConfig.cdn + '/post-images', imgPrefix = post.feature.split('post-images')[1], imgUrl = imgPrefix ? cdn + imgPrefix : post.feature;  %>
           <% if (site.customConfig.strategy === 'first') { %>
@@ -47,6 +48,50 @@
             <% } %>
           <% } else {%>
             <%- post.abstract %>
+=======
+        <% let cdn = site.customConfig.cdn + '/post-images', imgPrefix = post.feature.split('post-images')[1], imgUrl = imgPrefix ? cdn + imgPrefix : post.feature;  %>
+        <% if (site.customConfig.strategy === 'none') { %>
+          <%- post.abstract %>
+        <% } else if (site.customConfig.strategy === 'first') { %>
+          <% let paragraph = post.abstract && post.abstract.split('<p>');%>
+          <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
+            <%- '<p>' + paragraph[i] %>
+            <% if (i === 1 && post.feature) {%>
+              <img src="<%= imgUrl %>" />
+            <% } %>
+          <% } %>
+        <% } else if (site.customConfig.strategy === 'before') {%>
+          <% if (post.feature) { %>
+            <img src="<%= imgUrl %>" />
+          <% } %>
+          <%- post.abstract %>
+        <% } else if (site.customConfig.strategy === 'after') {%>
+          <%- post.abstract %>
+          <% if (post.feature) {%>
+            <img src="<%= imgUrl %>" />
+          <% } %>
+        <% } else if (site.customConfig.strategy === 'random') {%>
+          <% let paragraph = post.abstract && post.abstract.split('<p>');let r = Math.floor(Math.random() * 10) % paragraph.length;%>
+          <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
+            <%- '<p>' + paragraph[i]%>
+            <% if (i === r && post.feature) {%>
+              <img src="<%= imgUrl %>" />
+            <% } %>
+          <% } %>
+        <% } else if (site.customConfig.strategy === 'words') {%>
+          <% let paragraph = post.abstract && post.abstract.split('<p>'); %>
+          <% let words = 0; let has = false; for (let i = 0; i < paragraph.length; i++) { %>
+            <%- '<p>' + paragraph[i]%>
+            <%- post.featurec %>
+            <% words +=paragraph[i].length; %>
+            <% if (!has && words > 200 && post.feature) {%>
+              <img src="<%= imgUrl %>"/>
+              <% has = true; %>
+            <% } %>
+          <% } %>
+          <% if (!has && post.feature) {%>
+            <img src="<%= imgUrl %>"/>
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
           <% } %>
         <% } else {%>
           <%- post.abstract %>

@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 <% let scheme = site.customConfig.scheme || 'pisces'; let map = new Map(); map.set('/','home'); map.set('/archives', 'archive'); map.set('/tags','tags');map.set('/post/about','user');map.set('/post/skin-update','info-circle'); %>
 <div class=" <%= scheme !==''?scheme:'pisces' %>">
+=======
+<% let scheme = site.customConfig.scheme || 'pisces'; 
+let map = new Map(); 
+map.set('/','home'); 
+map.set('/archives', 'archive'); 
+map.set('/tags','tags');
+map.set('/post/about','user');
+map.set('/post/skin-update','info-circle'); %>
+<%- site.customConfig.mygithub %>
+<div class="<%= scheme !==''?scheme:'pisces' %>">
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
   <header class="header <%= scheme === 'mist' || scheme === 'muse'?'bg-color':''%> ">
     <div class="blog-header box-shadow-wrapper <%= scheme === 'gemini' || scheme === 'pisces'?'bg-color':''%> " id="header">
       <div class="nav-toggle" id="nav_toggle">
@@ -42,7 +54,11 @@
                     <% if (site.customConfig.friendsIcon) { %>
                       <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
                     <% } else { %>
+<<<<<<< HEAD
                       <i class="fa fa-ship"></i><%= site.customConfig.friendsTitle %>
+=======
+                      <i class="fa fa-address-book"></i><%= site.customConfig.friendsTitle %>
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
                     <% } %>
                   </a>
                 </li>
@@ -78,7 +94,11 @@
                   <% if (site.customConfig.friendsIcon) { %>
                     <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
                   <% } else { %>
+<<<<<<< HEAD
                     <i class="fa fa-ship"></i> <%= site.customConfig.friendsTitle %>
+=======
+                    <i class="fa fa-address-book"></i> <%= site.customConfig.friendsTitle %>
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
                   <% } %>
                 </a>
               </li>

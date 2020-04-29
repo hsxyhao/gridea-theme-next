@@ -52,12 +52,21 @@
             <div class="friends-note">
               <p><strong>友链格式：</strong></p>
               <ul>
+<<<<<<< HEAD
                 <li>网站名称：枫糖</li>
                 <li>网站地址：<a href="https://blog.maplesugar.space" data-pjax-state="">https://blog.maplesugar.space</a>
                 </li>
                 <li> 网站描述：From rookie to master</li>
                 <li> 网站 Logo / 头像：<a href="https://blog.maplesugar.space/uploads/maple-leaf-avatar.jpg"
                     data-pjax-state="">https://blog.maplesugar.space/uploads/maple-leaf-avatar.jpg</a></li>
+=======
+                <li>网站名称：<%= themeConfig.siteName %></li>
+                <li>网站地址：<a href="<%= themeConfig.domain %>" data-pjax-state=""><%= themeConfig.domain %></a>
+                </li>
+                <li> 网站描述：<%= themeConfig.siteDescription %></li>
+                <li> 网站 Logo / 头像：<a href="<%= themeConfig.domain %>/images/avatar.png"
+                    data-pjax-state=""><%= themeConfig.domain %>/images/avatar.png</a></li>
+>>>>>>> 851877768d0c9336e6cada33e3a7bddc50048547
               </ul>
             </div>
             <%- include('./_blocks/comment') %>
