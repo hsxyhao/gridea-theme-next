@@ -105,7 +105,7 @@
 .sidebar-wrapper {
   color: #555;
   border-radius: initial;
-  padding: 20px 10px;
+  padding: 10px 10px 0;
   box-sizing: border-box;
   width: 240px;
 }
