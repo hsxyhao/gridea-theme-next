@@ -813,6 +813,10 @@
           "value": "aplayer"
         },
         {
+          "label": "Hkplayer",
+          "value": "Hkplayer"
+        },
+        {
           "label": "歌单外链",
           "value": "iframeLinks"
         }
