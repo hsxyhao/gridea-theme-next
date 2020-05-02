@@ -326,14 +326,6 @@
       "note": "默认菜单栏在左边显示"
     },
     {
-      "name": "updateTip",
-      "label": "更新提示",
-      "group": "特性",
-      "value": false,
-      "type": "switch",
-      "note": "默认不开启更新提示，但是建议开启（未完成）"
-    },
-    {
       "name": "newWindow",
       "label": "文章链接新窗口打开",
       "group": "特性",
@@ -350,28 +342,30 @@
       "note": "建议开启RSS"
     },
     {
-      "name": "nightMode",
-      "label": "夜间模式",
-      "group": "特性",
-      "value": false,
-      "type": "switch",
-      "note": "夜间模式默认不开启【未完成】"
-    },
-    {
-      "name": "enableReward",
-      "label": "打赏功能",
-      "group": "特性",
-      "value": false,
-      "type": "switch",
-      "note": "打赏功能默认不开启【未完成】"
-    },
-    {
       "name": "hljs",
       "label": "代码块高亮主题",
       "group": "特性",
       "value": "androidstudio",
       "type": "input",
       "note": "前往官方地址https://highlightjs.org/，选择合适的高亮主题"
+    },
+    {
+      "name": "latex",
+      "label": "Latex渲染",
+      "group": "特性",
+      "value": "katex",
+      "type": "select",
+      "options": [
+        {
+          "label": "katex",
+          "value": "katex"
+        },
+        {
+          "label": "mathjax",
+          "value": "mathjax"
+        }
+      ],
+      "note": "Latex公式渲染插件"
     },
     {
       "name": "strategy",
