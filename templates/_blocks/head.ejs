@@ -20,73 +20,30 @@
 <script src="<%= cdn %>/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
 <% if (site.customConfig.latex === 'mathjax') { %>
 <script>
   window.MathJax = {
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [['$', '$'], ["\\(", "\\)"]],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
     },
-    messageStyle: "none",
-    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX", "TeX"] },
-    TeX: {
-      equationNumbers: { autoNumber: "all" },
-      extensions: ["AMSmath.js", "AMSsymbols.js", "AMScd.js"],
-      TagSide: "left",
-      Macros: {
-        field: ['\\mathbb{#1}', 1],
-        C: ['\\field{C}'],
-        F: ['\\field{F}'],
-        N: ['\\field{N}'],
-        Q: ['\\field{Q}'],
-        R: ['\\field{R}'],
-        Z: ['\\field{Z}'],
-
-        zeros: ['\\mathbf{0}'],
-        ud: ['\\,\\mathrm{d}'],
-
-        vect: ['\\boldsymbol{\\mathbf{#1}}', 1],
-        abs: ['\\lvert#1\\rvert', 1],
-        abslr: ['\\left\\lvert#1\\right\\rvert', 1],
-        norm: ['\\lVert#1\\rVert', 1],
-        normlr: ['\\left\\lVert#1\\right\\rVert', 1],
-
-        lcm: ['\\mathop{\\mathrm{lcm}}'],
-        interior: ['\\mathop{\\mathrm{int}}'],
-        exterior: ['\\mathop{\\mathrm{ext}}'],
-        volume: ['\\mathop{\\mathrm{vol}}'],
-
-        E: ['{\\rm I\\kern-.3em E}'],
-        Var: ['\\mathop{\\mathrm{Var}}'],
-        Cov: ['\\mathop{\\mathrm{Cov}}'],
-        Binom: ['\\mathop{\\mathrm{Binom}}'],
-        Exp: ['\\mathop{\\mathrm{Exp}}'],
-        Poi: ['\\mathop{\\mathrm{Poi}}'],
-
-        GL: ['\\mathrm{GL}'],
-        SL: ['\\mathrm{SL}'],
-        Aut: ['\\mathrm{Aut}'],
-        ker: ['\\mathrm{ker}'],
-        id: ['\\mathop{\\mathrm{id}}'],
-
-        Re: ['\\mathop{\\mathrm{Re}}'],
-        Im: ['\\mathop{\\mathrm{Im}}'],
-        Res: ['\\mathop{\\mathrm{Res}}'],
-      }
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
+      ignoreHtmlClass: 'tex2jax_ignore|crayon-.*', // 'crayon-' 开头的类，属于Wordpress代码高亮库，这部分不需要处理，否则会导致显示不正确,这部分是正则式，多条之间用'|'分割
+      processHtmlClass: 'tex2jax_process'
+    },
+    //禁用右键菜单	
+    renderActions: {
+      addMenu: [0, '', '']
     }
-  }
+  };
 </script>
 <script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</script>
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <% } else { %>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
   integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
