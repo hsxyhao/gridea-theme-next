@@ -176,6 +176,12 @@
       }
     })
   }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch.addEventListener('click', function() {
+    document.querySelector('#search_mask').style = ''
+  })
+
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
