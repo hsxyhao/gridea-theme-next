@@ -16,6 +16,11 @@
 
 <link href="<%= cdn %>/media/hljs/styles/<%= site.customConfig.hljs?site.customConfig.hljs:'github' %>.css"
   rel="stylesheet">
+  <% if (site.customConfig.loadingAnimation) { %>
+  <script src="https://cdn.jsdelivr.net/gh/HubSpot/pace@master/pace.js"></script>
+  <link href="<%= site.customConfig.loadAnimationStyle %>" rel="stylesheet" />
+  <% } %>
+
 
 <script src="<%= cdn %>/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
