@@ -18,15 +18,8 @@ gridea-theme-next原产自hexo平台的next主题，将其搬至gridea，也算�
 - [ ] 打赏功能
 - [ ] 多语言支持
 
-### 项目动态
-建议大家在Project的TodoList中了解一下NexT当前的规划，我会及时更新关于next主题的一些进展。
-
 ### Valine邮件支持
 新版本中作者将邮件通知功能移除，所以要想实现评论邮件通知，需要借助第三方支持，具体操作步骤，可以参考[Valine-Admin](https://github.com/zhaojun1998/Valine-Admin)
-
-### 联系
-群聊二维码，加入群聊，快速解决问题
-![Next主题交流群](https://cdn.jsdelivr.net/gh/hsxyhao/images.github.io@master/1JA_OJlig/group_chat.jpeg)
 
 ### 自定义配置保存
 windows用户如果上传了背景图片，会导致之后整个配置无法保存，这里不建议windows用户上传背景图片。但是可以选择手动填写图片地址的兼容方案，目前手动填写可以是图片外链，也可以是本地图片。如果是本地图片的话需要将图片先复制到next主题下assets/media/images这个目录，如果没有images文件夹，手动创建一个，然后再配置项那里填写成/media/images/文件名。
@@ -35,3 +28,6 @@ windows用户如果上传了背景图片，会导致之后整个配置无法保�
 
 ### 最后
 在这里祝大家2020年新的一年里开心每一天，感觉不错的话，点赞支持一下呗！
+
+### 联系
+![Next主题交流群](https://cdn.jsdelivr.net/gh/hsxyhao/images.github.io@master/1JA_OJlig/group_chat.jpeg)
