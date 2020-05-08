@@ -58,11 +58,27 @@
     },
     {
       "name": "cssStr",
-      "label": "自定义css",
+      "label": "自定义CSS样式",
       "group": "布局",
       "value": "",
       "type": "textarea",
       "note": "可以修改主题中的指定元素以及markdown的样式、颜色，需要css基础"
+    },
+    {
+      "name": "customHdrCd",
+      "label": "自定义头部代码",
+      "group": "布局",
+      "value": "",
+      "type": "textarea",
+      "note": "可以在主题中头部<head>内添加自定义代码"
+    },
+    {
+      "name": "customBottomCd",
+      "label": "自定义底部代码",
+      "group": "布局",
+      "value": "",
+      "type": "textarea",
+      "note": "可以在主题中页脚<footer>内添加自定义代码,与基础配置底部信息通用"
     },
     {
       "name": "viewportWidth",
@@ -1056,6 +1072,14 @@
       "value": "",
       "type": "input",
       "note": "xxxxxx32e97exxx0605fcc44xxxxxxx"
+    },
+    {
+      "name": "statisticalCd",
+      "label": "自定义统计代码",
+      "group": "跟踪",
+      "value": "",
+      "type": "textarea",
+      "note": "Google或百度直接在上面填写统计ID即可,其他统计平台在此处粘贴完整代码"
     }
   ]
 }
