@@ -335,6 +335,14 @@
       "note": "开启会产生头像旋转彩蛋"
     },
     {
+      "name": "enableSearch",
+      "label": "站内搜索",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "站内搜索功能"
+    },
+    {
       "name": "sideIsRight",
       "label": "菜单栏右侧显示",
       "group": "特性",

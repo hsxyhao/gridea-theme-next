@@ -1,4 +1,6 @@
-<%- include('./search') %>
+<% if (site.customConfig.enableSearch) { %>
+  <%- include('./search') %>
+<% } %>
 <input hidden id="copy" />
 <script>
   let language = '<%= site.customConfig.language %>';
@@ -36,7 +38,6 @@
 
     if (map.size > 0) {
       let lanElems = document.querySelectorAll('.language');
-      console.log(lanElems);
       lanElems.forEach(elem => {
         let lan = elem.dataset.lan, text = map.get(lan);
         if (elem.__proto__ === HTMLInputElement.prototype) {

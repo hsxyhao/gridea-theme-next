@@ -90,11 +90,13 @@ map.set('/post/skin-update','info-circle'); %>
               </li>
             <% } %>
           <% } %>
-          <li id="fa_search" class="nav-item">
-            <a href="javascript:void(0);">
-              <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
-            </a>
-          </li>
+          <% if (site.customConfig.enableSearch) { %>
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          <% } %>
         </ul>
       </nav>
     </div>
