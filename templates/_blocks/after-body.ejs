@@ -1,5 +1,55 @@
+<%- include('./search') %>
 <input hidden id="copy" />
 <script>
+  let language = '<%= site.customConfig.language %>';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      console.log(lanElems);
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
   //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
   window.Clipboard = (function (window, document, navigator) {
     var textArea,
@@ -86,6 +136,7 @@
     pre.appendChild(copyElem);
     pre.onclick = copyCode
   })
+
 </script>
 <script src="<%= site.customConfig.cdn %>/media/js/motion.js"></script>
 <% if (site.customConfig.bgMusic !== 'aplayer') { %>
@@ -96,7 +147,6 @@
   });
 </script>
 <% } %>
-<%- include('./search') %>
 <%- include('./mouse-click') %>
 <% if (site.customConfig.bolgerjsplus) { %>
 <script src="<%= site.customConfig.cdn %> /media/js/cool.js"></script>

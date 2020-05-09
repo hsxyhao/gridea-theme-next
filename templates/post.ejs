@@ -24,7 +24,9 @@
             <div class="post-body next-md-body" id="post_body">
               <%- post.content %>
             </div>
-            <%- include('./_blocks/post-footer') %>
+            <% if (!post.link.includes('about')) { %>
+              <%- include('./_blocks/post-footer') %>
+            <% } %>
             <%- include('./_blocks/comment') %>
           </div>
         </div>

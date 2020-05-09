@@ -43,19 +43,19 @@
               <span class="with-love">
                 <i class="fa fa-heart"></i>
               </span>
-              留言添加友链
+              <span class="language" data-lan="leave-message">留言添加友链</span>
               <span class="with-love">
                 <i class="fa fa-heart"></i>
               </span>
             </div>
             <hr>
             <div class="friends-note">
-              <p><strong>友链格式：</strong></p>
+              <p><strong class="language" data-lan="format">友链格式：</strong></p>
               <ul>
-                <li>网站名称：<%= themeConfig.siteName %></li>
-                <li>网站地址：<a href="<%= themeConfig.domain %>" data-pjax-state=""><%= themeConfig.domain %></a></li>
-                <li>网站描述：<%= themeConfig.siteDescription %></li>
-                <li>网站头像：
+                <li><span class="language" data-lan="site-name">网站名称：</span><%= themeConfig.siteName %></li>
+                <li><span class="language" data-lan="site-link">网站地址：</span><a href="<%= themeConfig.domain %>" data-pjax-state=""><%= themeConfig.domain %></a></li>
+                <li><span class="language" data-lan="site-desc">网站描述：</span><%= themeConfig.siteDescription %></li>
+                <li><span class="language" data-lan="site-img">网站头像：</span>
                   <a href="<%= themeConfig.domain %>/images/avatar.png"><%= themeConfig.domain %>/images/avatar.png</a>
                 </li>
               </ul>

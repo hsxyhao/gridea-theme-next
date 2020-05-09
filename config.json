@@ -89,6 +89,23 @@
       "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
     },
     {
+      "name": "language",
+      "label": "语言",
+      "group": "布局",
+      "value": "",
+      "type": "select",
+      "options": [
+        {
+          "label": "中文（默认）",
+          "value": ""
+        },
+        {
+          "label": "英文",
+          "value": "en"
+        }
+      ]
+    },
+    {
       "label": "相关文档",
       "group": "颜色",
       "note": "https://yeming.site/post/1JA_OJlig/#颜色"
