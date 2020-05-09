@@ -354,12 +354,76 @@ const generateOverride = (params) => {
   if (params.bgSiteMetaColor) {
     let color = params.bgSiteMetaColor;
     result += `
-      .site-meta {
-        background: ${color} !important;
+    .site-meta {
+      background: ${color} !important;
+    }
+    .head-top-line {
+      background: ${color};
+    }`;
+  } else {
+    result += `
+    .head-top-line {
+      background: #222;
+    }`;
+  }
+
+  // 加载
+  if (params.loadAnimationStyle) {
+
+    let color = params.bgSiteMetaColor || '#222';
+    if (params.loadAnimationStyle.includes('pace-theme-minimal.css')) {
+      result += `
+      .pace .pace-activity {
+        border-top-color: ${color} !important;
+        border-left-color: ${color} !important;
       }
-      .head-top-line {
+      .pace .pace-progress {
+        background-color: ${color} !important;
+      }
+      .pace-running .head-top-line {
+        background: transparent;
+      }`;
+    } else if (params.loadAnimationStyle.includes('pace-theme-center-simple.css')) {
+      result += `
+      .pace {
+        border: 1px solid ${color} !important;
+      }
+      .pace .pace-progress {
         background: ${color} !important;
       }`;
+    } else if (params.loadAnimationStyle.includes('pace-theme-center-radar.css')) {
+      result += `.pace .pace-activity {
+        border-color: ${color} transparent transparent;
+      }
+      .pace .pace-activity:before {
+        border-color: ${color} transparent transparent;
+      }`
+    } else if (params.loadAnimationStyle.includes('pace-theme-bounce.css') || params.loadAnimationStyle.includes('pace-theme-corner-indicator.css')) {
+      result += `.pace .pace-activity {
+        background: ${color} !important;
+      }`
+    } else if (params.loadAnimationStyle.includes('pace-theme-big-counter.css')) {
+      result += `
+      .pace .pace-activity {
+        border-top-color: ${color} !important;
+        border-left-color: ${color} !important;
+      }
+      .pace-running .head-top-line {
+        background: transparent;
+      }`;
+    } else if (params.loadAnimationStyle.includes('pace-theme-center-circle.css')) {
+      result += `.pace .pace-progress {
+        background: ${color} !important;
+      }`
+    } else if (params.loadAnimationStyle.includes('pace-theme-loading-bar.css')) {
+      result += `.pace .pace-activity {
+        box-shadow: inset 0 0 0 2px ${color}, inset 0 0 0 7px #FFF !important;
+      }
+      .pace .pace-progress {
+        background: ${color} !important;
+        color: ${color} !important;
+      }`
+    }
   }
 
   if (params.bgTitleColor) {

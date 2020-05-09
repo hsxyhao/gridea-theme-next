@@ -666,20 +666,12 @@
       "note": "博主介绍美化,默认关闭"
     },
     {
-      "name": "loadingAnimation",
-      "label": "加载动画",
-      "group": "魔改",
-      "value": false,
-      "type": "switch",
-      "note": "网页加载动画,默认关闭"
-    },
-    {
       "name": "loadAnimationStyle",
       "label": "加载动画样式",
       "group": "魔改",
       "value": "",
       "type": "input",
-      "note": "使用外链或本地地址加载样式,详情查看文档"
+      "note": "使用外链或本地地址加载样式，详情查看文档，默认不开启"
     },
     {
       "name": "opacity",
