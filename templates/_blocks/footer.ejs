@@ -24,7 +24,7 @@
     <% } %>
   </div>
   <% if (site.customConfig.bgImg !== '' || site.customConfig.bgImgUrl !== '') { %>
-    <% let bgurl = site.customConfig.bgImgUrl | site.customConfig.bgImg; bgurl = bgurl.startsWith('http') ? bgurl: site.customConfig.cdn + bgurl;%>
+    <% let bgurl = site.customConfig.bgImgUrl || site.customConfig.bgImg; bgurl = bgurl.startsWith('http') ? bgurl: site.customConfig.cdn + bgurl;%>
     <div class="bg-img">
       <img src="<%= bgurl %>" />
     </div>
