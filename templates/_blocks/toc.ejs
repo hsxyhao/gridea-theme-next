@@ -25,7 +25,7 @@
       }
     } else if (prop === HTMLLIElement.prototype) {
       // 保存li元素
-      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
         lList.push(elem);
       }
       for (let i = 0; i < elem.children.length; i++) {
