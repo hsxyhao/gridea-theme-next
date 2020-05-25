@@ -679,7 +679,7 @@
       "group": "魔改",
       "value": "",
       "type": "input",
-      "note": "使用外链或本地地址加载样式，详情查看文档，默认不开启"
+      "note": "使用外链或本地地址加载样式，加载颜色兼容next主题色，默认不开启，加载样式地址：https://cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/"
     },
     {
       "name": "opacity",
@@ -708,6 +708,13 @@
     {
       "name": "blur",
       "label": "背景图片虚化",
+      "group": "魔改",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "leaveTitle",
+      "label": "页面离开提示语",
       "group": "魔改",
       "value": "",
       "type": "input"
@@ -1031,6 +1038,14 @@
       "value": true,
       "type": "switch",
       "note": "代码高亮，默认开启，若不需要，请手动关闭"
+    },
+    {
+      "name": "enableQQ",
+      "label": "QQ",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "是否启用昵称框自动获取QQ昵称和QQ头像, 默认关闭"
     },
     {
       "name": "avatarForce",

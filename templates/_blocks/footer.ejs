@@ -1,7 +1,8 @@
 <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
     <div class="poweredby">
       <%- site.themeConfig.footerInfo%>
@@ -9,11 +10,11 @@
   </footer>
   <% let scheme = site.customConfig.scheme || 'pisces'; %>
   <% if (scheme === 'muse' || scheme === 'mist') { %>
-    <div class="drawer-box <%= site.customConfig.sideIsRight?'right':'left' %>" id="drawer_box">
-      <span class="muse-line muse-line-first"></span>
-      <span class="muse-line muse-line-middle"></span>
-      <span class="muse-line muse-line-last"></span>
-    </div>
+  <div class="drawer-box <%= site.customConfig.sideIsRight?'right':'left' %>" id="drawer_box">
+    <span class="muse-line muse-line-first"></span>
+    <span class="muse-line muse-line-middle"></span>
+    <span class="muse-line muse-line-last"></span>
+  </div>
   <% } %>
   <div class="<%= scheme !==''?scheme:'pisces' %> back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
@@ -24,16 +25,16 @@
     <% } %>
   </div>
   <% if (site.customConfig.bgImg !== '' || site.customConfig.bgImgUrl !== '') { %>
-    <% let bgurl = site.customConfig.bgImgUrl || site.customConfig.bgImg; bgurl = bgurl.startsWith('http') ? bgurl: site.customConfig.cdn + bgurl;%>
-    <div class="bg-img">
-      <img src="<%= bgurl %>" />
-    </div>
+  <% let bgurl = site.customConfig.bgImgUrl || site.customConfig.bgImg; bgurl = bgurl.startsWith('http') ? bgurl: site.customConfig.cdn + bgurl;%>
+  <div class="bg-img">
+    <img src="<%= bgurl %>" />
+  </div>
   <% } %>
   <% if (site.customConfig.enableLive2d) { %>
-    <%- include('./live2d.ejs') %>
+  <%- include('./live2d.ejs') %>
   <% } %>
   <% if (site.customConfig.bgMusic !== 'none') { %>
-    <%- include('./music.ejs') %>
+  <%- include('./music.ejs') %>
   <% } %>
 </div>
 <script>
@@ -41,13 +42,13 @@
   let sideBarOpen = 'sidebar-open';
   let body = document.body;
   let back2Top = document.querySelector('#back_to_top'),
-  back2TopText = document.querySelector('#back_to_top_text'),
-  drawerBox = document.querySelector('#drawer_box'),
-  rightSideBar = document.querySelector('.sidebar'),
-  viewport = document.querySelector('body');
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
 
   function scrollAnimation(currentY, targetY) {
-   
+
     let needScrollTop = targetY - currentY
     let _currentY = currentY
     setTimeout(() => {
@@ -62,13 +63,13 @@
     }, 1)
   }
 
-  back2Top.addEventListener("click", function(e) {
+  back2Top.addEventListener("click", function (e) {
     scrollAnimation(document.scrollingElement.scrollTop, 0);
     e.stopPropagation();
     return false;
   });
-  
-  window.addEventListener('scroll', function(e) {
+
+  window.addEventListener('scroll', function (e) {
     let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
     if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
       back2Top.classList.add('back-top-active');
@@ -81,27 +82,27 @@
     }
   });
 
-  
+
   let hasCacu = false;
-  window.onresize = function() {
-    if (window.width > 991) {
-      calcuHeight();
-    } else {
-      hasCacu = false;
-    }
+  window.onresize = function () {
+    console.log('onresize');
+    calcuHeight();
   }
 
   function calcuHeight() {
     // 动态调整站点概览高度
+    console.log('calcuHeight');
     if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
       let sideBar = document.querySelector('.sidebar');
       let navUl = document.querySelector('#site_nav');
+      console.log(`offsetHeight: ${navUl.offsetHeight}`);
+      console.log(`offsetTop: ${navUl.offsetTop}`);
       sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
       hasCacu = true;
     }
   }
   calcuHeight();
-  
+
   let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
 
   if (drawerBox) {
@@ -113,21 +114,21 @@
     let openProp, closeProp;
     if (right) {
       openProp = {
-        paddingRight: RIGHT_MOVE_DIS 
+        paddingRight: RIGHT_MOVE_DIS
       };
       closeProp = {
         paddingRight: '0px'
       };
     } else {
       openProp = {
-        paddingLeft: RIGHT_MOVE_DIS 
+        paddingLeft: RIGHT_MOVE_DIS
       };
       closeProp = {
         paddingLeft: '0px'
       };
     }
 
-    drawerBox.onclick = function() {
+    drawerBox.onclick = function () {
       open = !open;
       window.Velocity(rightSideBar, 'stop');
       window.Velocity(viewport, 'stop');
@@ -137,11 +138,11 @@
           width: RIGHT_MOVE_DIS
         }, {
           duration: MOTION_TIME,
-          begin: function() {
-            window.Velocity(rightMotions, transitionDir,{ });
+          begin: function () {
+            window.Velocity(rightMotions, transitionDir, {});
           }
         })
-        window.Velocity(viewport, openProp,{
+        window.Velocity(viewport, openProp, {
           duration: MOTION_TIME
         });
       } else {
@@ -149,13 +150,13 @@
           width: '0px'
         }, {
           duration: MOTION_TIME,
-          begin: function() {
+          begin: function () {
             window.Velocity(rightMotions, {
               opacity: 0
             });
           }
         })
-        window.Velocity(viewport, closeProp ,{
+        window.Velocity(viewport, closeProp, {
           duration: MOTION_TIME
         });
       }
@@ -172,17 +173,31 @@
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
       if (!item.classList.contains('btn')) {
-        item.setAttribute("target","_blank");
+        item.setAttribute("target", "_blank");
       }
     })
   }
 
   let faSearch = document.querySelector('#fa_search');
-  faSearch.addEventListener('click', function() {
+  faSearch.addEventListener('click', function () {
     document.querySelector('#search_mask').style = ''
   })
 
   // 代码高亮
   hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = '<%- site.customConfig.leaveTitle %>';
+  console.log(leaveTitle);
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
 
 </script>

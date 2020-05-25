@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
 <div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
 
 <style>
@@ -40,6 +40,7 @@
     placeholder: '<%= site.customConfig.placeholder %>',
     pageSize: '<%= site.customConfig.pageSize %>',
     lang: '<%= site.customConfig.lang %>',
+    enableQQ: true,
     visitor: 'true' === '<%= site.customConfig.visitor %>',
     highlight: 'true' === '<%= site.customConfig.highlight %>',
     avatarForce: 'true' === '<%= site.customConfig.avatarForce %>',
