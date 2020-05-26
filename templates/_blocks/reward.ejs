@@ -5,8 +5,13 @@
       <h2>感谢您的支持，我会继续努力的!</h2>
       <div class="reward-img-box">
         <div style="position: relative; width: 140px; height: 140px;">
-          <img id="zfb" class="reward-img" src="<%= site.customConfig.zfbImg %>" alt="赞赏码">
-          <img id="wx" class="reward-img" style="display: none;" src="<%= site.customConfig.wxImg %>" alt="赞赏码">
+          <%  let zfbUrl = site.customConfig.zfbImgUrl  || site.customConfig.zfbImg; let wxUrl = site.customConfig.wxImgUrl  || site.customConfig.wxImg; %>
+          <% if (zfbUrl) { %>
+            <img id="zfb" class="reward-img" src="<%= zfbUrl %>" alt="赞赏码">
+          <% } %>
+          <% if (wxUrl) { %>
+            <img id="wx" class="reward-img" style="display: none;" src="<%= wxUrl %>" alt="赞赏码">
+          <% } %>
         </div>
       </div>
       <p class="reward-word"><%= site.customConfig.rewardTitle %></p>

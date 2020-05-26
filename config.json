@@ -571,7 +571,7 @@
       "type": "picture-upload"
     },
     {
-      "name": "zfbImgUrl",
+      "name": "wxImgUrl",
       "label": "微信打赏码（兼容windows）",
       "group": "赞赏",
       "value": "",
