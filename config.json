@@ -512,6 +512,55 @@
       "note": "超过10个链接则启动压缩，建议启动压缩，目录过长可以进行一定优化"
     },
     {
+      "name": "enableReward",
+      "label": "开启文章打赏功能",
+      "group": "赞赏",
+      "value": false,
+      "type": "switch"
+    },
+    {
+      "name": "rewardTitle",
+      "label": "标题",
+      "group": "赞赏",
+      "value": "扫码打赏，你说多少就多少",
+      "type": "input"
+    },
+    {
+      "name": "rewardTip",
+      "label": "提示语",
+      "group": "赞赏",
+      "value": "打开微信扫一扫，即可进行扫码打赏哦",
+      "type": "input"
+    },
+    {
+      "name": "zfbImg",
+      "label": "支付宝打赏码",
+      "group": "赞赏",
+      "value": "",
+      "type": "picture-upload"
+    },
+    {
+      "name": "zfbImgUrl",
+      "label": "支付宝打赏码链接（兼容windows）",
+      "group": "赞赏",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "wxImg",
+      "label": "微信打赏码",
+      "group": "赞赏",
+      "value": "",
+      "type": "picture-upload"
+    },
+    {
+      "name": "zfbImgUrl",
+      "label": "微信打赏码（兼容windows）",
+      "group": "赞赏",
+      "value": "",
+      "type": "input"
+    },
+    {
       "label": "相关文档",
       "group": "社交",
       "note": "https://yeming.site/post/1JA_OJlig/#社交"

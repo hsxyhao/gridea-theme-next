@@ -24,6 +24,9 @@
             <div class="post-body next-md-body" id="post_body">
               <%- post.content %>
             </div>
+            <div class="reward-btn">
+              <div class="reward-btn-text">赞赏</div>
+            </div>
             <% if (!post.link.includes('about')) { %>
               <%- include('./_blocks/post-footer') %>
             <% } %>
@@ -34,6 +37,7 @@
     </div>
     <%- include('./_blocks/footer') %>
     <%- include('./_blocks/light-box') %>
+    <%- include('./_blocks/reward') %>
   </div>
 </body>
 <%- include('./_blocks/after-body') %>
