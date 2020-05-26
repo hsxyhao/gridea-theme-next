@@ -53,16 +53,10 @@ const generateOverride = (params) => {
     bgColor = toHexColor(bgColor, ratio);
     result += `body {
       background-color: ${bgColor} !important;
-    }
-    .nav-toggle .line {
-      background-color: ${bgColor} !important;
     }`
   } else {
     result += `body {
       background-color: ${params.bgColor};
-    }
-    .nav-toggle .line {
-      background-color: ${params.bgColor} !important;
     }`
   }
 
@@ -168,6 +162,17 @@ const generateOverride = (params) => {
       color: ${params.linkHoverColor};
       border-bottom-color: ${params.linkHoverColor};
     }`
+  }
+  
+  if (params.mobileMenuBtnColor) {
+    result += `.nav-toggle .line {
+      background-color: ${params.mobileMenuBtnColor} !important;
+    }`;
+  } else {
+    result += `
+    .nav-toggle .line {
+      background-color: ${params.mobileMenuBtnColor} !important;
+    }`;
   }
 
   if (params.menuColor) {

@@ -196,6 +196,15 @@
       "card": "color"
     },
     {
+      "name": "mobileMenuBtnColor",
+      "label": "移动端菜单按钮颜色",
+      "group": "颜色",
+      "value": "",
+      "type": "input",
+      "card": "color",
+      "note": "兼容主题色，默认为白色"
+    },
+    {
       "name": "menuColor",
       "label": "菜单项字体颜色",
       "group": "颜色",
