@@ -328,6 +328,15 @@ const generateOverride = (params) => {
       border-bottom-color: #fc6423;
     }`
   }
+  // 赞赏
+
+  if (params.enableReward) {
+    if (params.rewardBgColor) {
+      result += `.reward-btn-text {
+        background-color: ${toHexColor(params.rewardBgColor, ratio)} !important;
+      }`
+    }
+  }
 
   // 魔改
   if (params.postSectionBgColor) {

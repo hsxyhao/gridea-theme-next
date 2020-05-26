@@ -4,18 +4,25 @@
     <div class="reward-body">
       <h2>感谢您的支持，我会继续努力的!</h2>
       <div class="reward-img-box">
-        <img class="reward-img" src="https://ioliu.cn/images/alipay.png" alt="赞赏码">
+        <div style="position: relative; width: 140px; height: 140px;">
+          <img id="zfb" class="reward-img" src="<%= site.customConfig.zfbImg %>" alt="赞赏码">
+          <img id="wx" class="reward-img" style="display: none;" src="<%= site.customConfig.wxImg %>" alt="赞赏码">
+        </div>
       </div>
       <p class="reward-word"><%= site.customConfig.rewardTitle %></p>
       <p class="reward-tip"><%= site.customConfig.rewardTip %></p>
     </div>
     <div class="bottom">
-      <div class="pay-text">
+      <% if (site.customConfig.zfbImg || site.customConfig.zfbImgUrl) { %>
+      <div id="zfbBtn" class="pay-text">
         支付宝
       </div>
-      <div class="pay-text">
+      <% } %>
+      <% if (site.customConfig.wxImg || site.customConfig.wxImgUrl) { %>
+      <div id="wxBtn" class="pay-text">
         微信支付
       </div>
+      <% } %>
     </div>
   </div>
 </div>
@@ -122,11 +129,44 @@
     border: 6px solid #ea5f00;
     margin: 0 auto;
     border-radius: 3px;
+    position: relative;
   }
 
   .reward-img {
-    width: 140px;
-    height: 140px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
   }
 </style>
 <script>
@@ -134,11 +174,40 @@
     var mask = document.querySelector('.reward-mask');
     let close = document.querySelector('.reward-relative .close');
     let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
     rewardBtn.addEventListener('click', (e) => {
       window.Velocity(mask, 'transition.slideDownIn', {
         duration: 400
       })
     });
+
     close.addEventListener('click', (e) => {
       e.preventDefault();
       window.Velocity(mask, 'transition.slideUpOut', {

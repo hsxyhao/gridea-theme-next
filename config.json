@@ -533,6 +533,14 @@
       "type": "input"
     },
     {
+      "name": "rewardBgColor",
+      "label": "赞赏按钮颜色",
+      "group": "赞赏",
+      "value": "",
+      "type": "input",
+      "card": "color"
+    },
+    {
       "name": "zfbImg",
       "label": "支付宝打赏码",
       "group": "赞赏",

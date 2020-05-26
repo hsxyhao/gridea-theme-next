@@ -24,9 +24,11 @@
             <div class="post-body next-md-body" id="post_body">
               <%- post.content %>
             </div>
-            <div class="reward-btn">
-              <div class="reward-btn-text">赞赏</div>
-            </div>
+            <% if (site.customConfig.enableReward) { %>
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            <% } %>
             <% if (!post.link.includes('about')) { %>
               <%- include('./_blocks/post-footer') %>
             <% } %>
