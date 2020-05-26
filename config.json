@@ -1009,7 +1009,7 @@
       "name": "valineimage",
       "label": "评论框背景图",
       "group": "评论",
-      "value": "https://upimage.alexhchu.com/2020/04/21/47eda59424daa.gif",
+      "value": "",
       "type": "input",
       "note": "支持图片外链以及本地图片,使用方法与背景图片设置方法一致"
     },
