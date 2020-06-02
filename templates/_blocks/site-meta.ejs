@@ -91,4 +91,10 @@
     <%- site.customConfig.iframeHtml %>
   </div>
 <% } %>
+<% if (site.customConfig.particleClock && scheme == 'gemini' || scheme == 'pisces') { %>
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="<%= site.customConfig.cdn %>/media/js/magic/clock.js"></script>
+  </div>
+<% } %>
 </div>

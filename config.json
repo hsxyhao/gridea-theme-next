@@ -732,6 +732,13 @@
       "note": "目前windows系统使用背景图片请手动填写，上传会造成配置无法保存，具体填写规范README上有介绍"
     },
     {
+      "name": "particleClock",
+      "label": "粒子时钟",
+      "group": "魔改",
+      "value": false,
+      "type": "switch"
+    },
+    {
       "name": "bolgerjsplus",
       "label": "博主介绍美化",
       "group": "魔改",
