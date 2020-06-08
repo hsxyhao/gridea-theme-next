@@ -40,7 +40,7 @@
     placeholder: '<%= site.customConfig.placeholder %>',
     pageSize: '<%= site.customConfig.pageSize %>',
     lang: '<%= site.customConfig.lang %>',
-    enableQQ: true,
+    enableQQ: 'true' === '<%= site.customConfig.enableQQ %>',
     visitor: 'true' === '<%= site.customConfig.visitor %>',
     highlight: 'true' === '<%= site.customConfig.highlight %>',
     avatarForce: 'true' === '<%= site.customConfig.avatarForce %>',
