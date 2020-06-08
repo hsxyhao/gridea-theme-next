@@ -46,7 +46,7 @@
       <span><%= stats.words %><span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     <% if (browse) { %>
-    <% let url = link.split('://')[1]; let postId = url && url.substr(url.indexOf('/')) || url; %>
+    <% let url = link && link.replace('http://', '').replace('https://', ''); let postId = url && url.substr(url.indexOf('/')) || url; %>
     <% if (postId.lastIndexOf('/') !== postId.length-1) { %>
     <% postId = postId + '/' %>
     <% } %>
