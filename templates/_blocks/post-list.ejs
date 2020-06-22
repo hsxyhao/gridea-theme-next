@@ -5,7 +5,25 @@
       <div class="post-body">
         <% let cdn = site.customConfig.cdn + '/post-images', imgPrefix = post.feature.split('post-images')[1], imgUrl = imgPrefix ? cdn + imgPrefix : post.feature;  %>
         <% if (site.customConfig.strategy === 'none') { %>
-          <%- post.abstract %>
+          <% if (post.abstract) { %>
+            <%- post.abstract %>
+          <% } else if (site.customConfig.is_auto_excerpt) { %>
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            <% var br_position = 0 %>
+            <% for (var br_count = 0; br_count < site.customConfig.auto_excerpt_line; br_count++) { %>
+              <% br_position_tmp = post.content.indexOf('\n',br_position + 1) %>
+              <% if(br_position_tmp < 0) { break } %>
+              <% br_position = br_position_tmp %>
+            <% } %>
+            <% if(br_position > 0) { %>
+              <p><%- post.content.substring(0, br_position + 1) %>
+                <% if(post.content.substring(0, br_position + 1).indexOf("<code") > 0) { %>
+                  <!-- 自动摘要出来的内容有<code则补上结尾,防止格式错误 -->
+                  </code></pre>
+                <% } %>
+              <p>
+            <% } %>
+          <% } %>
         <% } else if (site.customConfig.strategy === 'first') { %>
           <% let paragraph = post.abstract && post.abstract.split('<p>');%>
           <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
