@@ -1,4 +1,4 @@
-<header class="post-header">
+<section class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="<%= link %>">
       <%= title %>
@@ -15,18 +15,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <% let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);%>
-      <% if (time < 60) { %>
-        <span><%= time %>秒之前</span>
-      <% } else if (time < 3600) { %>
-        <span><%= Math.floor(time/60) %> 分钟之前</span>
-      <% } else if (time >= 3600 && time < 86400) { %>
-          <span><%= Math.floor(time/3600) %> 小时之前</span>
-      <% } else if (time >= 86400 && time < 259200) { %>
-          <span><%= Math.floor(time/24) %> 天之前</span>
-      <% } else { %>
-        <span><%= dateFormat %></span>
-      <% } %>
+      <span class="publish-time" data-t="<%= date %>"><%= dateFormat %></span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     <%if (tags && tags.length > 0) { %>
@@ -68,4 +57,4 @@
     </span>
     <% } %>
   </div>
-</header>
+</section>
