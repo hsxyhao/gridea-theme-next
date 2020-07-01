@@ -379,7 +379,7 @@
       "name": "hljs",
       "label": "代码块高亮主题",
       "group": "特性",
-      "value": "androidstudio",
+      "value": "default",
       "type": "input",
       "note": "前往官方地址https://highlightjs.org/，选择合适的高亮主题"
     },
