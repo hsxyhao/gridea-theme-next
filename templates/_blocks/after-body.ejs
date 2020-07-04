@@ -173,3 +173,10 @@
 <% if (site.customConfig.bolgerjsplus) { %>
 <script src="<%= site.customConfig.cdn %>/media/js/cool.js"></script>
 <% } %>
+
+<% if (site.customConfig.bgEfficty == "sakura") { %>
+<script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
+<% } else if (site.customConfig.bgEfficty == "snowflake") { %>
+  <div class="snow-container"></div>
+  <script src="<%= site.customConfig.cdn %>/media/js/bg/snow.js"></script>
+<% } %>

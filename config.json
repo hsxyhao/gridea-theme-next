@@ -732,6 +732,27 @@
       "note": "目前windows系统使用背景图片请手动填写，上传会造成配置无法保存，具体填写规范README上有介绍"
     },
     {
+      "name": "bgEfficty",
+      "label": "背景特效",
+      "group": "魔改",
+      "value": "none",
+      "type": "radio",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "樱花",
+          "value": "sakura"
+        },
+        {
+          "label": "雪花",
+          "value": "snowflake"
+        }
+      ]
+    },
+    {
       "name": "particleClock",
       "label": "粒子时钟",
       "group": "魔改",
