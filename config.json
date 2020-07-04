@@ -794,7 +794,7 @@
     },
     {
       "name": "shadow",
-      "label": "Muse风格阴影效果",
+      "label": "Muse、Mist风格阴影效果",
       "group": "魔改",
       "value": false,
       "type": "switch",
