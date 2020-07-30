@@ -747,6 +747,10 @@
           "value": "sakura"
         },
         {
+          "label": "粒子",
+          "value": "nest"
+        },
+        {
           "label": "雪花",
           "value": "snowflake"
         }

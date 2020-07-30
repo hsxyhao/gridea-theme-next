@@ -179,4 +179,15 @@
 <% } else if (site.customConfig.bgEfficty == "snowflake") { %>
   <div class="snow-container"></div>
   <script src="<%= site.customConfig.cdn %>/media/js/bg/snow.js"></script>
+<% } else if (site.customConfig.bgEfficty == "nest") { %>
+  <div class="snow-container"></div>
+  <script src="<%= site.customConfig.cdn %>/media/js/bg/canvas-nest.js"></script>
+  <script>
+  const config = {
+    color: '255,0,0',
+    count: 88,
+  };
+  // Using config rendering effect at 'element'.
+  const cn = new CanvasNest(document.querySelector('.snow-container'), config);
+  </script>
 <% } %>
