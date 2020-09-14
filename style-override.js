@@ -83,7 +83,11 @@ const generateOverride = (params) => {
     }
     * {
         font-family: '${params.fontFamily}';
-    }`
+    }
+    .katex-block *{
+      font-family: 'KaTeX_Main';
+    }
+    `
   }
 
   if (params.fontSize && params.fontSize !== '') {
