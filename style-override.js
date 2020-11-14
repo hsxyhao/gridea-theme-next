@@ -30,8 +30,22 @@ const generateOverride = (params) => {
       background: transparent !important;
     }`
   }
-  let ratio = parseInt(255 / 100.0 * opacity);
-
+  
+  // js 浮点运算问题
+  //   var num = 255 / 100.0 * 100;
+  //   var a = num.toString();
+  //   // 254.99999999999997
+  //   var b = num.toString(2);
+  //   // 11111110.111111111111111111111111111111111111111111111
+  //   var c = num.toString(8);
+  //   // 376.777777777777777
+  //   var d = num.toString(16);
+  //   // fe.fffffffffff8
+  //   var e = parseInt(num);
+  //   // 254
+  //   let ratio = parseInt(255 / 100.0 * opacity);
+  let ratio = parseInt(255 / 100.0 * opacity + 0.5);
+  
   // 默认配置
   if (!params.bgColor) {
     let bgColor = '';
