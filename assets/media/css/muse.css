@@ -427,10 +427,6 @@
   }
 }
 
-@media (min-width: 992px) {
-
-}
-
 @media (max-width: 961px) {
   .drawer-box {
     display: none;
@@ -438,6 +434,9 @@
 }
 
 @media (max-width: 767px) {
+  .muse .post {
+    margin: 0;
+  }
 
   .main-continer {
     width: auto !important;

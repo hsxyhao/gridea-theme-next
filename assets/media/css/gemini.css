@@ -240,7 +240,6 @@
   .drawer-box {
     display: none;
   }
-
 }
 
 @media (max-width: 767px) {
@@ -276,6 +275,10 @@
 
 @media (max-width: 991px) and (min-width: 768px) {
 
+  .gemini .post {
+    margin-bottom: 1px;
+  }
+
   .main-continer {
     width: auto !important;
   }
@@ -305,11 +308,6 @@
 
   .gemini .section-layout-wrapper {
     width: auto;
-    margin: 10px;
-  }
-
-  .gemini .post {
-    padding: 20px;
   }
 
   .gemini .brand {
@@ -322,10 +320,11 @@
   .main-continer {
     width: auto;
   }
-
+  .gemini .post {
+    margin-bottom: 1px;
+  }
   .gemini .section-layout-wrapper {
     width: auto;
-    margin: 10px;
   }
 
   .gemini .nav-item-active a:after {

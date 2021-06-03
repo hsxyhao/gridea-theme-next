@@ -1,12 +1,12 @@
 <div class="footer-box">
   <footer class="footer">
+    <span id="busuanzi_container_site_pv">浏览数 <span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span> 人</span>
     <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> ©2019 | Theme By <a
         href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
-    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-    <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
     <div class="poweredby">
       <%- site.themeConfig.footerInfo%>
     </div>
@@ -219,25 +219,4 @@
     aelem.appendChild(image);
     parent.insertBefore(aelem, next);
   })
-</script>
-
-<script>
-   var enableMobileImg = "<%- site.customConfig.enableMobileImg %>" === 'true' ? true: false;
-   let bgImg = document.querySelector('.bg-img img');
-   if (bgImg) {
-    var winWidth=document.documentElement.clientWidth;
-    if (!enableMobileImg && winWidth < 384) {
-      bgImg.style = 'display: none';
-    }
-    window.addEventListener('resize', function (e) {
-      winWidth=document.documentElement.clientWidth;
-      if (winWidth > 384) {
-        bgImg.style = '';
-      } else {
-        if (!enableMobileImg) {
-          bgImg.style = 'display: none';
-        }
-      }
-    });
-  }
 </script>

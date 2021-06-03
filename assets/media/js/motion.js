@@ -33,7 +33,8 @@ const Element_Class = {
   tagPostNode: '.tag-post-node',
   cloudTags: '.cloud-tag',
   logoLineBefore: '.logo-line-before i',
-  logoLineAfter: '.logo-line-after i'
+  logoLineAfter: '.logo-line-after i',
+  page: 'div.page'
 }
 
 let logoLineMotion = function(MotionExector) {
@@ -141,6 +142,18 @@ let postListMotion = function(MotionExector) {
       }
     })
   }
+
+  let page = document.querySelector(Element_Class.page);
+  if (page) {
+    jQuery.Velocity(page, 'transition.slideDownIn', { })
+  } else {
+    jQuery.Velocity(page, 'transition.slideDownIn', { 
+      complete: function() {
+        MotionExector.next();
+      }
+    })
+  }
+
   geminiSiteMeta && jQuery.Velocity(geminiSiteMeta,'transition.slideUpIn',{
     stagger: 100, 
     drag: true,
@@ -149,6 +162,7 @@ let postListMotion = function(MotionExector) {
       MotionExector.next();
     }
   });
+
   if (posts.length <=0 && !geminiSiteMeta) {
     MotionExector.next();
   }

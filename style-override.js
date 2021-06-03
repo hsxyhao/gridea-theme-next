@@ -14,6 +14,15 @@ const generateOverride = (params) => {
   let cdn = params.cdn || '';
   let opacity = 100;
 
+  if (!params.enableMobileImg) {
+    result += `
+    @media (max-width: 767px) {
+      .bg-img img {
+        display: none;
+      }
+    }`;
+  }
+
   if (params.opacity) {
     try {
       opacity = parseFloat(params.opacity)
