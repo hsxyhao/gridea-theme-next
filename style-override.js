@@ -13,6 +13,7 @@ const generateOverride = (params) => {
   let headerClass = 'header'
   let cdn = params.cdn || '';
   let opacity = 100;
+
   if (params.opacity) {
     try {
       opacity = parseFloat(params.opacity)

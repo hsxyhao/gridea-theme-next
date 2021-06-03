@@ -352,6 +352,14 @@
       "note": "站内搜索功能"
     },
     {
+      "name": "enableMobileImg",
+      "label": "移动端背景图片",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "开启后移动端浏览会对pc端的背景图片进行压缩显示"
+    },
+    {
       "name": "sideIsRight",
       "label": "菜单栏右侧显示",
       "group": "特性",
@@ -376,26 +384,26 @@
       "note": "建议开启RSS"
     },
     {
-      "name": "hljs",
-      "label": "代码块高亮主题",
-      "group": "特性",
-      "value": "default",
-      "type": "input",
-      "note": "前往官方地址https://highlightjs.org/，选择合适的高亮主题"
-    },
-    {
       "name": "is_auto_excerpt",
       "label": "是否启用自动摘要（封面显示策略为无时生效）",
-      "group": "自动摘要",
+      "group": "特性",
       "value": true,
       "type": "switch"
     },
     {
       "name": "auto_excerpt_line",
       "label": "自动摘要选取行数",
-      "group": "自动摘要",
+      "group": "特性",
       "value": "3",
       "type": "input"
+    },
+    {
+      "name": "hljs",
+      "label": "代码块高亮主题",
+      "group": "特性",
+      "value": "default",
+      "type": "input",
+      "note": "前往官方地址https://highlightjs.org/，选择合适的高亮主题"
     },
     {
       "name": "latex",

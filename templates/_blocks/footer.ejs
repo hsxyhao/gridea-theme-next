@@ -89,9 +89,9 @@
 
 
   let hasCacu = false;
-  window.onresize = function () {
+  window.addEventListener('resize', function (e) {
     calcuHeight();
-  }
+  });
 
   function calcuHeight() {
     // 动态调整站点概览高度
@@ -207,7 +207,6 @@
 
 <script>
   let images = document.querySelectorAll('.section img');
-  console.log(images);
   images.forEach(image => {
     var parent = image.parentElement;
     var next = image.nextElementSibling;
@@ -220,4 +219,25 @@
     aelem.appendChild(image);
     parent.insertBefore(aelem, next);
   })
+</script>
+
+<script>
+   var enableMobileImg = "<%- site.customConfig.enableMobileImg %>" === 'true' ? true: false;
+   let bgImg = document.querySelector('.bg-img img');
+   if (bgImg) {
+    var winWidth=document.documentElement.clientWidth;
+    if (!enableMobileImg && winWidth < 384) {
+      bgImg.style = 'display: none';
+    }
+    window.addEventListener('resize', function (e) {
+      winWidth=document.documentElement.clientWidth;
+      if (winWidth > 384) {
+        bgImg.style = '';
+      } else {
+        if (!enableMobileImg) {
+          bgImg.style = 'display: none';
+        }
+      }
+    });
+  }
 </script>
