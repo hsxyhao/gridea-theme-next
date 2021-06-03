@@ -4,6 +4,9 @@
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
         href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
     <div class="poweredby">
       <%- site.themeConfig.footerInfo%>
     </div>
@@ -128,33 +131,33 @@
 
     drawerBox.onclick = function () {
       open = !open;
-      window.Velocity(rightSideBar, 'stop');
-      window.Velocity(viewport, 'stop');
-      window.Velocity(rightMotions, 'stop');
+      jQuery.Velocity(rightSideBar, 'stop');
+      jQuery.Velocity(viewport, 'stop');
+      jQuery.Velocity(rightMotions, 'stop');
       if (open) {
-        window.Velocity(rightSideBar, {
+        jQuery.Velocity(rightSideBar, {
           width: RIGHT_MOVE_DIS
         }, {
           duration: MOTION_TIME,
           begin: function () {
-            window.Velocity(rightMotions, transitionDir, {});
+            jQuery.Velocity(rightMotions, transitionDir, {});
           }
         })
-        window.Velocity(viewport, openProp, {
+        jQuery.Velocity(viewport, openProp, {
           duration: MOTION_TIME
         });
       } else {
-        window.Velocity(rightSideBar, {
+        jQuery.Velocity(rightSideBar, {
           width: '0px'
         }, {
           duration: MOTION_TIME,
           begin: function () {
-            window.Velocity(rightMotions, {
+            jQuery.Velocity(rightMotions, {
               opacity: 0
             });
           }
         })
-        window.Velocity(viewport, closeProp, {
+        jQuery.Velocity(viewport, closeProp, {
           duration: MOTION_TIME
         });
       }
@@ -177,7 +180,7 @@
   }
 
   let faSearch = document.querySelector('#fa_search');
-  faSearch.addEventListener('click', function () {
+  faSearch && faSearch.addEventListener('click', function () {
     document.querySelector('#search_mask').style = ''
   })
 
@@ -199,8 +202,8 @@
 
 </script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="<%= site.customConfig.cdn %>/media/css/jquery.fancybox.css" />
+<script src="<%= site.customConfig.cdn %>/media/js/jquery.fancybox.js"></script>
 
 <script>
   let images = document.querySelectorAll('.section img');
