@@ -189,6 +189,7 @@
   
   // 离开当前页title变化
   var leaveTitle = "<%- site.customConfig.leaveTitle %>";
+  var normal_title = document.title;
   if (leaveTitle) {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState == 'hidden') {

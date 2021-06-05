@@ -314,6 +314,12 @@
       "note": "seo优化关键字"
     },
     {
+      "name": "startTime",
+      "label": "创建时间",
+      "group": "特性",
+      "type": "date"
+    },
+    {
       "name": "menuIcon",
       "label": "导航菜单图标",
       "group": "特性",
