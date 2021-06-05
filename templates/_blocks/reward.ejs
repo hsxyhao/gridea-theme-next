@@ -192,20 +192,20 @@
 
     if (zfbBtn && wxBtn) {
       zfbBtn.addEventListener('click', () => {
-        window.Velocity(zfb, 'transition.slideLeftIn', {
+        jQuery.Velocity(zfb, 'transition.slideLeftIn', {
           duration: 400
         });
-        window.Velocity(wx, 'transition.slideRightOut', {
+        jQuery.Velocity(wx, 'transition.slideRightOut', {
           display: 'none',
           duration: 400
         });
       });
 
       wxBtn.addEventListener('click', () => {
-        window.Velocity(wx, 'transition.slideRightIn', {
+        jQuery.Velocity(wx, 'transition.slideRightIn', {
           duration: 400
         });
-        window.Velocity(zfb, 'transition.slideLeftOut', {
+        jQuery.Velocity(zfb, 'transition.slideLeftOut', {
           display: 'none',
           duration: 400
         });
@@ -213,14 +213,14 @@
     }
 
     rewardBtn.addEventListener('click', (e) => {
-      window.Velocity(mask, 'transition.slideDownIn', {
+      jQuery.Velocity(mask, 'transition.slideDownIn', {
         duration: 400
       })
     });
 
     close.addEventListener('click', (e) => {
       e.preventDefault();
-      window.Velocity(mask, 'transition.slideUpOut', {
+      jQuery.Velocity(mask, 'transition.slideUpOut', {
         duration: 400
       })
     })

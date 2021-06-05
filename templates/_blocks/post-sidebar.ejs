@@ -73,12 +73,12 @@
     currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
     e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
 
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
+    jQuery.Velocity(hideElement, 'stop');
+    jQuery.Velocity(hideElement, 'transition.slideUpOut', {
       display: 'none',
       duration: 200,
       complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
+        jQuery.Velocity(showElement, 'transition.slideDownIn', {
           duration: 200
         });
       }
