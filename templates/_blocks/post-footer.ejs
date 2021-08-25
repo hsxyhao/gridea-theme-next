@@ -1,0 +1,37 @@
+<div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      <%= site.customConfig.bolgername %>
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="<%= post.link %>" title="<%= post.title %>"><%= post.link %></a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    <% for(let i = 0; i < post.tags.length; i++) { %>
+      <a href="<%= post.tags[i].link %>"># <%= post.tags[i].name %></a>
+    <% } %>
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      <% if (post.prevPost) { %>
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="<%= post.prevPost.title %>" href="<%= post.prevPost.link %>"><%= post.prevPost.title %></a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="<%= post.prevPost.title %>" href="<%= post.prevPost.link %>">上一篇</a>
+      <% } %>
+    </div>
+    <div class="nav-next">
+      <% if (post.nextPost) { %>
+        <a class="nav-pc-next" title="<%= post.nextPost.title %>" href="<%= post.nextPost.link %>"><%= post.nextPost.title %></a>
+        <a class="nav-mobile-next" title="<%= post.nextPost.title %>" href="<%= post.nextPost.link %>">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      <% } %>
+    </div>
+  </div>
+</div>

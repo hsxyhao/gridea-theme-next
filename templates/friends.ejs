@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    <%- include('./_blocks/header', {active: true, menu: 'home', link: '/friends'}) %>
+  </div>
+  <div class="main-continer">
+    <% let scheme = site.customConfig.scheme || 'pisces'; %>
+    <div
+      class="section-layout <%= scheme !==''?scheme:'pisces' %> <%= scheme === 'muse' || scheme === 'mist' ?'bg-color':'' %>">
+      <div class="section-layout-wrapper">
+        <%- include('./_blocks/home-sidebar') %>
+        <div class="section-box <%= scheme !==''?scheme:'pisces' %> box-shadow-wrapper">
+          <section class="friends-section bg-color slide-down-in">
+            <div class="firends-box">
+              <h1 class="firends-title" itemprop="name headline"><%= site.customConfig.friendsTitle %></h1>
+              <% if (site.customConfig.friends) { %>
+              <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
+              <a href="<%= site.customConfig.friends[i].siteLink %>" target="_blank">
+                <div class="firends-item">
+                  <img src="<%= site.customConfig.friends[i].siteAvator %>" />
+                  <div class="right">
+                    <div class="top">
+                      <%= site.customConfig.friends[i].siteName %>
+                    </div>
+                    <div class="bottom">
+                      <%= site.customConfig.friends[i].siteDesc %>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <% } %>
+              <% } %>
+            </div>
+            <hr>
+            <div style="text-align:center">
+              <span class="with-love">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span class="language" data-lan="leave-message">留言添加友链</span>
+              <span class="with-love">
+                <i class="fa fa-heart"></i>
+              </span>
+            </div>
+            <hr>
+            <div class="friends-note">
+              <p><strong class="language" data-lan="format">友链格式：</strong></p>
+              <ul>
+                <li><span class="language" data-lan="site-name">网站名称：</span><%= themeConfig.siteName %></li>
+                <li><span class="language" data-lan="site-link">网站地址：</span><a href="<%= themeConfig.domain %>" data-pjax-state=""><%= themeConfig.domain %></a></li>
+                <li><span class="language" data-lan="site-desc">网站描述：</span><%= themeConfig.siteDescription %></li>
+                <li><span class="language" data-lan="site-img">网站头像：</span>
+                  <a href="<%= themeConfig.domain %>/images/avatar.png"><%= themeConfig.domain %>/images/avatar.png</a>
+                </li>
+              </ul>
+            </div>
+            <%- include('./_blocks/comment') %>
+          </section>
+        </div>
+      </div>
+    </div>
+    <%- include('./_blocks/footer') %>
+  </div>
+</body>
+<%- include('./_blocks/after-body') %>
+
+</html>

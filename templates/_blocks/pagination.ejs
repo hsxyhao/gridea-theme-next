@@ -1,0 +1,90 @@
+<% const show = 5; let model = logs % pageSize; let result = Math.floor(logs / pageSize); let pages = model === 0? result : result + 1; let next = pagination.next !== ''? parseInt(pagination.next.split('/')[index]): pages + 1;let current = next - 1; %>
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    <% if (pagination.prev !== '') {%>
+      <li class="pagination-dir">
+        <a href="<%= pagination.prev %>">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    <% }%>
+    <% if(pages <= show) { %>
+      <% for (let i = 0; i < pages; i++) {%>
+        <li class="pagination-li <%= current === i + 1 ?'pagination-active':'' %>">
+            <a href="<%= i == 0? url+'../' :url + (i+1)%>">
+              <%= i+1 %>
+            </a>
+        </li>
+      <% }%>
+    <% } else {%>
+      <!-- 1 2 3 4 ... N -->
+      <% if (current <= 3) {%>
+        <% for (let i = 0; i < 4; i++) {%>
+          <% if (i == 0) {%>
+            <li class="pagination-li <%= current === i + 1?'pagination-active':'' %>">
+              <a href="<%= current === i?'#':'/' %>">1</a>
+            </li>
+          <% } else { %>
+            <li class="pagination-li <%= current === i + 1?'pagination-active':'' %>">
+              <a href="<%= url + (i+1) %>">
+                <%= i+1 %>
+              </a>
+            </li>
+          <% }%>
+        <% }%>
+        <li class="pagination-li">
+          …
+        </li>
+        <li class="pagination-li">
+          <a href="<%= url + pages %>">
+            <%= pages %>
+          </a>
+        </li>
+      <% } else if (current >= pages - 2) {%>
+        <!-- 1 ... N-2 N-1 N-->
+        <li class="pagination-li">
+          <a href="/">1</a>
+        </li>
+        <li class="pagination-li">
+          …
+        </li>
+        <% for (let i = pages - 2; i < pages + 1; i++) {%>
+          <li class="pagination-li <%= current === i?'pagination-active':'' %>">
+            <a href="<%= current === i?'#':url + i %>">
+              <%= i %>
+            </a>
+          </li>
+        <% }%>
+      <% } else {%>
+        <li class="pagination-li">
+          <a href="/">1</a>
+        </li>
+        <li class="pagination-li">
+          …
+        </li>
+        <li class="pagination-li">
+          <a href="<%= url + (current-1) %>"><%= current-1 %></a>
+        </li>
+        <li class="pagination-li pagination-active">
+          <a href="<%= url + current %>"><%= current %></a>
+        </li>
+        <li class="pagination-li">
+          <a href="<%= url + (current+1) %>"><%= current + 1 %></a>
+        </li>
+        <li class="pagination-li">
+          …
+        </li>
+        <li class="pagination-li">
+          <a href="<%= url + pages %>"><%= pages %></a>
+        </li>
+      <% } %>
+    <% } %>
+    <% if (current !== pages) {%>
+      <li class="pagination-dir">
+        <a href="<%= url + next %>">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </li>
+    <% }%>
+  </ul>
+</div>

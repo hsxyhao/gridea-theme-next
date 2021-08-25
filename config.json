@@ -1,0 +1,1219 @@
+{
+  "name": "NexT",
+  "version": "0.4.1",
+  "author": "hsxyhao",
+  "repository": "https://github.com/hsxyhao/gridea-theme-next",
+  "customConfig": [
+    {
+      "label": "相关文档",
+      "group": "布局",
+      "note": "https://yeming.site/post/1JA_OJlig/#布局"
+    },
+    {
+      "name": "scheme",
+      "label": "外观",
+      "group": "布局",
+      "value": "pisces",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Pisces 小家碧玉似的清新",
+          "value": "pisces"
+        },
+        {
+          "label": "Gemini 精于心，简于形",
+          "value": "gemini"
+        },
+        {
+          "label": "Muse 黑白主调，大量留白",
+          "value": "muse"
+        },
+        {
+          "label": "Mist 整洁有序的单栏外观",
+          "value": "mist"
+        }
+      ]
+    },
+    {
+      "name": "subTitle",
+      "label": "子标题",
+      "group": "布局",
+      "value": "精于心，简于形",
+      "type": "input"
+    },
+    {
+      "name": "bolgername",
+      "label": "博主名称",
+      "group": "布局",
+      "value": "我是谁",
+      "type": "input"
+    },
+    {
+      "name": "bolgerjss",
+      "label": "博主介绍",
+      "group": "布局",
+      "type": "input",
+      "value": "",
+      "note": "支持多行写法，使用\\n表示换行，可以在魔改处开启美化功能"
+    },
+    {
+      "name": "cssStr",
+      "label": "自定义css",
+      "group": "布局",
+      "value": "",
+      "type": "textarea",
+      "note": "可以修改主题中的指定元素以及markdown的样式、颜色，需要css基础"
+    },
+    {
+      "name": "viewportWidth",
+      "label": "博客可视区宽度",
+      "group": "布局",
+      "value": "960px",
+      "type": "input",
+      "note": "各Scheme14寸屏左右推荐配置：Pisces 960px,Muse 700px, Mist 85%, Gemini 960px。在Pisces、Gemini风格中博客可视区宽度比文章内容区宽度多250~260px左右，设置了可视区宽度默认改变了内容区宽度"
+    },
+    {
+      "name": "fontSize",
+      "label": "字体大小",
+      "group": "布局",
+      "value": "",
+      "type": "input",
+      "note": "阅读内容区域字体大小，默认14"
+    },
+    {
+      "name": "fontFamily",
+      "label": "字体",
+      "group": "布局",
+      "value": "",
+      "type": "input",
+      "note": "修改字体需要将下载好的ttf文件复制到~/Gridea/themes/next/assets/media/fonts目录下，把文件名写在上面，重新生成即可，若无效联系微信:wx806649821(备注Next)"
+    },
+    {
+      "name": "language",
+      "label": "语言",
+      "group": "布局",
+      "value": "",
+      "type": "select",
+      "options": [
+        {
+          "label": "中文（默认）",
+          "value": ""
+        },
+        {
+          "label": "英文",
+          "value": "en"
+        }
+      ]
+    },
+    {
+      "label": "相关文档",
+      "group": "颜色",
+      "note": "https://yeming.site/post/1JA_OJlig/#颜色"
+    },
+    {
+      "name": "bgColor",
+      "label": "背景色",
+      "group": "颜色",
+      "value": "#eee",
+      "type": "input",
+      "card": "color",
+      "note": "Pisces、Gemini风格默认#eee，Muse、Mist默认#FFF"
+    },
+    {
+      "name": "postSectionBgColor",
+      "label": "主色调",
+      "group": "颜色",
+      "value": "#fff",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "timeLineColor",
+      "label": "归档页时间线线条色",
+      "group": "颜色",
+      "value": "#eee",
+      "type": "input",
+      "card": "color",
+      "note": "标签详情页的时间线也生效"
+    },
+    {
+      "name": "fontColor",
+      "label": "字体颜色",
+      "group": "颜色",
+      "value": "#555",
+      "card": "color",
+      "type": "input",
+      "note": "默认字体颜色"
+    },
+    {
+      "name": "titleColor",
+      "label": "标题颜色",
+      "group": "颜色",
+      "value": "#555",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "linkColor",
+      "label": "链接颜色",
+      "group": "颜色",
+      "value": "#555",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "linkHoverColor",
+      "label": "链接Hover颜色",
+      "group": "颜色",
+      "value": "#222",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "bgSiteMetaColor",
+      "label": "博客标题区域背景色",
+      "group": "颜色",
+      "value": "#000",
+      "type": "input",
+      "card": "color",
+      "note": "默认黑色不透明"
+    },
+    {
+      "name": "bgTitleColor",
+      "label": "博客标题背景色",
+      "group": "颜色",
+      "value": "#000",
+      "type": "input",
+      "card": "color",
+      "note": "默认黑色，不透明，Mist风格不生效"
+    },
+    {
+      "name": "blogTitleColor",
+      "label": "博客标题色",
+      "group": "颜色",
+      "value": "#FFF",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "mobileMenuBtnColor",
+      "label": "移动端菜单按钮颜色",
+      "group": "颜色",
+      "value": "",
+      "type": "input",
+      "card": "color",
+      "note": "兼容主题色，默认为白色"
+    },
+    {
+      "name": "menuColor",
+      "label": "菜单项字体颜色",
+      "group": "颜色",
+      "value": "#555",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "menuHoverColor",
+      "label": "菜单项Hover字体颜色",
+      "group": "颜色",
+      "value": "#222",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "menuActiveColor",
+      "label": "当前菜单项背景颜色",
+      "group": "颜色",
+      "value": "#f9f9f9",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "label": "相关文档",
+      "group": "鼠标",
+      "note": "https://yeming.site/post/1JA_OJlig/#鼠标"
+    },
+    {
+      "name": "mouseClick",
+      "label": "鼠标点击效果",
+      "group": "鼠标",
+      "value": "none",
+      "type": "radio",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "love",
+          "value": "love"
+        },
+        {
+          "label": "peace",
+          "value": "peace"
+        },
+        {
+          "label": "fireworks",
+          "value": "fireworks"
+        }
+      ]
+    },
+    {
+      "name": "cursorDefault",
+      "label": "默认",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorLink",
+      "label": "链接",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorText",
+      "label": "文本",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorCopy",
+      "label": "复制",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorZoomin",
+      "label": "放大",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "cursorZoomout",
+      "label": "缩小",
+      "group": "鼠标",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "label": "相关文档",
+      "group": "特性",
+      "note": "https://yeming.site/post/1JA_OJlig/#特性"
+    },
+    {
+      "name": "seoKeywords",
+      "label": "SEO",
+      "group": "特性",
+      "value": "Gridea静态个人博客",
+      "type": "input",
+      "note": "seo优化关键字"
+    },
+    {
+      "name": "startTime",
+      "label": "创建时间",
+      "group": "特性",
+      "type": "date"
+    },
+    {
+      "name": "menuIcon",
+      "label": "导航菜单图标",
+      "group": "特性",
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "默认",
+          "value": "default"
+        },
+        {
+          "label": "自动",
+          "value": "auto"
+        }
+      ],
+      "note": "无：导航菜单不会添加任何图标，默认：使用默认的图标，无法识别则不使用，自动：使用默认的图标，包含无法识别"
+    },
+    {
+      "name": "imgFillet",
+      "label": "站点预览头像圆角",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "开启会产生头像旋转彩蛋"
+    },
+    {
+      "name": "enableSearch",
+      "label": "站内搜索",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "站内搜索功能"
+    },
+    {
+      "name": "enableMobileImg",
+      "label": "移动端背景图片",
+      "group": "特性",
+      "value": true,
+      "type": "switch",
+      "note": "开启后移动端浏览会对pc端的背景图片进行压缩显示"
+    },
+    {
+      "name": "sideIsRight",
+      "label": "菜单栏右侧显示",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "默认菜单栏在左边显示"
+    },
+    {
+      "name": "newWindow",
+      "label": "文章链接新窗口打开",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "开启后博客内的链接会在新的窗口打开"
+    },
+    {
+      "name": "rss",
+      "label": "RSS",
+      "group": "特性",
+      "value": false,
+      "type": "switch",
+      "note": "建议开启RSS"
+    },
+    {
+      "name": "is_auto_excerpt",
+      "label": "是否启用自动摘要（封面显示策略为无时生效）",
+      "group": "特性",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "auto_excerpt_line",
+      "label": "自动摘要选取行数",
+      "group": "特性",
+      "value": "3",
+      "type": "input"
+    },
+    {
+      "name": "hljs",
+      "label": "代码块高亮主题",
+      "group": "特性",
+      "value": "default",
+      "type": "input",
+      "note": "前往官方地址https://highlightjs.org/，选择合适的高亮主题"
+    },
+    {
+      "name": "latex",
+      "label": "Latex渲染",
+      "group": "特性",
+      "value": "katex",
+      "type": "select",
+      "options": [
+        {
+          "label": "katex",
+          "value": "katex"
+        },
+        {
+          "label": "mathjax",
+          "value": "mathjax"
+        }
+      ],
+      "note": "Latex公式渲染插件"
+    },
+    {
+      "name": "strategy",
+      "label": "封面显示策略",
+      "group": "特性",
+      "value": "none",
+      "type": "select",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "第1段落后",
+          "value": "first"
+        },
+        {
+          "label": "摘要前",
+          "value": "before"
+        },
+        {
+          "label": "摘要后",
+          "value": "after"
+        },
+        {
+          "label": "随机",
+          "value": "random"
+        },
+        {
+          "label": "两百字以后",
+          "value": "words"
+        }
+      ],
+      "note": "多种封面显示策略适配不同种摘要排版"
+    },
+    {
+      "label": "相关文档",
+      "group": "目录",
+      "note": "https://yeming.site/post/1JA_OJlig/#目录"
+    },
+    {
+      "name": "siteBar",
+      "label": "阅读页目录展示方案",
+      "group": "目录",
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "隐藏",
+          "value": "hide"
+        },
+        {
+          "label": "自动",
+          "value": "auto"
+        },
+        {
+          "label": "目录",
+          "value": "toc"
+        },
+        {
+          "label": "站点预览",
+          "value": "sitemeta"
+        }
+      ],
+      "note": "显示：如果有目录则展示，没有什么都展示，隐藏：什么都不展示，自动：主题自动检测，检测到目录结构则展示，否则展示站点概览，站点预览：只显示站点预览"
+    },
+    {
+      "name": "autoNumber",
+      "label": "目录自动序号",
+      "group": "目录",
+      "value": true,
+      "type": "switch",
+      "note": "仅在有目录时生效"
+    },
+    {
+      "name": "indexColor",
+      "label": "目录颜色",
+      "group": "目录",
+      "value": "#eee",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "indexHoverColor",
+      "label": "目录Hover颜色",
+      "group": "目录",
+      "value": "#fff",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "indexActiveColor",
+      "label": "当前目录颜色",
+      "group": "目录",
+      "value": "",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "tocCompress",
+      "label": "目录压缩策略",
+      "group": "目录",
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "不压缩",
+          "value": "no_compress"
+        },
+        {
+          "label": "自动压缩",
+          "value": "auto"
+        },
+        {
+          "label": "压缩",
+          "value": "compress"
+        }
+      ],
+      "note": "超过10个链接则启动压缩，建议启动压缩，目录过长可以进行一定优化"
+    },
+    {
+      "name": "enableReward",
+      "label": "开启文章打赏功能",
+      "group": "赞赏",
+      "value": false,
+      "type": "switch"
+    },
+    {
+      "name": "rewardTitle",
+      "label": "标题",
+      "group": "赞赏",
+      "value": "扫码打赏，你说多少就多少",
+      "type": "input"
+    },
+    {
+      "name": "rewardTip",
+      "label": "提示语",
+      "group": "赞赏",
+      "value": "打开微信扫一扫，即可进行扫码打赏哦",
+      "type": "input"
+    },
+    {
+      "name": "rewardBgColor",
+      "label": "赞赏按钮颜色",
+      "group": "赞赏",
+      "value": "",
+      "type": "input",
+      "card": "color"
+    },
+    {
+      "name": "zfbImg",
+      "label": "支付宝打赏码",
+      "group": "赞赏",
+      "value": "",
+      "type": "picture-upload"
+    },
+    {
+      "name": "zfbImgUrl",
+      "label": "支付宝打赏码链接（兼容windows）",
+      "group": "赞赏",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "wxImg",
+      "label": "微信打赏码",
+      "group": "赞赏",
+      "value": "",
+      "type": "picture-upload"
+    },
+    {
+      "name": "wxImgUrl",
+      "label": "微信打赏码（兼容windows）",
+      "group": "赞赏",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "label": "相关文档",
+      "group": "社交",
+      "note": "https://yeming.site/post/1JA_OJlig/#社交"
+    },
+    {
+      "name": "socials",
+      "label": "链接",
+      "group": "社交",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "名称",
+          "name": "socialName",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "图标",
+          "name": "socialIcon",
+          "type": "input",
+          "value": "fa-globe"
+        },
+        {
+          "label": "链接",
+          "name": "socialLink",
+          "type": "input",
+          "value": ""
+        }
+      ],
+      "note": "常用的社交图标，github：fa-github-alt，twitter：fa-twitter，微信：fa-wechat，QQ：fa-qq，图标采用的是font-awesome矢量字体图标，自定义图标可以从http://www.fontawesome.com.cn上查找"
+    },
+    {
+      "name": "imgSocials",
+      "label": "图片",
+      "group": "社交",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "名称",
+          "name": "socialName",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "图标",
+          "name": "socialIcon",
+          "type": "input",
+          "value": "fa-globe"
+        },
+        {
+          "label": "图片",
+          "name": "socialImg",
+          "type": "picture-upload",
+          "value": ""
+        }
+      ],
+      "note": "QQ、微信类有二维码图片的社交账号，可以在这里添加"
+    },
+    {
+      "label": "相关文档",
+      "group": "友链",
+      "note": "https://yeming.site/post/1JA_OJlig/#友链"
+    },
+    {
+      "name": "enableFriendPage",
+      "label": "自定义友链页面",
+      "group": "友链",
+      "value": true,
+      "type": "switch",
+      "note": "开启后会自动在菜单栏生成一个友链导航，不开启在站点预览下出现友链"
+    },
+    {
+      "name": "friendsTitle",
+      "label": "友链标题",
+      "group": "友链",
+      "value": "友情链接",
+      "type": "input",
+      "note": "自定义友链标题"
+    },
+    {
+      "name": "friendsIcon",
+      "label": "导航图标",
+      "group": "友链",
+      "value": "",
+      "type": "input",
+      "note": "支持emoji图标，默认为fa-ship"
+    },
+    {
+      "name": "friendsTarget",
+      "label": "内部/外部",
+      "group": "友链",
+      "value": "_self",
+      "type": "input",
+      "note": "_blank: 浏览器中打开新的tab页，_self: 当前tab页跳转"
+    },
+    {
+      "name": "friendsIndex",
+      "label": "导航链接位置",
+      "group": "友链",
+      "value": "",
+      "type": "input",
+      "note": "在导航菜单中的排序，默认最后一个"
+    },
+    {
+      "name": "friends",
+      "label": "友链",
+      "group": "友链",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "名称",
+          "name": "siteName",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "链接",
+          "name": "siteLink",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "头像",
+          "name": "siteAvator",
+          "type": "input",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "相关文档",
+      "group": "魔改",
+      "note": "https://yeming.site/post/1JA_OJlig/#魔改"
+    },
+    {
+      "name": "bgImg",
+      "label": "背景图片",
+      "group": "魔改",
+      "value": "",
+      "type": "picture-upload",
+      "note": "博客整体背景图"
+    },
+    {
+      "name": "bgImgUrl",
+      "label": "背景图片地址（兼容windows）",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "目前windows系统使用背景图片请手动填写，上传会造成配置无法保存，具体填写规范README上有介绍"
+    },
+    {
+      "name": "bgEfficty",
+      "label": "背景特效",
+      "group": "魔改",
+      "value": "none",
+      "type": "radio",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "樱花",
+          "value": "sakura"
+        },
+        {
+          "label": "粒子",
+          "value": "nest"
+        },
+        {
+          "label": "雪花",
+          "value": "snowflake"
+        }
+      ]
+    },
+    {
+      "name": "particleClock",
+      "label": "粒子时钟",
+      "group": "魔改",
+      "value": false,
+      "type": "switch"
+    },
+    {
+      "name": "bolgerjsplus",
+      "label": "博主介绍美化",
+      "group": "魔改",
+      "value": false,
+      "type": "switch",
+      "note": "博主介绍美化,默认关闭"
+    },
+    {
+      "name": "loadAnimationStyle",
+      "label": "加载动画样式",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "使用外链或本地地址加载样式，加载颜色兼容next主题色，默认不开启，加载样式地址：https://cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/"
+    },
+    {
+      "name": "opacity",
+      "label": "可视区透明度",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "正常模式下所有标签的透明度，仅数字1~100"
+    },
+    {
+      "name": "radius",
+      "label": "圆角",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "Pisces、Gemini风格下圆角配置"
+    },
+    {
+      "name": "bgTitleFontSize",
+      "label": "站点标题字体大小",
+      "group": "魔改",
+      "value": "",
+      "type": "input",
+      "note": "字体大小采用的是css transform属性，参考值为[1,3]"
+    },
+    {
+      "name": "blur",
+      "label": "背景图片虚化",
+      "group": "魔改",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "leaveTitle",
+      "label": "页面离开提示语",
+      "group": "魔改",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "shadow",
+      "label": "Muse、Mist风格阴影效果",
+      "group": "魔改",
+      "value": false,
+      "type": "switch",
+      "note": "仅Muse风格生效，建议Muse风格中添加标题背景图片时开启"
+    },
+    {
+      "label": "相关文档",
+      "group": "看板娘",
+      "note": "https://yeming.site/post/1JA_OJlig/#看板娘"
+    },
+    {
+      "name": "enableLive2d",
+      "label": "是否开启看板娘",
+      "group": "看板娘",
+      "value": false,
+      "type": "switch"
+    },
+    {
+      "name": "enableLive2dSocial",
+      "label": "是否开启社交",
+      "group": "看板娘",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "chooseLive2d",
+      "label": "选择看板娘",
+      "group": "看板娘",
+      "value": "auto",
+      "type": "radio",
+      "options": [
+        {
+          "label": "伊斯特瓦尔",
+          "value": "histoire"
+        },
+        {
+          "label": "蕾姆",
+          "value": "rem"
+        },
+        {
+          "label": "凉风青叶",
+          "value": "aoba"
+        },
+        {
+          "label": "小黑",
+          "value": "hijiki"
+        },
+        {
+          "label": "小白",
+          "value": "tororo"
+        }
+      ]
+    },
+    {
+      "name": "apiKey",
+      "label": "apiKey",
+      "group": "看板娘",
+      "value": "",
+      "type": "input",
+      "note": "图灵机器人秘钥"
+    },
+    {
+      "name": "scale",
+      "label": "看板娘大小",
+      "group": "看板娘",
+      "value": "",
+      "type": "input",
+      "note": "建议值[0,1]"
+    },
+    {
+      "name": "live2dLeft",
+      "label": "看板娘距左边距离",
+      "group": "看板娘",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "live2dBottom",
+      "label": "看板娘距底部距离",
+      "group": "看板娘",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "musicLinks",
+      "label": "看板娘音乐",
+      "group": "看板娘",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "音乐名",
+          "name": "musicName",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "链接",
+          "name": "musicLink",
+          "type": "input",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "相关文档",
+      "group": "音乐",
+      "note": "https://yeming.site/post/1JA_OJlig/#音乐"
+    },
+    {
+      "name": "bgMusic",
+      "label": "音乐插件",
+      "group": "音乐",
+      "value": "none",
+      "type": "radio",
+      "options": [
+        {
+          "label": "无",
+          "value": "none"
+        },
+        {
+          "label": "Aplayer",
+          "value": "aplayer"
+        },
+        {
+          "label": "Hkplayer",
+          "value": "Hkplayer"
+        },
+        {
+          "label": "歌单外链",
+          "value": "iframeLinks"
+        }
+      ],
+      "note": "建议看板娘的背景音乐和APlayer只开启一个"
+    },
+    {
+      "name": "iframeHtml",
+      "label": "外链",
+      "group": "音乐",
+      "value": "",
+      "type": "textarea",
+      "note": ""
+    },
+    {
+      "name": "aplayerList",
+      "label": "播放列表",
+      "group": "音乐",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "音乐名",
+          "name": "musicName",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "艺术家",
+          "name": "author",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "资源",
+          "name": "musicLink",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "封面",
+          "name": "cover",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "歌词",
+          "name": "lrc",
+          "type": "input",
+          "value": ""
+        }
+      ],
+      "note": "歌词歌曲为网络资源，不太好找，谨慎使用"
+    },
+    {
+      "label": "相关文档",
+      "group": "评论",
+      "note": "https://yeming.site/post/1JA_OJlig/#评论"
+    },
+    {
+      "name": "valine",
+      "label": "Valine启用",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "启用后会覆盖gridea自带的评论,获取appID和appKey请看 https://valine.js.org/quickstart.html"
+    },
+    {
+      "name": "appID",
+      "label": "AppID",
+      "group": "评论",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "appKey",
+      "label": "AppKey",
+      "group": "评论",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "placeholder",
+      "label": "评论框占位提示符",
+      "group": "评论",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "valineimage",
+      "label": "评论框背景图",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "支持图片外链以及本地图片,使用方法与背景图片设置方法一致"
+    },
+    {
+      "name": "avatar",
+      "label": "封面头像",
+      "group": "评论",
+      "type": "select",
+      "value": "",
+      "options": [
+        {
+          "label": "自定义图像",
+          "value": "custom"
+        },
+        {
+          "label": "Gravatar官方图形",
+          "value": ""
+        },
+        {
+          "label": "神秘人(一个灰白头像)",
+          "value": "mp"
+        },
+        {
+          "label": "抽象几何图形",
+          "value": "identicon"
+        },
+        {
+          "label": "小怪物",
+          "value": "monsterid"
+        },
+        {
+          "label": "用不同面孔和背景组合生成的头像",
+          "value": "wavatar"
+        },
+        {
+          "label": "八位像素复古头像",
+          "value": "retro"
+        },
+        {
+          "label": "一种具有不同颜色、面部等的机器人",
+          "value": "robohash"
+        },
+        {
+          "label": "不显示头像",
+          "value": "hide"
+        }
+      ],
+      "note": "自定义头像为Gravatar的头像，需要自己上传，上面的头像具体对应的图像移步：https://valine.js.org/avatar.html"
+    },
+    {
+      "name": "pageSize",
+      "label": "评论分页",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "评论列表分页，每页条数，默认不分页"
+    },
+    {
+      "name": "lang",
+      "label": "多语言",
+      "group": "评论",
+      "type": "select",
+      "value": "zh-cn",
+      "options": [
+        {
+          "label": "zh-cn",
+          "value": "zh-cn"
+        },
+        {
+          "label": "en",
+          "value": "en"
+        },
+        {
+          "label": "ja",
+          "value": "ja"
+        }
+      ],
+      "note": "多语言支持，可选值：zh-cn，en，ja"
+    },
+    {
+      "name": "visitor",
+      "label": "来访",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "文章访问量统计"
+    },
+    {
+      "name": "highlight",
+      "label": "高亮",
+      "group": "评论",
+      "value": true,
+      "type": "switch",
+      "note": "代码高亮，默认开启，若不需要，请手动关闭"
+    },
+    {
+      "name": "enableQQ",
+      "label": "QQ",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "是否启用昵称框自动获取QQ昵称和QQ头像, 默认关闭"
+    },
+    {
+      "name": "avatarForce",
+      "label": "评论列表头像",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "每次访问强制拉取最新的评论列表头像，不推荐设置为true，目前的评论列表头像会自动带上Valine的版本号"
+    },
+    {
+      "label": "相关文档",
+      "group": "CDN",
+      "note": "https://yeming.site/post/1JA_OJlig/#CDN"
+    },
+    {
+      "name": "cdn",
+      "label": "地址",
+      "group": "CDN",
+      "value": "",
+      "type": "input",
+      "note": "只包含主题的静态资源，博客文章部分的静态资源（图片）需要手动引用"
+    },
+    {
+      "label": "相关文档",
+      "group": "跟踪",
+      "note": "https://yeming.site/post/1JA_OJlig/#跟踪"
+    },
+    {
+      "name": "ga",
+      "label": "谷歌分析",
+      "group": "跟踪",
+      "value": "",
+      "type": "input",
+      "note": "UA-xxxxxxxx-1"
+    },
+    {
+      "name": "bd",
+      "label": "百度分析",
+      "group": "跟踪",
+      "value": "",
+      "type": "input",
+      "note": "xxxxxx32e97exxx0605fcc44xxxxxxx"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+.archive-wrapper {
+  background-color: #FFF;
+}
+
+.archive-timeline-box {
+  margin-left: 55px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.archive-timeline-box::after {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  margin-left: -2px;
+  width: 4px;
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.archive-timeline-title {
+  position: relative;
+}
+
+.archive-timeline-title::before {
+  position: absolute;
+  content: " ";
+  top: 8px;
+  left: 0;
+  margin-left: -6px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+  background: #555;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.archive-timeline-title h2 {
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 0px;
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+.node-title {
+  position: relative;
+}
+
+.node-title::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.node-title h2 {
+  font-size: 20px;
+  line-height: 2;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.archive-timeline-box .tag-node {
+  margin: 30px 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: border;
+  border-bottom: 1px dashed #ccc;
+}
+
+.motion-warpper {
+  position: relative;
+  z-index: 1000;
+}
+
+.tag-year {
+  opacity: 0;
+}
+
+.tag-archive-node {
+  opacity: 0;
+}
+
+.archive-timeline-box .tag-node::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background-color: #bbb;
+  border: 1px solid #fff;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: background;
+  z-index: 1000;
+}
+
+
+.archive-timeline-box h1 {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: inherit;
+  margin: 0 20px;
+  color: inherit;
+}
+
+.archive-timeline-box h1 > small {
+  font-size: 16px;
+}
+
+.archive-timeline-box .tag-node:hover {
+  border-bottom-color: inherit;
+}
+
+
+@media (max-width: 767px) {
+  .archive-timeline-box {
+    margin-left: 0px;
+  }
+
+  .archive-timeline-box::after {
+    content: none;
+  }
+
+  .archive-timeline-title::before {
+    content: none;
+  }
+
+  .node-title::before {
+    content: none;
+  }
+
+  .archive-timeline-box .tag-node::before {
+    content: none;
+  }
+  .archive-timeline-box h1 {
+    max-width: 760px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

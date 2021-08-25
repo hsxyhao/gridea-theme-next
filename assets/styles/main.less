@@ -1,0 +1,167 @@
+@import './abstracts/varibles';
+
+*{
+  margin: 0;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+  font-size: 58%;
+  font-family: sans-serif; 
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 15px;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+body {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 14px;
+  line-height: 2;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+blockquote {
+  color: #9a9a9a;
+  margin: 0;
+  padding: 0 15px;
+  border-left: 4px solid #c5c5c5;
+}
+
+#canvas {
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  z-index: -99999;
+  position: fixed;
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+}
+
+// aplayer兼容
+.aplayer-title, .aplayer-list-title {
+  color: #000;
+}
+
+.light-box {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  width: 100%; 
+  left: 0px; 
+  top: 0px; 
+  transition: opacity 300ms ease-in-out 0s; 
+  z-index: 99999;
+}
+
+.light-box img {
+  width: 0;
+  transition: width 1000ms ease-in-out 0s;
+}
+
+.post-body {
+  overflow: hidden;
+}
+
+.post-body img {
+  cursor: zoom-in;
+}
+.post-body pre {
+  position: relative;
+}
+
+pre > span.copy-code {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  line-height: 1;
+  color: hsla(0,0%,54.9%,.8);
+  transition: color .1s;
+  user-select: none;
+}
+
+pre > span.copy-code:hover {
+  color: #FFF;
+}
+
+.nav-item .fa {
+  width: 16px;
+  text-align: center;
+}
+
+// 兼容
+.MathJax{
+  outline:0;
+}
+
+.MathJax_Display {
+  overflow-x:auto;
+  overflow-y:hidden !important;
+}
+
+p > code {
+  line-height: normal;
+  word-wrap: break-word;
+  border-radius: 0;
+  background-color: #fff5f5;
+  color: #c53030;
+  padding: .2em .33333333em;
+  font-size: .875rem;
+  margin-left: .125em;
+  margin-right: .125em;
+}
+
+/*雪花*/
+.snow-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100001; }
+
+@import './_core/common.less';
+@import './_blocks/footer.less';
+@import './_blocks/friends.less';
+@import './_blocks/section.less';
+@import './_blocks/pagination.less';
+@import './_blocks/post-list.less';
+@import './_blocks/title.less';
+@import './_blocks/post.less';
+@import './_blocks/post-sidebar.less';
+@import './_blocks/cloud-tags.less';
+@import './_blocks/tag-timeline.less';
+@import './_blocks/archive-timeline.less';
+@import './_blocks/toc.less';
+@import './_blocks/search.less';
+@import './_core/markdown.less';

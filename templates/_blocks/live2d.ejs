@@ -1,0 +1,47 @@
+<% let left = site.customConfig.live2dLeft || 5, bottom = site.customConfig.live2dBottom %>
+<link rel="stylesheet" href="<%= site.customConfig.cdn %>/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="<%= 'left: ' +left+ 'px;bottom: ' + bottom + 'px;' %>"
+    data-key="<%= site.customConfig.apiKey %>">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <% if (site.customConfig.enableLive2dSocial) { %>
+
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <% if (site.customConfig.enableLive2d && site.customConfig.musicLinks.length) { %>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <% } %>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        <% for(let i = 0; i < site.customConfig.musicLinks.length; i++ ) { %>
+        <input name="live2dBGM" value="<%= site.customConfig.musicLinks[i].musicLink %>" type="hidden">
+        <% } %>
+      </div>
+    <% } %>
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="<%= site.customConfig.cdn %>/media/live2d/js/live2d.js"></script>
+<%- include('../_blocks/message') %>

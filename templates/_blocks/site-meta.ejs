@@ -1,0 +1,100 @@
+<% let scheme = site.customConfig.scheme || 'pisces'; %>
+<div class="sidebar-wrapper box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %>">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="<%= site.customConfig.cdn %>/images/avatar.png"/>
+    <p class="site-author-name"><%= site.customConfig.bolgername %></p>
+    <% if (site.customConfig.bolgerjss && site.customConfig.bolgerjss !== '') { %>
+    <div class="site-description right-motion">
+      <% if (!site.customConfig.bolgerjsplus) { %>
+      <%let texts = site.customConfig.bolgerjss.split('\\n');%>
+      <% for (let i = 0; i < texts.length; i++) { %>
+        <p><%= texts[i] %></p>
+      <% } %>
+      <% } else { %>
+        <p id="binft"><%= site.customConfig.bolgerjss %></p>
+      <% } %>
+    </div>
+    <% } %>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
+        <span class="site-item-stat-count"><%= articles %></span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count"><%= site.tags.length %></span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count"><%= site.tags.length %></span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  <% if (scheme !== 'muse' && scheme !== 'mist') { %>
+    <% if(site.customConfig.rss) { %>
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="<%= themeConfig.domain %>/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    <% } %>
+  <% } %>
+  <% if ((site.customConfig.socials && site.customConfig.socials.length > 0) || (site.customConfig.imgSocials  && site.customConfig.imgSocials.length > 0)) { %>
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        <% if (site.customConfig.socials && site.customConfig.socials.length) { %>
+          <% for(let i = 0; i < site.customConfig.socials.length; i++) { %>
+            <a href="<%= site.customConfig.socials[i].socialLink %>">
+              <i class="fa <%= site.customConfig.socials[i].socialIcon %>" title="<%= site.customConfig.socials[i].socialName %>"></i>
+            </a>
+          <% } %>
+        <% } %>
+        <% if (site.customConfig.imgSocials && site.customConfig.imgSocials.length) { %>
+          <% for(let i = 0; i < site.customConfig.imgSocials.length; i++) { %>
+            <a class="social-img" href="#">
+              <img src="<%= site.customConfig.cdn %><%= site.customConfig.imgSocials[i].socialImg %>" />
+              <i class="fa <%= site.customConfig.imgSocials[i].socialIcon %>" title="<%= site.customConfig.imgSocials[i].socialName %>" ></i>
+            </a>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+  <% } %>
+<% if (!site.customConfig.enableFriendPage) { %>
+  <% if (site.customConfig.friends && site.customConfig.friends.length > 0) { %>
+    <div class="sidebar-item right-motion sidebar-item-friends">
+      <% if (site.customConfig.friendsIcon && site.customConfig.friendsIcon !== '') { %>
+        <p class="friends-title"><%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %></p>
+      <% } else { %>
+        <p class="friends-title"><i class="fa fa-ship"></i> <%= site.customConfig.friendsTitle %></p>
+      <% } %>
+      <div class="friends-box">
+        <% for (let i = 0; i < site.customConfig.friends.length; i++) {%>
+          <p>
+            <a href="<%= site.customConfig.friends[i].siteLink %>"><%= site.customConfig.friends[i].siteName %></a>
+          </p>
+        <% } %>
+      </div>
+    </div>
+  <% } %>
+<% } %>
+<% if (site.customConfig.bgMusic !== 'none' && site.customConfig.bgMusic === 'iframeLinks') { %>
+  <div class="sidebar-item">
+    <%- site.customConfig.iframeHtml %>
+  </div>
+<% } %>
+<% if ((scheme == 'gemini' || scheme == 'pisces') && site.customConfig.particleClock) { %>
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="<%= site.customConfig.cdn %>/media/js/magic/clock.js"></script>
+  </div>
+<% } %>
+</div>

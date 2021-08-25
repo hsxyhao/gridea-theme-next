@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    <%- include('./_blocks/header', {active: true, menu: 'home', link: '/'}) %>
+  </div>
+  <div class="main-continer">
+    <% let scheme = site.customConfig.scheme || 'pisces' %>
+    <div
+      class="section-layout <%= scheme !== '' ?scheme:'pisces' %> <%= scheme === 'muse' || scheme === 'mist' ?'bg-color':'' %>">
+      <div class="section-layout-wrapper">
+        <%- include('./_blocks/home-sidebar') %>
+        <div class="section-box <%= scheme !==''?scheme:'pisces' %>">
+          <section class="section <%= scheme === 'gemini'?'':'bg-color' %> posts-expand slide-down-in">
+            <%- include('./_blocks/post-list') %>
+            <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
+            <%- include('./_blocks/pagination', { logs: articles, pageSize: themeConfig.postPageSize, url: '/page/', index: 4}) %>
+          </section>
+        </div>
+      </div>
+    </div>
+    <%- include('./_blocks/footer') %>
+  </div>
+</body>
+<%- include('./_blocks/after-body') %>
+
+</html>

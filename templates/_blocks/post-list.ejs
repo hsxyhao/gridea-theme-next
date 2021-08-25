@@ -1,0 +1,85 @@
+<% posts.forEach(function(post) { %>
+  <article class="post-list-box <%= site.customConfig.scheme === 'muse'?'bg-color':''%> post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <%- include('../_blocks/title', { title: post.title, tags: post.tags, link: post.link, dateFormat: post.dateFormat, date: post.date, stats: post.stats, isTop: post.isTop, browse: false }) %>
+      <div class="post-body">
+        <% let cdn = site.customConfig.cdn + '/post-images', imgPrefix = post.feature.split('post-images')[1], imgUrl = imgPrefix ? cdn + imgPrefix : post.feature;  %>
+        <% if (site.customConfig.strategy === 'none') { %>
+          <% if (post.abstract) { %>
+            <%- post.abstract %>
+          <% } else if (site.customConfig.is_auto_excerpt) { %>
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            <% var br_position = 0 %>
+            <% for (var br_count = 0; br_count < site.customConfig.auto_excerpt_line; br_count++) { %>
+              <% br_position_tmp = post.content.indexOf('\n',br_position + 1) %>
+              <% if(br_position_tmp < 0) { break } %>
+              <% br_position = br_position_tmp %>
+            <% } %>
+            <% if(br_position > 0) { %>
+              <p><%- post.content.substring(0, br_position + 1) %>
+                <% if(post.content.substring(0, br_position + 1).indexOf("<code") > 0) { %>
+                  <!-- 自动摘要出来的内容有<code则补上结尾,防止格式错误 -->
+                  </code></pre>
+                <% } %>
+              <p>
+            <% } %>
+          <% } %>
+        <% } else if (site.customConfig.strategy === 'first') { %>
+          <% let paragraph = post.abstract && post.abstract.split('<p>');%>
+          <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
+            <%- '<p>' + paragraph[i] %>
+            <% if (i === 1 && post.feature) {%>
+              <img src="<%= imgUrl %>" />
+            <% } %>
+          <% } %>
+        <% } else if (site.customConfig.strategy === 'before') {%>
+          <% if (post.feature) { %>
+            <img src="<%= imgUrl %>" />
+          <% } %>
+          <%- post.abstract %>
+        <% } else if (site.customConfig.strategy === 'after') {%>
+          <%- post.abstract %>
+          <% if (post.feature) {%>
+            <img src="<%= imgUrl %>" />
+          <% } %>
+        <% } else if (site.customConfig.strategy === 'random') {%>
+          <% let paragraph = post.abstract && post.abstract.split('<p>');let r = Math.floor(Math.random() * 10) % paragraph.length;%>
+          <% let content = ''; for (let i = 0; i < paragraph.length; i++) { %>
+            <%- '<p>' + paragraph[i]%>
+            <% if (i === r && post.feature) {%>
+              <img src="<%= imgUrl %>" />
+            <% } %>
+          <% } %>
+        <% } else if (site.customConfig.strategy === 'words') {%>
+          <% let paragraph = post.abstract && post.abstract.split('<p>'); %>
+          <% let words = 0; let has = false; for (let i = 0; i < paragraph.length; i++) { %>
+            <%- '<p>' + paragraph[i]%>
+            <%- post.featurec %>
+            <% words +=paragraph[i].length; %>
+            <% if (!has && words > 200 && post.feature) {%>
+              <img src="<%= imgUrl %>"/>
+              <% has = true; %>
+            <% } %>
+          <% } %>
+          <% if (!has && post.feature) {%>
+            <img src="<%= imgUrl %>"/>
+          <% } %>
+        <% } else {%>
+          <%- post.abstract %>
+        <% } %>
+        <% if (post.content.length - post.abstract.length !== 14) { %>
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="<%= post.link %>" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        <% } %>
+      </div>
+      <% if (site.customConfig.scheme !== 'gemini') { %>
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      <% } %>
+    </div>
+  </article>
+<% }); %>  

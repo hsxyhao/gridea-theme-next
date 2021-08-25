@@ -1,0 +1,60 @@
+<section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="<%= link %>">
+      <%= title %>
+    </a>
+  </h1>
+  <div class="post-meta">
+    <% if (isTop) { %>
+    <span class="meta-item">
+      <i class="fa fa-thumb-tack"></i>
+      <span class="language" data-lan="top">置顶</span>
+      <span class="post-meta-divider">|</span>
+    </span>
+    <% } %>
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="<%= date %>"><%= dateFormat %></span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    <%if (tags && tags.length > 0) { %>
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      <% for(let i = 0; i < tags.length; i ++) { %>
+      <%if (i === tags.length - 1) { %>
+      <a href="<%= tags[i].link %>">
+        <span><%= tags[i].name %></span>
+      </a>
+      <% } else { %>
+      <a href="<%= tags[i].link %>">
+        <span><%= tags[i].name %></span>
+      </a>、
+      <% } %>
+      <% } %>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <% } %>
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span><%= stats.minutes %><span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span><%= stats.words %><span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    <% if (browse) { %>
+    <% let url = link && link.replace('http://', '').replace('https://', ''); let postId = url && url.substr(url.indexOf('/')) || url; %>
+    <% if (postId.lastIndexOf('/') !== postId.length-1) { %>
+    <% postId = postId + '/' %>
+    <% } %>
+    <span id="<%= postId %>" data-flag-title="<%= title %>" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    <% } %>
+  </div>
+</section>

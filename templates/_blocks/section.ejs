@@ -1,0 +1,12 @@
+<% let scheme = site.customConfig.scheme || 'pisces'; %>
+<div class="section-layout <%= scheme !==''?scheme:'pisces' %>">
+  <div class="section-layout-wrapper">
+    <%- include('./home-sidebar') %>
+    <div class="section-box">
+      <section class="section posts-expand">
+        <%- include('./abstract') %>
+        <%- include('./pagination') %>
+      </section>
+    </div>
+  </div>
+</div>

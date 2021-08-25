@@ -1,0 +1,126 @@
+<% let scheme = site.customConfig.scheme || 'pisces'; 
+let map = new Map(); 
+map.set('/','home'); 
+map.set('/archives', 'archive'); 
+map.set('/tags','tags');
+map.set('/post/about','user');
+map.set('/post/skin-update','info-circle'); %>
+<div class="<%= scheme !==''?scheme:'pisces' %>">
+  <header class="header <%= scheme === 'mist' || scheme === 'muse'?'bg-color':''%> ">
+    <div class="blog-header box-shadow-wrapper <%= scheme === 'gemini' || scheme === 'pisces'?'bg-color':''%> " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          <% if (scheme === 'mist') {%>
+            <a href="/" class="">
+              <span class="logo-line-before">
+                <i class=""></i>
+              </span>
+              <span class="main-title"><%= themeConfig.siteName %></span>
+              <span class="logo-line-after">
+                <i class=""></i>
+              </span>
+            </a>  
+          <% } else {%>
+            <a href="/" class="brand">
+              <span><%= themeConfig.siteName %></span>
+            </a>  
+          <% } %>
+        </div>
+        <% if (scheme !== 'mist' && site.customConfig.subTitle) {%>
+          <p class="subtitle"><%= site.customConfig.subTitle %></p>
+        <% } %>
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          <% for (let i=0; i < menus.length; i++) { %>
+            <% let menu = menus[i]; %>
+            <% if (site.customConfig.enableFriendPage) { %>
+              <% if (site.customConfig.friendsIndex-1 === i) { %>
+                <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
+                  <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
+                    <% if (site.customConfig.friendsIcon) { %>
+                      <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
+                    <% } else { %>
+                      <i class="fa fa-address-book"></i><%= site.customConfig.friendsTitle %>
+                    <% } %>
+                  </a>
+                </li>
+              <% } %>
+            <% } %>
+            <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
+              <% let target = menu.openType === 'External'?'_blank':'_self'; let href = menu.link === '/' ? '/': menu.link + '/' %>
+              <% if (site.customConfig.menuIcon === 'default') { %>
+                <% if (map.get(menu.link)) { %>
+                  <a href="<%= href %>" target="<%= target %>">
+                    <i class="fa fa-<%= map.get(menu.link) %>"></i> <%= menu.name %>
+                  </a>
+                <% } else { %>
+                  <a href="<%= href %>" target="<%= target %>">
+                    <%= menu.name %>
+                  </a>
+                <% } %>
+              <% } else if (site.customConfig.menuIcon === 'none') { %>
+                <a href="<%= href %>" target="<%= target %>">
+                  <%= menu.name %>
+                </a>
+              <% } else { %>
+                <a href="<%= href %>" target="<%= target %>">
+                  <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
+                </a>
+              <% } %>
+            </li>
+          <% } %>
+          <% if (site.customConfig.enableFriendPage) { %>
+            <% if (!site.customConfig.friendsIndex || site.customConfig.friendsIndex === '' || site.customConfig.friendsIndex-1 >= menus.length) { %>
+              <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
+                <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
+                  <% if (site.customConfig.friendsIcon) { %>
+                    <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
+                  <% } else { %>
+                    <i class="fa fa-address-book"></i> <%= site.customConfig.friendsTitle %>
+                  <% } %>
+                </a>
+              </li>
+            <% } %>
+          <% } %>
+          <% if (site.customConfig.enableSearch) { %>
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>

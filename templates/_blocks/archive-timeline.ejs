@@ -1,0 +1,33 @@
+<% let lastTime = ''; %>
+<% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
+<div class="bg-color">
+  <div class="archive-timeline-box">
+    <div class="archive-timeline-title">
+      <% if (site.posts.length > 0) {%>
+        <h2 class="language" data-lan="archives" data-count="<%= articles %>">非常好！目前共计<%= articles %>篇日志，继续努力！</h2>
+      <% } else { %>
+        <h2 class="language" data-lan="no-archives">您目前还没有记录日志哟~~~</h2>
+      <% } %>
+    </div>
+    <% for(let i = 0; i < posts.length; i++) {%>
+      <% let key = posts[i].dateFormat.substring(0, 4) %>
+      <% if (lastTime !== key) { %>
+        <div class="node-title">
+          <h2 class="tag-year"><%= key %></h2>
+        </div>    
+        <% lastTime = key %>
+      <% } %>
+      <a href="<%= posts[i].link %>">
+        <div class="motion-warpper tag-archive-node">
+          <div class="tag-node">
+            <h1>
+              <%= posts[i].dateFormat.substring(5)%>
+              <small><%= posts[i].title%></small>
+            </h1>
+          </div>  
+      </div>
+      </a>
+    <% }%>
+  </div>
+  <%- include('./pagination', { logs: articles, pageSize: themeConfig.archivesPageSize, url: '/archives/page/', index: 5}) %>
+</div>

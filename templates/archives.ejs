@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+  <meta name="description" content="<%= themeConfig.siteDescription %>">
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    <%- include('./_blocks/header', {active: true, menu: 'archives', link: '/archives'}) %>
+  </div>
+  <div class="main-continer">
+    <% let scheme = site.customConfig.scheme || 'pisces'; %>
+    <div
+      class="section-layout <%= (scheme === 'muse' || scheme === 'mist')?'bg-color':'' %> <%= scheme !==''?scheme:'pisces' %>">
+      <div class="section-layout-wrapper">
+        <%- include('./_blocks/home-sidebar') %>
+        <div class="section-box box-shadow-wrapper">
+          <section class="section archives-section bg-color posts-expand">
+            <%- include('./_blocks/archive-timeline') %>
+          </section>
+        </div>
+      </div>
+    </div>
+    <%- include('./_blocks/footer') %>
+  </div>
+</body>
+<%- include('./_blocks/after-body') %>
+
+</html>

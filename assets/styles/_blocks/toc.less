@@ -1,0 +1,67 @@
+.markdownIt-TOC ul {
+  display: none;
+}
+
+.expanded ul{
+  padding: 0 2px 5px 10px;
+  display: block;
+}
+
+.closed ul{
+  padding: 0 2px 5px 10px;
+  display: none;
+}
+
+.toc-wrapper a {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: all;
+  border-bottom: 1px solid #ccc;
+}
+
+.toc-active {
+  opacity: 1;
+}
+
+.markdownIt-TOC {
+  margin: 0;
+  padding: 0 2px 5px 20px;
+  text-align: left;
+  list-style: none;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.markdownIt-TOC::-webkit-scrollbar {
+  display: none;
+}
+
+.markdownIt-TOC .active-show > ul{
+  display: block;
+}
+
+.toc-wrapper .active-hidden > ul{
+  display: block;
+}
+
+.markdownIt-TOC li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.8;
+}
+
+
+@media (max-width: 961px) and (min-width: 768px) {
+  .toc-box {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .toc-box {
+    display: none;
+  }
+}
