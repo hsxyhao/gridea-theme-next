@@ -4,9 +4,9 @@
   <div class="archive-timeline-box">
     <div class="archive-timeline-title">
       <% if (site.posts.length > 0) {%>
-        <h2 class="language" data-lan="archives" data-count="<%= articles %>">非常好！目前共计<%= articles %>篇日志，继续努力！</h2>
+        <h2 class="language" data-lan="archives" data-count="<%= articles %>">非常好！目前共计<%= articles %>篇文章，继续努力！</h2>
       <% } else { %>
-        <h2 class="language" data-lan="no-archives">您目前还没有记录日志哟~~~</h2>
+        <h2 class="language" data-lan="no-archives">您目前还没有文章哟~~~</h2>
       <% } %>
     </div>
     <% for(let i = 0; i < posts.length; i++) {%>

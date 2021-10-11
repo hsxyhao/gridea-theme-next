@@ -3,7 +3,9 @@
 }
 
 .box-shadow-wrapper {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
 }
 
 .tags-section {
@@ -18,7 +20,7 @@
 
 .site-nav {
   padding: 20px 0;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 .nav-item {
@@ -47,10 +49,10 @@
   height: 2px;
   background-color: rgb(206, 204, 204);
   border-radius: 1px;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
-.nav-toggle:hover .line{
+.nav-toggle:hover .line {
   background-color: #fff;
 }
 
@@ -73,7 +75,7 @@
   opacity: 0;
 }
 
-.line+.line {
+.line + .line {
   margin-top: 4px;
 }
 
@@ -95,11 +97,11 @@
   position: relative;
   top: -10px;
   opacity: 0;
-  color: #EEE;
+  color: #eee;
 }
 
 .brand:hover {
-  color: #FFF;
+  color: #fff;
 }
 
 .sidebar-wrapper {
@@ -119,7 +121,7 @@
   margin: 0 auto;
   padding: 2px;
   height: auto;
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid #eee;
 }
 
@@ -132,14 +134,14 @@
 }
 
 .gemini .post {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .gemini .section {
   width: auto;
 }
 
-.gemini .section-box{
+.gemini .section-box {
   box-sizing: border-box;
   width: calc(100% - 252px);
   min-height: 700px;
@@ -187,7 +189,7 @@
   line-height: 36px;
   font-size: 24px;
   font-weight: normal;
-  font-family: 'Rosario', 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "Rosario", "Monda", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .gemini .site-meta {
@@ -204,7 +206,6 @@
   font-weight: initial;
   margin-top: 10px;
   font-size: 13px;
-  color: #ddd;
 }
 
 .gemini .nav-item-active a:after {
@@ -243,7 +244,6 @@
 }
 
 @media (max-width: 767px) {
-
   .main-continer {
     width: auto !important;
   }
@@ -270,11 +270,9 @@
     margin: 0;
     overflow: hidden;
   }
-
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-
   .gemini .post {
     margin-bottom: 1px;
   }
@@ -316,7 +314,6 @@
 }
 
 @media (max-width: 767px) {
-
   .main-continer {
     width: auto;
   }
@@ -346,7 +343,7 @@
   .gemini .blog-header {
     overflow: hidden;
   }
-  
+
   .header {
     width: auto !important;
   }
