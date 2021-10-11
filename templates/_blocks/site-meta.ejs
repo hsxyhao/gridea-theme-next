@@ -1,7 +1,7 @@
 <% let scheme = site.customConfig.scheme || 'pisces'; %>
 <div class="sidebar-wrapper box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %>">
   <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="<%= site.customConfig.cdn %>/images/avatar.png"/>
+    <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/YuZhangWang/Creative_pictures01@main/img/20210907012640.png"/>
     <p class="site-author-name"><%= site.customConfig.bolgername %></p>
     <% if (site.customConfig.bolgerjss && site.customConfig.bolgerjss !== '') { %>
     <div class="site-description right-motion">
@@ -22,12 +22,6 @@
         <% let articles = 0; site.posts.forEach(function(post) { if (!post.hideInList) articles++;});%>
         <span class="site-item-stat-count"><%= articles %></span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count"><%= site.tags.length %></span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">

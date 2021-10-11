@@ -154,7 +154,6 @@ const generateOverride = (params) => {
     
     .next-md-body a, .friends-box a  {
       color: ${params.linkColor};
-      border-bottom: 1px solid ${params.linkColor};
     }`
   }
 
@@ -383,7 +382,7 @@ const generateOverride = (params) => {
     let color = params.bgSiteMetaColor;
     result += `
     .site-meta {
-      background: ${color} !important;
+     
     }
     .head-top-line {
       background: ${color};
@@ -458,7 +457,7 @@ const generateOverride = (params) => {
     let color = toHexColor(params.bgTitleColor, ratio);
     result += `
     .brand {
-      background: ${color};
+  
     }
     `
   } else {

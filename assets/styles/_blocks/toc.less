@@ -2,12 +2,12 @@
   display: none;
 }
 
-.expanded ul{
+.expanded ul {
   padding: 0 2px 5px 10px;
   display: block;
 }
 
-.closed ul{
+.closed ul {
   padding: 0 2px 5px 10px;
   display: none;
 }
@@ -17,7 +17,7 @@
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
 }
 
 .toc-active {
@@ -38,21 +38,19 @@
   display: none;
 }
 
-.markdownIt-TOC .active-show > ul{
+.markdownIt-TOC .active-show > ul {
   display: block;
 }
 
-.toc-wrapper .active-hidden > ul{
+.toc-wrapper .active-hidden > ul {
   display: block;
 }
 
 .markdownIt-TOC li {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   line-height: 1.8;
 }
-
 
 @media (max-width: 961px) and (min-width: 768px) {
   .toc-box {

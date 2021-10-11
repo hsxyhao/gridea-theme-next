@@ -498,7 +498,7 @@
       "name": "autoNumber",
       "label": "目录自动序号",
       "group": "目录",
-      "value": true,
+      "value": false,
       "type": "switch",
       "note": "仅在有目录时生效"
     },
@@ -552,7 +552,7 @@
       "name": "enableReward",
       "label": "开启文章打赏功能",
       "group": "赞赏",
-      "value": false,
+      "value": true,
       "type": "switch"
     },
     {
@@ -566,7 +566,7 @@
       "name": "rewardTip",
       "label": "提示语",
       "group": "赞赏",
-      "value": "打开微信扫一扫，即可进行扫码打赏哦",
+      "value": " ",
       "type": "input"
     },
     {

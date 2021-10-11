@@ -104,5 +104,5 @@
 .hljs a:focus,
 .hljs a:hover {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }

@@ -1,194 +1,195 @@
 <% if (site.customConfig.enableSearch) { %>
-<%- include('./search') %>
-<% } %>
-<input hidden id="copy" />
-<script>
-  !function () {
-    let times = document.querySelectorAll('.publish-time');
-    for (let i = 0; i < times.length; i++) {
-      let date = times[i].dataset.t;
-      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
-      if (time < 60) {
-        str = time + '秒之前';
-      } else if (time < 3600) {
-        str = Math.floor(time / 60) + '分钟之前';
-      } else if (time >= 3600 && time < 86400) {
-        str = Math.floor(time / 3600) + '小时之前';
-      } else if (time >= 86400 && time < 259200) {
-        str = Math.floor(time / 86400) + '天之前';
-      } else {
-        str = times[i].textContent;
-      }
-      times[i].textContent = str;
-    }
-  }();
-</script>
-
-<script>
-  let language = '<%= site.customConfig.language %>';
-  if (language !== '') {
-    let map = new Map();
-    if (language === 'en') {
-      map.set('search', 'Search');
-      map.set('category', 'Categories');
-      map.set('article', 'Articles');
-      map.set('tag', 'Tags');
-      map.set('top', 'Top');
-      map.set('publish', 'published');
-      map.set('minute', ' minutes');
-      map.set('read-more', 'Read More');
-      map.set('view', 'View');
-      map.set('words', ' words');
-      map.set('category-in', 'category in');
-      map.set('preview', 'Meta');
-      map.set('index', 'Toc');
-      map.set('no-archives', "You haven't created yet");
-      map.set('archives', " articles in total");
-      map.set('cloud-tags', " tags in total");
-      map.set('copyright', "Copyright: ");
-      map.set('author', "Author: ");
-      map.set('link', "Link: ");
-      map.set('leave-message', "Leave a message");
-      map.set('format', "Links Format");
-      map.set('site-name', "Name: ");
-      map.set('site-link', "Link: ");
-      map.set('site-desc', "Desc: ");
-      map.set('stat', " related results, taking ");
-      map.set('stat-time', " ms");
-      map.set('site-img', "Image: ");
-    }
-
-    if (map.size > 0) {
-      let lanElems = document.querySelectorAll('.language');
-      lanElems.forEach(elem => {
-        let lan = elem.dataset.lan, text = map.get(lan);
-        if (elem.__proto__ === HTMLInputElement.prototype) {
-          elem.placeholder = text
-        } else {
-          if (elem.dataset.count) {
-            text = elem.dataset.count + text;
+  <%- include('./search') %>
+    <% } %>
+      <input hidden id="copy" />
+      <script>
+        !function () {
+          let times = document.querySelectorAll('.publish-time');
+          for (let i = 0; i < times.length; i++) {
+            let date = times[i].dataset.t;
+            let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+            if (time < 60) {
+              str = time + '秒之前';
+            } else if (time < 3600) {
+              str = Math.floor(time / 60) + '分钟之前';
+            } else if (time >= 3600 && time < 86400) {
+              str = Math.floor(time / 3600) + '小时之前';
+            } else if (time >= 86400 && time < 259200) {
+              str = Math.floor(time / 86400) + '天之前';
+            } else {
+              str = times[i].textContent;
+            }
+            times[i].textContent = str;
           }
-          elem.textContent = text;
+        }();
+      </script>
+
+      <script>
+        let language = '<%= site.customConfig.language %>';
+        if (language !== '') {
+          let map = new Map();
+          if (language === 'en') {
+            map.set('search', 'Search');
+            map.set('category', 'Categories');
+            map.set('article', 'Articles');
+            map.set('tag', 'Tags');
+            map.set('top', 'Top');
+            map.set('publish', 'published');
+            map.set('minute', ' minutes');
+            map.set('read-more', 'Read More');
+            map.set('view', 'View');
+            map.set('words', ' words');
+            map.set('category-in', 'category in');
+            map.set('preview', 'Meta');
+            map.set('index', 'Toc');
+            map.set('no-archives', "You haven't created yet");
+            map.set('archives', " articles in total");
+            map.set('cloud-tags', " tags in total");
+            map.set('copyright', "Copyright: ");
+            map.set('author', "Author: ");
+            map.set('link', "Link: ");
+            map.set('leave-message', "Leave a message");
+            map.set('format', "Links Format");
+            map.set('site-name', "Name: ");
+            map.set('site-link', "Link: ");
+            map.set('site-desc', "Desc: ");
+            map.set('stat', " related results, taking ");
+            map.set('stat-time', " ms");
+            map.set('site-img', "Image: ");
+          }
+
+          if (map.size > 0) {
+            let lanElems = document.querySelectorAll('.language');
+            lanElems.forEach(elem => {
+              let lan = elem.dataset.lan, text = map.get(lan);
+              if (elem.__proto__ === HTMLInputElement.prototype) {
+                elem.placeholder = text
+              } else {
+                if (elem.dataset.count) {
+                  text = elem.dataset.count + text;
+                }
+                elem.textContent = text;
+              }
+            })
+          }
         }
-      })
-    }
-  }
-  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
-  window.Clipboard = (function (window, document, navigator) {
-    var textArea,
-      copy;
 
-    // 判断是不是ios端
-    function isOS() {
-      return navigator.userAgent.match(/ipad|iphone/i);
-    }
-    //创建文本元素
-    function createTextArea(text) {
-      textArea = document.createElement('textArea');
-      textArea.value = text;
-      textArea.style.width = 0;
-      textArea.style.height = 0;
-      textArea.clientHeight = 0;
-      textArea.clientWidth = 0;
-      document.body.appendChild(textArea);
-    }
-    //选择内容
-    function selectText() {
-      var range,
-        selection;
+        window.Clipboard = (function (window, document, navigator) {
+          var textArea,
+            copy;
 
-      if (isOS()) {
-        range = document.createRange();
-        range.selectNodeContents(textArea);
-        selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        textArea.setSelectionRange(0, 999999);
-      } else {
-        textArea.select();
-      }
-    }
-
-    //复制到剪贴板
-    function copyToClipboard() {
-      try {
-        document.execCommand("Copy")
-      } catch (err) {
-        alert("复制错误！请手动复制！")
-      }
-      document.body.removeChild(textArea);
-    }
-
-    copy = function (text) {
-      createTextArea(text);
-      selectText();
-      copyToClipboard();
-    };
-
-    return {
-      copy: copy
-    };
-  })(window, document, navigator);
-
-  function copyCode(e) {
-    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-      let code = e.currentTarget.querySelector('code');
-      var text = code.innerText;
-      if (e.srcElement.textContent === '复制成功') {
-        return;
-      }
-      e.srcElement.textContent = '复制成功';
-      (function (elem) {
-        setTimeout(() => {
-          if (elem.textContent === '复制成功') {
-            elem.textContent = '复制代码'
+          // 判断是不是ios端
+          function isOS() {
+            return navigator.userAgent.match(/ipad|iphone/i);
           }
-        }, 1000);
-      })(e.srcElement)
-      Clipboard.copy(text);
-    }
-  }
+          //创建文本元素
+          function createTextArea(text) {
+            textArea = document.createElement('textArea');
+            textArea.value = text;
+            textArea.style.width = 0;
+            textArea.style.height = 0;
+            textArea.clientHeight = 0;
+            textArea.clientWidth = 0;
+            document.body.appendChild(textArea);
+          }
+          //选择内容
+          function selectText() {
+            var range,
+              selection;
 
-  let pres = document.querySelectorAll('pre');
-  pres.forEach(pre => {
-    let code = pre.querySelector('code');
-    let copyElem = document.createElement('span');
-    copyElem.classList.add('copy-code');
-    copyElem.textContent = '复制代码';
-    pre.appendChild(copyElem);
-    pre.onclick = copyCode
-  })
+            if (isOS()) {
+              range = document.createRange();
+              range.selectNodeContents(textArea);
+              selection = window.getSelection();
+              selection.removeAllRanges();
+              selection.addRange(range);
+              textArea.setSelectionRange(0, 999999);
+            } else {
+              textArea.select();
+            }
+          }
 
-</script>
-<script src="<%= site.customConfig.cdn %>/media/js/motion.js"></script>
+          //复制到剪贴板
+          function copyToClipboard() {
+            try {
+              document.execCommand("Copy")
+            } catch (err) {
+              alert("复制错误！请手动复制！")
+            }
+            document.body.removeChild(textArea);
+          }
 
-<% if (site.customConfig.bgMusic !== 'aplayer') { %>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 200
-  });
-</script>
-<% } %>
-<%- include('./mouse-click') %>
-<% if (site.customConfig.bolgerjsplus) { %>
-<script src="<%= site.customConfig.cdn %>/media/js/cool.js"></script>
-<% } %>
+          copy = function (text) {
+            createTextArea(text);
+            selectText();
+            copyToClipboard();
+          };
 
-<% if (site.customConfig.bgEfficty == "sakura") { %>
-<script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>
-<% } else if (site.customConfig.bgEfficty == "snowflake") { %>
-  <div class="snow-container"></div>
-  <script src="<%= site.customConfig.cdn %>/media/js/bg/snow.js"></script>
-<% } else if (site.customConfig.bgEfficty == "nest") { %>
-  <div class="snow-container"></div>
-  <script src="<%= site.customConfig.cdn %>/media/js/bg/canvas-nest.js"></script>
-  <script>
-  const config = {
-    color: '255,0,0',
-    count: 88,
-  };
-  // Using config rendering effect at 'element'.
-  const cn = new CanvasNest(document.querySelector('.snow-container'), config);
-  </script>
-<% } %>
+          return {
+            copy: copy
+          };
+        })(window, document, navigator);
+
+        function copyCode(e) {
+          if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+            let code = e.currentTarget.querySelector('code');
+            var text = code.innerText;
+            if (e.srcElement.textContent === '复制成功') {
+              return;
+            }
+            e.srcElement.textContent = '复制成功';
+            (function (elem) {
+              setTimeout(() => {
+                if (elem.textContent === '复制成功') {
+                  elem.textContent = '复制代码'
+                }
+              }, 1000);
+            })(e.srcElement)
+            Clipboard.copy(text);
+          }
+        }
+
+        let pres = document.querySelectorAll('pre');
+        pres.forEach(pre => {
+          let code = pre.querySelector('code');
+          let copyElem = document.createElement('span');
+          copyElem.classList.add('copy-code');
+          copyElem.textContent = '复制代码';
+          pre.appendChild(copyElem);
+          pre.onclick = copyCode
+        })
+
+      </script>
+      <script src="<%= site.customConfig.cdn %>/media/js/motion.js"></script>
+
+      <% if (site.customConfig.bgMusic !=='aplayer' ) { %>
+        <script
+          src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script>
+          var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 200
+          });
+        </script>
+        <% } %>
+          <%- include('./mouse-click') %>
+            <% if (site.customConfig.bolgerjsplus) { %>
+              <script src="<%= site.customConfig.cdn %>/media/js/cool.js"></script>
+              <% } %>
+
+                <% if (site.customConfig.bgEfficty=="sakura" ) { %>
+                  <script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>
+                  <% } else if (site.customConfig.bgEfficty=="snowflake" ) { %>
+                    <div class="snow-container"></div>
+                    <script src="<%= site.customConfig.cdn %>/media/js/bg/snow.js"></script>
+                    <% } else if (site.customConfig.bgEfficty=="nest" ) { %>
+                      <div class="snow-container"></div>
+                      <script src="<%= site.customConfig.cdn %>/media/js/bg/canvas-nest.js"></script>
+                      <script>
+                        const config = {
+                          color: '255,0,0',
+                          count: 88,
+                        };
+                        // Using config rendering effect at 'element'.
+                        const cn = new CanvasNest(document.querySelector('.snow-container'), config);
+                      </script>
+                      <% } %>

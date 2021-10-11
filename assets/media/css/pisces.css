@@ -18,7 +18,7 @@
 
 .site-nav {
   padding: 20px 0;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 .nav-item {
@@ -47,10 +47,10 @@
   height: 2px;
   background-color: rgb(206, 204, 204);
   border-radius: 1px;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
-.nav-toggle:hover .line{
+.nav-toggle:hover .line {
   background-color: #fff;
 }
 
@@ -73,7 +73,7 @@
   opacity: 0;
 }
 
-.line+.line {
+.line + .line {
   margin-top: 4px;
 }
 
@@ -92,7 +92,6 @@
   display: inline-block;
   padding: 0 40px;
   color: #fff;
-  background: #222;
   border-bottom: none;
   position: relative;
   top: -10px;
@@ -113,12 +112,11 @@
   margin: 0 auto;
   padding: 2px;
   height: auto;
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid #eee;
 }
 
 .pisces {
-
 }
 
 .pisces .section-box {
@@ -163,7 +161,7 @@
   line-height: 36px;
   font-size: 24px;
   font-weight: normal;
-  font-family: 'Rosario', 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "Rosario", "Monda", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .pisces .site-meta {
@@ -181,7 +179,7 @@
   font-weight: initial;
   margin-top: 10px;
   font-size: 13px;
-  color: #ddd;
+  color: #339af0 !important;
 }
 
 .pisces .nav-item-active a:after {
@@ -208,7 +206,7 @@
 .pisces .sidebar {
   box-shadow: none;
   opacity: 0;
-  transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
   width: 240px;
   position: relative;
 }
@@ -224,7 +222,6 @@
 }
 
 @media (min-width: 992px) {
-
 }
 
 @media (max-width: 961px) {
@@ -234,7 +231,6 @@
 }
 
 @media (max-width: 767px) {
-
   .main-continer {
     width: auto !important;
   }
@@ -261,11 +257,9 @@
     margin: 0;
     overflow: hidden;
   }
-
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-
   .main-continer {
     width: auto !important;
   }
@@ -296,11 +290,9 @@
   .pisces .section {
     padding: 20px;
   }
-
 }
 
 @media (max-width: 767px) {
-
   .main-continer {
     width: auto;
   }
@@ -325,7 +317,7 @@
   .pisces .blog-header {
     overflow: hidden;
   }
-  
+
   .section-layout-wrapper {
     width: auto !important;
   }
