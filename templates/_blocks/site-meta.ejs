@@ -1,7 +1,7 @@
 <% let scheme = site.customConfig.scheme || 'pisces'; %>
 <div class="sidebar-wrapper box-shadow-wrapper <%= (scheme === 'muse' || scheme === 'mist')?'':'bg-color' %>">
   <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/YuZhangWang/Creative_pictures01@main/img/20210907012640.png"/>
+    <img class="site-author-image right-motion" src="<%= site.customConfig.cdn %>/images/avatar.png"/>
     <p class="site-author-name"><%= site.customConfig.bolgername %></p>
     <% if (site.customConfig.bolgerjss && site.customConfig.bolgerjss !== '') { %>
     <div class="site-description right-motion">
