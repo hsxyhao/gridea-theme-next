@@ -382,7 +382,7 @@ const generateOverride = (params) => {
     let color = params.bgSiteMetaColor;
     result += `
     .site-meta {
-     
+      background: ${color} !important;
     }
     .head-top-line {
       background: ${color};
