@@ -1,6 +1,6 @@
 <div class="footer-box">
   <footer class="footer">
-    <center>
+    <center id="runTimeBox">
       已运行:<span id="run_time"></span>
     </center>
     <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
@@ -8,29 +8,26 @@
     <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
 
     <script>
-      function runTime() {
-        str = "";
-        BirthDay = new Date("January 30,2019");
-        today = new Date();
-        timeold = today.getTime() - BirthDay.getTime();
-        msPerDay = 24 * 60 * 60 * 1000;
-        e_daysold = timeold / msPerDay;
-        daysold = Math.floor(e_daysold);
-        str += daysold + "天";
-        return str;
+      BirthDay = new Date('<%= site.customConfig.startTime %>');
+      console.log(BirthDay.toString());
+      if (BirthDay.toString() !== 'Invalid Date') {
+        function runTime() {
+          str = "";
+          today = new Date();
+          timeold = today.getTime() - BirthDay.getTime();
+          msPerDay = 24 * 60 * 60 * 1000;
+          e_daysold = timeold / msPerDay;
+          daysold = Math.floor(e_daysold);
+          str += daysold + "天";
+          return str;
+        }
+        setInterval(function () {
+          $("#run_time").html(runTime());
+        }, 1000);
+      } else {
+        document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
       }
-      setInterval(function () {
-        $("#run_time").html(runTime());
-      }, 1000);
     </script>
-
-    <div class="copyright">
-      Powered By
-      <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-      <span class="post-meta-divider">|</span>
-      Theme By
-      <a href="https://github.com/theme-next/hexo-theme-next" target="_blank">Next</a>
-    </div>
     <div class="poweredby">
       <%- site.themeConfig.footerInfo%>
     </div>

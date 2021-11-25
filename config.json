@@ -317,7 +317,7 @@
       "name": "startTime",
       "label": "创建时间",
       "group": "特性",
-      "type": "date"
+      "type": "input"
     },
     {
       "name": "menuIcon",
