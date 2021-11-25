@@ -43,8 +43,8 @@ map.set('/post/skin-update','info-circle'); %>
             <% let menu = menus[i]; %>
             <% if (site.customConfig.enableFriendPage) { %>
               <% if (site.customConfig.friendsIndex-1 === i) { %>
-                <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
-                  <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
+                <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
+                  <a href="/friends" target="<%= site.customConfig.friendsTarget %>">
                     <% if (site.customConfig.friendsIcon) { %>
                       <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>
                     <% } else { %>
@@ -55,11 +55,12 @@ map.set('/post/skin-update','info-circle'); %>
               <% } %>
             <% } %>
             <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
-              <% let target = menu.openType === 'External'?'_blank':'_self'; let href = menu.link === '/' ? '/': menu.link + '/' %>
+              <% let target = menu.openType === 'External'?'_blank':'_self'; let href = menu.link === '/' ? '/': menu.link ; let iconValue =  map.get(menu.link.substr(site.themeConfig.domain.length))%>
+              <% console.log(iconValue) %>
               <% if (site.customConfig.menuIcon === 'default') { %>
-                <% if (map.get(menu.link)) { %>
+                <% if (iconValue) { %>
                   <a href="<%= href %>" target="<%= target %>">
-                    <i class="fa fa-<%= map.get(menu.link) %>"></i> <%= menu.name %>
+                    <i class="fa fa-<%= iconValue %>"></i> <%= menu.name %>
                   </a>
                 <% } else { %>
                   <a href="<%= href %>" target="<%= target %>">
@@ -72,14 +73,14 @@ map.set('/post/skin-update','info-circle'); %>
                 </a>
               <% } else { %>
                 <a href="<%= href %>" target="<%= target %>">
-                  <i class="fa fa-<%= map.get(menu.link) || 'globe'%>"></i> <%= menu.name %>
+                  <i class="fa fa-<%= iconValue || 'globe'%>"></i> <%= menu.name %>
                 </a>
               <% } %>
             </li>
           <% } %>
           <% if (site.customConfig.enableFriendPage) { %>
             <% if (!site.customConfig.friendsIndex || site.customConfig.friendsIndex === '' || site.customConfig.friendsIndex-1 >= menus.length) { %>
-              <li class="nav-item <%= active && '/friends/' === link?'nav-item-active':'' %>">
+              <li class="nav-item <%= active && '/friends' === link?'nav-item-active':'' %>">
                 <a href="/friends/" target="<%= site.customConfig.friendsTarget %>">
                   <% if (site.customConfig.friendsIcon) { %>
                     <%= site.customConfig.friendsIcon %><%= site.customConfig.friendsTitle %>

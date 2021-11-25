@@ -683,7 +683,7 @@
       "name": "friendsTitle",
       "label": "友链标题",
       "group": "友链",
-      "value": "友情链接",
+      "value": "友链",
       "type": "input",
       "note": "自定义友链标题"
     },
