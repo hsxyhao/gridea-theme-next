@@ -2,12 +2,7 @@
   <footer class="footer">
     <center>
       已运行:<span id="run_time"></span>
-      <span class="post-meta-divider">|</span>
-      已咕咕:<span id="gugu_time"></span>
     </center>
-
-    总字数:<span id="word_count"></span>
-    <span class="post-meta-divider">|</span>
     <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
     <span class="post-meta-divider">|</span>
     <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
@@ -29,41 +24,9 @@
       }, 1000);
     </script>
 
-    <script>
-      function guguTime() {
-        str = "";
-        guguDay = new Date(document.lastModified);
-        today = new Date();
-        timeold = today.getTime() - guguDay.getTime();
-        msPerDay = 24 * 60 * 60 * 1000;
-        e_daysold = timeold / msPerDay;
-        daysold = Math.floor(e_daysold);
-        str += daysold + "天";
-        return str;
-      }
-      setInterval(function () {
-        $("#gugu_time").html(guguTime());
-      }, 1000);
-    </script>
-
-    <script>
-      function site() {
-
-        return 275.6 + "k";
-      };
-
-      setInterval(function () {
-        $("#word_count").html(site());
-      }, 1000);
-    </script>
-
     <div class="copyright">
-      Created by
-      <a href="https://github.com/YuZhangWang" target="_blank">YuZhangWang</a>
-      ©2019-Present
-      <span class="post-meta-divider">|</span>
       Powered By
-      <a href="https://github.com/YuZhangWang/YuZhangWang.github.io" target="_blank">Github</a>
+      <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
       <span class="post-meta-divider">|</span>
       Theme By
       <a href="https://github.com/theme-next/hexo-theme-next" target="_blank">Next</a>

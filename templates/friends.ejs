@@ -54,17 +54,11 @@
                 <div class="friends-note">
                   <p><strong class="language" data-lan="format">友链格式：</strong></p>
                   <ul>
-                    <li><span class="language" data-lan="site-name">网站名称：</span>
-                      <%= themeConfig.siteName %>
-                    </li>
-                    <li><span class="language" data-lan="site-link">网站地址：</span><a href="https://www.yuzhang.wang/"
-                        data-pjax-state="">https://www.yuzhang.wang</a></li>
-                    <li><span class="language" data-lan="site-desc">网站描述：</span>
-                      <%= themeConfig.siteDescription %>
-                    </li>
+                    <li><span class="language" data-lan="site-name">网站名称：</span><%= themeConfig.siteName %></li>
+                    <li><span class="language" data-lan="site-link">网站地址：</span><a href="<%= themeConfig.domain %>" data-pjax-state=""><%= themeConfig.domain %></a></li>
+                    <li><span class="language" data-lan="site-desc">网站描述：</span><%= themeConfig.siteDescription %></li>
                     <li><span class="language" data-lan="site-img">网站头像：</span>
-                      <a
-                        href="https://cdn.jsdelivr.net/gh/YuZhangWang/Creative_pictures01@main/img/20210907012640.png">https://cdn.jsdelivr.net/gh/YuZhangWang/Creative_pictures01@main/img/20210907012640.png</a>
+                      <a href="<%= themeConfig.domain %>/images/avatar.png"><%= themeConfig.domain %>/images/avatar.png</a>
                     </li>
                   </ul>
                 </div>
