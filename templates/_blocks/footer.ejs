@@ -9,8 +9,7 @@
 
     <script>
       BirthDay = new Date('<%= site.customConfig.startTime %>');
-      console.log(BirthDay.toString());
-      if (BirthDay.toString() !== 'Invalid Date') {
+      if (BirthDay.getTime()) {
         function runTime() {
           str = "";
           today = new Date();
