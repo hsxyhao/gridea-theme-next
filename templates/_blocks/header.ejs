@@ -54,9 +54,9 @@ map.set('/post/skin-update','info-circle'); %>
                 </li>
               <% } %>
             <% } %>
+            <%- JSON.stringify(site.menu) %>
             <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
               <% let target = menu.openType === 'External'?'_blank':'_self'; let href = menu.link === '/' ? '/': menu.link ; let iconValue =  map.get(menu.link.substr(site.themeConfig.domain.length))%>
-              <% console.log(iconValue) %>
               <% if (site.customConfig.menuIcon === 'default') { %>
                 <% if (iconValue) { %>
                   <a href="<%= href %>" target="<%= target %>">
