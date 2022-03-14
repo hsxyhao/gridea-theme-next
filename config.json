@@ -1128,6 +1128,22 @@
       "note": "评论列表分页，每页条数，默认不分页"
     },
     {
+      "name": "serverURLs",
+      "label": "自定义域名",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该配置适用于国内自定义域名用户(或learncloud国际版用户,使用REST API 服务器地址), 国内版本会自动检测(无需手动填写)"
+    },
+    {
+      "name": "recordIP",
+      "label": "是否记录IP",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "开启在服务器中记录评论者IP"
+    },
+    {
       "name": "lang",
       "label": "多语言",
       "group": "评论",
