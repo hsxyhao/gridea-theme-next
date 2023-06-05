@@ -58,7 +58,7 @@ map.set('/post/skin-update','info-circle'); %>
               <% } %>
             <% } %>
             <li class="nav-item <%= active && menu.link === link?'nav-item-active':'' %>">
-              <% let target = menu.openType === 'External'?'_blank':'_self'; let href = menu.link === '/' ? '/': menu.link ; let iconValue =  map.get(menu.link.substr(site.themeConfig.domain.length))%>
+              <% let target = menu.openType === 'External'?'_blank':'_self'; let href = menu.openType === 'External' ? menu.link.substr(site.themeConfig.domain.length,menu.link.length) : menu.link; let iconValue =  map.get(menu.link.substr(site.themeConfig.domain.length))%>
               <% if (site.customConfig.menuIcon === 'default') { %>
                 <% if (iconValue) { %>
                   <a href="<%= href %>" target="<%= target %>">
